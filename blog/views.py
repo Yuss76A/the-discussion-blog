@@ -36,15 +36,13 @@ def register_view(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
-            login(request, user)  # Automatically log the user in after registration
-            return redirect('blog-welcome')  # Redirect to the welcome page after successful registration
+            login(request, user)  
+            return redirect('blog-welcome')  
     else:
         form = UserCreationForm()
     return render(request, 'blog/register.html', {'form': form})
 
 
 def post_detail(request, id):
-    # Can use get_object_or_404 with actual model if in DB,
-    # for now, using the posts list as an example
-    post = get_object_or_404(posts, id=id)  # Adjust if using a database model
-    return render(request, 'blog/post_detail.html', {'post': post})  # Pass the specific post to the template
+    post = get_object_or_404(posts, id=id)  
+    return render(request, 'blog/post_detail.html', {'post': post})  

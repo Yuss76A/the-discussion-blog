@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.http import HttpResponse
+from .models import Post
+
 
 posts = [
     {
@@ -22,7 +24,7 @@ posts = [
 
 def welcome(request):
     context = {
-        'articles': posts
+        'articles': Post.objects.all()
     }
     return render(request, 'blog/welcome.html', context)
 
@@ -44,5 +46,5 @@ def register_view(request):
 
 
 def post_detail(request, id):
-    post = get_object_or_404(posts, id=id)  
+    post = get_object_or_404(Post, id=id)  
     return render(request, 'blog/post_detail.html', {'post': post})  

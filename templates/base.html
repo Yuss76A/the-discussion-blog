@@ -146,16 +146,27 @@
     <main role="main" class="container">
         <div class="row">
             <div class="col-md-8">
-                {%  if messages%}
+                {% if messages %}
                 {% for message in messages %}
-                <div class="alert-{{ message.tags }}">
+                <div class="alert alert-{{ message.tags }}">
                     {{ message }}
                 </div>
                 {% endfor %}
                 {% endif %}
-            </div>
-            <div class="col-md-8">
-                {% block content %}{% endblock %}
+                <div class="row">
+                    {% block content %}
+                    {% for article in articles %}
+                    <div class="col-md-6 mb-4">
+                        <!-- Two posts per row -->
+                        <article class="media content-section">
+                            <h2><a href="{% url 'blog-detail' article.id %}">{{ article.title }}</a></h2>
+                            <p>{{ article.content }}</p>
+                            <small class="text-muted">{{ article.date_posted }}</small>
+                        </article>
+                    </div>
+                    {% endfor %}
+                    {% endblock %}
+                </div>
             </div>
             <div class="col-md-4">
                 <div class="content-sectionw">
@@ -168,39 +179,35 @@
                 <li class="list-group-item list-group-item-light">etc</li>
               </ul>
             </p> -->
-                    <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white" style="width: 380px;"
-                        style="padding-top: 120px;">
-                        <a id="list-group" style="text-decoration: none;" href=""
-                            class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
-                            <!-- <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg> -->
-                            <span class="fs-5 fw-semibold" id="gist-btn">Latest Gist</span>
+                    <div class="d-flex flex-column align-items-start bg-light p-3" style="width: 400px;">
+                        <a id="latest-gist" style="text-decoration: none;" href="#"
+                            class="d-flex align-items-center mb-3 text-primary">
+                            <span class="fs-5 font-weight-bold">Trending Posts</span>
                         </a>
-                        <div class="list-group list-group-flush border-bottom scrollarea">
-                            <a href="#" class="list-group-item list-group-item-action  lh-tight" aria-current="true">
-                                <div class="d-flex w-100 align-items-center justify-content-between">
-                                    <strong class="mb-1">Seriously, Stop Trying to Teach Toddlers How to Code...By
-                                        Desphixs
-                                    </strong>
-                                    <small>Wed</small>
+                        <div class="list-group list-group-flush">
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex justify-content-between">
+                                    <strong class="mb-1">Why Children Shouldn’t Learn to Code Early</strong>
+                                    <small class="text-muted">Last Wednesday</small>
                                 </div>
-                                <div class="col-10 mb-1 small">AS A BABY nerd, I was obsessed with Hackers. The 1995
-                                    cult movie... </div>
+                                <div class="mb-1 small">As a young tech enthusiast, I was captivated by the world of
+                                    programming...</div>
                             </a>
-                            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
-                                <div class="d-flex w-100 align-items-center justify-content-between">
-                                    <strong class="mb-1">Its not a bug - It's a feature... by Desphixs</strong>
-                                    <small class="text-muted">Tues</small>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex justify-content-between">
+                                    <strong class="mb-1">There’s No Such Thing as Bugs—Only Features!</strong>
+                                    <small class="text-muted">Last Tuesday</small>
                                 </div>
-                                <div class="col-10 mb-1 small">When it comes to coding, everything works like a miracle,
-                                    let me use that word...hahaha</div>
+                                <div class="mb-1 small">When programming, every hiccup seems like magic... let’s talk
+                                    about it!</div>
                             </a>
-                            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
-                                <div class="d-flex w-100 align-items-center justify-content-between">
-                                    <strong class="mb-1">I wanted to be a great programmer but...by Desphixs</strong>
-                                    <small class="text-muted">Mon</small>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex justify-content-between">
+                                    <strong class="mb-1">My Journey to Becoming a Successful Programmer</strong>
+                                    <small class="text-muted">Last Monday</small>
                                 </div>
-                                <div class="col-10 mb-1 small">in my family trait, nobody knows anything about computers
-                                    and i wanted to be the greatest computer scientist ever and...</div>
+                                <div class="mb-1 small">Coming from a family with no tech background, I aspired to be
+                                    the top developer...</div>
                             </a>
 
                         </div>
@@ -211,15 +218,15 @@
 
 
 
-        <footer class="">
-            <ul class="nav justify-content-center border-bottom" style="margin-top: 60px;">
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-                <li class="nav-item"><a href="admin/" class="nav-link px-2 text-muted">Admin</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
-            </ul>
-            <p class="text-center text-muted">&copy; Desphixs 2021</p>
+        <footer class="mt-4">
+            <nav class="nav justify-content-center border-top" style="padding-top: 20px;">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-secondary">Main Page</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-secondary">Highlights</a></li>
+                <li class="nav-item"><a href="/admin/" class="nav-link px-2 text-secondary">Control Panel</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-secondary">Support</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-secondary">About Us</a></li>
+            </nav>
+            <p class="text-center text-secondary">&copy; 2024 Discussion Hub. All Rights Reserved.</p>
         </footer>
 
     </main>

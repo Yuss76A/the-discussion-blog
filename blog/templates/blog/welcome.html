@@ -12,7 +12,7 @@
         </div>
         <h2><a class="article-title" href="{% url 'blog-detail' article.id %}">{{ article.title }}</a></h2>
         <!-- Use 'article' variable -->
-        <p class="article-content">{{ article.content }}</p> <!-- Use 'article' variable -->
+        <p class="article-content">{{ article.content|truncatewords:30 }}</p> <!-- Use 'article' variable -->
     </div>
     <br>
 </article>

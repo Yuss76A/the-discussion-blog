@@ -13,7 +13,7 @@ def register_view(request):
             login(request, user)
             username = user.username 
             messages.success(request, f'Welcome, {username}! Your account is ready. Log in to continue.')  
-            return redirect('welcome')  
+            return redirect('login')  
     else:
         form = UserRegisterForm()
 

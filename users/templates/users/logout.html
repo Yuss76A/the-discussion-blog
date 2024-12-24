@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="card shadow-sm">
+        <div class="card-body text-center">
+            <h2 class="text-warning">You Have Been Logged Out</h2>
+            <p class="lead">We're sorry to see you go! Thank you for visiting our site.</p>
+            <div class="mt-4">
+                <a href="{% url 'login' %}" class="btn btn-primary btn-lg me-2">Log In Again</a>
+                <!-- Button to login -->
+                <a href="{% url 'welcome' %}" class="btn btn-secondary btn-lg">Return to Home</a>
+                <!-- Button to return home -->
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

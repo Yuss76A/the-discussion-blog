@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.contrib import messages
 from .forms import UserRegisterForm
-
+from django.contrib.auth.decorators import login_required
 
 def register_view(request):
     if request.method == 'POST':
@@ -18,3 +18,7 @@ def register_view(request):
         form = UserRegisterForm()
 
     return render(request, 'users/register.html', {'form': form})
+
+@login_required
+def account(request):
+    return render(request, 'users/account.html')

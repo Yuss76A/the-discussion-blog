@@ -4,7 +4,7 @@
 {% for article in articles %}
 <article class="media content-section">
     <!-- Assuming 'profile' is an attribute of 'author' that contains an image -->
-    <img class="rounded-circle article-img" src="{{ article.author.profile.image.url }}" alt="Profile Picture">
+    <img class="rounded-circle article-img" src="{{ article.author.account.avatar.url }}" alt="Account Picture">
     <div class="media-body">
         <div class="article-metadata">
             <a class="mr-2" href="#">{{ article.author }}</a> <!-- Use 'article' variable -->

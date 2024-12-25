@@ -3,41 +3,50 @@
 
 {% block content %}
 <!-- Include Font Awesome for icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="container mt-5">
-    <div class="account-card p-4 bg-white rounded shadow-lg">
-        <!-- Updated class name -->
-        <div class="text-center mb-4">
-            <img class="rounded-circle account-image" src="{{ user.profile.image.url }}" alt="User Account Image"
-                style="width: 150px; height: 150px;">
+    <div class="account-container">
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white text-center">
+                <h4 class="mb-0">Your Account Overview</h4>
+            </div>
+            <div class="card-body text-center">
+                <img class="rounded-circle" src="{{ user.account.avatar.url }}" alt="User Account Image"
+                    style="width: 150px; height: 150px; border: 2px solid #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);">
+
+                <h2 class="text-info mt-3">{{ user.username|title }}</h2>
+                <p class="lead text-secondary">{{ user.email }}</p>
+            </div>
         </div>
 
-        <h1 class="text-primary">{{ user.username|title }}</h1>
-        <p class="lead text-secondary">{{ user.email }}</p>
-
-        <div class="social-links my-3">
-            <a href="#" class="text-info mx-2" title="Dribbble"><i class="fab fa-dribbble fa-lg"></i></a>
-            <a href="#" class="text-info mx-2" title="Twitter"><i class="fab fa-twitter fa-lg"></i></a>
-            <a href="#" class="text-info mx-2" title="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a>
-            <a href="#" class="text-info mx-2" title="Facebook"><i class="fab fa-facebook fa-lg"></i></a>
+        <div class="social-links my-4">
+            <h5 class="text-center text-primary">Connect with Us</h5> <!-- Section header -->
+            <div class="d-flex justify-content-center">
+                <a href="#" id="auth-links"><i class="fa fa-dribbble fa-lg text-info mx-2"></i></a>
+                <a href="#" id="auth-links"><i class="fa fa-twitter fa-lg text-info mx-2"></i></a>
+                <a href="#" id="auth-links"><i class="fa fa-linkedin fa-lg text-info mx-2"></i></a>
+                <a href="#" id="auth-links"><i class="fa fa-facebook fa-lg text-info mx-2"></i></a>
+            </div>
         </div>
 
         <form action="" method="post" enctype="multipart/form-data" class="mt-4">
             {% csrf_token %}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4 text-success">Update Your Information</legend>
+                <legend class="border-bottom mb-4 text-success">Update Your Account Information</legend>
                 {{ u_form|crispy }}
+                <!-- Render user update form -->
                 {{ p_form|crispy }}
+                <!-- Render account update form -->
             </fieldset>
             <div class="form-group">
-                <button class="btn btn-success btn-block" type="submit">Save Changes</button>
+                <button class="btn btn-success btn-block" type="submit">Save Changes</button> <!-- Save button -->
             </div>
         </form>
 
-        <div class="mt-4 text-center">
-            <a href="{% url 'account' %}" class="btn btn-outline-warning">Edit Account</a>
-            <!-- Changed to Edit Account -->
+        <div class="text-center mt-3">
+            <a href="{% url 'account' %}" class="btn btn-outline-warning">Edit Account Details</a>
+            <!-- Link to edit account -->
         </div>
     </div>
 </div>

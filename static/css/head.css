@@ -100,6 +100,31 @@ a.article-title:hover {
     font-size: 2.5rem;
 }
 
+.account-container {
+    margin-top: 20px;
+    padding: 20px;
+    /* Space inside the card */
+    background-color: #f8f9fa;
+    /* Light gray background for a softer look */
+    border-radius: 10px;
+    /* Rounded corners for the card */
+}
+
+.account-image {
+    transition: transform 0.2s;
+    /* Animation effect on the image */
+}
+
+.account-image:hover {
+    transform: scale(1.05);
+    /* Slightly enlarge on hover for effect */
+}
+
+.social-icon:hover {
+    color: #0056b3;
+    /* Change color on hover for social icons */
+}
+
 svg {
     width: 50px;
     height: 50px;

@@ -18,7 +18,7 @@ class UserUpdateForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ['username', 'email']  # Users can update these fields
+        fields = ['username', 'email']  
 
     def clean_email(self):
         email = self.cleaned_data.get('email')
@@ -28,5 +28,5 @@ class UserUpdateForm(forms.ModelForm):
 
 class AccountUpdateForm(forms.ModelForm):
     class Meta:
-        model = Account  # This should be the model name for your user account
-        fields = ['avatar']  # Adjusted field
+        model = Account  
+        fields = ['avatar'] 

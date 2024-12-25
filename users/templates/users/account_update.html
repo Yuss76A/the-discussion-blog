@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="profile-update-card shadow-lg p-4 bg-light rounded">
+        <h2 class="text-center text-primary mb-4">Edit Your Profile</h2>
+
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <fieldset class="form-border p-4 mb-4 rounded">
+                <legend class="text-secondary mb-3">Personal Information</legend>
+                {{ user_form|crispy }}
+                <!-- Render user update form -->
+                {{ account_form|crispy }}
+                <!-- Render profile update form -->
+            </fieldset>
+            <div class="text-center">
+                <button class="btn btn-success btn-lg" type="submit">Save Changes</button>
+            </div>
+        </form>
+
+        <div class="text-center mt-3">
+            <a href="{% url 'account' %}" class="btn btn-outline-secondary">Back to Account</a>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

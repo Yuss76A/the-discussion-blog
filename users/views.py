@@ -2,9 +2,9 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.contrib import messages
-from .forms import UserRegisterForm
+from .forms import UserRegisterForm, UserUpdateForm, AccountUpdateForm
 from django.contrib.auth.decorators import login_required
-from .forms import UserUpdateForm, AccountUpdateForm 
+from .models import Account
 
 def register_view(request):
     if request.method == 'POST':
@@ -27,23 +27,22 @@ def account(request):
 
 @login_required
 def update_account(request):
+    user_account = Account.objects.get(user=request.user)
     if request.method == 'POST':
         user_form = UserUpdateForm(request.POST, instance=request.user)  
-        account_form = AccountUpdateForm(request.POST, request.FILES, instance=request.user.useraccount)  
+        account_form = AccountUpdateForm(request.POST, request.FILES, instance=request.user.account)  
 
         if user_form.is_valid() and account_form.is_valid():
             user_form.save() 
             account_form.save()  
             messages.success(request, 'Your account has been successfully updated!')  
             return redirect('account') 
-
+            
     else:
-        
         user_form = UserUpdateForm(instance=request.user)
-        account_form = AccountUpdateForm(instance=request.user.useraccount)
-
+        account_form = AccountUpdateForm(instance=request.user.account)
     context = {
         'user_form': user_form,
         'account_form': account_form
-    }
-    return render(request, 'users/edit_account.html', context)  
+        }
+    return render(request, 'users/account_update.html', context)  

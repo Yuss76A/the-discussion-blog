@@ -1,14 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello</title>
-</head>
+{% block content %}
+<!-- Include Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-<body>
-    <h1>Hello {{ request.user }}</h1>
-</body>
+<div class="container mt-5">
+    <div class="account-card p-4 bg-white rounded shadow-lg">
+        <!-- Updated class name -->
+        <div class="text-center mb-4">
+            <img class="rounded-circle account-image" src="{{ user.profile.image.url }}" alt="User Account Image"
+                style="width: 150px; height: 150px;">
+        </div>
 
-</html>
+        <h1 class="text-primary">{{ user.username|title }}</h1>
+        <p class="lead text-secondary">{{ user.email }}</p>
+
+        <div class="social-links my-3">
+            <a href="#" class="text-info mx-2" title="Dribbble"><i class="fab fa-dribbble fa-lg"></i></a>
+            <a href="#" class="text-info mx-2" title="Twitter"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="#" class="text-info mx-2" title="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a>
+            <a href="#" class="text-info mx-2" title="Facebook"><i class="fab fa-facebook fa-lg"></i></a>
+        </div>
+
+        <form action="" method="post" enctype="multipart/form-data" class="mt-4">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4 text-success">Update Your Information</legend>
+                {{ u_form|crispy }}
+                {{ p_form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-success btn-block" type="submit">Save Changes</button>
+            </div>
+        </form>
+
+        <div class="mt-4 text-center">
+            <a href="{% url 'account' %}" class="btn btn-outline-warning">Edit Account</a>
+            <!-- Changed to Edit Account -->
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,7 +1,7 @@
-{% extends 'blog/base.html' %}
+{% extends 'base.html' %}
 {% block content %}
 <article class="media content-section my-4 p-3 border bg-light rounded shadow-sm">
-    <img class="rounded-circle article-img" src="{{ object.author.profile.avatar.url }}" alt="Author's Profile Picture">
+    <img class="rounded-circle article-img" src="{{ object.author.account.avatar.url }}" alt="Author's Profile Picture">
     <div class="media-body ml-3">
         <div class="article-metadata">
             <h5 class="article-author">
@@ -11,7 +11,7 @@
         </div>
 
         <h2><a class="article-title" href="{% url 'blog-detail' object.id %}">{{ object.title }}</a></h2>
-        <p class="article-content">{{ object.content|truncatewords:50 }}</p> <!-- Limit preview content length -->
+        <p class="article-content">{{ object.content }}</p>
 
         {% if object.author == user %}
         <div class="btn-group mt-3">

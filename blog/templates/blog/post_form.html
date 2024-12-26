@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="content-section p-4 rounded shadow-sm" style="border: 2px solid #e9ecef;">
+        <h2 class="text-center mb-4 text-primary">Create a New Post</h2>
+        <p class="text-center lead">Share your insights and be part of the conversation!</p> <!-- Engaging message -->
+
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <fieldset>
+                <legend class="border-bottom mb-4">Post Details</legend>
+                {{ form|crispy }}
+                <!-- Render the entire form using Crispy Forms -->
+            </fieldset>
+            <div class="text-center">
+                <button type="submit" class="btn btn-success">Publish</button> <!-- Submit button -->
+            </div>
+        </form>
+
+        <div class="text-center mt-3">
+            <small>Need to go back? <a href="{% url 'account' %}">Return to Your Account</a></small>
+        </div>
+
+        <div class="mt-4 text-center">
+            <h5>Every new post is a new opportunity!</h5>
+            <p><strong>Make your voice heard!</strong></p> <!-- Motivational prompt -->
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -24,7 +24,7 @@ def post_detail(request, id):
 class PostListView(ListView):
     model = Post
     template_name = 'blog/welcome.html'
-    context_object_name = 'object'
+    context_object_name = 'articles'
     ordering = ["-date_posted"]
 
 class PostDetailView(DetailView):

@@ -1,24 +1,29 @@
 {% extends 'base.html' %}
 {% block content %}
-<article class="media content-section my-4 p-3 border bg-light rounded shadow-sm">
+
+<article class="media content-section my-4 p-3 bg-light rounded shadow-sm">
     <img class="rounded-circle article-img" src="{{ object.author.account.avatar.url }}" alt="Author's Profile Picture">
+
     <div class="media-body ml-3">
         <div class="article-metadata">
-            <h5 class="article-author">
-                <a href="#">{{ object.author.username }}</a>
-            </h5>
-            <small class="text-muted">{{ object.date_posted|date:"F j, Y" }}</small>
+            <strong>Posted by:</strong>
+            <a class="author-link" href="#">{{ object.author.username }}</a> <!-- Assuming 'username' displays -->
+            <small class="text-muted">on {{ object.date_posted|date:"F j, Y" }}</small>
         </div>
 
-        <h2><a class="article-title" href="{% url 'blog-detail' object.id %}">{{ object.title }}</a></h2>
-        <p class="article-content">{{ object.content }}</p>
+        <h2>
+            <a class="article-title" href="{% url 'blog-detail' object.id %}">{{ object.title }}</a>
+            <!-- Link to detail view -->
+        </h2>
+        <p class="article-content">{{ object.content }}</p> <!-- Display shortened content -->
 
         {% if object.author == user %}
-        <div class="btn-group mt-3">
-            <a class="btn btn-outline-primary" href="{% url 'blog-update' object.id %}">Edit</a>
-            <a class="btn btn-outline-danger" href="{% url 'blog-delete' object.id %}">Remove</a>
+        <div class="action-buttons mt-3">
+            <a class="btn btn-outline-success" href="#">Edit Post</a> <!-- Update link -->
+            <a class="btn btn-outline-danger" href="#">Delete Post</a> <!-- Delete link -->
         </div>
         {% endif %}
     </div>
 </article>
+
 {% endblock content %}

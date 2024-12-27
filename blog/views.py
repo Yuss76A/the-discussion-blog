@@ -4,6 +4,7 @@ from django.contrib.auth import login
 from django.http import HttpResponse
 from .models import Post
 from django.views.generic import ListView, DetailView, CreateView
+from django.contrib import messages
 
 
 # def welcome(request):
@@ -33,3 +34,9 @@ class PostDetailView(DetailView):
 class PostCreateView(CreateView):
     model = Post
     fields = ['title', 'content']
+    success_url = '/'
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        messages.success(self.request, 'Your post has been created successfully!')
+        return super().form_valid(form)

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="content-section p-4 bg-light rounded shadow-sm">
+        <h2 class="text-center text-danger">Confirm Post Deletion</h2>
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <fieldset>
+                <legend class="border-bottom mb-4">Delete Post</legend>
+                <h4>Are you sure you want to delete the post titled <b>"{{ object.title }}"</b>?</h4>
+                <p>This action cannot be undone.</p>
+            </fieldset>
+
+            <div class="text-center">
+                <button class="btn btn-danger btn-lg" type="submit">Delete</button>
+                <a href="{% url 'blog-detail' object.id %}" class="btn btn-secondary btn-lg"
+                    style="margin-left: 15px;">Cancel</a>
+                <!-- Added margin to separate buttons -->
+            </div>
+        </form>
+
+        <div class="text-center mt-3">
+            <small class="text-muted">Return to the <a href="{% url 'welcome' %}" class="text-info">Home
+                    Page</a></small>
+        </div>
+    </div>
+</div>
+{% endblock content %}

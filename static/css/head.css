@@ -301,3 +301,10 @@ button:hover {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
     border-radius: 70px;
 }
+
+.discussion-room {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    margin-right: 30px;
+}

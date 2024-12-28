@@ -314,3 +314,10 @@ button:hover {
 .welcome-text {
     color: #E6E6FA;
 }
+
+/* Comments Box CSS */
+.comment-textarea {
+    width: 100%;
+    height: 100px;
+    resize: vertical;
+}

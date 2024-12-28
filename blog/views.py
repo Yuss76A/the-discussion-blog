@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.http import HttpResponse
-from .models import Post
+from .models import Post, Comment
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
@@ -20,9 +20,19 @@ def about(request):
 
 
 # Post detail view
-def post_detail(request, id):
-    post = get_object_or_404(Post, id=id)  
-    return render(request, 'blog/post_detail.html', {'post': post})
+def post_detail(request, pk):
+    post = get_object_or_404(Post, id=pk)
+    comments = post.comments.all()  
+    
+    if request.method == 'POST':
+        content = request.POST.get('content')
+        if request.user.is_authenticated:
+            Comment.objects.create(post=post, author=request.user, content=content)
+            messages.success(request, 'Your comment has been added!')
+            return redirect('blog-detail', pk=post.id)  
+
+    return render(request, 'blog/post_detail.html', {'post': post, 'comments': comments})  
+    
 
 # List of all posts view
 class PostListView(ListView):

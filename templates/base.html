@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
+<hr>
 
 <head>
 
@@ -30,7 +31,8 @@
                     <div class="d-flex w-100 align-items-center">
                         <!-- Left Side: Discussion Room -->
                         <div class="mr-auto">
-                            <span class="discussion-room">Discussion Room</span>
+                            <a class="discussion-room" href="{% url 'welcome' %}"
+                                style="color: white; font-weight: bold; font-size: 24px;">Discussion Room</a>
                         </div>
                         <div class="navbar-nav mr-auto">
                             {% if user.is_authenticated %}

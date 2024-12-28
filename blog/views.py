@@ -6,6 +6,7 @@ from .models import Post, Comment
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from .forms import CommentForm
 
 
 # def welcome(request):
@@ -20,18 +21,19 @@ def about(request):
 
 
 # Post detail view
-def post_detail(request, pk):
-    post = get_object_or_404(Post, id=pk)
-    comments = post.comments.all()  
-    
-    if request.method == 'POST':
-        content = request.POST.get('content')
-        if request.user.is_authenticated:
-            Comment.objects.create(post=post, author=request.user, content=content)
-            messages.success(request, 'Your comment has been added!')
-            return redirect('blog-detail', pk=post.id)  
+# def post_detail(request, pk):
+#     post = get_object_or_404(Post, id=pk)  # Get the post by primary key
+#     comments = post.comments.all()  # Retrieve associated comments
 
-    return render(request, 'blog/post_detail.html', {'post': post, 'comments': comments})  
+#     # Handle comment submission
+#     if request.method == 'POST':
+#         content = request.POST.get('content')
+#         if request.user.is_authenticated:
+#             Comment.objects.create(post=post, author=request.user, content=content)  # Create new comment
+#             messages.success(request, 'Your comment has been added!')
+#             return redirect('blog-detail', pk=post.id)  # Redirect to the detail view of the post
+
+#     return render(request, 'blog/post_detail.html', {'post': post, 'comments': comments})
     
 
 # List of all posts view
@@ -44,6 +46,32 @@ class PostListView(ListView):
 # Detail view for a specific post
 class PostDetailView(LoginRequiredMixin, DetailView):
     model = Post
+    template_name = 'blog/post_detail.html'
+    context_object_name = 'post'  # Name the context object for access in the template
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['comments'] = self.object.comments.all()  # Include comments in context
+        context['comment_form'] = CommentForm()  # Initialize the comment form
+        return context
+
+    def post(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        form = CommentForm(request.POST)  # Create a form instance with submitted data
+        
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.post = self.object  # Link the comment to the post
+            comment.author = request.user  # Set the comment author
+            comment.save()  # Save the comment
+            messages.success(request, 'Your comment has been added!')
+            return redirect('blog-detail', pk=self.object.id)  # Redirect back to post detail
+
+        # If the form is not valid, render the same page with form errors
+        context = self.get_context_data()
+        context['comment_form'] = form  # Include the invalid form to show errors
+        return self.render_to_response(context)
+  
 
 # Create new post view
 class PostCreateView(LoginRequiredMixin, CreateView):

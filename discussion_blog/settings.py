@@ -129,11 +129,17 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
+# Set the default auto field type to BigAutoField for larger integer fields
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# Specify the template pack for crispy forms, using Bootstrap 4 styles
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+# Define the URL to redirect users after logging in successfully
 LOGIN_REDIRECT_URL = 'welcome'
+# Define the URL for the login page
 LOGIN_URL = 'login'
 
+# Set the media root directory where uploaded files are stored
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# Define the base URL for serving media files
 MEDIA_URL = '/media/'

@@ -19,8 +19,10 @@
 
         {% if object.author == user %}
         <div class="action-buttons mt-3">
-            <a class="btn btn-outline-success" href="#">Edit Post</a> <!-- Update link -->
-            <a class="btn btn-outline-danger" href="#">Delete Post</a> <!-- Delete link -->
+            <a class="btn btn-outline-success" href="{% url 'blog-update' object.id %}">Edit Post</a>
+            <!-- Update link -->
+            <a class="btn btn-outline-danger" href="{% url 'blog-delete' object.id %}">Delete Post</a>
+            <!-- Delete link -->
         </div>
         {% endif %}
     </div>

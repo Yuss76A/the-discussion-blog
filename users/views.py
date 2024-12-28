@@ -7,6 +7,7 @@ from django.contrib.auth.decorators import login_required
 from .models import Account
 
 def register_view(request):
+    """Handle user registration."""
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
         if form.is_valid():
@@ -22,11 +23,13 @@ def register_view(request):
 
 @login_required
 def account(request):
+    """Display user account information."""
     return render(request, 'users/account.html')
 
 
 @login_required
 def update_account(request):
+    """Update user account information."""
     user_account = Account.objects.get(user=request.user)
     if request.method == 'POST':
         user_form = UserUpdateForm(request.POST, instance=request.user)  

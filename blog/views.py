@@ -14,24 +14,28 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 #     }
 #     return render(request, 'blog/welcome.html', context)
 
-
+# About page view
 def about(request):
     return render(request, 'blog/about.html', {'title': "About Page"})
 
 
+# Post detail view
 def post_detail(request, id):
     post = get_object_or_404(Post, id=id)  
     return render(request, 'blog/post_detail.html', {'post': post})
 
+# List of all posts view
 class PostListView(ListView):
     model = Post
     template_name = 'blog/welcome.html'
     context_object_name = 'articles'
     ordering = ["-date_posted"]
 
+# Detail view for a specific post
 class PostDetailView(LoginRequiredMixin, DetailView):
     model = Post
 
+# Create new post view
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
     fields = ['title', 'content']
@@ -42,9 +46,12 @@ class PostCreateView(LoginRequiredMixin, CreateView):
         messages.success(self.request, 'Your post has been created successfully!')
         return super().form_valid(form)
 
+# Update existing post view with permissions check
 class PostUpdateView(LoginRequiredMixin,UserPassesTestMixin, UpdateView):
     model = Post
     fields = ['title', 'content']
+    success_url = '/'
+
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -56,7 +63,7 @@ class PostUpdateView(LoginRequiredMixin,UserPassesTestMixin, UpdateView):
             return True
         return False
 
-
+# Delete post view with permissions check
 class PostDeleteView(DeleteView):
     model = Post
     success_url = '/'

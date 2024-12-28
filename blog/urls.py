@@ -4,6 +4,7 @@ from django.contrib.auth import views as auth_views
 from .views import PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView
 
 
+# URL patterns for blog application navigation
 urlpatterns = [
     # path('', views.welcome, name="welcome"),
 

@@ -36,16 +36,12 @@
                             {% if user.is_authenticated %}
                             <a class="nav-item nav-link" href="{% url 'welcome' %}">HOME</a>
                             <a class="nav-item nav-link" href="{% url 'about' %}">ABOUT</a>
+                            <div class="navbar-text" style="color: white; margin-left: 20px; padding-left: 20px;">
+                                <h5 class="mb-0 welcome-text">Welcome, {{ request.user.username }}!</h5>
+                            </div>
                         </div>
                         <!-- Navbar Right Side -->
                         <div class="navbar-nav">
-                            <!-- <a class="nav-item nav-link" href="#">Login</a>
-              <a class="nav-item nav-link" href="#">Register</a> -->
-                            <!-- <button class="noselect">Create Post</button> -->
-                            <!--                <h3 style="color: white;">Hello {{request.user}}</h3>-->
-                            <div class="navbar-text text-black">
-                                <h5 class="mb-0">Welcome, {{ request.user.username }}!</h5>
-                            </div>
                             <a href="{% url 'blog-new' %}" id="auth-links">
                                 <span></span>
                                 <span></span>

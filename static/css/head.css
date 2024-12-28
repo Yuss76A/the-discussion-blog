@@ -302,9 +302,15 @@ button:hover {
     border-radius: 70px;
 }
 
+/* Project Forum Name CSS Code */
 .discussion-room {
     color: white;
     font-weight: bold;
     font-size: 24px;
     margin-right: 30px;
+}
+
+/* User Welcome Text */
+.welcome-text {
+    color: #E6E6FA;
 }

@@ -181,6 +181,19 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
+
+    <!-- Script to automatically hide success messages after 10 seconds -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set a timeout to hide all alert messages after 10 seconds
+            setTimeout(function () {
+                const messages = document.querySelectorAll('.alert'); // Select all alert messages
+                messages.forEach(function (message) {
+                    message.style.display = 'none'; // Hide the message
+                });
+            }, 10000); // 10000 milliseconds = 10 seconds
+        });
+    </script>
 </body>
 
 </html>

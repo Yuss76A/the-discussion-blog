@@ -40,6 +40,15 @@
         <strong>{{ comment.author.username }}:</strong>
         <p>{{ comment.content }}</p>
         <small class="text-muted">{{ comment.created_at }}</small>
+        {% if comment.author == user %}
+        <div>
+            <a href="{% url 'update-comment' comment.id %}" class="btn btn-info btn-sm">Edit</a>
+            <form method="POST" action="{% url 'delete-comment' comment.id %}" style="display:inline;">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+            </form>
+        </div>
+        {% endif %}
     </div>
     {% empty %}
     <p>No comments yet.</p>

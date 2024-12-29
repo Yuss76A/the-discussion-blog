@@ -321,3 +321,10 @@ button:hover {
     height: 100px;
     resize: vertical;
 }
+
+/* Comments Delete Button */
+.btn {
+    width: auto;
+    padding: .375rem .75rem;
+
+}

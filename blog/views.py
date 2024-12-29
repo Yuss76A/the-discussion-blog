@@ -111,3 +111,34 @@ class PostDeleteView(DeleteView):
         if self.request.user == post.author:
             return True
         return False
+
+
+def update_comment(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id)
+
+    # Ensure that the logged-in user is the author of the comment
+    if request.user != comment.author:
+        messages.error(request, "You do not have permission to edit this comment.")
+        return redirect('blog-detail', pk=comment.post.id)
+
+    if request.method == 'POST':
+        content = request.POST.get('content')
+        if content:
+            comment.content = content  # Update comment content
+            comment.save()  # Save updated comment
+            messages.success(request, 'Your comment has been updated!')
+            return redirect('blog-detail', pk=comment.post.id)
+
+    return render(request, 'blog/update_comment.html', {'comment': comment})  # Render update form
+
+def delete_comment(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id)
+
+    if request.user == comment.author:  # Ensure the user is the author
+        post_id = comment.post.id  # Store the related post's ID
+        comment.delete()  # Delete the comment
+        messages.success(request, 'Your comment has been deleted!')
+        return redirect('blog-detail', pk=post_id)  # Redirect back to the post detail view
+    else:
+        messages.error(request, "You do not have permission to delete this comment.")
+        return redirect('blog-detail', pk=comment.post.id)

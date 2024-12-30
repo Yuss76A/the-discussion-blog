@@ -146,3 +146,7 @@ def delete_comment(request, comment_id):
 # Highlights Page
 def highlights(request):
     return render(request, 'blog/highlights.html')
+
+# About Me Page
+def about_me(request):
+    return render(request, 'blog/about_me.html')

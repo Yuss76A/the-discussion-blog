@@ -10,7 +10,8 @@ urlpatterns = [
 
     path('', PostListView.as_view(), name="welcome"),
     path('about/', views.about, name="about"),
-     path('highlights/', views.highlights, name="highlights"),
+    path('highlights/', views.highlights, name="highlights"),
+    path('about-me/', views.about_me, name='about-me'),
     path('post-new/', PostCreateView.as_view(), name="blog-new"),
     path('post/<int:pk>/', PostDetailView.as_view(), name="blog-detail"),
     # path('post/<int:pk>/', post_detail, name="blog-detail"),

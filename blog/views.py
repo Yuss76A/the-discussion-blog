@@ -6,7 +6,7 @@ from .models import Post, Comment
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from .forms import CommentForm
+from .forms import CommentForm, CollaborateForm
 
 
 # def welcome(request):
@@ -150,3 +150,16 @@ def highlights(request):
 # About Me Page
 def about_me(request):
     return render(request, 'blog/about_me.html')
+
+# Collaboration and Support Page
+def support_and_collaboration(request):
+    collaborate_form = CollaborateForm()  
+
+    if request.method == 'POST':
+        collaborate_form = CollaborateForm(request.POST)
+        if collaborate_form.is_valid():  
+            collaborate_form.save()  
+            messages.success(request, 'Your request has been submitted successfully!')
+            return redirect('support-and-collaboration') 
+
+    return render(request, 'blog/support_and_collaboration.html', {'collaborate_form': collaborate_form})

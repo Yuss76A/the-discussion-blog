@@ -39,3 +39,13 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"{self.author.username}: {self.content[:20]}"
+
+
+class CollaborateRequest(models.Model):
+    name = models.CharField(max_length=100)  # Field for the user's name
+    email = models.EmailField()                # Field for the user's email
+    message = models.TextField()               # Field for the message
+    created_at = models.DateTimeField(auto_now_add=True)  # Timestamp for when the request is created
+
+    def __str__(self):
+        return f"Collaboration Request from {self.name}"

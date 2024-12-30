@@ -142,3 +142,7 @@ def delete_comment(request, comment_id):
     else:
         messages.error(request, "You do not have permission to delete this comment.")
         return redirect('blog-detail', pk=comment.post.id)
+
+# Highlights Page
+def highlights(request):
+    return render(request, 'blog/highlights.html')

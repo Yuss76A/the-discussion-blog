@@ -8,7 +8,7 @@ body {
     background-repeat: no-repeat;
 }
 
-
+/* Sets the color and font for all headings and paragraphs */
 h1,
 h2,
 h3,
@@ -20,27 +20,33 @@ p {
     font-family: 'Poppins', sans-serif;
 }
 
+/* Resets padding and removes bullet points from unordered lists */
 ul {
     padding: 0;
     list-style: none;
 }
 
+/* Applies a linear gradient background */
 .bg-steel {
     background: linear-gradient(270deg, rgba(30, 15, 45, 1) 0%, rgba(70, 50, 120, 1) 100%);
 }
 
+/* Styles the navigation links in the navbar */
 .site-header .navbar-nav .nav-link {
     color: #d1e7dd;
 }
 
+/* Changes link color to white when hovered */
 .site-header .navbar-nav .nav-link:hover {
     color: #ffffff;
 }
 
+/* Makes the active navigation link bold */
 .site-header .navbar-nav .nav-link.active {
     font-weight: bold;
 }
 
+/* Styles sections of content with a white background and padding */
 .content-section {
     background: #fefefe;
     padding: 15px 25px;
@@ -49,26 +55,31 @@ ul {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Styles article titles with color and font weight */
 .article-title {
     color: #555555;
     font-weight: 600;
 }
 
+/* Changes color and adds underline for article titles on hover */
 a.article-title:hover {
-    color: #ff00ff;
+    color: #908690;
     text-decoration: underline;
 }
 
+/* Ensures that text wraps normally within the article content */
 .article-content {
     white-space: normal;
 }
 
+/* Sets a fixed size for article images */
 .article-img {
     height: 70px;
     width: 70px;
     margin-right: 20px;
 }
 
+/* Styles article metadata with font and borders */
 .article-metadata {
     font-family: 'Arial', sans-serif;
     margin-bottom: 5px;
@@ -77,17 +88,20 @@ a.article-title:hover {
     padding-bottom: 2px;
 }
 
+/* Changes link color in the metadata on hover */
 .article-metadata a:hover {
     color: #000;
     text-decoration: underline;
 }
 
+/* Sets size for SVG icons and aligns them vertically */
 .article-svg {
     width: 30px;
     height: 30px;
     vertical-align: middle;
 }
 
+/* Sets size for account images (e.g., profile pictures) */
 .account-img {
     height: 125px;
     width: 125px;
@@ -95,10 +109,12 @@ a.article-title:hover {
     margin-bottom: 16px;
 }
 
+/* Styles account headings */
 .account-heading {
     font-size: 2.5rem;
 }
 
+/* Adds space at the top of the account section */
 .account-container {
     margin-top: 20px;
     padding: 20px;
@@ -106,23 +122,28 @@ a.article-title:hover {
     border-radius: 10px;
 }
 
+/* Applies a transition effect for smooth scaling */
 .account-image {
     transition: transform 0.2s;
 }
 
+/* Scales the image slightly larger when hovered */
 .account-image:hover {
     transform: scale(1.05);
 }
 
+/* Changes the color of social icons on hover */
 .social-icon:hover {
-    color: #0056b3;
+    color: #8aafd6;
 }
 
+/* Sets specific dimensions for SVG icons */
 svg {
     width: 50px;
     height: 50px;
 }
 
+/* Styles for the authentication links */
 #auth-links {
     font-family: 'Poppins', sans-serif;
     position: relative;
@@ -138,34 +159,38 @@ svg {
     margin-right: 5px;
 }
 
+/* Changes the style of the link on hover */
 #auth-links:hover {
     font-weight: bold;
     background: #03e9f4;
     text-decoration: none;
-    color: #050801;
+    color: #b2c39c;
     box-shadow: 0 0 5px #03e9f4,
         0 0 25px #03e9f4,
         0 0 50px #03e9f4,
         0 0 200px #03e9f4;
-    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(103, 56, 56, 0.333));
 }
 
+/* Applies a hue rotation to the second child for color effect */
 #auth-links:nth-child(2) {
     filter: hue-rotate(110deg);
 }
 
+/* Styles for span elements within auth links */
 #auth-links span {
     position: absolute;
     display: block;
 }
 
+/* Creates a horizontal line animation starting from the left */
 #auth-links span:nth-child(1) {
     top: 0;
     left: 0;
     width: 100%;
     height: 2px;
     background: linear-gradient(90deg, transparent, #007bff);
-    animation: animate1 1s linear infinite;
+    animation: animate1 5s linear infinite;
 }
 
 @keyframes animate1 {
@@ -179,6 +204,7 @@ svg {
     }
 }
 
+/* Creates a vertical line animation starting from the top */
 #auth-links span:nth-child(2) {
     top: -100%;
     right: 0;
@@ -200,6 +226,7 @@ svg {
     }
 }
 
+/* Styles for the third span element within auth links; creates a horizontal line animation */
 #auth-links span:nth-child(3) {
     bottom: 0;
     right: 0;
@@ -221,6 +248,7 @@ svg {
     }
 }
 
+/* Styles for the fourth span element within auth links; creates a vertical line animation */
 #auth-links span:nth-child(4) {
     bottom: -100%;
     left: 0;
@@ -242,6 +270,7 @@ svg {
     }
 }
 
+/* Styles for the button used to create a new post */
 #gist-btn {
     color: white;
     background: linear-gradient(270deg, rgba(240, 0, 255, 1) 0%, rgba(100, 0, 200, 1) 100%);
@@ -251,11 +280,13 @@ svg {
     border-radius: 8px;
 }
 
+/* Changes the button's text decoration and opacity on hover */
 #gist-btn:hover {
     text-decoration: none;
     opacity: 0.9;
 }
 
+/* Styles for card elements */
 .card-card {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
     max-width: 750px;
@@ -264,17 +295,20 @@ svg {
     border-radius: 20px;
 }
 
+/* Styles for the profile heading */
 #profile-h1 {
     color: #333;
     font-family: 'Poppins', sans-serif;
 }
 
+/* General styles for titles */
 .title {
     font-family: 'Poppins', sans-serif;
     color: #444;
     font-size: 20px;
 }
 
+/* General button styles */
 button {
     font-family: 'Poppins', sans-serif;
     border: 1px solid transparent;
@@ -291,11 +325,13 @@ button {
     background: linear-gradient(270deg, rgba(255, 0, 255, 1) 0%, rgba(50, 0, 255, 1) 100%);
 }
 
+/* Changes styles on button hover */
 button:hover {
     background-color: #495057;
     transform: translateY(-2px);
 }
 
+/* Styles for the profile image */
 #profile-img {
     margin-top: 20px;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);

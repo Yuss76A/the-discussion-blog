@@ -113,48 +113,27 @@
             <div class="col-md-8">
                 {% block content %}{% endblock %}
             </div>
+            <!-- Trendin Topics Bar -->
             <div class="col-md-4">
                 <div class="content-sectionw">
-                    <!-- <h3>Our Sidebar</h3>
-            <p class='text-muted'>You can put any information here you'd like.
-              <ul class="list-group">
-                <li class="list-group-item list-group-item-light">Latest Posts</li>
-                <li class="list-group-item list-group-item-light">Announcements</li>
-                <li class="list-group-item list-group-item-light">Calendars</li>
-                <li class="list-group-item list-group-item-light">etc</li>
-              </ul>
-            </p> -->
-                    <div class="d-flex flex-column align-items-start bg-light p-3" style="width: 400px;">
+                    <div class="d-flex flex-column align-items-start bg-light p-3">
                         <a id="latest-gist" style="text-decoration: none;" href="#"
                             class="d-flex align-items-center mb-3 text-primary">
                             <span class="fs-5 font-weight-bold">Trending Posts</span>
                         </a>
                         <div class="list-group list-group-flush">
-                            <a href="#" class="list-group-item list-group-item-action">
+                            {% for post in trending_posts %}
+                            <a href="{% url 'blog-detail' post.id %}" class="list-group-item list-group-item-action">
                                 <div class="d-flex justify-content-between">
-                                    <strong class="mb-1">Why Children Shouldn’t Learn to Code Early</strong>
-                                    <small class="text-muted">Last Wednesday</small>
+                                    <strong class="mb-1">{{ post.title }}</strong>
+                                    <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
                                 </div>
-                                <div class="mb-1 small">As a young tech enthusiast, I was captivated by the world of
-                                    programming...</div>
+                                <p class="mb-1 small">{{ post.content|truncatewords:15 }}</p>
+                                <!-- Show first 15 words of content -->
                             </a>
-                            <a href="#" class="list-group-item list-group-item-action">
-                                <div class="d-flex justify-content-between">
-                                    <strong class="mb-1">There’s No Such Thing as Bugs—Only Features!</strong>
-                                    <small class="text-muted">Last Tuesday</small>
-                                </div>
-                                <div class="mb-1 small">When programming, every hiccup seems like magic... let’s talk
-                                    about it!</div>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action">
-                                <div class="d-flex justify-content-between">
-                                    <strong class="mb-1">My Journey to Becoming a Successful Programmer</strong>
-                                    <small class="text-muted">Last Monday</small>
-                                </div>
-                                <div class="mb-1 small">Coming from a family with no tech background, I aspired to be
-                                    the top developer...</div>
-                            </a>
-
+                            {% empty %}
+                            <p class="text-muted">No trending posts available.</p>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>

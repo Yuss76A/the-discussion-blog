@@ -22,7 +22,7 @@ class PostListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['trending_posts'] = Post.objects.order_by('-date_posted')[:5]  # Fetch trending posts
+        context['trending_posts'] = Post.objects.order_by('?')[:5]  # Fetch trending posts
         return context
 
 # Detail view for a specific post

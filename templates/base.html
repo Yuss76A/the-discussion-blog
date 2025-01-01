@@ -22,7 +22,6 @@
         <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #003366;">
             <!-- Dark blue color -->
             <div class="container">
-                <!-- <a class="navbar-brand mr-4" href="">Django Blog</a> -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
                     aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -30,70 +29,74 @@
                 <div class="collapse navbar-collapse" id="navbarToggle">
                     <div class="d-flex w-100 align-items-center">
                         <!-- Left Side: Discussion Room -->
-                        <div class="mr-auto">
+                        <div class="mr-auto d-flex align-items-center">
+                            <!-- Added d-flex to horizontally align items -->
                             <a class="discussion-room" href="{% url 'welcome' %}"
-                                style="color: white; font-weight: bold; font-size: 24px;">Discussion Room</a>
-                        </div>
-                        <div class="navbar-nav mr-auto">
+                                style="color: white; font-weight: bold; font-size: 24px;">
+                                Discussion Room
+                            </a>
+                            <!-- Welcome Message on the Left -->
                             {% if user.is_authenticated %}
-                            <!-- <a class="nav-item nav-link" href="{% url 'welcome' %}">HOME</a> -->
-                            <!-- <a class="nav-item nav-link" href="{% url 'about' %}">ABOUT</a> -->
-                            <div class="navbar-text" style="color: white; margin-left: 20px; padding-left: 20px;">
-                                <h5 class="mb-0 welcome-text">Welcome, {{ request.user.username }}!</h5>
+                            <div class="navbar-text" style="color: white; margin-left: 20px;">
+                                Welcome, {{ request.user.username }}!
                             </div>
+                            {% endif %}
                         </div>
+
                         <!-- Navbar Right Side -->
                         <div class="navbar-nav">
-                            <a href="{% url 'welcome' %}" id="auth-links">
+                            <a class="nav-item nav-link" href="{% url 'welcome' %}" id="auth-links">
                                 <span></span>
                                 <span></span>
                                 <span></span>
                                 <span></span>
                                 Home
-                                <a href="{% url 'blog-new' %}" id="auth-links">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    Create Post
-                                </a>
-                                <a href="{% url 'account' %}" id="auth-links">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    Account
-                                </a>
-                                <a href="{% url 'logout' %}" id="auth-links">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    Logout
-                                </a>
-                                {% else %}
-                                <a href="{% url 'login' %}" id="auth-links">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    Login
-                                </a>
-                                <a href="{% url 'register' %}" id="auth-links">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    Register
-                                </a>
-                                {% endif %}
-                                <a href="{% url 'about' %}" id="auth-links">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    About Us
-                                </a>
+                            </a>
+                            <a class="nav-item nav-link" href="{% url 'about' %}" id="auth-links">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                About Us
+                            </a>
+                            {% if user.is_authenticated %}
+                            <a class="nav-item nav-link" href="{% url 'blog-new' %}" id="auth-links">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                Create Post
+                            </a>
+                            <a class="nav-item nav-link" href="{% url 'account' %}" id="auth-links">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                Account
+                            </a>
+                            <a class="nav-item nav-link" href="{% url 'logout' %}" id="auth-links">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                Logout
+                            </a>
+                            {% else %}
+                            <a class="nav-item nav-link" href="{% url 'login' %}" id="auth-links">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                Login
+                            </a>
+                            <a class="nav-item nav-link" href="{% url 'register' %}" id="auth-links">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                Register
+                            </a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
@@ -114,6 +117,7 @@
                 {% block content %}{% endblock %}
             </div>
             <!-- Trendin Topics Bar -->
+            {% if request.path == '/' or 'post/' in request.path %}
             <div class="col-md-4">
                 <div class="content-sectionw">
                     <div class="d-flex flex-column align-items-start bg-light p-3">
@@ -135,6 +139,7 @@
                             <p class="text-muted">No trending posts available.</p>
                             {% endfor %}
                         </div>
+                        {% endif %}
                     </div>
                 </div>
             </div>

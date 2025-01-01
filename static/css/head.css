@@ -143,7 +143,6 @@ svg {
     height: 50px;
 }
 
-/* Styles for the authentication links */
 #auth-links {
     font-family: 'Poppins', sans-serif;
     position: relative;
@@ -155,119 +154,53 @@ svg {
     text-transform: uppercase;
     transition: 0.5s;
     letter-spacing: 4px;
-    overflow: hidden;
     margin-right: 5px;
+}
+
+/* Slide-in underline effect */
+#auth-links:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: #03e9f4;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+/* Show the underline on hover */
+#auth-links:hover:after {
+    transform: scaleX(1);
 }
 
 /* Changes the style of the link on hover */
 #auth-links:hover {
     font-weight: bold;
-    background: #03e9f4;
-    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.3);
     color: #b2c39c;
     box-shadow: 0 0 5px #03e9f4,
         0 0 25px #03e9f4,
         0 0 50px #03e9f4,
         0 0 200px #03e9f4;
-    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(103, 56, 56, 0.333));
 }
 
-/* Applies a hue rotation to the second child for color effect */
-#auth-links:nth-child(2) {
-    filter: hue-rotate(110deg);
-}
-
-/* Styles for span elements within auth links */
+/* For additional styles if you have span elements for animations */
 #auth-links span {
     position: absolute;
     display: block;
 }
 
-/* Creates a horizontal line animation starting from the left */
-#auth-links span:nth-child(1) {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #007bff);
-    animation: animate1 5s linear infinite;
-}
+/* Add any additional animated span code here if necessary */
 
-@keyframes animate1 {
-    0% {
-        left: -100%;
-    }
-
-    50%,
-    100% {
-        left: 100%;
-    }
-}
-
-/* Creates a vertical line animation starting from the top */
-#auth-links span:nth-child(2) {
-    top: -100%;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(180deg, transparent, #007bff);
-    animation: animate2 1s linear infinite;
-    animation-delay: 0.25s;
-}
-
-@keyframes animate2 {
-    0% {
-        top: -100%;
-    }
-
-    50%,
-    100% {
-        top: 100%;
-    }
-}
-
-/* Styles for the third span element within auth links; creates a horizontal line animation */
-#auth-links span:nth-child(3) {
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(270deg, transparent, #007bff);
-    animation: animate3 1s linear infinite;
-    animation-delay: 0.50s;
-}
-
-@keyframes animate3 {
-    0% {
-        right: -100%;
-    }
-
-    50%,
-    100% {
-        right: 100%;
-    }
-}
-
-/* Styles for the fourth span element within auth links; creates a vertical line animation */
-#auth-links span:nth-child(4) {
-    bottom: -100%;
-    left: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(360deg, transparent, #007bff);
-    animation: animate4 1s linear infinite;
-    animation-delay: 0.75s;
-}
-
-@keyframes animate4 {
-    0% {
-        bottom: -100%;
-    }
-
-    50%,
-    100% {
-        bottom: 100%;
-    }
+/* Welcome text styles (if needed separately) */
+.welcome-text {
+    color: #E6E6FA;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-left: 15px;
+    padding-left: 15px;
 }
 
 /* Styles for the button used to create a new post */
@@ -375,4 +308,17 @@ button:hover {
     width: 100%;
     height: 90px;
     resize: vertical;
+}
+
+.welcome-text {
+    font-size: 1.1rem;
+    /* Slightly larger font size */
+    font-weight: 500;
+    /* Adjust weight for readability */
+    margin-left: 15px;
+    /* Space on the left for separation */
+    padding-left: 15px;
+    /* Padding for better spacing */
+    color: white;
+    /* Ensure text color fits with your theme */
 }

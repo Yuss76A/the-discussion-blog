@@ -4,11 +4,9 @@
 <hr>
 
 <head>
-
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -30,7 +28,6 @@
                     <div class="d-flex w-100 align-items-center">
                         <!-- Left Side: Discussion Room -->
                         <div class="mr-auto d-flex align-items-center">
-                            <!-- Added d-flex to horizontally align items -->
                             <a class="discussion-room" href="{% url 'welcome' %}">Discussion Room</a>
                             <!-- Welcome Message on the Left -->
                             {% if user.is_authenticated %}
@@ -130,40 +127,61 @@
                                     <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
                                 </div>
                                 <p class="mb-1 small">{{ post.content|truncatewords:15 }}</p>
-                                <!-- Show first 15 words of content -->
                             </a>
                             {% empty %}
                             <p class="text-muted">No trending posts available.</p>
                             {% endfor %}
                         </div>
-                        {% endif %}
                     </div>
                 </div>
-            </div>
-        </div>
-        <footer class="mt-4">
-            <div class="container">
-                <nav class="nav justify-content-center border-top" style="padding-top: 20px;">
-                    <!-- Adding some margin to separate footer content visually -->
-                    <div class="nav-item" style="margin-right: 20px;">
-                        <a href="/highlights/" class="nav-link px-2 text-secondary">Highlights</a>
-                    </div>
-                    <div class="nav-item" style="margin-right: 20px;">
-                        <a href="/admin/" class="nav-link px-2 text-secondary">Control Panel</a>
-                    </div>
-                    <div class="nav-item" style="margin-right: 20px;">
-                        <a href="/support-and-collaboration/" class="nav-link px-2 text-secondary">Support</a>
-                    </div>
-                    <div class="nav-item">
-                        <a href="/about-me/" class="nav-link px-2 text-secondary">About Me</a>
-                    </div>
-                </nav>
-                <!-- Add some padding and margin to the bottom of the footer -->
-                <p class="text-center text-secondary mt-3">&copy; 2024 Discussion Hub. All Rights Reserved.</p>
-            </div>
-        </footer>
 
+                <!-- Advertisement Section Below Trending Posts -->
+                <div class="content-sectionw mt-3">
+                    <div class="d-flex flex-column align-items-start bg-light p-3">
+                        <a id="latest-gist" style="text-decoration: none;" href="#"
+                            class="d-flex align-items-center mb-3 text-primary">
+                            <span class="fs-5 font-weight-bold">Advertisement</span>
+                        </a>
+                        <div class="list-group list-group-flush">
+                            <a href="https://codeinstitute.net" target="_blank">
+                                <img src="https://fitefuaite.com/wp-content/uploads/2020/05/code-institute.png"
+                                    alt="Learn to code with Code Institute!"
+                                    style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                            </a>
+                            <div class="mt-3">
+                                <p>
+                                    <a href="https://codeinstitute.net" target="_blank"
+                                        style="color: inherit; text-decoration: none;">
+                                        Learn to code with Code Institute! Get started today with our online courses.
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
     </main>
+    <footer class="mt-4">
+        <div class="container">
+            <nav class="nav justify-content-center border-top" style="padding-top: 20px;">
+                <!-- Adding some margin to separate footer content visually -->
+                <div class="nav-item" style="margin-right: 20px;">
+                    <a href="/highlights/" class="nav-link px-2 text-secondary">Highlights</a>
+                </div>
+                <div class="nav-item" style="margin-right: 20px;">
+                    <a href="/admin/" class="nav-link px-2 text-secondary">Control Panel</a>
+                </div>
+                <div class="nav-item" style="margin-right: 20px;">
+                    <a href="/support-and-collaboration/" class="nav-link px-2 text-secondary">Support</a>
+                </div>
+                <div class="nav-item">
+                    <a href="/about-me/" class="nav-link px-2 text-secondary">About Me</a>
+                </div>
+            </nav>
+            <!-- Add some padding and margin to the bottom of the footer -->
+            <p class="text-center text-secondary mt-3">&copy; 2024 Discussion Hub. All Rights Reserved.</p>
+        </div>
+    </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

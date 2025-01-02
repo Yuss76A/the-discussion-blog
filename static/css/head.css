@@ -336,3 +336,14 @@ button:hover {
 .discussion-room:hover:after {
     transform: scaleX(1);
 }
+
+/* Center the columns */
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+/* Prevent stretching to full width */
+.col-md-8 {
+    flex: 0 0 auto;
+}

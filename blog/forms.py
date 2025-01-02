@@ -14,6 +14,10 @@ class CollaborateForm(forms.ModelForm):
     class Meta:
         model = CollaborateRequest
         fields = ['name', 'email', 'message']
-        widgets = {  # Optional: Customize form widgets for better UX
-            'message': forms.Textarea(attrs={'placeholder': 'Your message...', 'rows': 4}),
+        widgets = {  
+            'message': forms.Textarea(attrs={
+                'placeholder': 'Your message...', 
+                'rows': 6,  # Increase rows for bigger message area
+                'class': 'custom-textarea'  # Add a custom class for CSS styling
+            }),
         }

@@ -347,3 +347,10 @@ button:hover {
 .col-md-8 {
     flex: 0 0 auto;
 }
+
+.custom-textarea {
+    height: 200px;
+    /* Set specific height */
+    resize: none;
+    /* Prevent resizing if desired */
+}

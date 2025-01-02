@@ -1,8 +1,5 @@
 body {
-    /* background: linear-gradient(to bottom right,#002f4b, #dc4225); */
-    /* color: #333333;  */
     background-color: rgb(235, 223, 223);
-    /* background: linear-gradient(to bottom right,#002f4b,#dc4225); */
     margin-top: 5rem;
     background-size: contain;
     background-repeat: no-repeat;
@@ -57,8 +54,9 @@ ul {
 
 /* Styles article titles with color and font weight */
 .article-title {
-    color: #555555;
+    color: #000000;
     font-weight: 600;
+    font-size: 1.8rem;
 }
 
 /* Changes color and adds underline for article titles on hover */
@@ -192,8 +190,6 @@ svg {
     display: block;
 }
 
-/* Add any additional animated span code here if necessary */
-
 /* Welcome text styles (if needed separately) */
 .welcome-text {
     color: #E6E6FA;
@@ -279,11 +275,6 @@ button:hover {
     margin-right: 30px;
 }
 
-/* User Welcome Text */
-.welcome-text {
-    color: #E6E6FA;
-}
-
 /* Comments Box CSS */
 .comment-textarea {
     width: 100%;
@@ -299,9 +290,7 @@ button:hover {
 
 .comment {
     max-width: 95%;
-    /* Prevents wide comments */
     word-wrap: break-word;
-    /* Breaks long words */
 }
 
 .comment-textarea {
@@ -310,15 +299,40 @@ button:hover {
     resize: vertical;
 }
 
+/* Welcome User CSS */
 .welcome-text {
     font-size: 1.1rem;
-    /* Slightly larger font size */
     font-weight: 500;
-    /* Adjust weight for readability */
     margin-left: 15px;
-    /* Space on the left for separation */
     padding-left: 15px;
-    /* Padding for better spacing */
     color: white;
-    /* Ensure text color fits with your theme */
+}
+
+/* Discussion Title CSS */
+.discussion-room {
+    position: relative;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.discussion-room:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: #03e9f4;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.discussion-room:hover {
+    color: #03e9f4;
+}
+
+.discussion-room:hover:after {
+    transform: scaleX(1);
 }

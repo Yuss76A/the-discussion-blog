@@ -31,10 +31,7 @@
                         <!-- Left Side: Discussion Room -->
                         <div class="mr-auto d-flex align-items-center">
                             <!-- Added d-flex to horizontally align items -->
-                            <a class="discussion-room" href="{% url 'welcome' %}"
-                                style="color: white; font-weight: bold; font-size: 24px;">
-                                Discussion Room
-                            </a>
+                            <a class="discussion-room" href="{% url 'welcome' %}">Discussion Room</a>
                             <!-- Welcome Message on the Left -->
                             {% if user.is_authenticated %}
                             <div class="navbar-text" style="color: white; margin-left: 20px;">
@@ -145,15 +142,25 @@
             </div>
         </div>
         <footer class="mt-4">
-            <nav class="nav justify-content-center border-top" style="padding-top: 20px;">
-                <li class="nav-item"><a href="/highlights/" class="nav-link px-2 text-secondary">Highlights</a>
-                </li>
-                <li class="nav-item"><a href="/admin/" class="nav-link px-2 text-secondary">Control Panel</a></li>
-                <li class="nav-item"><a href="/support-and-collaboration/"
-                        class="nav-link px-2 text-secondary">Support</a></li>
-                <li class="nav-item"><a href="/about-me/" class="nav-link px-2 text-secondary">About Me</a></li>
-            </nav>
-            <p class="text-center text-secondary">&copy; 2024 Discussion Hub. All Rights Reserved.</p>
+            <div class="container">
+                <nav class="nav justify-content-center border-top" style="padding-top: 20px;">
+                    <!-- Adding some margin to separate footer content visually -->
+                    <div class="nav-item" style="margin-right: 20px;">
+                        <a href="/highlights/" class="nav-link px-2 text-secondary">Highlights</a>
+                    </div>
+                    <div class="nav-item" style="margin-right: 20px;">
+                        <a href="/admin/" class="nav-link px-2 text-secondary">Control Panel</a>
+                    </div>
+                    <div class="nav-item" style="margin-right: 20px;">
+                        <a href="/support-and-collaboration/" class="nav-link px-2 text-secondary">Support</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="/about-me/" class="nav-link px-2 text-secondary">About Me</a>
+                    </div>
+                </nav>
+                <!-- Add some padding and margin to the bottom of the footer -->
+                <p class="text-center text-secondary mt-3">&copy; 2024 Discussion Hub. All Rights Reserved.</p>
+            </div>
         </footer>
 
     </main>

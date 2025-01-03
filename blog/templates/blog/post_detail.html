@@ -13,7 +13,8 @@
     <div class="media-body ml-3">
         <div class="article-metadata">
             <strong>Posted by:</strong>
-            <a class="author-link" href="#">{{ object.author.username }}</a> <!-- Assuming 'username' displays -->
+            <a class="author-link" href="#">{{ object.author.username }}</a>
+            <!-- Assuming 'username' displays -->
             <small class="text-muted">on {{ object.date_posted|date:"F j, Y" }}</small>
         </div>
 
@@ -33,7 +34,7 @@
         {% endif %}
     </div>
 </article>
-<h2>Comments</h2>
+<h2 class="text-switch">Comments</h2>
 <div id="comments-section">
     {% for comment in object.comments.all %}
     <div class="comment bg-light p-2 rounded my-2">

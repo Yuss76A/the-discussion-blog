@@ -1,7 +1,9 @@
 body {
     background-color: rgb(235, 223, 223);
+    color: #444444;
     margin-top: 5rem;
     background-size: contain;
+    transition: background-color 0.5s, color 0.5s;
     background-repeat: no-repeat;
 }
 
@@ -353,4 +355,160 @@ button:hover {
     /* Set specific height */
     resize: none;
     /* Prevent resizing if desired */
+}
+
+/* Dark Mood */
+
+body.dark-mode {
+    background-color: #000000;
+    /* Pure black background for the body */
+    color: #FFFFFF;
+    /* White text for main content */
+}
+
+.toggle-switch {
+    display: flex;
+    align-items: center;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+    /* Color when dark mode is active */
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+
+/* Post title and content styles */
+body.dark-mode .post-title,
+body.dark-mode .post-content {
+    /* Class for post content */
+    color: #000000;
+    /* Black color for post titles and content */
+    background-color: #131212;
+    /* White background to make it distinguishable */
+}
+
+/* Styles for the trending posts titles */
+body.dark-mode .trending-title {
+    color: #0b282b;
+}
+
+/* Style for comments */
+body.dark-mode .comment {
+    color: #121111;
+}
+
+body.dark-mode .comment-username {
+    color: #0e1111;
+}
+
+/* Navbar and links */
+body.dark-mode .navbar-nav .nav-link,
+body.dark-mode .nav-link.active {
+    color: #d1e7dd;
+}
+
+body.dark-mode .nav-link:hover {
+    color: #ffffff;
+    /* Hover effect color for nav links */
+}
+
+/* Content sections */
+body.dark-mode .content-section {
+    background: #777575;
+    /* Dark gray for content sections */
+    color: #272424;
+    /* White text color */
+    border: 1px solid #333;
+    /* Border for definition */
+}
+
+body.dark-mode .toggle-switch {
+    color: #ffffff;
+    /* Toggle switch text color */
+}
+
+/* Links in dark mode */
+body.dark-mode a {
+    color: #03e9f4;
+    /* Light blue color for links */
+}
+
+body.dark-mode a:hover {
+    color: #bb86fc;
+    /* Lighter shade for link hover effect */
+}
+
+/* Ensure button colors are appropriate in dark mode */
+body.dark-mode button {
+    background: #444;
+    /* Dark gray background for buttons */
+    color: #ffffff;
+    /* White text for buttons */
+}
+
+body.dark-mode button:hover {
+    background: #555;
+    /* Slightly lighter on hover */
+}
+
+/* UL LI CSS from about us page */
+body.dark-mode ul li {
+    color: #121111;
+    /* Light gray color for list items */
+}
+
+
+
+body.dark-mode .text-switch {
+    color: white;
+}
+
+#profile-update-form {
+    /* Style properties */
+    color: black;
+}
+
+#date-posted {
+    color: #03e9f4;
 }

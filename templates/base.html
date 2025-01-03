@@ -179,6 +179,14 @@
                     <a href="/about-me/" class="nav-link px-2 text-secondary">About Me</a>
                 </div>
             </nav>
+            <!--Dark Modd-->
+            <div class="toggle-switch">
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label" style="margin-left: 8px;">Dark Mode</span>
+            </div>
             <!-- Add some padding and margin to the bottom of the footer -->
             <p class="text-center text-secondary mt-3">&copy; 2024 Discussion Hub. All Rights Reserved.</p>
         </div>
@@ -193,7 +201,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
-
+    <script src="{% static 'js/theme-toggle.js' %}"></script>
     <!-- Script to automatically hide success messages after 10 seconds -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {

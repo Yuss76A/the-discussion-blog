@@ -8,11 +8,13 @@
     <div class="media-body">
         <div class="article-metadata">
             <a class="mr-2" href="#">{{ article.author }}</a> <!-- Use 'article' variable -->
-            <small class="text-muted">{{ article.date_posted }}</small> <!-- Use 'article' variable -->
+            <small class="text-muted">{{ article.date_posted }}</small>
+            <!-- Use 'article' variable -->
         </div>
         <h2><a class="article-title" href="{% url 'blog-detail' article.id %}">{{ article.title }}</a></h2>
         <!-- Use 'article' variable -->
-        <p class="article-content">{{ article.content|truncatewords:30 }}</p> <!-- Use 'article' variable -->
+        <p class="article-content text-switch">{{ article.content|truncatewords:30 }}</p>
+        <!-- Use 'article' variable -->
     </div>
     <br>
 </article>

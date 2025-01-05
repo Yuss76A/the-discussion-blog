@@ -515,7 +515,7 @@ body.dark-mode .content-section {
     border: 1px solid #333;
 }
 
-/* Default Light Mode Styles and Dark Mode for Highlihts Page */
+/* Default Light Mode Styles and Dark Mode for Highlihts/About Me Files */
 .highlight-container {
     background-color: #f8f9fa;
     color: #444444;
@@ -541,4 +541,8 @@ body.dark-mode .highlight-container .lead {
 
 body.dark-mode .highlight-container p {
     color: #ffffff;
+}
+
+body.dark-mode .custom-header {
+    color: #85c7c8;
 }

@@ -7,7 +7,7 @@
 {% endfor %}
 {% endif %}
 
-<article class="media content-section my-4 p-3 bg-light rounded shadow-sm">
+<article class="media content-section my-4 p-3 rounded shadow-sm">
     <img class="rounded-circle article-img" src="{{ object.author.account.avatar.url }}" alt="Author's Profile Picture">
 
     <div class="media-body ml-3">
@@ -37,9 +37,9 @@
 <h2 class="text-switch">Comments</h2>
 <div id="comments-section">
     {% for comment in object.comments.all %}
-    <div class="comment bg-light p-2 rounded my-2">
+    <div class="comment rounded my-2">
         <strong>{{ comment.author.username }}:</strong>
-        <p>{{ comment.content }}</p>
+        <p class="text-switch">{{ comment.content }}</p>
         <small class="text-muted">{{ comment.created_at }}</small>
         {% if comment.author == user %}
         <div>

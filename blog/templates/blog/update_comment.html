@@ -5,13 +5,14 @@
 
 <div class="container mt-5">
     <div class="content-section p-4 rounded shadow-sm" style="border: 2px solid #e9ecef;">
-        <h2 class="text-center mb-4 text-primary">Update Comment</h2>
-        <p class="text-center lead">Edit your comment below to share your insights!</p> <!-- Engaging message -->
+        <h2 class="highlight-title text-center mb-4 text-primary">Update Comment</h2>
+        <p class="text-switch text-center lead">Edit your comment below to share your insights!</p>
+        <!-- Engaging message -->
 
         <form action="" method="post">
             {% csrf_token %}
             <fieldset>
-                <legend class="border-bottom mb-4">Comment Details</legend>
+                <legend class="text-switch border-bottom mb-4">Comment Details</legend>
                 <textarea name="content" class="form-control" rows="4" required>{{ comment.content }}</textarea>
                 <!-- Pre-fill with current comment content -->
                 <!-- Use a standard textarea since we don't need crispy forms here for simplicity -->
@@ -21,13 +22,13 @@
             </div>
         </form>
 
-        <div class="text-center mt-3">
+        <div class=" text-switch text-center mt-3">
             <small>Need to go back? <a href="{% url 'blog-detail' comment.post.id %}">Return to Post</a></small>
         </div>
 
         <div class="mt-4 text-center">
-            <h5>Make your thoughts clear!</h5>
-            <p><strong>Your voice matters!</strong></p> <!-- Motivational prompt -->
+            <h5 class="text-switch">Make your thoughts clear!</h5>
+            <p class="text-switch"><strong>Your voice matters!</strong></p> <!-- Motivational prompt -->
         </div>
     </div>
 </div>

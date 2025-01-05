@@ -292,7 +292,7 @@ button:hover {
 }
 
 .comment {
-    max-width: 95%;
+    max-width: 100%;
     word-wrap: break-word;
 }
 
@@ -489,7 +489,9 @@ body.dark-mode ul li {
     /* Light gray color for list items */
 }
 
-
+body.dark-mode .article-content {
+    color: white;
+}
 
 body.dark-mode .text-switch {
     color: white;
@@ -545,4 +547,26 @@ body.dark-mode .highlight-container p {
 
 body.dark-mode .custom-header {
     color: #85c7c8;
+}
+
+/* Light Mode Styles for Comments */
+.comment {
+    background-color: #f8f9fa;
+    /* Light gray background for light mode */
+    color: #444444;
+    /* Dark text for light mode */
+    padding: 10px;
+    /* Padding inside each comment */
+    border-radius: 8px;
+    /* Rounded corners */
+    margin-bottom: 10px;
+    /* Margin for spacing between comments */
+}
+
+/* Dark Mode Styles for Comments */
+body.dark-mode .comment {
+    background-color: #777575;
+    /* Dark gray background for dark mode */
+    color: #ffffff;
+    /* White text for better contrast */
 }

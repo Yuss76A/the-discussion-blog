@@ -96,8 +96,10 @@
                 </div>
         </nav>
     </header>
+    <!--Main Section-->
     <main role="main" class="container">
         <div class="row">
+            <!-- Main Content Area for Posts -->
             <div class="col-md-8">
                 {%  if messages%}
                 {% for message in messages %}
@@ -113,6 +115,18 @@
             <!-- Trendin Topics Bar -->
             {% if request.path == '/' or 'post/' in request.path %}
             <div class="col-md-4">
+                <!--Category Window-->
+                <div class="content-section p-3 bg-light rounded shadow-sm text-center">
+                    <h5 class="text-primary">Categories</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-info">Cinema</a></li>
+                        <li><a href="#" class="text-info">Science</a></li>
+                        <li><a href="#" class="text-info">School</a></li>
+                        <li><a href="#" class="text-info">Cars</a></li>
+                        <li><a href="#" class="text-info">Random Funny Posts</a></li>
+                    </ul>
+                </div>
+                <!-- Trending Posts Section -->
                 <div class="content-section">
                     <div class="d-flex flex-column align-items-start bg-light p-3">
                         <a id="latest-gist" style="text-decoration: none;" href="#"
@@ -134,7 +148,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Advertisement Section Below Trending Posts -->
                 <div class="content-section mt-3">
                     <div class="d-flex flex-column align-items-start bg-light p-3">
@@ -152,14 +165,17 @@
                                 <p>
                                     <a href="https://codeinstitute.net" target="_blank"
                                         style="color: inherit; text-decoration: none;">
-                                        Learn to code with Code Institute! Get started today with our online courses.
+                                        Learn to code with Code Institute! Get started today with our online
+                                        courses.
                                     </a>
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                {% endif %}
+            </div>
+            {% endif %}
+        </div>
     </main>
     <!--Footer Section-->
     <footer class="mt-4">

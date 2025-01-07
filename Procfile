@@ -1,1 +1,1 @@
-web: gunicorn the_discussion_blog.wsgi
+web: gunicorn discussion_blog.wsgi

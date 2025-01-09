@@ -144,4 +144,4 @@ LOGIN_URL = 'login'
 # Set the media root directory where uploaded files are stored
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Define the base URL for serving media files
-MEDIA_URL = '/media/'
+MEDIA_URL = 'media/'

@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+import cloudinary
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
@@ -154,3 +155,9 @@ LOGIN_URL = 'login'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Define the base URL for serving media files
 MEDIA_URL = 'media/'
+
+cloudinary.config(
+    cloud_name=os.environ.get('CLOUDINARY_CLOUD_NAME'), 
+    api_key=os.environ.get('CLOUDINARY_API_KEY'), 
+    api_secret=os.environ.get('CLOUDINARY_API_SECRET')
+)

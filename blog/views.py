@@ -8,30 +8,96 @@ from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .forms import CommentForm, CollaborateForm
 
+
 # About Page
 def about(request):
+    """
+    Render the About page.
+
+    This view displays information about the application and its purpose.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+    
+    Returns:
+        HttpResponse: Renders the 'about.html' template with the title context.
+    """
     return render(request, 'blog/about.html', {'title': "About Page"})
 
 
 # List of all posts view
 class PostListView(ListView):
+    """
+    View to display a list of all blog posts.
+
+    This view fetches and displays all posts ordered by the date posted,
+    as well as the trending posts for additional context.
+
+    Attributes:
+        model (Post): The model to be used for this view.
+        template_name (str): The template that will be rendered for this view.
+        context_object_name (str): The name used to reference the list of articles in the template.
+        ordering (list): Specifies the order in which the articles are returned.
+
+    Methods:
+        get_context_data(**kwargs): Adds trending posts to the context for the template.
+    """
     model = Post
     template_name = 'blog/welcome.html'
     context_object_name = 'articles'
     ordering = ["-date_posted"]
 
     def get_context_data(self, **kwargs):
+        """
+        Add trending posts to the context.
+
+        This method extends the default context data with trending posts.
+
+        Args:
+            **kwargs: Additional context arguments.
+
+        Returns:
+            dict: The updated context data including trending posts.
+        """
         context = super().get_context_data(**kwargs)
         context['trending_posts'] = Post.objects.order_by('?')[:5]  # Fetch trending posts
         return context
 
+
 # Detail view for a specific post
 class PostDetailView(LoginRequiredMixin, DetailView):
+    """
+    View to display the details of a specific blog post.
+
+    This view requires user authentication and allows users to view the post
+    details, comments associated with this post, and submit new comments.
+
+    Attributes:
+        model (Post): The model to be used for this view.
+        template_name (str): The template that will be rendered for this view.
+        context_object_name (str): The name used to reference the specific post in the template.
+
+    Methods:
+        get_context_data(**kwargs): Adds comments and trending posts to the context.
+        post(request, *args, **kwargs): Handles form submissions for new comments.
+    """
     model = Post
     template_name = 'blog/post_detail.html'
     context_object_name = 'post'  
 
     def get_context_data(self, **kwargs):
+        """
+        Add comments and trending posts to the context.
+
+        This method extends the default context data with comments and a small list of
+        trending posts.
+
+        Args:
+            **kwargs: Additional context arguments.
+
+        Returns:
+            dict: The updated context data, including comments and trending posts.
+        """
         context = super().get_context_data(**kwargs)
         context['comments'] = self.object.comments.all()
         context['trending_posts'] = Post.objects.order_by('?')[:5] # Include trending posts
@@ -39,6 +105,20 @@ class PostDetailView(LoginRequiredMixin, DetailView):
         return context
 
     def post(self, request, *args, **kwargs):
+        """
+        Handle form submissions for new comments.
+
+        Validates and saves a new comment related to the post.
+
+        Args:
+            request (HttpRequest): The HTTP request object.
+            *args: Variable-length argument list.
+            **kwargs: Keyworded, variable-length argument list.
+
+        Returns:
+            HttpResponse: Redirects to the post detail page if successful or renders
+            the same page with form errors.
+        """
         self.object = self.get_object()
         form = CommentForm(request.POST)
         
@@ -58,6 +138,21 @@ class PostDetailView(LoginRequiredMixin, DetailView):
 
 # Create new post view
 class PostCreateView(LoginRequiredMixin, CreateView):
+    """
+    View to create a new post. 
+
+    This view is accessible only to authenticated users. Upon successful form submission, 
+    it assigns the current user as the author of the post and displays a success message.
+
+    Attributes:
+        model: The database model to use (Post).
+        fields: The fields to be included in the form ('title' and 'content').
+        success_url: The URL to redirect to after successful creation.
+    
+    Methods:
+        form_valid(form): Assigns the request user as the author of the post and 
+                          calls the parent's form_valid method.
+    """
     model = Post
     fields = ['title', 'content']
     success_url = '/'
@@ -67,8 +162,27 @@ class PostCreateView(LoginRequiredMixin, CreateView):
         messages.success(self.request, 'Your post has been created successfully!')
         return super().form_valid(form)
 
+
 # Update existing post view with permissions check
 class PostUpdateView(LoginRequiredMixin,UserPassesTestMixin, UpdateView):
+    """
+    View to update an existing post. 
+
+    This view requires the user to be logged in and ensures that only the author of the 
+    post can make changes. On successful form submission, it updates the post and retains 
+    the author as the current user.
+
+    Attributes:
+        model: The database model to use (Post).
+        fields: The fields to be included in the form ('title' and 'content').
+        success_url: The URL to redirect to after successful update.
+    
+    Methods:
+        form_valid(form): Assigns the request user as the author of the post 
+                          and calls the parent's form_valid method.
+        test_func(): Checks if the current user is the author of the post, 
+                     returning True if so, otherwise False.
+    """
     model = Post
     fields = ['title', 'content']
     success_url = '/'
@@ -84,8 +198,23 @@ class PostUpdateView(LoginRequiredMixin,UserPassesTestMixin, UpdateView):
             return True
         return False
 
+
 # Delete post view with permissions check
 class PostDeleteView(DeleteView):
+    """
+    View to delete a post.
+
+    This view deletes the specified post and requires that the user is the 
+    author of the post in order to proceed, ensuring permissions are respected.
+
+    Attributes:
+        model: The database model to use (Post).
+        success_url: The URL to redirect to after successful deletion. 
+
+    Methods:
+        test_func(): Checks if the current user is the author of the post, 
+                     returning True if so, otherwise False.
+    """
     model = Post
     success_url = '/'
 
@@ -96,7 +225,23 @@ class PostDeleteView(DeleteView):
         return False
 
 
+# Update a comment by the author; only authorized users can edit.
 def update_comment(request, comment_id):
+    """
+    Update a specific comment.
+
+    Ensures that the logged-in user is the author of the comment before allowing edits. 
+    If the user is authorized and submits valid content, the comment is updated, 
+    and a success message is displayed.
+
+    Parameters:
+        request: The HTTP request object.
+        comment_id: The ID of the comment to be updated.
+    
+    Returns:
+        Redirects to the blog detail page after updating or renders the update 
+        comment form if the request method is not POST.
+    """
     comment = get_object_or_404(Comment, id=comment_id)
 
     # Ensure that the logged-in user is the author of the comment
@@ -112,9 +257,26 @@ def update_comment(request, comment_id):
             messages.success(request, 'Your comment has been updated!')
             return redirect('blog-detail', pk=comment.post.id)
 
-    return render(request, 'blog/update_comment.html', {'comment': comment})  
+    return render(request, 'blog/update_comment.html', {'comment': comment})
 
+
+# Delete a comment by the author; only authorized users can delete.
 def delete_comment(request, comment_id):
+    """
+    Delete a specific comment.
+
+    This function checks if the logged-in user is the author of the comment before allowing 
+    deletion. If authorized, the comment is deleted, and a success message is displayed. 
+    Otherwise, an error message is shown.
+
+    Parameters:
+        request: The HTTP request object.
+        comment_id: The ID of the comment to be deleted.
+    
+    Returns:
+        Redirects to the blog detail page after deletion or shows an error message 
+        if permission is denied.
+    """
     comment = get_object_or_404(Comment, id=comment_id)
 
     if request.user == comment.author:  
@@ -126,16 +288,51 @@ def delete_comment(request, comment_id):
         messages.error(request, "You do not have permission to delete this comment.")
         return redirect('blog-detail', pk=comment.post.id)
 
+
 # Highlights Page
 def highlights(request):
+    """
+    Render the highlights page.
+
+    Parameters:
+        request: The HTTP request object.
+    
+    Returns:
+        Renders the highlights page template.
+    """
+
     return render(request, 'blog/highlights.html')
+
 
 # About Me Page
 def about_me(request):
+    """
+    Render the about me page.
+
+    Parameters:
+        request: The HTTP request object.
+    
+    Returns:
+        Renders the about me page template.
+    """
     return render(request, 'blog/about_me.html')
+
 
 # Collaboration and Support Page
 def support_and_collaboration(request):
+    """
+    Render the collaboration and support page.
+
+    Displays a form for collaboration requests and handles form submissions.
+    If the form is valid, the request is saved and a success message is displayed.
+
+    Parameters:
+        request: The HTTP request object.
+    
+    Returns:
+        Redirects to the support and collaboration page on successful form submission 
+        or re-renders the page with the form if there are validation errors.
+    """
     collaborate_form = CollaborateForm()  
 
     if request.method == 'POST':

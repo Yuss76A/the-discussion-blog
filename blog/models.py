@@ -32,6 +32,19 @@ def get_absolute_url(self):
 
 
 class Comment(models.Model):
+    """
+    Represents a comment on a blog post.
+
+    Attributes:
+        post (ForeignKey): A reference to the associated Post object.
+                           This creates a one-to-many relationship where a post can have multiple comments.
+        author (ForeignKey): A reference to the User object representing the author of the comment.
+        content (TextField): The textual content of the comment.
+        created_at (DateTimeField): The date and time when the comment was created; automatically set to now.
+
+    Methods:
+        __str__(): Returns a string representation of the comment, displaying the author's username and a truncated version of the content.
+    """
     post = models.ForeignKey(Post, related_name='comments', on_delete=models.CASCADE)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     content = models.TextField()
@@ -42,6 +55,18 @@ class Comment(models.Model):
 
 
 class CollaborateRequest(models.Model):
+    """
+    Represents a collaboration request submitted by a user.
+
+    Attributes:
+        name (CharField): The name of the user submitting the request.
+        email (EmailField): The email address of the user for follow-up.
+        message (TextField): The content of the message detailing the collaboration inquiry.
+        created_at (DateTimeField): The date and time when the request was created; automatically set to now.
+
+    Methods:
+        __str__(): Returns a string representation of the collaboration request showing the user's name.
+    """
     name = models.CharField(max_length=100)  # Field for the user's name
     email = models.EmailField()                # Field for the user's email
     message = models.TextField()               # Field for the message

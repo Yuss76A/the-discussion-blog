@@ -1,7 +1,16 @@
 from django.urls import path
 from . import views
 from django.contrib.auth import views as auth_views
-from .views import PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView, update_comment, delete_comment, support_and_collaboration
+from .views import (
+    PostListView, 
+    PostDetailView, 
+    PostCreateView, 
+    PostUpdateView, 
+    PostDeleteView,
+    update_comment, 
+    delete_comment, 
+    support_and_collaboration
+)
 
 
 # URL patterns for blog application navigation

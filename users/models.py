@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
+
 class Account(models.Model):
     """
     Represents a user account that holds additional information linked to Django's User model.

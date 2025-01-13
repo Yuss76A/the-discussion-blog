@@ -3,6 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from .models import Account
 
+
 class UserRegisterForm(UserCreationForm):
     """
     Form for user registration, allowing input of username, first name, last name, and email.
@@ -33,6 +34,7 @@ class UserUpdateForm(forms.ModelForm):
         if User.objects.filter(email=email).exists():
             raise forms.ValidationError("This email is already associated with another account.")
         return email
+        
 
 class AccountUpdateForm(forms.ModelForm):
     """

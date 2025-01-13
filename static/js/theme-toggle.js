@@ -1,3 +1,9 @@
+// This script handles the theme toggle functionality for the website.
+// It checks the user's saved theme preference in local storage and 
+// applies dark mode if the preference is set. It also updates the 
+// webpage based on user interactions with the theme toggle switch, 
+// saving the new preference in local storage for future visits.
+
 document.addEventListener('DOMContentLoaded', function () {
     const themeToggle = document.getElementById('theme-toggle');
     const themeLabel = document.getElementById('theme-label');

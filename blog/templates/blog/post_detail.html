@@ -14,22 +14,26 @@
     <div class="media-body ml-3">
         <div class="article-metadata">
             <strong>Posted by:</strong>
-            <a class="author-link" href="#">{{ object.author.username }}</a>
+            <a class="author-link" href="#"
+                aria-label="View profile of {{ object.author.username }}">{{ object.author.username }}</a>
             <!-- Assuming 'username' displays -->
             <small class="text-muted">on {{ object.date_posted|date:"F j, Y" }}</small>
         </div>
 
         <h2>
-            <a class="article-title" href="{% url 'blog-detail' object.id %}">{{ object.title }}</a>
+            <a class="article-title" href="{% url 'blog-detail' object.id %}"
+                aria-label="Read the article titled '{{ object.title }}'">{{ object.title }}</a>
             <!-- Link to detail view -->
         </h2>
         <p class="article-content">{{ object.content }}</p> <!-- Display shortened content -->
 
         {% if object.author == user %}
         <div class="action-buttons mt-3">
-            <a class="btn btn-outline-success" href="{% url 'blog-update' object.id %}">Edit Post</a>
+            <a class="btn btn-outline-success" href="{% url 'blog-update' object.id %}"
+                aria-label="Edit the post titled '{{ object.title }}'">Edit Post</a>
             <!-- Update link -->
-            <a class="btn btn-outline-danger" href="{% url 'blog-delete' object.id %}">Delete Post</a>
+            <a class="btn btn-outline-danger" href="{% url 'blog-delete' object.id %}"
+                aria-label="Delete the post titled '{{ object.title }}'">Delete Post</a>
             <!-- Delete link -->
         </div>
         {% endif %}
@@ -44,7 +48,8 @@
         <small class="text-muted">{{ comment.created_at }}</small>
         {% if comment.author == user %}
         <div>
-            <a href="{% url 'update-comment' comment.id %}" class="btn btn-info btn-sm">Edit</a>
+            <a href="{% url 'update-comment' comment.id %}" class="btn btn-info btn-sm"
+                aria-label="Edit comment with ID {{ comment.id }}">Edit</a>
             <form method="POST" action="{% url 'delete-comment' comment.id %}" style="display:inline;">
                 {% csrf_token %}
                 <button type="submit" class="btn btn-danger btn-sm">Delete</button>

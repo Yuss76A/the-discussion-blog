@@ -25,9 +25,11 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
 
 def __str__(self):
+    """Return the title of the post as its string representation."""
     return self.title
 
 def get_absolute_url(self):
+    """Return the URL for the detail view of the post based on its primary key."""
     return reverse('blog-detail', kwargs={'pk': self.pk})
 
 

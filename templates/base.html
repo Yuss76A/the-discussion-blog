@@ -38,7 +38,8 @@
                     <div class="d-flex w-100 align-items-center">
                         <!-- Left Side: Discussion Room -->
                         <div class="mr-auto d-flex align-items-center">
-                            <a class="discussion-room" href="{% url 'welcome' %}">Discussion Room</a>
+                            <a class="discussion-room" href="{% url 'welcome' %}"
+                                aria-label="Go to the Discussion Room">Discussion Room</a>
                             <!-- Welcome Message on the Left -->
                             {% if user.is_authenticated %}
                             <div class="navbar-text" style="color: white; margin-left: 20px;">

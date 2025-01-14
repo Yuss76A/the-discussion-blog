@@ -24,7 +24,8 @@
         </form>
 
         <div class=" text-switch text-center mt-3">
-            <small>Need to go back? <a href="{% url 'blog-detail' comment.post.id %}">Return to Post</a></small>
+            <small>Need to go back? <a href="{% url 'blog-detail' comment.post.id %}"
+                    aria-label="Return to the post titled '{{ comment.post.title }}'">Return to Post</a></small>
         </div>
 
         <div class="mt-4 text-center">

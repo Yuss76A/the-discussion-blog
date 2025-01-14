@@ -573,23 +573,10 @@ body.dark-mode .comment {
 
 /* Dark Mode Styles for Register File */
 body.dark-mode .form-control {
-    background-color: #333;
+    background-color: #e7e1e1;
     /* Darker background for input fields */
-    color: rgb(17, 16, 16);
+    color: rgb(19, 18, 18);
     /* White text color inside input fields */
     border: 1px solid #444;
     /* Border color */
-}
-
-body.dark-mode input::placeholder {
-    color: #AAAAAA;
-    /* Light gray for placeholder text */
-}
-
-/* Styles for Fieldset and Legend in Dark Mode */
-body.dark-mode fieldset {
-    background-color: #1c1c1c;
-    /* Background for fieldset in dark mode */
-    border: 1px solid #444;
-    /* Darker border for fieldset */
 }

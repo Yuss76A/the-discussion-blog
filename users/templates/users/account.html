@@ -46,15 +46,8 @@
             </fieldset>
             <p class="text-center">
                 <!-- Link/button to redirect to profile update form -->
-                <button id="btn-profile">
-                    <a href="{% url 'update_account' %}" id="auth-links" aria-label="Update your profile information">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        Update Profile
-                    </a>
-                </button>
+                <a href="{% url 'update_account' %}" id="auth-links" class="btn btn-primary text-black"
+                    aria-label="Update your profile information">Update Profile</a>
             </p>
         </form>
     </div>

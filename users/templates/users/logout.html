@@ -12,10 +12,12 @@
             <h2 class="text-warning">You Have Been Logged Out</h2>
             <p class="lead">We're sorry to see you go! Thank you for visiting our site.</p>
             <div class="mt-4">
-                <a href="{% url 'login' %}" class="btn btn-primary btn-lg me-2">Log In Again</a>
                 <!-- Button to login -->
-                <a href="{% url 'welcome' %}" class="btn btn-secondary btn-lg">Return to Home</a>
+                <a href="{% url 'login' %}" class="btn btn-primary btn-lg me-2"
+                    aria-label="Log in again to your account">Log In Again</a>
                 <!-- Button to return home -->
+                <a href="{% url 'welcome' %}" class="btn btn-secondary btn-lg"
+                    aria-label="Return to the home page">Return to Home</a>
             </div>
         </div>
     </div>

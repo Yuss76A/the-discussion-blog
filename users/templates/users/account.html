@@ -26,11 +26,13 @@
             <h5 class="text-center text-primary">Connect with Us</h5> <!-- Section header -->
             <div class="d-flex justify-content-center">
                 <!-- Social media icons with links -->
-                <a href="https://dribbble.com/" id="auth-links"><i class="fa fa-dribbble fa-lg text-info mx-2"></i></a>
-                <a href="https://twitter.com/" id="auth-links"><i class="fa fa-twitter fa-lg text-info mx-2"></i></a>
-                <a href="https://www.linkedin.com/" id="auth-links"><i
+                <a href="https://dribbble.com/" id="auth-links" aria-label="Connect on Dribbble"><i
+                        class="fa fa-dribbble fa-lg text-info mx-2"></i></a>
+                <a href="https://twitter.com/" id="auth-links" aria-label="Connect on Twitter"><i
+                        class="fa fa-twitter fa-lg text-info mx-2"></i></a>
+                <a href="https://www.linkedin.com/" id="auth-links" aria-label="Connect on LinkedIn"><i
                         class="fa fa-linkedin fa-lg text-info mx-2"></i></a>
-                <a href="https://www.facebook.com/" id="auth-links"><i
+                <a href="https://www.facebook.com/" id="auth-links" aria-label="Connect on Facebook"><i
                         class="fa fa-facebook fa-lg text-info mx-2"></i></a>
             </div>
         </div>
@@ -45,7 +47,7 @@
             <p class="text-center">
                 <!-- Link/button to redirect to profile update form -->
                 <button id="btn-profile">
-                    <a href="{% url 'update_account' %}" id="auth-links">
+                    <a href="{% url 'update_account' %}" id="auth-links" aria-label="Update your profile information">
                         <span></span>
                         <span></span>
                         <span></span>

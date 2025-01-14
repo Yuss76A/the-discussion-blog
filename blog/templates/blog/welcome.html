@@ -7,14 +7,17 @@
     <img class="rounded-circle article-img" src="{{ article.author.account.avatar.url }}" alt="Account Picture">
     <div class="media-body">
         <div class="article-metadata">
-            <a class="mr-2" href="#">{{ article.author }}</a> <!-- Use 'article' variable -->
+            <a class="mr-2" href="#" aria-label="View profile of {{ article.author }}">{{ article.author }}</a>
+
             <small class="text-muted">{{ article.date_posted }}</small>
-            <!-- Use 'article' variable -->
         </div>
-        <h2><a class="article-title" href="{% url 'blog-detail' article.id %}">{{ article.title }}</a></h2>
-        <!-- Use 'article' variable -->
+        <h2>
+            <a class="article-title" href="{% url 'blog-detail' article.id %}"
+                aria-label="Read the article titled '{{ article.title }}'">{{ article.title }}</a>
+        </h2>
+
         <p class="article-content text-switch">{{ article.content|truncatewords:30 }}</p>
-        <!-- Use 'article' variable -->
+
     </div>
     <br>
 </article>

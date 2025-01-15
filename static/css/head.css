@@ -66,12 +66,15 @@ ul {
     color: #000000;
     font-weight: 600;
     font-size: 1.8rem;
+    text-decoration: none;
+    white-space: normal;
+    overflow-wrap: break-word;
 }
 
 /* Changes color and adds underline for article titles on hover */
 a.article-title:hover {
     color: #908690;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* Ensures that text wraps normally within the article content */
@@ -437,6 +440,19 @@ button:hover {
     border: 2px solid #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     border-radius: 50%;
+}
+
+/* Post Detail Containers in the welcome Page */
+.media-body {
+    -webkit-box-flex: 1;
+    flex: 1;
+    overflow: hidden;
+}
+
+.media-body h2 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 /* Dark Mood */

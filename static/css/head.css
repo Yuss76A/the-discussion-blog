@@ -31,6 +31,12 @@ ul {
     background: linear-gradient(270deg, rgba(30, 15, 45, 1) 0%, rgba(70, 50, 120, 1) 100%);
 }
 
+/* Navbar Color CSS Style */
+.navbar-custom {
+    background-color: #003366;
+}
+
+
 /* Styles the navigation links in the navbar */
 .site-header .navbar-nav .nav-link {
     color: #d1e7dd;
@@ -311,6 +317,19 @@ button:hover {
     color: white;
 }
 
+/* User Name in te Navbar */
+.navbar-text.welcome-message {
+    color: white;
+    transition: color 0.3s ease;
+    /* Smooth transition effect */
+}
+
+/* User Name in the Navbar Hover Effect */
+.navbar-text.welcome-message:hover {
+    color: darkgray;
+    /* Change color on hover */
+}
+
 /* Discussion Title CSS */
 .discussion-room {
     position: relative;
@@ -356,6 +375,48 @@ button:hover {
     /* Set specific height */
     resize: none;
     /* Prevent resizing if desired */
+}
+
+/* Advertisment Window CSS Style */
+.image-style {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* CSS Style for the text in the advertisment window */
+.link-custom {
+    color: inherit !important;
+    /* Force the inherited color */
+    text-decoration: none !important;
+    /* Force no underline */
+}
+
+/* Footer Navbar CSS Style */
+.nav-padding-top {
+    padding-top: 20px;
+    /* Padding for the top of the navbar */
+}
+
+.nav-item-margin {
+    margin-right: 20px;
+    /* Margin for separating nav items */
+}
+
+/* Additional styles for the nav items if needed */
+.nav-link {
+    color: #6c757d;
+}
+
+/* Hover Effect for the Footer Navbar */
+.nav-link:hover {
+    color: #0056b3;
+}
+
+/* Dark / light Mode Swtich */
+.theme-label {
+    margin-left: 8px;
 }
 
 /* Dark Mood */
@@ -581,6 +642,7 @@ body.dark-mode .form-control {
     /* Border color */
 }
 
+/*CSS Style for update profile button*/
 #auth-links.text-black {
     color: black;
     /* Making sure the text is black */

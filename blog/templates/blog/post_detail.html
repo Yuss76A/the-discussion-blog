@@ -50,7 +50,7 @@
         <div>
             <a href="{% url 'update-comment' comment.id %}" class="btn btn-info btn-sm"
                 aria-label="Edit comment with ID {{ comment.id }}">Edit</a>
-            <form method="POST" action="{% url 'delete-comment' comment.id %}" style="display:inline;">
+            <form method="POST" action="{% url 'delete-comment' comment.id %}" class="form-inline">
                 {% csrf_token %}
                 <button type="submit" class="btn btn-danger btn-sm">Delete</button>
             </form>

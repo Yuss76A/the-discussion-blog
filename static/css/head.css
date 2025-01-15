@@ -419,6 +419,26 @@ button:hover {
     margin-left: 8px;
 }
 
+/* Post Detail.html file delete button */
+.form-inline {
+    display: inline;
+    /* Ensures the form displays inline */
+}
+
+/* Create a New Post border / Update Comment border */
+.content-border {
+    border: 2px solid #e9ecef;
+}
+
+/* Account Profile IMG CSS */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+}
+
 /* Dark Mood */
 
 body.dark-mode {

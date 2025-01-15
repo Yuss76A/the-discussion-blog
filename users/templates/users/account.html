@@ -14,9 +14,7 @@
             </div>
             <div class="card-body text-center">
                 <!-- Display user profile image -->
-                <img class="rounded-circle" src="{{ user.account.avatar.url }}" alt="User Account Image"
-                    style="width: 150px; height: 150px; border: 2px solid #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);">
-
+                <img class="rounded-circle profile-img" src="{{ user.account.avatar.url }}" alt="User Account Image">
                 <h2 class="text-info mt-3">{{ user.username|title }}</h2>
                 <p class="lead text-secondary">{{ user.email }}</p>
             </div>

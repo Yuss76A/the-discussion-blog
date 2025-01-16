@@ -2,7 +2,7 @@
 {% block content %}
 
 {% for article in articles %}
-<article class="media content-section">
+<article class="media content-section mt-4">
     <!-- Assuming 'profile' is an attribute of 'author' that contains an image -->
     <img class="rounded-circle article-img" src="{{ article.author.account.avatar.url }}" alt="Account Picture">
     <div class="media-body">

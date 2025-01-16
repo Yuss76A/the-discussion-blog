@@ -2,6 +2,22 @@
 {% block content %}
 
 <div class="container mt-4">
+    <!-- Search Bar: Placed above the posts -->
+    <div class="mt-4">
+        <!-- Margin top for spacing -->
+        <form method="GET" action="{% url 'welcome' %}">
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <!-- Group input and button -->
+                    <input class="form-control" type="search" name="search" placeholder="Search for posts..."
+                        aria-label="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
     {% for article in articles %}
     <article class="media content-section mt-4">
         <!-- Assuming 'profile' is an attribute of 'author' that contains an image -->

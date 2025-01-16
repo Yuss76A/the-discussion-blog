@@ -49,6 +49,14 @@ class PostListView(ListView):
     ordering = ["-date_posted"]
     paginate_by = 8
 
+    def get_queryset(self):
+        queryset = Post.objects.all().order_by('-date_posted')
+        search_query = self.request.GET.get('search', '')  # Get search query from URL parameters
+        
+        if search_query:
+            queryset = queryset.filter(title__icontains=search_query) | queryset.filter(content__icontains=search_query)
+        return queryset
+
     def get_context_data(self, **kwargs):
         """
         Add trending posts to the context.

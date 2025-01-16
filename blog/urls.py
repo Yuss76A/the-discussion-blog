@@ -9,7 +9,7 @@ from .views import (
     PostDeleteView,
     update_comment, 
     delete_comment, 
-    support_and_collaboration
+    support_and_collaboration,
 )
 
 

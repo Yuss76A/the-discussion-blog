@@ -7,6 +7,7 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .forms import CommentForm, CollaborateForm
+from django.core.paginator import Paginator
 
 
 # About Page
@@ -46,6 +47,7 @@ class PostListView(ListView):
     template_name = 'blog/welcome.html'
     context_object_name = 'articles'
     ordering = ["-date_posted"]
+    paginate_by = 8
 
     def get_context_data(self, **kwargs):
         """

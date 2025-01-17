@@ -455,6 +455,31 @@ button:hover {
     white-space: nowrap;
 }
 
+/* Light Mode CSS For Log in to your Account title */
+.login-title {
+    color: #003366;
+    /* Set your desired color here */
+}
+
+/* Light Mode Styles for Comments */
+.comment {
+    background-color: #f8f9fa;
+    /* Light gray background for light mode */
+    color: #444444;
+    /* Dark text for light mode */
+    padding: 10px;
+    /* Padding inside each comment */
+    border-radius: 8px;
+    /* Rounded corners */
+    margin-bottom: 10px;
+    /* Margin for spacing between comments */
+}
+
+.custom-primary {
+    color: #000099;
+    /* Replace with the desired color value */
+}
+
 /* Dark Mood */
 
 body.dark-mode {
@@ -582,7 +607,7 @@ body.dark-mode button:hover {
 
 /* UL LI CSS from about us page */
 body.dark-mode ul li {
-    color: #121111;
+    color: #b7c2b7;
     /* Light gray color for list items */
 }
 
@@ -604,7 +629,7 @@ body.dark-mode .text-switch {
 }
 
 body.dark-mode .text-muted {
-    color: rgb(11, 10, 10) !important;
+    color: rgb(246, 241, 241) !important;
 }
 
 body.dark-mode .content-section {
@@ -646,20 +671,6 @@ body.dark-mode .custom-header {
     color: #85c7c8;
 }
 
-/* Light Mode Styles for Comments */
-.comment {
-    background-color: #f8f9fa;
-    /* Light gray background for light mode */
-    color: #444444;
-    /* Dark text for light mode */
-    padding: 10px;
-    /* Padding inside each comment */
-    border-radius: 8px;
-    /* Rounded corners */
-    margin-bottom: 10px;
-    /* Margin for spacing between comments */
-}
-
 /* Dark Mode Styles for Comments */
 body.dark-mode .comment {
     background-color: #777575;
@@ -687,4 +698,9 @@ body.dark-mode .form-control {
 #auth-links.text-black:hover {
     color: black;
     /* Ensures it stays black on hover */
+}
+
+/* Dark Mode CSS For Log in to your Account title */
+body.dark-mode .login-title {
+    color: white;
 }

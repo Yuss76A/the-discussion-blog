@@ -104,7 +104,7 @@
                                 aria-label="Read details about {{ post.title }}">
                                 <div class="d-flex justify-content-between">
                                     <strong class="mb-1">{{ post.title }}</strong>
-                                    <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
+                                    <small class="date-text">{{ post.date_posted|date:"F d, Y" }}</small>
                                 </div>
                                 <p class="mb-1 small">{{ post.content|truncatewords:15 }}</p>
                             </a>

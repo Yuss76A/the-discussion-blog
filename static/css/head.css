@@ -551,7 +551,7 @@ body.dark-mode .post-title {
 
 /* Styles for the trending posts titles */
 body.dark-mode .trending-title {
-    color: #0b282b;
+    color: black;
 }
 
 /* Style for comments */
@@ -736,4 +736,17 @@ body.dark-mode .btn-outline-danger:hover {
     /* Darker shade on hover */
     border-color: #d32f2f;
     /* Match border to hover color */
+}
+
+/* Dark Mode Styles for Article Title */
+body.dark-mode .article-title {
+    color: black;
+    /* A lighter, softer blue for better visibility */
+}
+
+body.dark-mode .article-title:hover {
+    color: black;
+    /* Lighter shade on hover */
+    text-decoration: underline;
+    /* Underline for hover effect */
 }

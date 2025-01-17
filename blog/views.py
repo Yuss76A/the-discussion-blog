@@ -29,19 +29,30 @@ def about(request):
 # List of all posts view
 class PostListView(ListView):
     """
-    View to display a list of all blog posts.
+    A view to display a list of all blog posts in reverse chronological order.
 
-    This view fetches and displays all posts ordered by the date posted,
-    as well as the trending posts for additional context.
+    This view fetches and displays all posts ordered by the date they were posted, 
+    with additional support for search functionality. It also includes trending posts
+    in the context for additional user engagement.
 
     Attributes:
-        model (Post): The model to be used for this view.
-        template_name (str): The template that will be rendered for this view.
-        context_object_name (str): The name used to reference the list of articles in the template.
-        ordering (list): Specifies the order in which the articles are returned.
+        model (Post): The Django model to be used for this view, representing the blog posts.
+        template_name (str): The template filename that will render the output of this view (e.g., 'blog/welcome.html').
+        context_object_name (str): The name of the context variable that will contain the list of blog articles.
+        ordering (list): A list defining the order in which to return articles, with the most recent posts first.
+        paginate_by (int): Number of articles displayed per page for pagination.
 
     Methods:
-        get_context_data(**kwargs): Adds trending posts to the context for the template.
+        get_queryset(): 
+            Returns a queryset of blog posts, optionally filtered by a search query found in the URL.
+
+        get_context_data(**kwargs):
+            Extends the default context data by adding a list of trending posts
+            to provide additional context and user engagement opportunities.
+
+    Usage:
+        The view can be accessed through a URL configuration and will automatically
+        handle pagination and search queries based on user input from the request.
     """
     model = Post
     template_name = 'blog/welcome.html'

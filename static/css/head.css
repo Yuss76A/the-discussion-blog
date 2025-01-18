@@ -480,18 +480,69 @@ button:hover {
     /* Replace with the desired color value */
 }
 
+/* Notification.html File */
+.notification-list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.notification-item {
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    /* Light gray bottom border */
+    transition: background-color 0.3s;
+    /* Smooth background transition on hover */
+}
+
+.notification-item:hover {
+    background-color: #f5f5f5;
+    /* Light gray hover effect */
+}
+
 .read {
-    background-color: #f8f9fa;
-    /* Light grey for read notifications */
-    color: #6c757d;
-    /* Dark grey text for read */
+    background-color: #f9f9f9;
+    /* Background for read notifications */
 }
 
 .unread {
-    background-color: #fff3cd;
+    background-color: #fff4e5;
     /* Light yellow for unread notifications */
-    color: #856404;
-    /* Darker text for emphasis */
+    font-weight: bold;
+    /* Make unread notifications stand out */
+}
+
+.notification-message {
+    display: flex;
+    justify-content: space-between;
+    /* Space out messages and timestamps */
+}
+
+.notification-text {
+    font-size: 16px;
+    /* Standard text size */
+}
+
+.notification-timestamp {
+    font-size: 12px;
+    /* Smaller size for timestamps */
+    color: #888;
+    /* Light gray for timestamps */
+}
+
+.notification-link {
+    display: inline-block;
+    margin-top: 5px;
+    /* Spacing above the link */
+    color: #007bff;
+    /* Bootstrap primary color for links */
+    text-decoration: none;
+    /* Remove underline */
+}
+
+.no-comment {
+    color: #d9534f;
+    /* Bootstrap danger color for display message */
 }
 
 /* Dark Mood */

@@ -3,17 +3,25 @@
 <h2 class="text-center mt-4">Your Notifications</h2>
 
 {% if notifications %}
-<ul class=" list-unstyled">
+<ul class="notification-list list-unstyled">
     {% for notification in notifications %}
-    <li class="{% if notification.is_read %}read{% else %}unread{% endif %}">
-        {{ notification.message }} <small>{{ notification.created_at|date:"F j, Y, g:i A" }}</small>
+    <li class="notification-item {% if notification.is_read %}read{% else %}unread{% endif %}">
+        <div class="notification-message">
+            <span class="notification-text">{{ notification.message }}</span>
+            <small class="notification-timestamp">{{ notification.created_at|date:"F j, Y, g:i A" }}</small>
+            <a href="{% url 'delete_notification' notification.id %}" class="delete-notification"
+                aria-label="Delete this notification"
+                onclick="return confirm('Are you sure you want to delete this notification?');">
+                Delete
+            </a>
+        </div>
         {% if notification.comment %}
         <a href="{% url 'blog-detail' notification.comment.post.id %}#comment-{{ notification.comment.id }}"
-            aria-label="View your comment">
+            class="notification-link" aria-label="View your comment">
             Go to Comment
         </a>
         {% else %}
-        <span>No associated comment.</span>
+        <span class="no-comment">No associated comment.</span>
         {% endif %}
     </li>
     {% endfor %}

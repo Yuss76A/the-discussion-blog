@@ -434,3 +434,11 @@ def reply_comment(request, comment_id):
 def notifications_view(request):
     notifications = Notification.objects.filter(user=request.user).order_by('-created_at')
     return render(request, 'blog/notifications.html', {'notifications': notifications})
+
+
+@login_required
+def delete_notification(request, notification_id):
+    notification = get_object_or_404(Notification, id=notification_id, user=request.user)
+    notification.delete()  # Delete the notification
+    messages.success(request, 'Notification deleted successfully.')  # A success message
+    return redirect('notifications')  # Redirect back to notifications

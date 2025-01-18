@@ -364,3 +364,21 @@ def support_and_collaboration(request):
             return redirect('support-and-collaboration') 
 
     return render(request, 'blog/support_and_collaboration.html', {'collaborate_form': collaborate_form})
+
+
+# Like a post
+def like_post(request, post_id):
+    post = get_object_or_404(Post, id=post_id)  # Get the post object
+    post.likes += 1  # Increment the likes
+    post.save()  # Save the post with the updated like count
+    messages.success(request, 'You liked this post!')  # Optional success message
+    return redirect('blog-detail', pk=post_id)  # Redirect back to the post detail view
+
+
+# Dislike a post
+def dislike_post(request, post_id):
+    post = get_object_or_404(Post, id=post_id)  # Get the post object 
+    post.dislikes += 1  # Increment the dislikes
+    post.save()  # Save the post with the updated dislike count
+    messages.success(request, 'You disliked this post!')  # Optional success message
+    return redirect('blog-detail', pk=post_id)  # Redirect back to the post detail view

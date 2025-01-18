@@ -715,6 +715,7 @@ body.dark-mode .btn-outline-success {
     /* Border to match background */
 }
 
+/* CSS Style for the Edit and Delete post buttons */
 body.dark-mode .btn-outline-success:hover {
     background-color: white;
     /* Darker shade on hover */

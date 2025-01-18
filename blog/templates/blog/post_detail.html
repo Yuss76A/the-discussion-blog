@@ -44,17 +44,27 @@
             <!-- Link to detail view -->
         </h2>
         <p class="article-content">{{ object.content }}</p> <!-- Display shortened content -->
+        <div class="d-flex justify-content-between mt-3">
+            <!-- Left Side: Edit and Delete buttons -->
+            <div>
+                {% if object.author == user %}
+                <a class="btn btn-outline-success" href="{% url 'blog-update' object.id %}"
+                    aria-label="Edit the post titled '{{ object.title }}'">Edit Post</a>
+                <a class="btn btn-outline-danger" href="{% url 'blog-delete' object.id %}"
+                    aria-label="Delete the post titled '{{ object.title }}'">Delete Post</a>
+                {% endif %}
+            </div>
 
-        {% if object.author == user %}
-        <div class="action-buttons mt-3">
-            <a class="btn btn-outline-success" href="{% url 'blog-update' object.id %}"
-                aria-label="Edit the post titled '{{ object.title }}'">Edit Post</a>
-            <!-- Update link -->
-            <a class="btn btn-outline-danger" href="{% url 'blog-delete' object.id %}"
-                aria-label="Delete the post titled '{{ object.title }}'">Delete Post</a>
-            <!-- Delete link -->
+            <!-- Right Side: Like and Dislike buttons -->
+            <div>
+                <a href="{% url 'like-post' object.id %}" class="btn btn-success mr-2" aria-label="Like this post">
+                    <i class="fas fa-thumbs-up"></i> Like ({{ object.likes }})
+                </a>
+                <a href="{% url 'dislike-post' object.id %}" class="btn btn-danger" aria-label="Dislike this post">
+                    <i class="fas fa-thumbs-down"></i> Dislike ({{ object.dislikes }})
+                </a>
+            </div>
         </div>
-        {% endif %}
     </div>
 </article>
 <h2 class="text-switch">Comments</h2>

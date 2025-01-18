@@ -10,6 +10,8 @@ from .views import (
     update_comment, 
     delete_comment, 
     support_and_collaboration,
+    like_post,
+    dislike_post,
 )
 
 
@@ -26,4 +28,6 @@ urlpatterns = [
     path('post/<int:pk>/delete/', PostDeleteView.as_view(), name="blog-delete"),
     path('comment/<int:comment_id>/update/', update_comment, name='update-comment'),
     path('comment/<int:comment_id>/delete/', delete_comment, name='delete-comment'),
+    path('post/<int:post_id>/like/', views.like_post, name='like-post'),
+    path('post/<int:post_id>/dislike/', views.dislike_post, name='dislike-post'),
 ]

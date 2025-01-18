@@ -74,16 +74,32 @@
         <strong>{{ comment.author.username }}:</strong>
         <p class="text-switch">{{ comment.content }}</p>
         <small class="text-muted">{{ comment.created_at }}</small>
-        {% if comment.author == user %}
-        <div>
-            <a href="{% url 'update-comment' comment.id %}" class="btn btn-info btn-sm"
-                aria-label="Edit comment with ID {{ comment.id }}">Edit</a>
-            <form method="POST" action="{% url 'delete-comment' comment.id %}" class="form-inline">
-                {% csrf_token %}
-                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-            </form>
+        <!-- Actions section with edit/delete on the left and like/dislike on the right -->
+        <div class="d-flex justify-content-between mt-2">
+            <!-- Left Side: Edit and Delete buttons -->
+            <div>
+                {% if comment.author == user %}
+                <a href="{% url 'update-comment' comment.id %}" class="btn btn-info btn-sm"
+                    aria-label="Edit comment with ID {{ comment.id }}">Edit</a>
+                <form method="POST" action="{% url 'delete-comment' comment.id %}" class="form-inline d-inline">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                </form>
+                {% endif %}
+            </div>
+
+            <!-- Right Side: Like and Dislike buttons -->
+            <div>
+                <a href="{% url 'like-comment' comment.id %}" class="btn btn-success btn-sm"
+                    aria-label="Like this comment">
+                    <i class="fas fa-thumbs-up"></i> Like ({{ comment.likes }})
+                </a>
+                <a href="{% url 'dislike-comment' comment.id %}" class="btn btn-danger btn-sm"
+                    aria-label="Dislike this comment">
+                    <i class="fas fa-thumbs-down"></i> Dislike ({{ comment.dislikes }})
+                </a>
+            </div>
         </div>
-        {% endif %}
     </div>
     {% empty %}
     <p class="text-switch ">No comments yet.</p>

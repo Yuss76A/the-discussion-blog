@@ -382,3 +382,21 @@ def dislike_post(request, post_id):
     post.save()  # Save the post with the updated dislike count
     messages.success(request, 'You disliked this post!')  # Optional success message
     return redirect('blog-detail', pk=post_id)  # Redirect back to the post detail view
+
+
+# Like a comment
+def like_comment(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id)  # Get the comment object
+    comment.likes += 1  # Increment likes
+    comment.save()  # Save the comment with updated like count
+    messages.success(request, 'You liked this comment!')  # Success message
+    return redirect('blog-detail', pk=comment.post.id)  # Redirect to the post detail view
+
+
+# Dislike a comment
+def dislike_comment(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id)  # Get the comment object
+    comment.dislikes += 1  # Increment dislikes
+    comment.save()  # Save the comment with updated dislike count
+    messages.success(request, 'You disliked this comment!')  # Success message
+    return redirect('blog-detail', pk=comment.post.id)  # Redirect to the post detail view

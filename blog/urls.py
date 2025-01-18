@@ -12,6 +12,8 @@ from .views import (
     support_and_collaboration,
     like_post,
     dislike_post,
+    like_comment,
+    dislike_comment
 )
 
 
@@ -30,4 +32,6 @@ urlpatterns = [
     path('comment/<int:comment_id>/delete/', delete_comment, name='delete-comment'),
     path('post/<int:post_id>/like/', views.like_post, name='like-post'),
     path('post/<int:post_id>/dislike/', views.dislike_post, name='dislike-post'),
+    path('comment/<int:comment_id>/like/', views.like_comment, name='like-comment'),
+    path('comment/<int:comment_id>/dislike/', views.dislike_comment, name='dislike-comment'),
 ]

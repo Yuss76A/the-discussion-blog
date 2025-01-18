@@ -13,7 +13,9 @@ from .views import (
     like_post,
     dislike_post,
     like_comment,
-    dislike_comment
+    dislike_comment,
+    notifications_view,
+    reply_comment
 )
 
 
@@ -34,4 +36,6 @@ urlpatterns = [
     path('post/<int:post_id>/dislike/', views.dislike_post, name='dislike-post'),
     path('comment/<int:comment_id>/like/', views.like_comment, name='like-comment'),
     path('comment/<int:comment_id>/dislike/', views.dislike_comment, name='dislike-comment'),
+    path('notifications/', notifications_view, name='notifications'),
+    path('comment/<int:comment_id>/reply/', views.reply_comment, name='reply-comment'),
 ]

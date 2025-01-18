@@ -26,7 +26,10 @@
             <div class="article-metadata">
                 <a class="mr-2" href="#" aria-label="View profile of {{ article.author }}">{{ article.author }}</a>
 
-                <small class="text-muted">{{ article.date_posted }} | {{ article.comments.count }} comments</small>
+                <small class="text-muted">{{ article.date_posted }} | {{ article.comments.count }} comments |
+                    <i class="fas fa-thumbs-up"></i> {{ article.likes }} |
+                    <i class="fas fa-thumbs-down"></i> {{ article.dislikes }}
+                </small>
             </div>
             <h2>
                 <a class="article-title" href="{% url 'blog-detail' article.id %}"

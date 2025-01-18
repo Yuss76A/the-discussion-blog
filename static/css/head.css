@@ -480,6 +480,20 @@ button:hover {
     /* Replace with the desired color value */
 }
 
+.read {
+    background-color: #f8f9fa;
+    /* Light grey for read notifications */
+    color: #6c757d;
+    /* Dark grey text for read */
+}
+
+.unread {
+    background-color: #fff3cd;
+    /* Light yellow for unread notifications */
+    color: #856404;
+    /* Darker text for emphasis */
+}
+
 /* Dark Mood */
 
 body.dark-mode {

@@ -71,7 +71,7 @@
 <h2 class="text-switch">Comments</h2>
 <div id="comments-section">
     {% for comment in object.comments.all %}
-    <div class="comment rounded my-2">
+    <div class="comment rounded my-2" id="comment-{{ comment.id }}">
         <strong>{{ comment.author.username }}:</strong>
         <p class="text-switch">{{ comment.content }}</p>
         <small class="text-muted">{{ comment.created_at }}</small>
@@ -101,12 +101,51 @@
                 </a>
             </div>
         </div>
+        <!-- Reply Form -->
+        <form method="POST" action="{% url 'reply-comment' comment.id %}" class="mt-2">
+            {% csrf_token %}
+            <textarea name="content" class="form-control" placeholder="Reply to this comment..." required></textarea>
+            <button type="submit" class="btn btn-primary mt-2">Reply</button>
+        </form>
+
+        <!-- Display Replies -->
+        {% for reply in comment.replies.all %}
+        <div class="reply mt-3 pl-4">
+            <!-- Indent replies for clarity -->
+            <strong>{{ reply.author.username }}:</strong>
+            <p class="text-switch">{{ reply.content }}</p>
+            <small class="text-muted">{{ reply.created_at|date:"F j, Y - H:i" }}</small>
+            <div class="d-flex justify-content-between mt-2">
+                <div>
+                    {% if reply.author == user %}
+                    <a href="{% url 'update-comment' reply.id %}" class="btn btn-info btn-sm"
+                        aria-label="Edit reply with ID {{ reply.id }}">Edit</a>
+                    <form method="POST" action="{% url 'delete-comment' reply.id %}" class="form-inline d-inline">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    </form>
+                    {% endif %}
+                </div>
+                <div>
+                    <a href="{% url 'like-comment' reply.id %}" class="btn btn-success btn-sm"
+                        aria-label="Like this reply">
+                        <i class="fas fa-thumbs-up"></i> Like ({{ reply.likes }})
+                    </a>
+                    <a href="{% url 'dislike-comment' reply.id %}" class="btn btn-danger btn-sm"
+                        aria-label="Dislike this reply">
+                        <i class="fas fa-thumbs-down"></i> Dislike ({{ reply.dislikes }})
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p class="text-switch ">No comments yet.</p>
+        {% endfor %}
     </div>
     {% empty %}
-    <p class="text-switch ">No comments yet.</p>
+    <p class="text-switch">No comments yet.</p>
     {% endfor %}
 </div>
-
 <!-- Comment Form -->
 {% if user.is_authenticated %}
 <form method="POST" action="{% url 'blog-detail' object.id %}">

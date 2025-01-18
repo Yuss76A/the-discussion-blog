@@ -26,9 +26,11 @@ class Post(models.Model):
     likes = models.IntegerField(default=0)
     dislikes = models.IntegerField(default=0)
 
+
 def __str__(self):
     """Return the title of the post as its string representation."""
     return self.title
+
 
 def get_absolute_url(self):
     """Return the URL for the detail view of the post based on its primary key."""
@@ -55,6 +57,7 @@ class Comment(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     likes = models.IntegerField(default=0)
     dislikes = models.IntegerField(default=0)
+    parent = models.ForeignKey('self', null=True, blank=True, related_name='replies', on_delete=models.CASCADE)
 
     def __str__(self):
         return f"{self.author.username}: {self.content[:20]}"
@@ -80,3 +83,14 @@ class CollaborateRequest(models.Model):
 
     def __str__(self):
         return f"Collaboration Request from {self.name}"
+
+
+class Notification(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)  # The user receiving the notification
+    message = models.CharField(max_length=255)  # The message of the notification
+    comment = models.ForeignKey(Comment, null=True, blank=True, on_delete=models.CASCADE)  # Link to the comment
+    created_at = models.DateTimeField(auto_now_add=True)  # Timestamp of when the notification was created
+    is_read = models.BooleanField(default=False)  # Whether the notification has been read
+
+    def __str__(self):
+        return f'Notification for {self.user.username}: {self.message}'

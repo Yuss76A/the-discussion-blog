@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="text-center mt-4">Your Notifications</h2>
+
+{% if notifications %}
+<ul class=" list-unstyled">
+    {% for notification in notifications %}
+    <li class="{% if notification.is_read %}read{% else %}unread{% endif %}">
+        {{ notification.message }} <small>{{ notification.created_at|date:"F j, Y, g:i A" }}</small>
+        {% if notification.comment %}
+        <a href="{% url 'blog-detail' notification.comment.post.id %}#comment-{{ notification.comment.id }}"
+            aria-label="View your comment">
+            Go to Comment
+        </a>
+        {% else %}
+        <span>No associated comment.</span>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>You have no notifications.</p>
+{% endif %}
+{% endblock %}

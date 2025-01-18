@@ -2,13 +2,13 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.http import HttpResponse
-from .models import Post, Comment
+from .models import Post, Comment, Notification
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .forms import CommentForm, CollaborateForm
 from django.core.paginator import Paginator
-
+from django.contrib.auth.decorators import login_required
 
 # About Page
 def about(request):
@@ -400,3 +400,37 @@ def dislike_comment(request, comment_id):
     comment.save()  # Save the comment with updated dislike count
     messages.success(request, 'You disliked this comment!')  # Success message
     return redirect('blog-detail', pk=comment.post.id)  # Redirect to the post detail view
+
+
+def reply_comment(request, comment_id):
+    parent_comment = get_object_or_404(Comment, id=comment_id)
+    
+    if request.method == 'POST':
+        content = request.POST.get('content')
+        if content:
+            new_comment = Comment(
+                content=content,
+                author=request.user,
+                post=parent_comment.post,
+                parent=parent_comment
+            )
+            new_comment.save()
+            
+            # Create a notification for the original comment's author
+            if parent_comment.author != request.user:  # Avoid notifying the reply author
+                Notification.objects.create(
+                    user=parent_comment.author,
+                    message=f"{request.user.username} replied to your comment: '{parent_comment.content}'",
+                    comment=parent_comment
+                )
+
+            messages.success(request, 'Your reply has been posted!')
+            return redirect('blog-detail', pk=parent_comment.post.id)
+    
+    return redirect('blog-detail', pk=parent_comment.post.id)
+
+
+@login_required
+def notifications_view(request):
+    notifications = Notification.objects.filter(user=request.user).order_by('-created_at')
+    return render(request, 'blog/notifications.html', {'notifications': notifications})

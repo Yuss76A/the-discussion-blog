@@ -35,7 +35,8 @@
             <a class="author-link" href="#"
                 aria-label="View profile of {{ object.author.username }}">{{ object.author.username }}</a>
             <!-- Assuming 'username' displays -->
-            <small class="text-muted">on {{ object.date_posted|date:"F j, Y" }}</small>
+            <small class="text-muted">on {{ object.date_posted|date:"F j, Y" }} | {{ object.comments.count }}
+                comments</small>
         </div>
 
         <h2>

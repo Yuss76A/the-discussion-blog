@@ -26,7 +26,7 @@
             <div class="article-metadata">
                 <a class="mr-2" href="#" aria-label="View profile of {{ article.author }}">{{ article.author }}</a>
 
-                <small class="text-muted">{{ article.date_posted }}</small>
+                <small class="text-muted">{{ article.date_posted }} | {{ article.comments.count }} comments</small>
             </div>
             <h2>
                 <a class="article-title" href="{% url 'blog-detail' article.id %}"

@@ -9,9 +9,8 @@
         <div class="notification-message">
             <span class="notification-text">{{ notification.message }}</span>
             <small class="notification-timestamp">{{ notification.created_at|date:"F j, Y, g:i A" }}</small>
-            <a href="{% url 'delete_notification' notification.id %}" class="delete-notification"
-                aria-label="Delete this notification"
-                onclick="return confirm('Are you sure you want to delete this notification?');">
+            <a href="#" class="delete-notification" aria-label="Delete this notification"
+                data-id="{{ notification.id }}" onclick="confirmDeletion(event)">
                 Delete
             </a>
         </div>
@@ -29,4 +28,12 @@
 {% else %}
 <p>You have no notifications.</p>
 {% endif %}
+<!-- Confirmation Modal -->
+<div id="confirmationModal" class="modal">
+    <div class="modal-content">
+        <p>Are you sure you want to delete this notification?</p>
+        <button id="confirmDelete">Yes, Delete</button>
+        <button id="cancelDelete">Cancel</button>
+    </div>
+</div>
 {% endblock %}

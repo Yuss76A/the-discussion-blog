@@ -27,4 +27,30 @@ document.addEventListener('DOMContentLoaded', function () {
             localStorage.setItem('theme', 'light'); // Save preference
         }
     });
+
+    // Handle delete notification confirmation
+    const deleteLinks = document.querySelectorAll('.delete-notification');
+
+    deleteLinks.forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent the default action
+
+            const notificationId = this.getAttribute('data-id'); // Get the ID from the data attribute
+
+            // Show the confirmation modal
+            const confirmationModal = document.getElementById('confirmationModal');
+            confirmationModal.style.display = 'block';
+
+            // Confirm delete event
+            document.getElementById('confirmDelete').onclick = function () {
+                // Redirect to the delete URL
+                window.location.href = `/notifications/delete/${notificationId}/`; // Adjust if necessary
+            };
+
+            // Cancel delete event
+            document.getElementById('cancelDelete').onclick = function () {
+                confirmationModal.style.display = 'none'; // Hide modal
+            };
+        });
+    });
 });

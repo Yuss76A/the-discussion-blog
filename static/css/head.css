@@ -568,6 +568,26 @@ button:hover {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Notification DOT Bellow the notification button */
+.notification-dot {
+    color: red;
+    /* Color of the dot */
+    margin-left: 5px;
+    /* Space between the text and the dot */
+    font-size: 1.5em;
+    /* Adjust size to your preference */
+}
+
+.visible {
+    display: inline;
+    /* Show the dot when notifications exist */
+}
+
+.hidden {
+    display: none;
+    /* Hide the dot when there are no notifications */
+}
+
 /* Dark Mood */
 
 body.dark-mode {

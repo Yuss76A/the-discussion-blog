@@ -62,8 +62,11 @@
                                 aria-label="Logout of your account">Logout</a>
                             <a class="nav-item nav-link" href="{% url 'notifications' %}" id="auth-links"
                                 aria-label="View your notifications">
-                                Notifications <span class="badge badge-danger">{{ notifications_count }}</span>
-                                <!-- Notification Badge -->
+                                Notifications
+                                {% if unread_count > 0 %}
+                                <span class="notification-dot visible">●</span>
+                                <!-- Only shows the dot if there are unread notifications -->
+                                {% endif %}
                             </a>
                             {% else %}
                             <a class="nav-item nav-link" href="{% url 'login' %}" id="auth-links"

@@ -82,6 +82,11 @@ class PostListView(ListView):
         """
         context = super().get_context_data(**kwargs)
         context['trending_posts'] = Post.objects.order_by('?')[:5]  # Fetch trending posts
+
+
+        # Add unread_notification count here
+        context['unread_count'] = Notification.objects.filter(user=self.request.user, is_read=False).count()
+        
         return context
 
 
@@ -432,8 +437,20 @@ def reply_comment(request, comment_id):
 
 @login_required
 def notifications_view(request):
+    # Fetch all notifications for the logged-in user, ordered by creation date
     notifications = Notification.objects.filter(user=request.user).order_by('-created_at')
-    return render(request, 'blog/notifications.html', {'notifications': notifications})
+    
+    # Calculate the unread notifications count
+    unread_count = notifications.filter(is_read=False).count()  # Count of unread notifications
+
+    # Optionally, mark notifications as read
+    notifications.update(is_read=True)  # Mark all as read when accessing here
+    
+    # Pass notifications and unread_count to the template
+    return render(request, 'blog/notifications.html', {
+        'notifications': notifications,
+        'unread_count': unread_count,  # Pass the unread count to the template
+    })
 
 
 @login_required

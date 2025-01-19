@@ -53,4 +53,12 @@ document.addEventListener('DOMContentLoaded', function () {
             };
         });
     });
+
+    // This function will hide alert messages after a specified timeout
+    setTimeout(function () {
+        const messages = document.querySelectorAll('.alert'); // Select all alert messages
+        messages.forEach(function (message) {
+            message.style.display = 'none'; // Hide each alert message
+        });
+    }, 10000);
 });

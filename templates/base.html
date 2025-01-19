@@ -189,17 +189,6 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
     <script src="{% static 'js/theme-toggle.js' %}"></script>
-    <!-- Script to automatically hide success messages after 10 seconds -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            setTimeout(function () {
-                const messages = document.querySelectorAll('.alert');
-                messages.forEach(function (message) {
-                    message.style.display = 'none';
-                });
-            }, 10000);
-        });
-    </script>
 </body>
 
 </html>

@@ -12,7 +12,7 @@
                     <input class="form-control" type="search" name="search" placeholder="Search for posts..."
                         aria-label="Search">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        <button class="btn" type="submit">Search</button>
                     </div>
                 </div>
             </div>
@@ -35,9 +35,8 @@
                 <a class="article-title" href="{% url 'blog-detail' article.id %}"
                     aria-label="Read the article titled '{{ article.title }}'">{{ article.title }}</a>
             </h2>
-
+            <hr>
             <p class="article-content text-switch">{{ article.content|truncatewords:30 }}</p>
-
         </div>
         <br>
     </article>

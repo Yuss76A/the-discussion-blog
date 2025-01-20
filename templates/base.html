@@ -64,12 +64,12 @@
                                 aria-label="View your notifications">
                                 Notifications
                                 {% if unread_count > 0 %}
-                                <span class="notification-dot visible">●</span>
+                                <span class="notification-dot visible ml-5">●</span>
                                 <!-- Only shows the dot if there are unread notifications -->
                                 {% endif %}
                             </a>
                             {% else %}
-                            <a class="nav-item nav-link" href="{% url 'login' %}" id="auth-links"
+                            <a class=" nav-item nav-link" href="{% url 'login' %}" id="auth-links"
                                 aria-label="Login to your account">Login</a>
                             <a class="nav-item nav-link" href="{% url 'register' %}" id="auth-links"
                                 aria-label="Register a new account">Register</a>
@@ -106,9 +106,10 @@
                             aria-label="View trending posts">
                             <span class="fs-5 font-weight-bold">Trending Posts</span>
                         </a>
-                        <div class="list-group list-group-flush">
+                        <div class="list-group list-group-flush trending-title">
                             {% for post in trending_posts %}
-                            <a href="{% url 'blog-detail' post.id %}" class="list-group-item list-group-item-action"
+                            <a href="{% url 'blog-detail' post.id %}"
+                                class="list-group-item list-group-item-action trending-title"
                                 aria-label="Read details about {{ post.title }}">
                                 <div class="d-flex justify-content-between">
                                     <strong class="trending-title mb-1">{{ post.title }}</strong>

@@ -12,7 +12,7 @@
                 <input class="form-control" type="search" name="search" placeholder="Search for posts..."
                     aria-label="Search">
                 <div class="input-group-append">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <button class="btn" type="submit">Search</button>
                 </div>
             </div>
         </div>
@@ -44,6 +44,7 @@
                 aria-label="Read the article titled '{{ object.title }}'">{{ object.title }}</a>
             <!-- Link to detail view -->
         </h2>
+        <hr>
         <p class="article-content">{{ object.content }}</p> <!-- Display shortened content -->
         <div class="d-flex justify-content-between mt-3">
             <!-- Left Side: Edit and Delete buttons -->
@@ -75,6 +76,7 @@
 <h2 class="text-switch">Comments</h2>
 <div id="comments-section">
     {% for comment in object.comments.all %}
+    {% if comment.parent is None %}
     <div class="comment rounded my-2" id="comment-{{ comment.id }}">
         <strong>{{ comment.author.username }}:</strong>
         <p class="text-switch">{{ comment.content }}</p>
@@ -146,6 +148,7 @@
         <p class="text-switch ">No comments yet.</p>
         {% endfor %}
     </div>
+    {% endif %}
     {% empty %}
     <p class="text-switch">No comments yet.</p>
     {% endfor %}

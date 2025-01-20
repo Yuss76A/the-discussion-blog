@@ -64,11 +64,13 @@ ul {
 /* Styles article titles with color and font weight */
 .article-title {
     color: #000000;
-    font-weight: 600;
-    font-size: 1.8rem;
+    font-weight: bold;
+    font-size: 1.4rem;
     text-decoration: none;
     white-space: normal;
     overflow-wrap: break-word;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Changes color and adds underline for article titles on hover */
@@ -296,9 +298,11 @@ button:hover {
 
 /* Comments Delete Button */
 .btn {
+    font-size: 12px;
     width: auto;
     padding: .375rem .75rem;
 }
+
 
 .comment {
     max-width: 100%;
@@ -572,10 +576,14 @@ button:hover {
 .notification-dot {
     color: red;
     /* Color of the dot */
-    margin-left: 5px;
-    /* Space between the text and the dot */
     font-size: 1.5em;
-    /* Adjust size to your preference */
+    /* Size of the dot */
+    display: none;
+    /* Initially hidden */
+    margin-top: 5px;
+    /* Space above the dot */
+    line-height: 1.2;
+    vertical-align: middle;
 }
 
 .visible {

@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-<h2 class="text-center mt-4">Your Notifications</h2>
+<h2 class="text-center text-switch mt-4">Your Notifications</h2>
 
 {% if notifications %}
 <ul class="notification-list list-unstyled">
@@ -26,7 +26,7 @@
     {% endfor %}
 </ul>
 {% else %}
-<p>You have no notifications.</p>
+<p class="text-switch">You have no notifications.</p>
 {% endif %}
 <!-- Confirmation Modal -->
 <div id="confirmationModal" class="modal">

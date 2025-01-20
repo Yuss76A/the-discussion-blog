@@ -8,7 +8,7 @@
     <div class="content-section p-4 bg-light rounded shadow-sm">
         <h2 class="text-center text-danger">Confirm Post Deletion</h2>
 
-        <form action="" method="post">
+        <form action="{% url 'blog-delete' object.id %}" method="post">
             {% csrf_token %}
             <fieldset>
                 <legend class="border-bottom mb-4">Delete Post</legend>

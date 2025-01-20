@@ -50,19 +50,23 @@
             <div>
                 {% if object.author == user %}
                 <a class="btn btn-outline-success" href="{% url 'blog-update' object.id %}"
-                    aria-label="Edit the post titled '{{ object.title }}'">Edit Post</a>
+                    aria-label="Edit the post titled '{{ object.title }}'">
+                    <i class="fas fa-pencil-alt"></i> <!-- Pencil icon for Edit -->
+                </a>
                 <a class="btn btn-outline-danger" href="{% url 'blog-delete' object.id %}"
-                    aria-label="Delete the post titled '{{ object.title }}'">Delete Post</a>
+                    aria-label="Delete the post titled '{{ object.title }}'">
+                    <i class="fas fa-trash"></i> <!-- Trash icon for Delete -->
+                </a>
                 {% endif %}
             </div>
 
             <!-- Right Side: Like and Dislike buttons -->
             <div>
                 <a href="{% url 'like-post' object.id %}" class="btn btn-success mr-2" aria-label="Like this post">
-                    <i class="fas fa-thumbs-up"></i> Like ({{ object.likes }})
+                    <i class="fas fa-thumbs-up"></i>({{ object.likes }})
                 </a>
                 <a href="{% url 'dislike-post' object.id %}" class="btn btn-danger" aria-label="Dislike this post">
-                    <i class="fas fa-thumbs-down"></i> Dislike ({{ object.dislikes }})
+                    <i class="fas fa-thumbs-down"></i>({{ object.dislikes }})
                 </a>
             </div>
         </div>

@@ -112,22 +112,19 @@ class PostDetailView(LoginRequiredMixin, DetailView):
     context_object_name = 'post'  
 
     def get_context_data(self, **kwargs):
-        """
-        Add comments and trending posts to the context.
-
-        This method extends the default context data with comments and a small list of
-        trending posts.
-
-        Args:
-            **kwargs: Additional context arguments.
-
-        Returns:
-            dict: The updated context data, including comments and trending posts.
-        """
         context = super().get_context_data(**kwargs)
-        context['comments'] = self.object.comments.all()
-        context['trending_posts'] = Post.objects.order_by('?')[:5] # Include trending posts
-        context['comment_form'] = CommentForm()
+        comments = self.object.comments.all().order_by('-created_at')  
+
+        # Set up pagination for comments
+        paginator = Paginator(comments, 6)  # Display 6 comments per page
+        page_number = self.request.GET.get('page')  # Get the current page number from the GET parameters
+        page_comments = paginator.get_page(page_number)  # Get the comments for that page
+
+        # Add to context
+        context['comments'] = page_comments  # Pass paginated comments to the context
+        context['trending_posts'] = Post.objects.order_by('?')[:5]  # Include trending posts
+        context['comment_form'] = CommentForm()  # Add the comment form
+        context['paginator'] = paginator  # Useful for pagination controls in the template
         return context
 
     def post(self, request, *args, **kwargs):

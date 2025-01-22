@@ -1,26 +1,30 @@
-{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
+{% load static %}
 
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <!-- Metadata for SEO and page information -->
-    <meta name="description" content="Discussion Room - A vibrant forum for engaging discussions, 
-    sharing knowledge, and connecting with others. Join our community!">
-    <meta name="keywords" content="forum, discussion, community, 
-    knowledge sharing, engagement, topics, conversations">
+    <meta name="description"
+        content="Discussion Room - A vibrant forum for engaging discussions, sharing knowledge, and connecting with others. Join our community!">
+    <meta name="keywords" content="forum, discussion, community, knowledge sharing, engagement, topics, conversations">
     <meta name="author" content="Yusein Ali">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <link rel="stylesheet" href="{% static 'css/head.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{% static 'favicon/favicon.png' %}">
 
+    <title>{% block title %}Discussion Room{% endblock %}</title>
 </head>
 
 <!--Body Section-->

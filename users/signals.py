@@ -8,7 +8,9 @@ from .models import Account
 def create_account(sender, instance, created, **kwargs):
     """
     Create an Account instance for a newly created User.
-    Triggered when a User instance is saved and if it's a new instance.
+
+    This signal is triggered when a User instance is saved and if it's a new instance.
+    It creates a corresponding Account instance automatically upon user registration.
     """
     if created:
         Account.objects.create(user=instance)  
@@ -18,6 +20,8 @@ def create_account(sender, instance, created, **kwargs):
 def save_account(sender, instance, **kwargs):
     """
     Save the Account instance whenever the User instance is saved.
-    This keeps the related Account in sync with the User's data.
+
+    This keeps the related Account in sync with the User's data, ensuring that any updates 
+    to the User instance are reflected in the corresponding Account instance.
     """
     instance.account.save()  

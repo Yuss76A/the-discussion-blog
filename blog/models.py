@@ -11,11 +11,14 @@ class Post(models.Model):
         title (CharField): The title of the post, limited to 200 characters.
         content (TextField): The main content of the post.
         date_posted (DateTimeField): The date and time when the post was published, 
-        automatically set to the current date and time when created.
+                                      automatically set to the current date and time when created.
         author (ForeignKey): A reference to the User model, indicating the author of the post.
-        This relationship allows for cascading deletes; if a user is deleted,
-        their posts will also be removed.
-        Methods:
+                             This relationship allows for cascading deletes; if a user is deleted,
+                             their posts will also be removed.
+        likes (IntegerField): The number of likes for the post, default is 0.
+        dislikes (IntegerField): The number of dislikes for the post, default is 0.
+
+    Methods:
         __str__(): Returns the title of the post as a string representation.
         get_absolute_url(): Returns the URL to access the detailed view of the post.
     """
@@ -43,13 +46,18 @@ class Comment(models.Model):
 
     Attributes:
         post (ForeignKey): A reference to the associated Post object.
-                           This creates a one-to-many relationship where a post can have multiple comments.
         author (ForeignKey): A reference to the User object representing the author of the comment.
         content (TextField): The textual content of the comment.
-        created_at (DateTimeField): The date and time when the comment was created; automatically set to now.
+        created_at (DateTimeField): The date and time when the comment was created; 
+                                     automatically set to now.
+        likes (IntegerField): The number of likes for the comment, default is 0.
+        dislikes (IntegerField): The number of dislikes for the comment, default is 0.
+        parent (ForeignKey, optional): A self-referencing ForeignKey linking to another 
+                                       Comment object (for replies).
 
     Methods:
-        __str__(): Returns a string representation of the comment, displaying the author's username and a truncated version of the content.
+        __str__(): Returns a string representation of the comment, displaying the author's 
+                    username and a truncated version of the content.
     """
     post = models.ForeignKey(Post, related_name='comments', on_delete=models.CASCADE)
     author = models.ForeignKey(User, on_delete=models.CASCADE)

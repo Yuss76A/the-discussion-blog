@@ -1,6 +1,14 @@
+"""
+URL routing for the blog application.
+
+This module defines the URL patterns for navigating various views in the 
+blog application, including post management, comments, notifications, 
+and user interactions.
+"""
+
 from django.urls import path
-from . import views
 from django.contrib.auth import views as auth_views
+from . import views
 from .views import (
     PostListView, 
     PostDetailView, 

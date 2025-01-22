@@ -20,7 +20,8 @@ def register_view(request):
         request: The HTTP request object.
 
     Returns:
-        Rendered template for registration or redirects to the login page on success.
+       Rendered template for registration or redirects to the login page on success.
+       If the form is invalid, it re-renders the form with error messages.
     """
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
@@ -67,7 +68,7 @@ def update_account(request):
 
     Returns:
         Rendered template for the account update form, or redirects to the account page
-        on successful update.
+        on successful update. If the form is invalid, it re-renders the form with error messages.
     """
     user_account = Account.objects.get(user=request.user)
     if request.method == 'POST':
@@ -75,7 +76,8 @@ def update_account(request):
         account_form = AccountUpdateForm(request.POST, request.FILES, instance=request.user.account)  
 
         if user_form.is_valid() and account_form.is_valid():
-            user_form.save() 
+            updated_user = user_form.save(commit=False)
+            updated_user.save()
             account_form.save()  
             messages.success(request, 'Your account has been successfully updated!')  
             return redirect('account') 

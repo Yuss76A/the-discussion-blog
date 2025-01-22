@@ -7,8 +7,13 @@ class CollaborateRequestAdmin(admin.ModelAdmin):
     Admin panel configuration for the CollaborateRequest model.
 
     This admin class customizes the display of the CollaborateRequest entries
-    in the Django admin interface. It allows filtering and searching by the 
-    requestor's name and email.
+    in the Django admin interface.
+
+    Attributes:
+        list_display (tuple): The fields to display in the list view.
+        search_fields (tuple): The fields that can be searched in the list view.
+
+    This allows filtering and searching by the requestor's name and email.
     """
     list_display = ('name', 'email', 'created_at')
     search_fields = ('name', 'email')

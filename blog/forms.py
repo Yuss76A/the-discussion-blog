@@ -11,8 +11,9 @@ class CommentForm(forms.ModelForm):
     by the Comment model.
 
     Attributes:
-        content (Textarea): A textarea widget for entering comment content, with placeholder text.
-    
+        content (Textarea): A textarea widget for entering comment content, 
+                             with placeholder text and specified row height.
+
     Meta:
         model (Comment): The model this form is associated with.
         fields (list): List containing the fields from the Comment model to display.
@@ -36,7 +37,8 @@ class CollaborateForm(forms.ModelForm):
     Attributes:
         name (CharField): The name of the user making the request.
         email (EmailField): The email address of the user.
-        message (Textarea): A textarea widget for entering the message, with placeholder text and row height.
+        message (Textarea): A textarea widget for entering the message, 
+                            with placeholder text and specified row height.
     
     Meta:
         model (CollaborateRequest): The model this form is associated with.

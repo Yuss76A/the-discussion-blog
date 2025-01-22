@@ -1,14 +1,15 @@
-from django.shortcuts import render, redirect, get_object_or_404
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth import login
-from django.http import HttpResponse
-from .models import Post, Comment, Notification
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib import messages
-from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from .forms import CommentForm, CollaborateForm
-from django.core.paginator import Paginator
+from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.core.paginator import Paginator
+from django.http import HttpResponse
+from django.shortcuts import render, redirect, get_object_or_404
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+
+from .forms import CommentForm, CollaborateForm
+from .models import Post, Comment, Notification
 
 # About Page
 def about(request):
@@ -370,41 +371,111 @@ def support_and_collaboration(request):
 
 # Like a post
 def like_post(request, post_id):
-    post = get_object_or_404(Post, id=post_id)  # Get the post object
-    post.likes += 1  # Increment the likes
-    post.save()  # Save the post with the updated like count
-    messages.success(request, 'You liked this post!')  # Optional success message
-    return redirect('blog-detail', pk=post_id)  # Redirect back to the post detail view
+    """
+    Like a specific post.
+
+    Increments the like count of the post specified by post_id. Upon successfully liking
+    the post, a success message is displayed, and the user is redirected to 
+    the detail view of the post.
+
+    Args:
+        request: The HTTP request object.
+        post_id: The ID of the post to be liked.
+
+    Returns:
+        HttpResponse: Redirects to the blog detail view for the specified post.
+    """
+    post = get_object_or_404(Post, id=post_id)
+    post.likes += 1
+    post.save()
+    messages.success(request, 'You liked this post!')
+    return redirect('blog-detail', pk=post_id)
 
 
 # Dislike a post
 def dislike_post(request, post_id):
-    post = get_object_or_404(Post, id=post_id)  # Get the post object 
-    post.dislikes += 1  # Increment the dislikes
-    post.save()  # Save the post with the updated dislike count
-    messages.success(request, 'You disliked this post!')  # Optional success message
-    return redirect('blog-detail', pk=post_id)  # Redirect back to the post detail view
+    """
+    Dislike a specific post.
+
+    Increments the dislike count of the post specified by post_id. Upon successfully disliking
+    the post, a success message is displayed, and the user is redirected to 
+    the detail view of the post.
+
+    Args:
+        request: The HTTP request object.
+        post_id: The ID of the post to be disliked.
+
+    Returns:
+        HttpResponse: Redirects to the blog detail view for the specified post.
+    """
+    post = get_object_or_404(Post, id=post_id) 
+    post.dislikes += 1
+    post.save()
+    messages.success(request, 'You disliked this post!')
+    return redirect('blog-detail', pk=post_id)
 
 
 # Like a comment
 def like_comment(request, comment_id):
-    comment = get_object_or_404(Comment, id=comment_id)  # Get the comment object
-    comment.likes += 1  # Increment likes
-    comment.save()  # Save the comment with updated like count
-    messages.success(request, 'You liked this comment!')  # Success message
-    return redirect('blog-detail', pk=comment.post.id)  # Redirect to the post detail view
+    """
+    Like a specific comment.
+
+    Increments the like count for the comment specified by comment_id. Upon successfully liking
+    the comment, a success message is displayed, and the user is redirected to the detail view
+    of the associated post.
+
+    Args:
+        request: The HTTP request object.
+        comment_id: The ID of the comment to like.
+
+    Returns:
+        HttpResponse: Redirects to the blog detail view for the associated post.
+    """
+    comment = get_object_or_404(Comment, id=comment_id)
+    comment.likes += 1
+    comment.save()
+    messages.success(request, 'You liked this comment!')
+    return redirect('blog-detail', pk=comment.post.id)
 
 
 # Dislike a comment
 def dislike_comment(request, comment_id):
-    comment = get_object_or_404(Comment, id=comment_id)  # Get the comment object
-    comment.dislikes += 1  # Increment dislikes
-    comment.save()  # Save the comment with updated dislike count
-    messages.success(request, 'You disliked this comment!')  # Success message
-    return redirect('blog-detail', pk=comment.post.id)  # Redirect to the post detail view
+    """
+    Dislike a specific comment.
+
+    Increments the dislike count for the comment specified by comment_id. Upon successfully disliking
+    the comment, a success message is displayed, and the user is redirected to the detail view 
+    of the associated post.
+
+    Args:
+        request: The HTTP request object.
+        comment_id: The ID of the comment to dislike.
+
+    Returns:
+        HttpResponse: Redirects to the blog detail view for the associated post.
+    """
+    comment = get_object_or_404(Comment, id=comment_id)
+    comment.dislikes += 1
+    comment.save()
+    messages.success(request, 'You disliked this comment!')
+    return redirect('blog-detail', pk=comment.post.id)
 
 
 def reply_comment(request, comment_id):
+    """
+    Reply to a specific comment.
+
+    Allows the logged-in user to submit a reply to the comment identified by comment_id.
+    If the form is submitted successfully, a new comment is created linking it to the parent comment,
+    and a notification is sent to the original comment's author.
+
+    Args:
+        request: The HTTP request object.
+        comment_id: The ID of the comment being replied to.
+
+    Returns:
+        HttpResponse: Redirects to the blog detail view for the associated post.
+    """
     parent_comment = get_object_or_404(Comment, id=comment_id)
     
     if request.method == 'POST':
@@ -419,7 +490,7 @@ def reply_comment(request, comment_id):
             new_comment.save()
             
             # Create a notification for the original comment's author
-            if parent_comment.author != request.user:  # Avoid notifying the reply author
+            if parent_comment.author != request.user:
                 Notification.objects.create(
                     user=parent_comment.author,
                     message=f"{request.user.username} replied to your comment: '{parent_comment.content}'",
@@ -434,25 +505,49 @@ def reply_comment(request, comment_id):
 
 @login_required
 def notifications_view(request):
-    # Fetch all notifications for the logged-in user, ordered by creation date
+    """
+    View to display user notifications.
+
+    Fetches and displays notifications for the logged-in user, ordered by creation date.
+    Also marks all notifications as read.
+
+    Args:
+        request: The HTTP request object.
+
+    Returns:
+        HttpResponse: Renders the notifications page, passing the notifications and unread count to the template.
+    """
+
     notifications = Notification.objects.filter(user=request.user).order_by('-created_at')
     
-    # Calculate the unread notifications count
-    unread_count = notifications.filter(is_read=False).count()  # Count of unread notifications
+    unread_count = notifications.filter(is_read=False).count()
 
-    # Optionally, mark notifications as read
-    notifications.update(is_read=True)  # Mark all as read when accessing here
+    
+    notifications.update(is_read=True)  
     
     # Pass notifications and unread_count to the template
     return render(request, 'blog/notifications.html', {
         'notifications': notifications,
-        'unread_count': unread_count,  # Pass the unread count to the template
+        'unread_count': unread_count,
     })
 
 
 @login_required
 def delete_notification(request, notification_id):
+    """
+    Delete a specific notification.
+
+    Retrieves the notification specified by notification_id and deletes it if it belongs to the 
+    logged-in user. A success message is displayed after deletion.
+
+    Args:
+        request: The HTTP request object.
+        notification_id: The ID of the notification to delete.
+
+    Returns:
+        HttpResponse: Redirects to the notifications view after deletion.
+    """
     notification = get_object_or_404(Notification, id=notification_id, user=request.user)
-    notification.delete()  # Delete the notification
-    messages.success(request, 'Notification deleted successfully.')  # A success message
-    return redirect('notifications')  # Redirect back to notifications
+    notification.delete()
+    messages.success(request, 'Notification deleted successfully.')
+    return redirect('notifications')

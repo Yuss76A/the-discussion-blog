@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-
+{% load static %}
 <div class="container mt-4">
     <!-- Search Bar: Placed above the posts -->
     <div class="mt-4">
@@ -21,7 +21,14 @@
     {% for article in articles %}
     <article class="media content-section mt-4">
         <!-- Assuming 'profile' is an attribute of 'author' that contains an image -->
-        <img class="rounded-circle article-img" src="{{ article.author.account.avatar.url }}" alt="Account Picture">
+        <div class="d-flex justify-content-center">
+            {% if "default_avatar" in article.author.account.avatar.url %}
+            <img class="rounded-circle profile-img" src="{% static 'images/default.jpg' %}" alt="placeholder">
+            {% else %}
+            <img class="rounded-circle profile-img" src="{{ article.author.account.avatar.url }}"
+                alt="User Account Image">
+            {% endif %}
+        </div>
         <div class="media-body">
             <div class="article-metadata">
                 <a class="mr-2" href="#" aria-label="View profile of {{ article.author }}">{{ article.author }}</a>

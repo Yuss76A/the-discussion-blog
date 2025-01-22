@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(235, 223, 223);
+    background-color: rgb(230, 230, 250);
     color: #444444;
     margin-top: 5rem;
     /* background-size: contain; */
@@ -86,8 +86,8 @@ a.article-title:hover {
 
 /* Sets a fixed size for article images */
 .article-img {
-    height: 70px;
-    width: 70px;
+    width: 80px;
+    height: 80px;
     margin-right: 20px;
 }
 
@@ -155,6 +155,7 @@ svg {
     height: 50px;
 }
 
+/* Navbar Auth-links CSS Style */
 #auth-links {
     font-family: 'Poppins', sans-serif;
     position: relative;
@@ -274,13 +275,6 @@ button:hover {
     transform: translateY(-2px);
 }
 
-/* Styles for the profile image */
-#profile-img {
-    margin-top: 20px;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-    border-radius: 70px;
-}
-
 /* Project Forum Name CSS Code */
 .discussion-room {
     color: white;
@@ -328,13 +322,13 @@ button:hover {
 .navbar-text.welcome-message {
     color: white;
     transition: color 0.3s ease;
-    /* Smooth transition effect */
+
 }
 
 /* User Name in the Navbar Hover Effect */
 .navbar-text.welcome-message:hover {
     color: darkgray;
-    /* Change color on hover */
+
 }
 
 /* Discussion Title CSS */
@@ -379,9 +373,8 @@ button:hover {
 
 .custom-textarea {
     height: 200px;
-    /* Set specific height */
     resize: none;
-    /* Prevent resizing if desired */
+
 }
 
 /* Advertisment Window CSS Style */
@@ -395,20 +388,19 @@ button:hover {
 /* CSS Style for the text in the advertisment window */
 .link-custom {
     color: inherit !important;
-    /* Force the inherited color */
     text-decoration: none !important;
-    /* Force no underline */
+
 }
 
 /* Footer Navbar CSS Style */
 .nav-padding-top {
     padding-top: 20px;
-    /* Padding for the top of the navbar */
+
 }
 
 .nav-item-margin {
     margin-right: 20px;
-    /* Margin for separating nav items */
+
 }
 
 /* Additional styles for the nav items if needed */
@@ -429,7 +421,7 @@ button:hover {
 /* Post Detail.html file delete button */
 .form-inline {
     display: inline;
-    /* Ensures the form displays inline */
+
 }
 
 /* Create a New Post border / Update Comment border */
@@ -439,11 +431,14 @@ button:hover {
 
 /* Account Profile IMG CSS */
 .profile-img {
-    width: 150px;
-    height: 150px;
+    width: 80px;
+    /* Set the width */
+    height: 80px;
+    /* Set the height */
     border: 2px solid #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* Add white border */
     border-radius: 50%;
+    margin-right: 10px;
 }
 
 /* Post Detail Containers in the welcome Page */
@@ -462,26 +457,22 @@ button:hover {
 /* Light Mode CSS For Log in to your Account title */
 .login-title {
     color: #003366;
-    /* Set your desired color here */
+
 }
 
 /* Light Mode Styles for Comments */
 .comment {
     background-color: #f8f9fa;
-    /* Light gray background for light mode */
     color: #444444;
-    /* Dark text for light mode */
     padding: 10px;
-    /* Padding inside each comment */
     border-radius: 8px;
-    /* Rounded corners */
     margin-bottom: 10px;
-    /* Margin for spacing between comments */
+
 }
 
 .custom-primary {
     color: #000099;
-    /* Replace with the desired color value */
+
 }
 
 /* Notification.html File */
@@ -494,54 +485,49 @@ button:hover {
 .notification-item {
     padding: 15px;
     border-bottom: 1px solid #e0e0e0;
-    /* Light gray bottom border */
     transition: background-color 0.3s;
-    /* Smooth background transition on hover */
+
 }
 
 .notification-item:hover {
     background-color: #f5f5f5;
-    /* Light gray hover effect */
+
 }
 
 .read {
     background-color: #f9f9f9;
-    /* Background for read notifications */
+
 }
 
 .unread {
     background-color: #fff4e5;
-    /* Light yellow for unread notifications */
     font-weight: bold;
-    /* Make unread notifications stand out */
+
 }
 
 .notification-message {
     display: flex;
     justify-content: space-between;
-    /* Space out messages and timestamps */
+
 }
 
 .notification-text {
     font-size: 16px;
-    /* Standard text size */
+
 }
 
 .notification-timestamp {
     font-size: 12px;
-    /* Smaller size for timestamps */
     color: #888;
-    /* Light gray for timestamps */
+
 }
 
 .notification-link {
     display: inline-block;
     margin-top: 5px;
-    /* Spacing above the link */
     color: #007bff;
-    /* Bootstrap primary color for links */
     text-decoration: none;
-    /* Remove underline */
+
 }
 
 .no-comment {
@@ -575,15 +561,12 @@ button:hover {
 /* Notification DOT Bellow the notification button */
 .notification-dot {
     color: red;
-    /* Color of the dot */
     font-size: 1.5em;
-    /* Size of the dot */
     display: none;
-    /* Initially hidden */
     margin-top: 5px;
-    /* Space above the dot */
     line-height: 1.2;
     vertical-align: middle;
+
 }
 
 .visible {
@@ -658,7 +641,6 @@ input:checked+.slider:before {
 
 /* Post title and content styles */
 body.dark-mode .post-title {
-    /* Class for post content */
     color: #000000;
     background-color: #131212;
 
@@ -699,7 +681,7 @@ body.dark-mode .toggle-switch {
 /* Links in dark mode */
 body.dark-mode a {
     color: #03e9f4;
-    /* Light blue color for links */
+
 }
 
 body.dark-mode a:hover {
@@ -710,9 +692,8 @@ body.dark-mode a:hover {
 /* Ensure button colors are appropriate in dark mode */
 body.dark-mode button {
     background: #444;
-    /* Dark gray background for buttons */
     color: #ffffff;
-    /* White text for buttons */
+
 }
 
 body.dark-mode button:hover {
@@ -735,7 +716,6 @@ body.dark-mode .text-switch {
 }
 
 #profile-update-form {
-    /* Style properties */
     color: black;
 }
 
@@ -749,7 +729,6 @@ body.dark-mode .text-muted {
 
 body.dark-mode .content-section {
     background: #777575;
-    /* Dark gray background for the content section in dark mode */
     color: #171515;
     border: 1px solid #333;
 }
@@ -789,30 +768,27 @@ body.dark-mode .custom-header {
 /* Dark Mode Styles for Comments */
 body.dark-mode .comment {
     background-color: #777575;
-    /* Dark gray background for dark mode */
     color: #ffffff;
-    /* White text for better contrast */
+
 }
 
 /* Dark Mode Styles for Register File */
 body.dark-mode .form-control {
     background-color: #e7e1e1;
-    /* Darker background for input fields */
     color: rgb(19, 18, 18);
-    /* White text color inside input fields */
     border: 1px solid #444;
-    /* Border color */
+
 }
 
 /*CSS Style for update profile button*/
 #auth-links.text-black {
     color: black;
-    /* Making sure the text is black */
+
 }
 
 #auth-links.text-black:hover {
     color: black;
-    /* Ensures it stays black on hover */
+
 }
 
 /* Dark Mode CSS For Log in to your Account title */
@@ -823,46 +799,39 @@ body.dark-mode .login-title {
 /* Dark Mode Styles for Edit and Delete Buttons */
 body.dark-mode .btn-outline-success {
     background-color: #4caf50;
-    /* A nice green color */
     color: white;
-    /* Text color */
     border: 1px solid #4caf50;
-    /* Border to match background */
+
 }
 
 /* CSS Style for the Edit and Delete post buttons */
 body.dark-mode .btn-outline-success:hover {
     background-color: white;
-    /* Darker shade on hover */
     border-color: #45a049;
-    /* Match border to hover color */
+
 }
 
 body.dark-mode .btn-outline-danger {
     background-color: #f44336;
-    /* A bright red color */
     color: white;
-    /* Text color */
     border: 1px solid #f44336;
-    /* Border to match background */
+
 }
 
 body.dark-mode .btn-outline-danger:hover {
     background-color: white;
-    /* Darker shade on hover */
     border-color: #d32f2f;
-    /* Match border to hover color */
+
 }
 
 /* Dark Mode Styles for Article Title */
 body.dark-mode .article-title {
     color: black;
-    /* A lighter, softer blue for better visibility */
+
 }
 
 body.dark-mode .article-title:hover {
     color: black;
-    /* Lighter shade on hover */
     text-decoration: underline;
-    /* Underline for hover effect */
+
 }

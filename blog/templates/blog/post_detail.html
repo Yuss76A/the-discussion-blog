@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
 
 
 <!-- Search Bar: Placed above the post details -->
@@ -25,9 +26,15 @@
 {% endfor %}
 {% endif %}
 
+<!-- Blog post details including author info, content, and action buttons if the user is the author -->
 <article class="media content-section my-4 p-3 rounded shadow-sm">
-    <!-- Blog post details including author info, content, and action buttons if the user is the author -->
-    <img class="rounded-circle article-img" src="{{ object.author.account.avatar.url }}" alt="Author's Profile Picture">
+    <div class="d-flex justify-content-center">
+        {% if "default_avatar" in object.author.account.avatar.url %}
+        <img class="rounded-circle profile-img" src="{% static 'images/default.jpg' %}" alt="placeholder">
+        {% else %}
+        <img class="rounded-circle profile-img" src="{{ object.author.account.avatar.url }}" alt="User Account Image">
+        {% endif %}
+    </div>
 
     <div class="media-body ml-3">
         <div class="article-metadata">

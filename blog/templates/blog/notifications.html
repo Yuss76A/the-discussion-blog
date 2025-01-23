@@ -2,6 +2,15 @@
 {% block content %}
 <h2 class="text-center text-switch mt-4">Your Notifications</h2>
 
+<!-- Message Display Area -->
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-success" role="alert">
+    {{ message }}
+</div>
+{% endfor %}
+{% endif %}
+
 {% if notifications %}
 <ul class="notification-list list-unstyled">
     {% for notification in notifications %}

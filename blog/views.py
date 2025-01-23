@@ -117,15 +117,15 @@ class PostDetailView(LoginRequiredMixin, DetailView):
         comments = self.object.comments.all().order_by('-created_at')  
 
         # Set up pagination for comments
-        paginator = Paginator(comments, 6)  # Display 6 comments per page
-        page_number = self.request.GET.get('page')  # Get the current page number from the GET parameters
-        page_comments = paginator.get_page(page_number)  # Get the comments for that page
+        paginator = Paginator(comments, 6)
+        page_number = self.request.GET.get('page')
+        page_comments = paginator.get_page(page_number)
 
         # Add to context
-        context['comments'] = page_comments  # Pass paginated comments to the context
-        context['trending_posts'] = Post.objects.order_by('?')[:5]  # Include trending posts
-        context['comment_form'] = CommentForm()  # Add the comment form
-        context['paginator'] = paginator  # Useful for pagination controls in the template
+        context['comments'] = page_comments
+        context['trending_posts'] = Post.objects.order_by('?')[:5]
+        context['comment_form'] = CommentForm()
+        context['paginator'] = paginator
         return context
 
     def post(self, request, *args, **kwargs):

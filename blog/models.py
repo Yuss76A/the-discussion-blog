@@ -84,21 +84,38 @@ class CollaborateRequest(models.Model):
     Methods:
         __str__(): Returns a string representation of the collaboration request showing the user's name.
     """
-    name = models.CharField(max_length=100)  # Field for the user's name
-    email = models.EmailField()                # Field for the user's email
-    message = models.TextField()               # Field for the message
-    created_at = models.DateTimeField(auto_now_add=True)  # Timestamp for when the request is created
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    message = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return f"Collaboration Request from {self.name}"
 
 
 class Notification(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)  # The user receiving the notification
-    message = models.CharField(max_length=255)  # The message of the notification
-    comment = models.ForeignKey(Comment, null=True, blank=True, on_delete=models.CASCADE)  # Link to the comment
-    created_at = models.DateTimeField(auto_now_add=True)  # Timestamp of when the notification was created
-    is_read = models.BooleanField(default=False)  # Whether the notification has been read
+    """
+    Represents a notification for a user within the application.
+
+    Notifications can relate to various events, such as comments on the user's posts
+    or replies to their comments. Each notification is associated with a specific user,
+    and may include additional information based on the type of notification.
+
+    Attributes:
+        user (User): The user associated with this notification.
+        message (str): A message describing the notification.
+        comment (Comment, optional): A reference to a Comment object that this notification pertains to.
+        created_at (datetime): The timestamp when the notification was created.
+        is_read (bool): A flag indicating whether the notification has been read by the user.
+
+    Methods:
+        __str__(): Returns a string representation of the notification.
+    """
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    message = models.CharField(max_length=255)
+    comment = models.ForeignKey(Comment, null=True, blank=True, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+    is_read = models.BooleanField(default=False)
 
     def __str__(self):
         return f'Notification for {self.user.username}: {self.message}'

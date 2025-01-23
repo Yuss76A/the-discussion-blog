@@ -7,6 +7,7 @@ from django.core.paginator import Paginator
 from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
 
 from .forms import CommentForm, CollaborateForm
 from .models import Post, Comment, Notification
@@ -85,8 +86,11 @@ class PostListView(ListView):
         context['trending_posts'] = Post.objects.order_by('?')[:5]  # Fetch trending posts
 
 
-        # Add unread_notification count here
-        context['unread_count'] = Notification.objects.filter(user=self.request.user, is_read=False).count()
+       # Only get unread notification count for authenticated users
+        if self.request.user.is_authenticated:
+            context['unread_count'] = Notification.objects.filter(user=self.request.user, is_read=False).count()
+        else:
+            context['unread_count'] = 0  # Default to 0 if the user is not authenticated
         
         return context
 
@@ -114,7 +118,7 @@ class PostDetailView(LoginRequiredMixin, DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        comments = self.object.comments.all().order_by('-created_at')  
+        comments = self.object.comments.filter(parent__isnull=True).order_by('-created_at')  
 
         # Set up pagination for comments
         paginator = Paginator(comments, 6)
@@ -152,6 +156,7 @@ class PostDetailView(LoginRequiredMixin, DetailView):
             comment.author = request.user
             comment.save()
             messages.success(request, 'Your comment has been added!')
+
             return redirect('blog-detail', pk=self.object.id)
 
         # If the form is not valid, render the same page with form errors
@@ -214,13 +219,13 @@ class PostUpdateView(LoginRequiredMixin,UserPassesTestMixin, UpdateView):
 
     def form_valid(self, form):
         form.instance.author = self.request.user
+        form.save()
+        messages.success(self.request, 'Your post has been updated successfully!')
         return super().form_valid(form)
 
     def test_func(self):
         post = self.get_object()
-        if self.request.user == post.author:
-            return True
-        return False
+        return self.request.user == post.author
 
 
 # Delete post view with permissions check
@@ -236,17 +241,28 @@ class PostDeleteView(DeleteView):
         success_url: The URL to redirect to after successful deletion. 
 
     Methods:
+        delete(request, *args, **kwargs): Handles the deletion of the post and sets a success message.
         test_func(): Checks if the current user is the author of the post, 
                      returning True if so, otherwise False.
     """
     model = Post
-    success_url = '/'
+    success_url = reverse_lazy('welcome')
 
-    def test_func(self):
+    def delete(self, request, *args, **kwargs):
+        """
+        Handle the deletion of the post and notify the user.
+        """
         post = self.get_object()
-        if self.request.user == post.author:
-            return True
-        return False
+        post.delete()
+        
+        self.notify_user(request)
+        return redirect(self.success_url)
+
+    def notify_user(self, request):
+        """ 
+        Send success message to the user after deletion.
+        """
+        messages.success(request, 'Your post has been deleted!')
 
 
 # Update a comment by the author; only authorized users can edit.

@@ -50,7 +50,7 @@ class CollaborateForm(forms.ModelForm):
         widgets = {  
             'message': forms.Textarea(attrs={
                 'placeholder': 'Your message...', 
-                'rows': 6,  # Increase rows for bigger message area
-                'class': 'custom-textarea'  # Add a custom class for CSS styling
+                'rows': 6,
+                'class': 'custom-textarea'
             }),
         }

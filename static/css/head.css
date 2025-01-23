@@ -513,6 +513,7 @@ button:hover {
 
 .notification-text {
     font-size: 16px;
+    color: black;
 
 }
 
@@ -834,4 +835,15 @@ body.dark-mode .article-title:hover {
     color: black;
     text-decoration: underline;
 
+}
+
+/* Blue color for "Go to Comment" link */
+body.dark-mode .notification-link {
+    color: #007bff;
+    /* Bootstrap blue color */
+}
+
+/* Delete Button in the Notifications.html file*/
+body.dark-mode .notification-item .delete-notification {
+    color: #007bff;
 }

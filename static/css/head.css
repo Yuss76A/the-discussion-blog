@@ -580,6 +580,17 @@ button:hover {
     /* Hide the dot when there are no notifications */
 }
 
+/* Code Institute Link in the highkights.html file*/
+.text-orange {
+    color: orangered;
+}
+
+.text-orange:hover {
+    color: darkorange;
+    /* Darker shade providing a hover effect */
+    text-decoration: underline;
+}
+
 /* Dark Mood */
 
 body.dark-mode {
@@ -840,10 +851,20 @@ body.dark-mode .article-title:hover {
 /* Blue color for "Go to Comment" link */
 body.dark-mode .notification-link {
     color: #007bff;
-    /* Bootstrap blue color */
 }
 
 /* Delete Button in the Notifications.html file*/
 body.dark-mode .notification-item .delete-notification {
     color: #007bff;
+}
+
+/* Dark Mode Styles for Code Institute Link in the highlights.html file */
+body.dark-mode .text-orange {
+    color: #FFA500;
+}
+
+/* Dark Mode Hover Effect or Code Institute Link in the highlights.html file  */
+body.dark-mode .text-orange:hover {
+    color: #FF8C00;
+    text-decoration: underline;
 }

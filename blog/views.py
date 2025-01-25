@@ -64,7 +64,7 @@ class PostListView(ListView):
 
     def get_queryset(self):
         queryset = Post.objects.all().order_by('-date_posted')
-        search_query = self.request.GET.get('search', '')  # Get search query from URL parameters
+        search_query = self.request.GET.get('search', '')
         category_query = self.request.GET.get('category')
 
         if search_query:
@@ -88,14 +88,14 @@ class PostListView(ListView):
             dict: The updated context data including trending posts.
         """
         context = super().get_context_data(**kwargs)
-        context['trending_posts'] = Post.objects.order_by('?')[:5]  # Fetch trending posts
+        context['trending_posts'] = Post.objects.order_by('?')[:5]
 
 
        # Only get unread notification count for authenticated users
         if self.request.user.is_authenticated:
             context['unread_count'] = Notification.objects.filter(user=self.request.user, is_read=False).count()
         else:
-            context['unread_count'] = 0  # Default to 0 if the user is not authenticated
+            context['unread_count'] = 0
         
         return context
 

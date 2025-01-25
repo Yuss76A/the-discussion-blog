@@ -52,18 +52,18 @@
             <!-- Link to detail view -->
         </h2>
         <hr>
-        <p class="article-content">{{ object.content }}</p> <!-- Display shortened content -->
+        <p class="article-content">{{ object.content }}</p>
         <div class="d-flex justify-content-between mt-3">
             <!-- Left Side: Edit and Delete buttons -->
             <div>
                 {% if object.author == user %}
                 <a class="btn btn-outline-success" href="{% url 'blog-update' object.id %}"
                     aria-label="Edit the post titled '{{ object.title }}'">
-                    <i class="fas fa-pencil-alt"></i> <!-- Pencil icon for Edit -->
+                    <i class="fas fa-pencil-alt"></i>
                 </a>
                 <a class="btn btn-outline-danger" href="{% url 'blog-delete' object.id %}"
                     aria-label="Delete the post titled '{{ object.title }}'">
-                    <i class="fas fa-trash"></i> <!-- Trash icon for Delete -->
+                    <i class="fas fa-trash"></i>
                 </a>
                 {% endif %}
             </div>

@@ -20,12 +20,12 @@
                 <button type="submit" class="btn btn-success">Publish</button> <!-- Submit button -->
             </div>
         </form>
-
-        <div class="text-center mt-3 text-switch">
-            <small>Need to go back? <a href="{% url 'welcome' %}" aria-label="Return to the home page">Return to the
-                    Home Page</a></small>
+        <!-- Go Back button -->
+        <div class="text-center mt-3">
+            <button type="button" class="btn btn-secondary" onclick="window.history.back();"
+                aria-label="Go back to the previous page">Go Back</button>
+            <!-- Button that uses JavaScript to return to the previous page -->
         </div>
-
         <div class="mt-4 text-center text-switch">
             <h5 class="text-switch">Every new post is a new opportunity!</h5>
             <p class="text-switch"><strong>Make your voice heard!</strong></p> <!-- Motivational prompt -->

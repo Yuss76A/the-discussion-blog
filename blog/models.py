@@ -3,6 +3,20 @@ from django.contrib.auth.models import User
 from django.utils import timezone
 from django.urls import reverse
 
+
+class Category(models.Model):
+    """
+    Represents a category for blog posts.
+
+    Attributes:
+        name (CharField): The name of the category.
+    """
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+        
+
 class Post(models.Model):
     """
     Represents a blog post in the application.
@@ -28,6 +42,7 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     likes = models.IntegerField(default=0)
     dislikes = models.IntegerField(default=0)
+    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, related_name='posts')
 
 
 def __str__(self):

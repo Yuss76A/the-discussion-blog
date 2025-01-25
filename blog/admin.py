@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Comment, CollaborateRequest
+from .models import Post, Comment, CollaborateRequest, Category
 
 
 class CollaborateRequestAdmin(admin.ModelAdmin):
@@ -25,4 +25,5 @@ class CollaborateRequestAdmin(admin.ModelAdmin):
 admin.site.register(Post)
 admin.site.register(Comment)
 admin.site.register(CollaborateRequest, CollaborateRequestAdmin)
+admin.site.register(Category)
 

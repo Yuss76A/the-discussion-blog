@@ -16,6 +16,12 @@
             </div>
         </form>
     </div>
+    <!-- Message for selected category -->
+    {% if request.GET.category %}
+    <div class="alert alert-info" role="alert">
+        You are viewing posts in the category: <strong>{{ request.GET.category|title }}</strong>
+    </div>
+    {% endif %}
     <!-- Message Display Area -->
     {% if messages %}
     {% for message in messages %}
@@ -89,5 +95,4 @@
     <p class="text-muted">No articles available.</p>
     {% endif %}
 </div>
-
 {% endblock content %}

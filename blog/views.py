@@ -65,9 +65,14 @@ class PostListView(ListView):
     def get_queryset(self):
         queryset = Post.objects.all().order_by('-date_posted')
         search_query = self.request.GET.get('search', '')  # Get search query from URL parameters
-        
+        category_query = self.request.GET.get('category')
+
         if search_query:
             queryset = queryset.filter(title__icontains=search_query) | queryset.filter(content__icontains=search_query)
+
+        if category_query:
+            queryset = queryset.filter(category__name__iexact=category_query)
+
         return queryset
 
     def get_context_data(self, **kwargs):
@@ -183,7 +188,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
                           calls the parent's form_valid method.
     """
     model = Post
-    fields = ['title', 'content']
+    fields = ['title', 'content', 'category']
     success_url = '/'
 
     def form_valid(self, form):

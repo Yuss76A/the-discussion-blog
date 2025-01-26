@@ -8,7 +8,9 @@
     <div class="content-section p-4 bg-light rounded shadow-sm">
         <h2 class="text-center text-danger">Confirm Post Deletion</h2>
 
-        <form action="{% url 'blog-delete' object.id %}" method="post">
+        <form
+            action="{% url 'blog-delete' object.id %}?category={{ request.GET.category }}{% if request.GET.search %}&search={{ request.GET.search }}{% endif %}"
+            method="post">
             {% csrf_token %}
             <fieldset>
                 <legend class="border-bottom mb-4">Delete Post</legend>
@@ -17,10 +19,11 @@
             </fieldset>
 
             <div class="text-center">
-                <button class="btn btn-danger btn-lg" type="submit">Delete</button>
-                <a href="{% url 'blog-detail' object.id %}" class="btn btn-secondary btn-lg"
-                    style="margin-left: 15px;">Cancel</a>
-                <!-- Added margin to separate buttons -->
+                <button class="btn btn-danger btn-lg" type="submit" aria-label="Confirm deletion of {{ object.title }}">
+                    Delete
+                </button>
+                <a href="{% url 'blog-detail' object.id %}?category={{ request.GET.category }}{% if request.GET.search %}&search={{ request.GET.search }}{% endif %}"
+                    class="btn btn-secondary btn-lg" aria-label="Cancel post deletion">Cancel</a>
             </div>
         </form>
 

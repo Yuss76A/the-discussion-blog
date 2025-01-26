@@ -8,8 +8,8 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
-
-from .forms import CommentForm, CollaborateForm
+from .forms import CommentForm
+from django.db.models import Q
 from .models import Post, Comment, Notification
 
 # About Page
@@ -68,7 +68,7 @@ class PostListView(ListView):
         category_query = self.request.GET.get('category')
 
         if search_query:
-            queryset = queryset.filter(title__icontains=search_query) | queryset.filter(content__icontains=search_query)
+            queryset = queryset.filter(Q(title__icontains=search_query) | Q(content__icontains=search_query))
 
         if category_query:
             queryset = queryset.filter(category__name__iexact=category_query)
@@ -254,20 +254,21 @@ class PostDeleteView(DeleteView):
     success_url = reverse_lazy('welcome')
 
     def delete(self, request, *args, **kwargs):
-        """
-        Handle the deletion of the post and notify the user.
-        """
-        post = self.get_object()
-        post.delete()
+        """Handle the deletion of the post and notify the user."""
+        post = self.get_object()  # Get the post object
         
-        self.notify_user(request)
-        return redirect(self.success_url)
+        # Capture the current category and search parameters
+        current_category = request.GET.get('category', '')
+        search_query = request.GET.get('search', '')
 
-    def notify_user(self, request):
-        """ 
-        Send success message to the user after deletion.
-        """
+        post.delete()
         messages.success(request, 'Your post has been deleted!')
+
+        # Redirect with filters included
+        if current_category or search_query:
+            return redirect(f'?category={current_category}&search={search_query}')
+        else:
+            return redirect(self.success_url)
 
 
 # Update a comment by the author; only authorized users can edit.

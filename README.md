@@ -111,3 +111,21 @@ Discussion Room is a user-friendly forum application designed to facilitate enga
 
 * Keep users informed about replies to their comments, likes, and new posts relevant to their interests, encouraging them to return to the site.
 * Use notifications strategically to enhance user engagement and activity on the platform.
+
+
+### Requirements 
+
+* Landing page.
+* About section.
+* User registration and login.
+* Post creation and management.
+* Commenting functionality.
+* Categories for filtering posts.
+* Search functionality for posts.
+* Trending posts section.
+* User profile management.
+* Admin dashboard access.
+* CRUD functionality for posts and comments.
+* User notifications system.
+* Responsive design.
+* Links to social media.

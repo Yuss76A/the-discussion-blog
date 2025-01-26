@@ -47,3 +47,29 @@ Discussion Room is a user-friendly forum application designed to facilitate enga
 9. Commenting Functionality
 
 * As a user, I want to comment on posts to express my thoughts and engage in discussions with other users.
+
+
+### Admin Stories
+
+1. User Account Management
+
+* As an admin, I want to create user accounts so that new users can register and participate in discussions.
+* As an admin, I want to view a list of all user accounts so that I can manage user access and activity.
+* As an admin, I want to disable or delete user accounts so that I can remove users who violate community guidelines or no longer participate.
+
+2. Post Management
+
+* As an admin, I want to view all posts on the platform so that I can monitor discussions and ensure they align with community standards.
+* As an admin, I want to delete posts that are inappropriate or violate community guidelines so that I can maintain a respectful discussion environment.
+* As an admin, I want to edit posts to correct any misinformation or update content when necessary.
+
+3. Comment Management
+
+* As an admin, I want to view all comments made on posts so that I can ensure discussions remain constructive.
+* As an admin, I want to delete comments that are offensive or inappropriate to keep the platform safe for users.
+* As an admin, I want to manage reported comments or posts that users flag to investigate and take appropriate action.
+
+4. Moderation Tools
+
+* As an admin, I want to receive notifications about user reports on posts or comments so that I can respond promptly and uphold community standards.
+* As an admin, I want to ban users for repeat offenses to protect the community from disruptive behavior.

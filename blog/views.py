@@ -8,9 +8,9 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
-from .forms import CommentForm
+from .forms import CommentForm, CollaborateForm
 from django.db.models import Q
-from .models import Post, Comment, Notification
+from .models import Post, Comment, Notification, Category
 
 # About Page
 def about(request):
@@ -123,7 +123,8 @@ class PostDetailView(LoginRequiredMixin, DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        comments = self.object.comments.filter(parent__isnull=True).order_by('-created_at')  
+
+        comments = self.object.comments.filter(parent__isnull=True).order_by('-created_at')
 
         # Set up pagination for comments
         paginator = Paginator(comments, 6)
@@ -135,6 +136,9 @@ class PostDetailView(LoginRequiredMixin, DetailView):
         context['trending_posts'] = Post.objects.order_by('?')[:5]
         context['comment_form'] = CommentForm()
         context['paginator'] = paginator
+
+        context['category'] = Category.objects.all()
+
         return context
 
     def post(self, request, *args, **kwargs):

@@ -129,3 +129,10 @@ Discussion Room is a user-friendly forum application designed to facilitate enga
 * User notifications system.
 * Responsive design.
 * Links to social media.
+
+
+## Design Choices 
+
+### Fonts
+
+[Google Fonts](https://fonts.google.com/ "Google Fonts") The Discussion Room website utilizes [Poppins](https://fonts.google.com/specimen/Poppins) for headings, ensuring a modern and clean aesthetic, while Arial serves as the primary font for body text due to its simplicity and readability.

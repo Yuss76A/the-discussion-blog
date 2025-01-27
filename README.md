@@ -1,6 +1,6 @@
 # Discussion Room
 
-![Responsive Mockup](docs/screenshots/responsive.png)
+![Responsive Mockup](static/images/screenshots/responsive.png)
 
 
 ## Introduction
@@ -136,3 +136,148 @@ Discussion Room is a user-friendly forum application designed to facilitate enga
 ### Fonts
 
 [Google Fonts](https://fonts.google.com/ "Google Fonts") The Discussion Room website utilizes [Poppins](https://fonts.google.com/specimen/Poppins) for headings, ensuring a modern and clean aesthetic, while Arial serves as the primary font for body text due to its simplicity and readability.
+
+
+### Colours
+
+![Colour Palette](static/images/screenshots/colorpalette1.png)
+![Colour Palette](static/images/screenshots/colorpalette2.png)
+![Colour Palette](static/images/screenshots/colorpalette3.png)
+
+
+1. rgb(230, 230, 250)
+
+Purpose: Background color for the body of the website, creating a soft and inviting atmosphere.
+
+2. #444444
+
+Purpose: Primary text color for headings (h1, h2, etc.) and paragraphs (p), ensuring good readability.
+
+3. rgba(30, 15, 45, 1) and rgba(70, 50, 120, 1)
+
+Purpose: Used in the background of the .bg-steel class, providing a linear gradient effect that adds visual interest.
+
+4. #003366
+
+Purpose: Background color for the custom navbar, giving it a deep, professional look.
+
+5. #d1e7dd
+
+Purpose: Color for navigation links in the navbar, creating a clear contrast against the navbar background.
+
+6. #ffffff
+
+Purpose: Hover color for navigation links, ensuring visibility and interaction clarity.
+
+7. #fefefe
+
+Purpose: Background color for sections with the .content-section class, creating a clean and light appearance for content areas.
+
+8. #000000
+
+Purpose: Primary color for article titles, providing a strong contrast that makes the titles stand out.
+
+9. #908690
+
+Purpose: Hover color for article titles, adding a subtle change to indicate interactivity.
+
+10. #dcdcdc
+
+Purpose: Border color for .article-metadata, providing a subtle division between metadata and content.
+
+11. #f5f5f5
+
+Purpose: Background color for comments, ensuring they are distinguishable from the main content area.
+
+12. #007bff
+
+Purpose: Color for links in notifications and other emphasized text, providing a vibrant, clickable appearance.
+
+13. #6c757d
+
+Purpose: Default color for navbar links, offering a neutral tone that fits well within the overall design.
+
+14. #343a40
+
+Purpose: Default button background color, providing a dark contrasting color that highlights interactive elements.
+
+15. #495057
+
+Purpose: Button hover color, slightly lighter than the default, enhancing the visual indication when a user interacts with buttons.
+
+16. #e6e6fa
+
+Purpose: Text color for welcome messages, contributing to a lighter overall tone for user greetings.
+
+17. #121212 and #ffffff (used in dark mode styles)
+
+Purpose: Background and text colors respectively for dark mode support, ensuring sufficient contrast and readability.
+
+18. #f8f9fa
+
+Purpose: Background color for the account section and highlights, contributing to a clean and modern look.
+
+19. #03e9f4
+
+Purpose: Color used for various hover effects and highlights, providing a vibrant shade that draws attention.
+
+20. #b2c39c
+
+Purpose: Hover color for authentication links, creating an appealing visual effect when interacted with.
+
+21. #777575
+
+Background for content sections in dark mode.
+
+22. #28a745
+
+Color used for likes, visually indicating positive feedback or approval.
+
+23. #dc3545
+
+Color used for dislikes, indicating negative feedback or disapproval.
+
+24. #FFA500
+
+Color used for Code Institute promotional links, drawing attention and encouraging user interaction.
+
+## Dark Mode Specific Colors
+
+1. #000000
+
+This is used as the background color for the entire site when dark mode is activated
+
+2. Primary Text Color:
+
+#FFFFFF: This is the primary text color used in dark mode to ensure high contrast against the black background for legibility.
+
+3. Comment Background:
+
+#777575: This color is assigned to the background of comments when dark mode is active, distinguishing them from the main content.
+
+4. Highlight Color for Effects:
+
+#03e9f4: This color is often used for elements that require attention, such as links or buttons, maintaining visibility in dark mode.
+
+5. Muted Text Color:
+
+#E6E6FA: This is a subtle, softer color reserved for muted text in dark mode, providing a visual hierarchy without causing strain against the darker background.
+
+## Color Choices 
+
+Certainly! Here’s a suggested text to add to your README file regarding the color choices and a note about the potential for missing colors, along with an improvised touch to enhance the tone:
+
+Color Choices
+In developing the Discussion Room project, I've carefully selected and noted the colors used to create an engaging and visually appealing website. The goal was to design a platform that not only facilitates discussions but also captures the attention of users through thoughtful color usage.
+
+The colors chosen aim to provide a harmonious balance that enhances readability, establishes a welcoming atmosphere, and encourages interaction. Here is a comprehensive list of the colors used, along with their purposes.
+
+While I have made an effort to document all the colors in use, it’s possible that a few may have been overlooked in the process. Should any colors be missing, they will be added to future updates as we continue to enhance the user experience and aesthetic appeal of the site.
+
+By implementing this color scheme, I aspire to create a vibrant yet cohesive environment that invites users to explore, share, and engage in meaningful conversations within the community.
+
+## Color Palette 
+
+For the color palette, I used [Color Palette](https://coolors.co/).
+
+

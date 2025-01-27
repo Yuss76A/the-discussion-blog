@@ -280,4 +280,16 @@ By implementing this color scheme, I aspire to create a vibrant yet cohesive env
 
 For the color palette, I used [Color Palette](https://coolors.co/).
 
+## Icons
 
+The icons used for the site were sourced from [Font Awesome](https://fontawesome.com/ "Font Awesome")
+
+## Structure
+
+The Discussion Room provides a simple yet engaging web platform, aiming to establish its unique color scheme and style. The navigation bar includes several links, offering quick access to various sections, such as About Us, Create a Post, Home Page, Logout, and the Notifications Page.
+
+The footer features additional links for Highlights, Collaboration Requests, About the Team, and the Admin Page, ensuring users can easily find important information. 
+
+Additionally, the site includes a Trending Topics section that showcases random posts and a dedicated Advertisement Window for promotional content. Above the trending topics, users will find Categories to help them navigate discussions more effectively.
+
+To fully engage with the content—whether by commenting or posting—users must register for an account, fostering a community of committed participants. 

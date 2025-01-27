@@ -292,4 +292,52 @@ The footer features additional links for Highlights, Collaboration Requests, Abo
 
 Additionally, the site includes a Trending Topics section that showcases random posts and a dedicated Advertisement Window for promotional content. Above the trending topics, users will find Categories to help them navigate discussions more effectively.
 
-To fully engage with the content—whether by commenting or posting—users must register for an account, fostering a community of committed participants. 
+To fully engage with the content—whether by commenting or posting—users must register for an account, fostering a community of committed participants.
+
+
+### Database Models
+
+User Profile (Account):<br>
+
+| Object             | Field           |
+|--------------------|-----------------|
+|      user          |  OneToOneField  |
+|      avatar        | CloudinaryField |
+
+Post:<br>
+
+| Object         | Field           |
+|----------------|-----------------|
+|   title        |    CharField    |
+|  content       |    TextField    |
+|  author        |    ForeignKey   |
+| date_posted    |   DateTimeField |
+| category       |   ForeignKey    |
+
+Comment:<br>
+
+| Object         | Field           |
+|----------------|-----------------|
+|   content      |    TextField    |
+|    post        |    ForeignKey   |
+|    author      |    ForeignKey   |
+|  created_at    |  DateTimeField  |
+|   likes        |   IntegerField  |
+|  dislikes      |   IntegerField  |
+|   parent       |    ForeignKey   |
+
+Notification:<br>
+
+| Object         | Field           |
+|----------------|-----------------|
+|   user         |    ForeignKey   |
+|  message       |    CharField    |
+|  is_read       |    BooleanField |
+| created_at     |    DateTimeField|
+| comment        |    ForeignKey   |
+
+Category:<br>
+
+| Object         | Field           |
+|----------------|-----------------|
+|   name         |    CharField    |

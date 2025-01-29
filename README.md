@@ -407,3 +407,7 @@ Wireframes have been created using [Balsamic](https://balsamiq.com "Balsamic"). 
 
 *Reading Post Mobile Wireframe*<br>
 ![Reading Post Mobile Wireframe](static/images/screenshots/readingapostmobile.png)
+
+## Note
+
+As with many forums and web pages, the mobile wireframe reflects the layout users will see when they interact with the site on smaller screens. When viewing the forum on mobile, users will need to scroll down to access all content on the page. The design shown in the mobile wireframe illustrates the initial view, while scrolling reveals the complete set of features and discussions.

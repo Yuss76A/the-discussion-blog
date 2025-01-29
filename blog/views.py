@@ -7,7 +7,7 @@ from django.core.paginator import Paginator
 from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from django.urls import reverse_lazy
+from django.urls import reverse, reverse_lazy
 from .forms import CommentForm, CollaborateForm
 from django.db.models import Q
 from .models import Post, Comment, Notification, Category
@@ -213,17 +213,18 @@ class PostUpdateView(LoginRequiredMixin,UserPassesTestMixin, UpdateView):
     Attributes:
         model: The database model to use (Post).
         fields: The fields to be included in the form ('title' and 'content').
-        success_url: The URL to redirect to after successful update.
+        success_url: The URL to redirect to after successful update (will be overridden).
     
     Methods:
         form_valid(form): Assigns the request user as the author of the post 
                           and calls the parent's form_valid method.
+        get_success_url(): Returns the URL to redirect to after successful update.
         test_func(): Checks if the current user is the author of the post, 
                      returning True if so, otherwise False.
     """
     model = Post
     fields = ['title', 'content']
-    success_url = '/'
+
 
 
     def form_valid(self, form):
@@ -231,6 +232,10 @@ class PostUpdateView(LoginRequiredMixin,UserPassesTestMixin, UpdateView):
         form.save()
         messages.success(self.request, 'Your post has been updated successfully!')
         return super().form_valid(form)
+
+    def get_success_url(self):
+        """Redirect to the detail view of the updated post."""
+        return reverse('blog-detail', kwargs={'pk': self.object.pk})
 
     def test_func(self):
         post = self.get_object()

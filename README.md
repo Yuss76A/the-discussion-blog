@@ -341,3 +341,69 @@ Category:<br>
 | Object         | Field           |
 |----------------|-----------------|
 |   name         |    CharField    |
+
+
+
+## Wireframes
+
+Wireframes have been created using [Balsamic](https://balsamiq.com "Balsamic"). These wireframes provided an initial blueprint for the layout of my forum project. However, the design evolved and adapted throughout the development process, resulting in some changes in the final product.
+
+*Main Page Desktop Wireframe*<br>
+![Main Page Desktop Wireframe](static/images/screenshots/mainpagedesktop.png)
+
+*Main Page Mobile Wireframe*<br>
+![Main Page Mobile Wireframe](static/images/screenshots/mainpagemobile.png)
+
+*About Us Desktop Wireframe*<br>
+![About Us Desktop Wireframe](static/images/screenshots/aboutuspagedesktop.png)
+
+*About Us Mobile Wireframe*<br>
+![About Us Mobiel Wireframe](static/images/screenshots/aboutuspagemobile.png)
+
+*Create Post Desktop Wireframe*<br>
+![Create Pos Desktop Wireframe](static/images/screenshots/createapostdesktop.png)
+
+*Create Post Mobile Wireframe*<br>
+![Create Post Mobile Wireframe](static/images/screenshots/createanewpostmobile.png)
+
+*Account Page Desktop Wireframe*<br>
+![Account Page Desktop Wireframe](static/images/screenshots/accountpagedesktop.png)
+
+*Account Page Mobile Wireframe*<br>
+![Account Page Mobile Wireframe](static/images/screenshots/accountpagemobile.png)
+
+*Logged Out Window Desktop Wireframe*<br>
+![Logged Out Window Desktop Wireframe](static/images/screenshots/loggedoutdesktop.png)
+
+*Logged Out Window Mobile Wireframe*<br>
+![Logged Out Window Mobile Wireframe](static/images/screenshots/loggedoutmobile.png)
+
+*Notifications Page Desktop Wireframe*<br>
+![Notifications Page Desktop Wireframe](static/images/screenshots/notificationsdesktop.png)
+
+*Notifications Page Mobile Wireframe*<br>
+![Notifications Page Mobile Wireframe](static/images/screenshots/notificationsmobile.png)
+
+*About Me Page Desktop Wireframe*<br>
+![About Me Page Desktop Wireframe](static/images/screenshots/aboutmepagedesktop.png)
+
+*About Me Page Mobile Wireframe*<br>
+![About Me Page Mobile Wireframe](static/images/screenshots/aboutmemobile.png)
+
+*Support Page Desktop Wireframe*<br>
+![Support Page Desktop Wireframe](static/images/screenshots/supportpagedesktop.png)
+
+*Support Page Mobile Wireframe*<br>
+![Support Page Mobile Wireframe](static/images/screenshots/supportpagemobile.png)
+
+*Highlights Page Desktop Wireframe*<br>
+![Highlights Page Desktop Wireframe](static/images/screenshots/highlightspagedesktop.png)
+
+*Highlights Page Mobile Wireframe*<br>
+![Highlights Page Mobile Wireframe](static/images/screenshots/supportpagemobile.png)
+
+*Reading Post Desktop Wireframe*<br>
+![Reading Post Desktop Wireframe](static/images/screenshots/readingapostdesktop.png)
+
+*Reading Post Mobile Wireframe*<br>
+![Reading Post Mobile Wireframe](static/images/screenshots/readingapostmobile.png)

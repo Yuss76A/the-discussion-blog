@@ -226,7 +226,6 @@ class PostUpdateView(LoginRequiredMixin,UserPassesTestMixin, UpdateView):
     fields = ['title', 'content']
 
 
-
     def form_valid(self, form):
         form.instance.author = self.request.user
         form.save()
@@ -268,16 +267,32 @@ class PostDeleteView(DeleteView):
         
         # Capture the current category and search parameters
         current_category = request.GET.get('category', '')
+        print("current category in delete method = ", current_category)
         search_query = request.GET.get('search', '')
 
         post.delete()
         messages.success(request, 'Your post has been deleted!')
 
         # Redirect with filters included
-        if current_category or search_query:
-            return redirect(f'?category={current_category}&search={search_query}')
-        else:
-            return redirect(self.success_url)
+    # def get_success_url(self):
+    #     current_category = self.request.GET.get('category', '')
+    #     search_query = self.request.GET.get('search', '')
+    #     if current_category and search_query:
+    #         return reverse('category_page', kwargs={'category':
+    #             return_category})
+    #     return reverse('category_page')
+
+    # def get_success_url(self):
+        
+    #     current_category = self.request.GET.get('category', '')
+    #     print("current category in get_success_url method = ", current_category)
+    #     search_query = self.request.GET.get('search', '')
+
+    #     base_url = reverse('welcome')  
+    #     if current_category:
+    #         return f"{base_url}?category={current_category}"
+
+    #         return reverse('welcome')  
 
 
 # Update a comment by the author; only authorized users can edit.

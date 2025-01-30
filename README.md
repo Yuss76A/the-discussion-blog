@@ -411,3 +411,276 @@ Wireframes have been created using [Balsamic](https://balsamiq.com "Balsamic"). 
 ## Note
 
 As with many forums and web pages, the mobile wireframe reflects the layout users will see when they interact with the site on smaller screens. When viewing the forum on mobile, users will need to scroll down to access all content on the page. The design shown in the mobile wireframe illustrates the initial view, while scrolling reveals the complete set of features and discussions.
+
+
+## Features 
+
+### Navbar
+
+The navbar is designed to be simple and user-friendly. When a user is logged out, the left side displays the name of the forum, Discussion Room, which serves as a direct link to the home page. On the right side, there are links for Home, About Us, Login, and Register sections. This straightforward layout ensures easy navigation without any complex features, allowing users to quickly access key areas of the website.
+
+*Navbar Logged Out*<br>
+![Navbar Logged Out](static/images/screenshots/loggedoutnavbar.png)
+
+### Navbar Logged In
+
+When a user is logged in, the navbar retains the Discussion Room name on the left side, serving as a direct link back to the home page. In the center, a welcome message appears, greeting the user with "Welcome, User!" 
+
+The navbar includes links to the Home and About Us pages, accessible to both logged-in and logged-out users. Additionally, it features a Create a New Post section that allows users to initiate discussions. 
+
+Users can manage their profiles via the Account link, log out using the Logout button, and access the Notifications page to view replies to comments they have posted. This layout promotes ease of access and enhances the overall user experience.
+
+*Navbar Logged In*<br>
+![Navbar Logged In](static/images/screenshots/navbar.png)
+
+### Mobile Navbar
+
+The mobile version of the navbar features a collapsible design that enhances usability on smaller screens. When the user touches the navbar at the top of the screen, it expands downwards to reveal all sections. This functionality ensures that users can easily access important links, regardless of whether they are logged in or logged out.
+
+Both logged-out and logged-in users will see the following sections:
+
+Discussion Room: A link back to the home page.
+* Welcome Message: Displayed for logged-in users.
+* Home: Accessible to all users.
+* About Us: Accessible to all users.
+* Create a New Post: Available for logged-in users.
+* Account: Access to user profile for logged-in users.
+* Logout: Available for logged-in users.
+* Notifications: Link to see replies to comments for logged-in users.
+* This collapsible navbar format provides a clean and efficient navigation experience, making it easy for users to engage with the forum content.
+
+*Navbar Logged Out Mobile*<br>
+![Navbar Logged Out Mobile](static/images/screenshots/navbarmobile.png)
+
+*Navbar Logged In Mobile*<br>
+![Navbar Logged In Mobile](static/images/screenshots/loggedinnavbar.png)
+
+### Maine Page (Home Button)
+
+The main page of the Discussion Room is designed to display 8 posts per page, with pagination functionality to navigate between different sets of posts easily.
+
+At the top of the page, there is a search bar that allows users to search for posts using random words, titles, or phrases, enhancing content discovery.
+
+On the right side of the page, there is a Trending Posts window that showcases random posts from the forum. This section refreshes each time the user reloads the page or navigates to another page, creating an engaging experience by introducing different content continually. The Trending Posts window is visible both to logged-in users and guests; however, to access any post from this section, users must log in.
+
+At the top of the Trending Posts window, there are categories allowing users to filter posts. There are 4 categories available, each linking to the posts associated with that category, making it easier for users to find content of interest. 
+
+Below the Trending Posts window, an Advertisement Window is included, which serves as a potential future feature to help maintain the forum project. This section can display ads relevant to the user base, providing an opportunity for monetization or informative promotions. Although its implementation can be adjusted in the future, it currently serves as an example of what may enhance the user experience.
+
+*Maine Page Desktop*<br>
+![Main Page Desktop](static/images/screenshots/pagehomedesktop.png)
+
+### Main Page Mobile (Home Button )
+
+The mobile version contains the same features as the desktop version; however, users need to scroll down to access some functions, including the Trending Posts window, categories, and the Advertisement Window. This scrolling functionality is common in many forum projects.
+
+*Maine Page Mobile*<br>
+![Main Page Mobile](static/images/screenshots/pagehomemobile.png)
+
+### About Us 
+
+In the About Us section, you'll find information about the Discussion Room forum, including the community rules that guide our interactions. This window can be accessed by both logged-in and logged-out users. We aim to create a welcoming environment where individuals can engage in discussions on various topics with kindness and respect.
+
+Participants are encouraged to share their thoughts, ask questions, and connect with others, fostering a vibrant community that values diverse perspectives.
+
+Community guidelines ensure a positive experience for all users, with a strong emphasis on constructive dialogue and mutual respect. We are dedicated to maintaining an inclusive space for everyone.
+
+*About Us Desktop*<br>
+![About Us Desktop](static/images/screenshots/pageaboutusdesktop.png)
+
+*About Us Mobile*<br>
+![About Us Mobile](static/images/screenshots/pageaboutusmobile.png)
+
+### Create A New Post
+
+In the Create a New Post section, users can easily compose and publish new posts. This simple and intuitive interface includes fields for the post title, content, and a choice of category. Once the post is ready, users can click the Publish button to share it with the community. 
+
+For those who wish to cancel the action, there is an option to go back, allowing users to navigate away without creating a new post.
+
+*Create A New Post Desktop*<br>
+![Create A New Post Desktop](static/images/screenshots/pagecreateapostdesktop.png)
+
+*Create A New Post Mobile*<br>
+![Create A New Post Mobile](static/images/screenshots/pagecreateapostmobile.png)
+
+### Account
+
+In the Account Section, users are presented with a visually appealing window that displays their profile picture, name, and email address. This section also includes social media links, allowing users to navigate to their profiles or find inspiration for new posts and updates they wish to share.
+
+Additionally, there is an Update Profile button that directs users to the profile editing page, enabling them to make changes to their account information as needed.
+
+*Account Page Desktop*<br>
+![Account Page Desktop](static/images/screenshots/pageaccountdesktop.png)
+
+*Account Page Mobile*<br>
+![Account Page Mobile](static/images/screenshots/pageaccountmobile.png)
+
+### Edit Your Profile Window
+
+When users click the Update Profile button, they are taken to the Edit Your Profile window. In this section, users can update their name, email, and avatar image. After making the desired changes, users can save their updates, or if they wish to cancel, they have the option to go back without making any changes.
+
+*Edit Your Profile Desktop*<br>
+![Edit Your Profile Desktop](static/images/screenshots/pageeditprofiledesktop.png)
+
+*Edit Your Profile Mobile*<br>
+![Edit Your Profile Mobile](static/images/screenshots/pageeditprofilemobile.png)
+
+### LogOut
+
+When users click the Logout button, they will be logged out of their account. Following this action, a notification window will appear, displaying a message that says, "You've been logged out." Additionally, users will see a message expressing, "We're sorry to see you go. Thank you for visiting our site," reinforcing a friendly atmosphere.
+
+In this window, users will have two options: Log In Again to access their account or Return to Home Page to navigate back to the main section of the forum.
+
+*Logout Page Desktop*<br>
+![Logout Page Desktop](static/images/screenshots/pageloggedoutdesktop.png)
+
+*Logout Page Mobile*<br>
+![Logout Page Mobile](static/images/screenshots/pageloggedoutmobile.png)
+
+### Notifications
+
+In the Notifications Page, users will see notifications for replies to comments they have posted on various forum posts. When users log in or when someone replies to their comment, a red dot will appear below the notification button, indicating that they have new notifications.
+
+If there are no notifications, users will simply see a message stating that there are no notifications available, ensuring clear communication without unnecessary clutter.
+
+*Notification Page Desktop*<br>
+![Notification Page Desktop](static/images/screenshots/pagenotificationsdesktop.png)
+
+*Notification Page Mobile*<br>
+![Notification Page Mobile](static/images/screenshots/pagenotificationsmobile.png)
+
+*Red Dot*<br>
+![Red Dot](static/images/screenshots/redpoint.png)
+
+* In the Notifications Page, users will see notifications for replies to comments they have posted on various forum posts. If a user has notifications, they will see messages formatted as follows: "User [username] replied to your comment: [main comment content]." Each notification will include the date and time of the reply.Users will also have options to Delete the notification or Go to the comment, allowing them to manage their interactions effectively.
+
+*Notification Page with Notification Desktop*<br>
+![Notification Page with Notification Desktop](static/images/screenshots/messagenotificationdesktop.png)
+
+*Notification Page with Notification Mobile*<br>
+![Notification Page with Notification Mobile](static/images/screenshots/messagenotificationmobile.png)
+
+### About Me
+
+In the About Me section, you'll learn about Yusein Ali, a 33-year-old with a diverse life journey. Born in Burgas, Bulgaria, he moved to Spain in 2001, pursued his passion for football in Turkey, and later returned to Bulgaria. In 2013, he moved to Luxembourg, where he continued to play football until relocating to Sweden in 2023.
+
+Yusein has a border collie named Molly and is multilingual, speaking several languages including Bulgarian, Spanish, French, English, Turkish, Italian, Portuguese, and Luxembourgish, with Swedish currently being learned.
+
+His passion for technology began in childhood, leading him to enroll in Code Institute in 2023 to enhance his programming skills. This forum, Discussion Room, is his fourth project out of five developed through Code Institute, inspired by the popular Spanish forum Forocoches.com.
+
+Thank you for visiting and exploring the forum, where a welcoming space is provided for sharing and discussing ideas!
+
+*About Me Page Desktop*<br>
+![About Me Page Desktop](static/images/screenshots/pageaboutmedesktop.png)
+
+*About Me Page Mobile*<br>
+![About Me Page Mobile](static/images/screenshots/pageaboutmemobile.png)
+
+### Support & Collaboration
+
+In the Support and Collaboration section, users can easily get in touch with the administration team. They have the ability to report unusual activities or inappropriate behavior from users who disrespect others. Additionally, users can submit requests for collaboration or suggestions to enhance the forum.
+
+The section includes fields for users to enter their name, email (to facilitate contact), and a message detailing their inquiry or report. Once completed, users can submit their information using the Submit button, ensuring their concerns and ideas are communicated effectively.
+
+*Support & Collaboration Desktop*<br>
+![Support & Collaboration Desktop](static/images/screenshots/pagesupportdesktop.png)
+
+*Support & Collaboration Mobile*<br>
+![Support & Collaboration Mobile](static/images/screenshots/pagesupportmobile.png)
+
+### Admin Page (Control Panel)
+
+The Admin Page (Control Panel) serves as the central control hub for administrators, granting them full rights to manage the forum effectively. Admins have the authority to monitor user activity, ensuring that community standards are upheld.
+
+Through this page, admins can delete offensive posts and comments, as well as take necessary action against users who violate the forum rules. This functionality ensures a safe and respectful environment for all participants within the Discussion Room community.
+
+*Admin Page Desktop*<br>
+![Admin Page Desktop](static/images/screenshots/adminpagedekstop.png)
+
+*Admin Page Mobile*<br>
+![Admin Page Mobile](static/images/screenshots/adminpagemobile.png)
+
+### Highlights
+
+In the Thank You section, I want to express my heartfelt gratitude to Code Institute for making this project a reality. Their extensive resources and support have been instrumental in building my project and pursuing my passion for web development.
+
+I extend special thanks to all the tutors who were always available to assist whenever I needed help. Your expertise and guidance greatly impacted my learning journey.
+
+A special thank you goes to my amazing mentor, Iuliia Konovalova, for your unwavering support and mentorship. Your encouragement and insights helped me navigate through challenges and stay motivated.
+
+I would also like to thank the GitHub team for providing an incredible platform that enabled effective collaboration and development of my project.
+
+For more information about Code Institute, visit their website: https://codeinstitute.net/se/
+
+*Highlights Page Desktop*<br>
+![Highlights Page Desktop](static/images/screenshots/pagethankyoudesktop.png)
+
+*Highlights Page Mobile*<br>
+![Highlights Page Mobile](static/images/screenshots/pagethankyoumobile.png)
+
+### Reading Post
+
+Users will have the option to read posts in full detail, but this feature is only accessible to individuals who have an account and are logged in. On the right side of each post, there will be access to the Trending Posts window and available Categories, allowing users to easily explore related content.
+
+Additionally, an Advertisement Window will be present, providing links to external advertisements. When a user clicks on an advertisement, a new page will open, directing them to the advertised content.
+
+Each post container will include:
+
+* A space for the user's image.
+* The date and time of publication.
+* The author's name.
+* Like and dislike counters, along with a comment counter to track user engagement.
+* Edit and delete options for the post, which will be visible only to the author of the post, indicated by pencil and trash icons.
+At the top of the page, there will also be a search bar, enabling users to search for specific posts or keywords, enhancing content discovery and accessibility.
+
+*Post Detail Page Desktop*<br>
+![Post Detail Page Desktop](static/images/screenshots/pagepostdetaildesktop.png)
+
+*Post Detail Page Mobile*<br>
+![Post Detail Page Mobile](static/images/screenshots/pagepostdetailmobile.png)
+
+### Update Post
+
+When users access the update post option from the post they have published, indicated by the pencil icon, they will be brought to a dedicated window. In this section, users can view their existing post, where they can update the title and content as needed. Once they have made the necessary changes, they can republish the post, ensuring that their updates are reflected in the forum.
+
+*Update Post Desktop*<br>
+![Update Post Desktop](static/images/screenshots/pageeditpostdesktop.png)
+
+*Update Post Mobile*<br>
+![Update Post Mobile](static/images/screenshots/pageditpostmobile.png)
+
+### Delete Post
+
+When users click on the trash icon associated with their published post, they will be prompted with a confirmation window. This window will ask if they are sure they want to delete the post, clearly stating that this action cannot be undone. Users will have the option to confirm the deletion, cancel the action to retain the post, or return to the home page, ensuring flexibility during the decision-making process.
+
+*Delete Post Desktop*<br>
+![Delete Post Desktop](static/images/screenshots/pagedeletepostdesktop.png)
+
+*Delete Post Mobile*<br>
+![Delete Post Mobile](static/images/screenshots/pagedeletepostmobile.png)
+
+### Commenting Functionality
+
+Users will have the option to comment on a post, reply to comments made by other users, and like or dislike those comments. In the comment window, users can see the name of the commenter, along with the date and time of the comment.
+
+Each post will display 6 comments per page, with pagination activated to navigate through additional comments as needed.
+
+*Commentin Functionality Desktop*<br>
+![Commentin Functionality Desktop](static/images/screenshots/pagecommentsdesktop.png)
+
+*Commentin Functionality Mobile*<br>
+![Commentin Functionality Mobile](static/images/screenshots/pagecommentsmobile.png)
+
+### Footer
+
+The footer is positioned at the bottom of the page and provides essential navigation options. It includes links to the Highlights page, Control Panel, Support and Collaboration, and About Me page. 
+
+These links are accessible to both logged-in and logged-out users, ensuring that everyone can explore the content. However, the Control Panel link is restricted to authorized personnel only, while the other links remain available to all users.
+
+*Footer Page Desktop*<br>
+![Footer Page Desktop](static/images/screenshots/footerdesktop.png)
+
+*Footer Page Mobile*<br>
+![Footer Page Mobile](static/images/screenshots/footermobile.png)
+
+

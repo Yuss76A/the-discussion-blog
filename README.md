@@ -419,6 +419,8 @@ As with many forums and web pages, the mobile wireframe reflects the layout user
 
 The navbar is designed to be simple and user-friendly. When a user is logged out, the left side displays the name of the forum, Discussion Room, which serves as a direct link to the home page. On the right side, there are links for Home, About Us, Login, and Register sections. This straightforward layout ensures easy navigation without any complex features, allowing users to quickly access key areas of the website.
 
+The navbar includes hover effects that enhance the user experience for all users, whether logged in or not. The title Discussion Room features a distinct hover effect that draws attention, while the links present in the navbar also have their own hover styles, providing clear visual feedback when users interact with the navigation elements.
+
 *Navbar Logged Out*<br>
 ![Navbar Logged Out](static/images/screenshots/loggedoutnavbar.png)
 
@@ -694,3 +696,65 @@ This statement reinforces the ownership and copyright of the content on the site
 ![Footer Message](static/images/screenshots/footermessage.png)
 
 
+## Dark Mode
+
+The Discussion Room includes a Dark Mode feature inspired by the user-friendly design of https://en.wikipedia.org/wiki/Django_(web_framework). This mode provides an alternative color scheme to reduce eye strain in low-light environments. Users can easily switch to Dark Mode, which is beneficial for those who prefer working with a dark screen, like myself at times.
+
+To switch back to light mode, users can find the toggle option located in the bottom left corner of the page. This flexibility allows users to choose their preferred viewing experience while engaging with the forum content.
+
+This Dark Mode feature is currently in a testing phase. If we find that users are not satisfied with it, we will consider suspending the feature and removing it. Conversely, if users enjoy it, we will seek to refine and enhance the experience further.
+
+* This means the page is in Dark Mode
+
+*Dark Mode Option*<br>
+![Dark Mode](static/images/screenshots/darkmode.png)
+
+* This means the page is in Light Mode
+
+*Dark Mode Option*<br>
+![Dark Mode](static/images/screenshots/lightmode.png)
+
+## Navbar (Dark Mode)
+The navbar in Dark Mode maintains the same structure as outlined in the previous navbar section. Users will find the same essential links: Home, About Us, Login, and Register. Both the Home and About Us links are accessible to logged-in users and those who are not registered.
+
+The navbar also features hover effects for enhanced interactivity. The title Discussion Room has a unique hover effect, while the other links present different hover styles, creating an engaging and visually appealing navigation experience even in Dark Mode.
+
+*Dark Mode Navbar*<br>
+![Dark Mode Navbar](static/images/screenshots/darkhover.png)
+
+*Dark Mode Navbar*<br>
+![Dark Mode Navbar](static/images/screenshots/darkhoverlinks.png)
+
+* The mobile version features a navbar that appears in a dark grey color. When users click on the navbar, it expands downwards to display all navigation links. This functionality is accessible to all users, whether logged in or not, ensuring that everyone can easily navigate to key areas of the forum without hassle.
+
+*Dark Mode Mobile*<br>
+![Dark Mode Mobile](static/images/screenshots/darkmodemobilenavbar.png)
+
+## Main Page (Home Button Dark Mode)
+
+The main page retains the same features discussed earlier and is enhanced with pleasant colors in dark mode for improved visibility. The navbar remains consistent, ensuring a familiar navigation experience.
+
+* The search bar is styled in white, complemented by a dark grey search button featuring white text, creating a striking contrast.
+* Post containers are displayed with a dark grey background, featuring titles in black and content in white for clear readability.
+* User avatar images are presented within a white circular frame, adding a clean visual touch.
+* User names and other data fields are displayed in white, maintaining legibility against the dark background.
+
+On the right side, users will find:
+
+* Categories highlighted in blue color, allowing for easy browsing of topics.
+* Trending Posts showcased in a white container with black and grey text, ensuring that users can easily engage with popular discussions.
+* An Advertisement Window featuring dark grey borders with a white background, providing a clear viewing area for promotional content.
+
+At the bottom of the page, a white line visually separates the footer from the rest of the content. The footer includes essential links and a toggle switch for dark/light mode, allowing users to easily switch their viewing preference.
+
+*Main Page Dark Mode*<br>
+![Main Page Dark Mode](static/images/screenshots/darkmodeloggedout.png)
+
+*Main Page Dark Mobile*<br>
+![Main Page Dark Mobile](static/images/screenshots/darkmodehome.png)
+
+*Categories, Trending Posts and Advertisment*<br>
+![Categories, Trending Posts and Advertisment](static/images/screenshots/darkmodetranding.png)
+
+*Footer Dark Mode*<br>
+![Footer Dark Mode](static/images/screenshots/darkmodefooter.png)

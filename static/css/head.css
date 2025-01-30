@@ -710,14 +710,21 @@ body.dark-mode button {
 
 body.dark-mode button:hover {
     background: #555;
-    /* Slightly lighter on hover */
+
 }
 
-/* UL LI CSS from about us page */
-body.dark-mode ul li {
+/* Color For Password requirements and Forum Guidelines in About Us page in Dark Mode*/
+body.light-mode ul li {
     color: #b7c2b7;
-    /* Light gray color for list items */
+
 }
+
+
+/* UL LI CSS from about us page */
+/* body.dark-mode ul li {
+    color: #FFFFFF;
+
+} */
 
 body.dark-mode .article-content {
     color: white;

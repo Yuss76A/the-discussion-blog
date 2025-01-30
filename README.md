@@ -758,3 +758,107 @@ At the bottom of the page, a white line visually separates the footer from the r
 
 *Footer Dark Mode*<br>
 ![Footer Dark Mode](static/images/screenshots/darkmodefooter.png)
+
+## Abous Us (Dark Mode)
+
+The About Us page retains the same features as described previously, with a dark mode aesthetic. The container is set to a dark grey background, providing a comfortable viewing experience. The title is styled in a vibrant green color, complemented by white text for the body content, creating a visually appealing contrast that enhances readability in dark mode.
+
+*About Us Dark Mode Desktop*<br>
+![About Us Dark Mode Desktop](static/images/screenshots/darkmodeaboutusdesktop.png)
+
+*About Us Dark Mode Mobile*<br>
+![About Us Dark Mode Mobile](static/images/screenshots/darkmodeaboutusmobile.png)
+
+## Login Page (Dark Mode)
+
+The Login Page in dark mode features a sleek design that enhances user experience. It includes input fields for username and password, both displayed in white to provide a strong contrast against the dark background, ensuring readability.
+
+The Log In button is styled with a green border, adding a visually appealing touch. Below the login fields, users who do not have an account can find a prompt to sign up, presented in a nice blue color for emphasis.
+
+A clean white line visually separates the footer from the login options. In the bottom left corner, there is a toggle for switching between dark and light modes, designed in blue to align with the overall color theme.
+
+*Dark Mode Log In Page*<br>.
+![Dark Mode Log In Page](static/images/screenshots/darkmodelogindesktop.png)
+
+*Dark Mode Log In Mobile*<br>.
+![Dark Mode Log In Mobile](static/images/screenshots/darkmodeloginmobile.png)
+
+## Register Page(Dark Mode)
+
+The Register Page in dark mode mirrors the structure of the Login Page, ensuring a consistent user experience. All input fields are displayed in white, with their corresponding labels also in white, creating a classic input style against the black background. 
+
+* Password Requirements are also presented in white to maintain readability.
+* The Register Now button features a nice blue border, providing a visually appealing call-to-action.
+* Below the registration fields, the message for users who already have an account is displayed in white, accompanied by a Log In link styled in a nice blue color.
+
+At the bottom of the page, a classic line separates the toggle for switching between light and dark modes from the footer, which is presented in a subtle grey color to provide a clear and elegant delineation.
+
+*Register Page Dark Mode Desktop*<br>
+![Register Page Dark Mode Desktop](static/images/screenshots/darkmoderegisterdesktop.png)
+
+*Register Page Dark Mode Desktop*<br>
+![Register Page Dark Mode Desktop](static/images/screenshots/darkmoderegistermobile.png)
+
+## Footer Section ( Dark Mode)
+
+The footer in dark mode features a classic line that separates it from the main content window, providing a clean visual distinction. It includes links for Highlights, Control Panel, Support, and About Me, all styled in a nice grey color with a subtle hover effect for enhanced interactivity.
+
+These links are accessible across all pages for both logged-in users and those without an account. However, the Control Panel link is reserved for administrative tasks and is only available to authorized personnel who can log in.
+
+At the bottom of the footer, there is an "All rights reserved" message, ensuring clarity regarding content ownership. Additionally, the toggle for switching between dark and light modes is present; in dark mode, the toggle appears in blue, while in light mode, it is styled in grey, maintaining consistency with the overall theme.
+
+*Footer In Dark Mode Desktop*<br>
+![ooter In Dark Mode Desktop](static/images/screenshots/footerdarkmodedesktop.png)
+
+*Footer In Dark Mode Mobile*<br>
+![ooter In Dark Mode Mobile](static/images/screenshots/footerdarkmodemobile.png)
+
+## About Me (Dark Mode)
+
+The About Me page in dark mode features an elegant grey window that creates a visually appealing backdrop. The titles are displayed in a vibrant green color, while the content is presented in white letters, ensuring excellent readability. This combination of colors enhances the overall aesthetic and provides a comfortable experience for users navigating the page.
+
+*About Me Dark Mode Desktop*<br>
+![About Me Dark Mode Desktop](static/images/screenshots/darkmodeaboutmedesktop.png)
+
+*About Me Dark Mode Mobile*<br>
+![About Me Dark Mode Mobile](static/images/screenshots/darkmodeaboutmemobile.png)
+
+## Support & Collaboration Page (Dark Mode)
+
+The Support and Collaboration page in dark mode opens with a nice blue title that creates an inviting atmosphere. Below the title, a submessage encourages users to contact the team for messages and various inquiries related to collaboration.
+
+Input fields for name, email, and message are displayed in white, ensuring clarity against the dark background. The Submit button features a grey background with white letters and a nice blue border, providing an appealing call-to-action for users submitting their queries.
+
+*About Me Dark Mode Desktop*<br>
+![About Me Dark Mode Desktop](static/images/screenshots/darkmodesupportdesktop.png)
+
+*About Me Dark Mode Mobile*<br>
+![About Me Dark Mode Mobile](static/images/screenshots/darkmodesupportmobile.png)
+
+## Control Panel (Dark Mode)
+
+The Admin Control Panel is presented against a dark background, featuring striking blue titles that enhance the visibility and hierarchy of information. The overall blue color scheme conveys a professional and authoritative appearance, suitable for administrative functions.
+
+Within the control panel, users can expect to see various icons—such as "x" for deletion, pencil icons for editing, and plus signs for adding content—styled in a vibrant green color. This choice of color not only adds visual interest but also clearly indicates actions that can be taken within the panel.
+
+The combination of blue titles, white text, and green action icons creates a cohesive and user-friendly interface, ensuring that administrators can manage the forum efficiently and intuitively while maintaining a pleasant visual environment.
+
+*About Me Dark Mode Desktop*<br>
+![About Me Dark Mode Desktop](static/images/screenshots/darkmodecontrolpaneldesktop.png)
+
+*About Me Dark Mode Mobile*<br>
+![About Me Dark Mode Mobile](static/images/screenshots/darkmodecontrolpanelmobile.png)
+
+## Highlights Page (Dark Mode)
+
+The Highlights Page is presented in a nice grey window with a prominent blue title and white content. This section expresses gratitude to Code Institute for providing the resources and support to bring this project to life. 
+
+Special thanks to the tutors and my mentor, Iuliia Konovalova, for their invaluable guidance throughout my learning journey. I also appreciate the GitHub team for their collaboration platform.
+
+For more information about Code Institute, visit their website: https://codeinstitute.net/se/, highlighted in an engaging orange color.
+
+*Highlights Page Dark Mode Desktop*<br>
+![Highlights Page Dark Mode Desktop](static/images/screenshots/darkmodehighlightsdesktop.png)
+
+*Highlights Page Dark Mode Mobile*<br>
+![Highlights Page Dark Mode Mobile](static/images/screenshots/darkmodehighlightsmobile.png)

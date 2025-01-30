@@ -683,4 +683,14 @@ These links are accessible to both logged-in and logged-out users, ensuring that
 *Footer Page Mobile*<br>
 ![Footer Page Mobile](static/images/screenshots/footermobile.png)
 
+### Footer Message
+
+At the bottom of the page, users will find the following message:
+© 2024 Discussion Hub. All Rights Reserved.
+This statement reinforces the ownership and copyright of the content on the site.
+
+*Footer Message*<br>
+
+![Footer Message](static/images/screenshots/footermessage.png)
+
 

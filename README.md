@@ -888,4 +888,18 @@ To inspire users, two motivational phrases are included, creating a positive atm
 <*Create a New Post Page Dark Mode Mobile*<br>
 ![Create a New Post Page Dark Mode Mobile](static/images/screenshots/darkmodecreateapostmobil.png)
 
+## Account Page (Dark Mode)
 
+The Account Page in dark mode features a visually appealing layout with a main container that has a soft white background. Within this container, there is another internal container, also in white, which includes a bar with a blue background displaying the text "Your Account Overview" in black letters.
+
+The user’s avatar is presented in a circular format, accompanied by the username displayed in blue and the email address in grey for clear differentiation. 
+
+Additionally, the section includes “Connect with Us” text in blue, followed by links to social media profiles. These links feature hover effects for enhanced interactivity and user engagement.
+
+At the bottom of the page, users will find a button for Update Profile, enabling them to make changes to their account details easily.
+
+*Account Page Dark Mode Desktop*<br>
+![Account Page Dark Mode Desktop](static/images/screenshots/darkmodeaccoundesktop.png)
+
+*Account Page Dark Mode Mobile*<br>
+![Account Page Dark Mode Mobile](static/images/screenshots/darkmodeaccountmobile.png)

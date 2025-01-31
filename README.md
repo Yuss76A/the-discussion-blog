@@ -903,3 +903,17 @@ At the bottom of the page, users will find a button for Update Profile, enabling
 
 *Account Page Dark Mode Mobile*<br>
 ![Account Page Dark Mode Mobile](static/images/screenshots/darkmodeaccountmobile.png)
+
+## Edit Profile Page (Dark Mode)
+
+The Edit Profile Page is designed with a pleasing soft white container that features a bold blue title, clearly indicating the purpose of the page. Within this container, users will find input fields for updating their username and email, set against a grey background for easy readability.
+
+Additionally, there is a dedicated section for changing the avatar image. This section displays the current profile photo, allowing users to easily see what the existing image is before making changes.
+
+At the bottom of the page, there is a Save Changes button with an attractive dark grey background and white text, enabling users to apply their updates. Next to it, a simple link in blue allows users to Cancel and go back, providing an easy option to exit without saving changes.
+
+*Edit Profile Dark Mode Desktop*<br>
+![Edit Profile Dark Mode Desktop](static/images/screenshots/darkmodeeditprofiledesktop.png)
+
+*Edit Profile Dark Mode Mobile*<br>
+![Edit Profile Dark Mode Mobile](static/images/screenshots/darkmodeeditprofilemobil.png)

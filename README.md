@@ -868,3 +868,24 @@ As a logged-in user, I will present the sections that can only be accessed when 
 
 * The Home button brings you back to the main page, while the About Us section and the footer links remain accessible, providing a seamless and familiar navigation experience within the forum.
 
+## Create a New Post (Dark Mode)
+
+In the Create a New Post section in dark mode, users will find a visually appealing dark grey container featuring a vibrant blue title accompanied by a soft white subphrase for clarity.
+
+This section includes three input fields styled in a soft cream white, allowing for a pleasant input experience:
+
+* Title
+* Content
+* Category
+
+The Publish button stands out with a dark grey background and white text, complemented by a nice green border, ensuring it is clearly visible. Additionally, there is a Go Back button available for users who wish to cancel the post creation process.
+
+To inspire users, two motivational phrases are included, creating a positive atmosphere for composing new posts.
+
+<*Create a New Post Page Dark Mode Desktop*<br>
+![Create a New Post Page Desktop Dark Mode](static/images/screenshots/darkmodecreatepostdesktop.png)
+
+<*Create a New Post Page Dark Mode Mobile*<br>
+![Create a New Post Page Dark Mode Mobile](static/images/screenshots/darkmodecreateapostmobil.png)
+
+

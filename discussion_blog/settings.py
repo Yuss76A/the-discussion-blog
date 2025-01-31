@@ -19,9 +19,10 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-yuss76a-thediscussionbl-69kv780ak0p.ws.codeinstitute-ide.net', '.herokuapp.com']
+ALLOWED_HOSTS = ["127.0.0.1", ".herokuapp.com"]
 
-CSRF_TRUSTED_ORIGINS = ["https://8000-yuss76a-thediscussionbl-69kv780ak0p.ws.codeinstitute-ide.net"]
+CSRF_TRUSTED_ORIGINS = ["https://localhost",
+                        "https://*.herokuapp.com"]
 
 
 # Application definition

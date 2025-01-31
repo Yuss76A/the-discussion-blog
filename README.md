@@ -862,3 +862,9 @@ For more information about Code Institute, visit their website: https://codeinst
 
 *Highlights Page Dark Mode Mobile*<br>
 ![Highlights Page Dark Mode Mobile](static/images/screenshots/darkmodehighlightsmobile.png)
+
+## User Access (Logged In)
+As a logged-in user, I will present the sections that can only be accessed when you are logged into the forum. All the sections outlined previously, including the main page, are available in your logged-in session. 
+
+* The Home button brings you back to the main page, while the About Us section and the footer links remain accessible, providing a seamless and familiar navigation experience within the forum.
+

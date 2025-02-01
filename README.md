@@ -977,3 +977,19 @@ Lastly, an Advertisement Window is framed with a grey border, containing a white
 
 *Post Detail Page Dark Mode Mobile*<br>
 ![Post Detail Page Dark Mode Mobile](static/images/screenshots/darkmodepostdetailmobil.png)
+
+## Update Post Page(Dark Mode)
+
+The Update Post Page features a nice dark grey container with an attractive blue title. This page uses the same layout as the Create a New Post section, which is why the title is Create a New Post. 
+
+The main difference is that the input fields for title and content are pre-filled with the existing information from the post being updated, ensuring that users can see and modify the current content directly.
+
+The input fields are styled in a soft cream white color, with the text within them (for both title and content) displayed in black for clear readability.
+
+At the bottom of the page, the Publish button has a dark grey background with white letters that read Publish, accented by a nice green border to make it stand out. Additionally, there is a Go Back button styled with the same dark grey background and white letters as the Publish button, but without a border, allowing users to easily cancel the update and return to the previous page.
+
+*Update Post Page Dark Mode Desktop*<br>
+![Update Post Page Dark Mode Desktop](static/images/screenshots/darkmodeeditpostdesktop.png)
+
+*Update Post Page Dark Mode Mobile*<br>
+![Update Post Page Dark Mode Mobile](static/images/screenshots/darkmodeditpostmobil.png)

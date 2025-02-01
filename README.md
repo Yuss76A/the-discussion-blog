@@ -993,3 +993,23 @@ At the bottom of the page, the Publish button has a dark grey background with wh
 
 *Update Post Page Dark Mode Mobile*<br>
 ![Update Post Page Dark Mode Mobile](static/images/screenshots/darkmodeditpostmobil.png)
+
+## Delete Post Page (Dark Mode)
+
+The Delete Post Page features a clean white container that clearly communicates the importance of the action being taken. At the top, a bold Confirm Post Deletion title is displayed in red, indicating that this is a serious action.
+
+Below the title, a subheading reads Delete Post in black, setting the context for users. A phrase follows, asking, "Are you sure you want to delete the post titled: [Post Title]?" This emphasizes the specific post being addressed. Additionally, it informs users that "This action cannot be undone," reinforcing the gravity of the decision.
+
+At the bottom of the container, users are presented with two choices:
+
+A Delete button with a dark grey background, white letters, and a red border, providing a clear call-to-action for proceeding with the deletion.
+A Cancel button styled similarly—dark grey background and white letters— but with blue text, allowing users to back out of the deletion process.
+There’s also a section that provides the option to Return to Home Page, directing users back to the main area of the forum if they choose to navigate away.
+
+While the Categories Links remain visible for easy navigation, the Trending Posts section will not be displayed on this page. However, the Advertisement Window will still be present, allowing users to view any ongoing promotions or relevant content.
+
+*Delete Post Page Dark Mode Desktop*<br>
+![Delete Post Page Dark Mode Desktop](static/images/screenshots/darkmodedeletepostdesktop.png)
+
+*Delete Post Page Dark Mode Mobile*<br>
+![Delete Post Page Dark Mode Mobile](static/images/screenshots/darkmodedeletepostmobil.png)

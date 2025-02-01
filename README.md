@@ -917,3 +917,34 @@ At the bottom of the page, there is a Save Changes button with an attractive dar
 
 *Edit Profile Dark Mode Mobile*<br>
 ![Edit Profile Dark Mode Mobile](static/images/screenshots/darkmodeeditprofilemobil.png)
+
+## Notifications Page (Dark Mode - Empty)
+The Notifications Page in dark mode features a sleek black background that enhances the visual appeal. At the top of the page, the title Your Notifications is displayed in white letters, clearly indicating the purpose of the section.
+
+If there are no notifications to show, a message will appear below the title saying You have no notifications, also in white. This clear communication ensures that users are aware of their current notification status without any confusion.
+
+*Notifications Page Empty Dark Mode Desktop*<br>
+![Notifications Page Empty Dark Mode Desktop](static/images/screenshots/darkmodenotificationsdesktop.png)
+
+*Notifications Page Empty Dark Mode Mobile*<br>
+![Notifications Page Empty Dark Mode Mobile](static/images/screenshots/darkmodenotificationsmobil.png)
+
+## Notification Page With Notification(Dark Mode)
+
+The Notifications Page in dark mode features a clean white title at the top that reads Your Notifications. Below the title, a white container displays the detailed information about any replies to the user's comments. Each notification includes:
+
+User Name: The name of the user who replied.
+Comment Reference: A message stating "User [name] replied to your comment: [your comment content]."
+Date and Time of Reply: The date and hour when the reply was made.
+Additionally, users will have two options for each notification:
+
+Delete: To remove the notification and keep the notifications page clean and organized.
+Go to Comment: This option will link the user directly to the specific comment they posted, allowing for easy navigation and engagement with the discussion.
+Before arriving at this page, logged-in users will notice a red dot below the notifications link in the navbar, indicating that there are new notifications to check.
+
+*Notifications Page Dark Mode Desktop*<br>
+![Notifications Page Dark Mode Desktop](static/images/screenshots/darkmodewithnotificationdesktop.png)
+
+*Notifications Page Dark Mode Mobile*<br>
+![Notifications Page Dark Mode Mobile](static/images/screenshots/darkmodewithnotificationmobile.png)
+

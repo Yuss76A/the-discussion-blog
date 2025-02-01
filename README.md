@@ -948,3 +948,32 @@ Before arriving at this page, logged-in users will notice a red dot below the no
 *Notifications Page Dark Mode Mobile*<br>
 ![Notifications Page Dark Mode Mobile](static/images/screenshots/darkmodewithnotificationmobile.png)
 
+## Post Detail Page (Dark Mode)
+
+The Post Detail Page in dark mode features a well-structured layout designed for optimal readability and engagement.
+
+At the top left corner of the post container, the user’s avatar is displayed in a nice circular format with a white border. Below the avatar, the posted by information indicates the username, followed by the date and the comment counter.
+
+The title of the post stands out in black, presented with an elegant font, while the content is displayed in white using a clean and appealing font style.
+
+Towards the bottom left of the post container, users will find the Edit button, which has a green background with a white icon, allowing users to modify their post. Next to it, the Delete button features a red background with a white icon, signaling caution for users when removing the post.
+
+On the bottom right side of the post container, users can interact with the Like and Dislike buttons. The Like button has a green background with a blue icon, indicating positive interaction, while the Dislike button features a red background with a blue icon for easy visibility.
+
+The Comment Section is designed in white, providing a clear area for users to add their thoughts. Pagination in this section is presented with a white background color, grey letters for the comments, and blue for the page numbers, enabling effortless navigation through comments.
+
+Below the comment input, the Submit button has a grey background with white text, accented with a blue border, creating an attractive call-to-action.
+
+At the top of the page, a search bar with a soft color scheme invites users to search for posts. The search button features a grey background and displays the text "Search for posts" in grey letters, with the actual button having white letters.
+
+Additionally, the Categories Section is integrated within the Trending Posts window on the right side. The category links are showcased in a nice blue color, making them easily accessible.
+
+The Trending Posts window features a title in blue, displaying random posts in a white container, with titles in black and content in grey. This window is surrounded by a grey border to delineate it visually from other sections.
+
+Lastly, an Advertisement Window is framed with a grey border, containing a white container inside. This space can be utilized for relevant advertisements, ensuring a clean and organized layout.
+
+*Post Detail Page Dark Mode Desktop*<br>
+![Post Detail Page Dark Mode Desktop](static/images/screenshots/darkomodepostadetaildesktop.png)
+
+*Post Detail Page Dark Mode Mobile*<br>
+![Post Detail Page Dark Mode Mobile](static/images/screenshots/darkmodepostdetailmobil.png)

@@ -529,15 +529,18 @@ When users click the Update Profile button, they are taken to the Edit Your Prof
 
 ### LogOut
 
-When users click the Logout button, they will be logged out of their account. Following this action, a notification window will appear, displaying a message that says, "You've been logged out." Additionally, users will see a message expressing, "We're sorry to see you go. Thank you for visiting our site," reinforcing a friendly atmosphere.
+When users click the Logout button, they will be logged out of their account. Following this action, they will see a window with a title in blue that says, "You Have Been Logged Out." Below the title, a subphrase reads, "We're sorry to see you go! Thank you for visiting our site," reinforcing a friendly atmosphere.
 
-In this window, users will have two options: Log In Again to access their account or Return to Home Page to navigate back to the main section of the forum.
+In this window, users will have two options:
+
+* A button with a blue background and white letters labeled "Log In Again" to access their account.
+* A second button with a dark grey background and white letters labeled "Return to Home" to navigate back to the main section of the forum.
 
 *Logout Page Desktop*<br>
-![Logout Page Desktop](static/images/screenshots/pageloggedoutdesktop.png)
+![Logout Page Desktop](static/images/screenshots/pagelogoutdesktop.png)
 
 *Logout Page Mobile*<br>
-![Logout Page Mobile](static/images/screenshots/pageloggedoutmobile.png)
+![Logout Page Mobile](static/images/screenshots/pagelogoutmobile.png)
 
 ### Notifications
 
@@ -1013,3 +1016,20 @@ While the Categories Links remain visible for easy navigation, the Trending Post
 
 *Delete Post Page Dark Mode Mobile*<br>
 ![Delete Post Page Dark Mode Mobile](static/images/screenshots/darkmodedeletepostmobil.png)
+
+## Logout Page (Dark Mode)
+
+When a logged-in user chooses the option to log out, they will see the following window. The Logout Section is presented in a nice white container that contrasts effectively with the black background, providing a clean and inviting appearance. At the top of the container, a bold blue title reads, "You Have Been Logged Out," clearly indicating the user’s status.
+
+Beneath the title, a message in grey letters states, "We're sorry to see you go! Thank you for visiting our site," conveying appreciation and warmth to the user.
+
+Within this section, there are two buttons for user navigation:
+
+* The first button, Log In Again, features a blue background with letters in light blue, offering a clear call to action for users wishing to re-enter their accounts.
+* The second button, Return to Home, has a dark grey background with letters in light blue, allowing users to easily navigate back to the main page of the forum.
+
+*Logout Page Dark Mode Desktop*<br>
+![Logout Page Dark Mode Desktop](static/images/screenshots/darkmodelogoutdesktop.png)
+
+*Logout Page Dark Mode Mobile*<br>
+![Logout Page Dark Mode Mobile](static/images/screenshots/darkmodelogoutmobile.png)

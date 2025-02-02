@@ -1169,3 +1169,44 @@ This search bar is not only present on the main page but also accessible when us
 
 *Search Bar Functionality*<BR>
 ![Search Bar Functionality](static/images/screenshots/sectionsearchpostsbar.png)
+
+## Social Account Links
+On the Account Page, users will find links to their social media accounts, including Facebook, Twitter, LinkedIn, and Dribbble. These links are conveniently positioned to encourage users to connect and engage with their networks.
+
+By clicking on any of these links, users can easily navigate to their respective social media profiles, fostering interaction and sharing within the community. This integration allows users to showcase their contributions and connect with others, enhancing the overall experience of the Discussion Room.
+
+Whether users wish to share posts, collaborate on projects, or simply stay updated, these social media links provide a useful avenue for expanding their online presence beyond the forum.
+
+*Social Account Links*<br>
+![Social Account Links](static/images/screenshots/sectionsociallinks.png)
+
+## Post Detail Bar
+At the top of the container where each post is displayed, the Post Detail Bar provides essential information about the post. This bar includes:
+
+* User Name: Clearly indicating who authored the post, allowing readers to see the contributor's identity.
+* Date and Time: Displaying when the post was published, providing context for its relevance.
+* Comment Counter: Showing how many comments the post has received, encouraging user interaction and engagement.
+* Like and Dislike Counters: Displaying the number of likes and dislikes the post has garnered, which helps attract attention to the content.
+
+This Post Detail Bar is prominently visible on the main page, where all posts are displayed, and is also present when a user is reading an individual post (without showing like and dislike counts). By providing this key information upfront, users can quickly gauge the popularity and engagement of a post, enhancing their browsing experience.
+
+*Post Detail Bar*<br>
+![Post Detail Bar](static/images/screenshots/sectionpostdetailsbar.png)
+
+## Feature Testing Table
+
+| Feature Tested               | Feature Description                           | Testing Completed                                           | Expected Outcome                                                                  | Result       |
+|------------------------------|----------------------------------------------|-----------------------------------------------------------|-----------------------------------------------------------------------------------|--------------|
+| Navigation Links             | Links to various sections of the forum      | Clicked all available navigation links                    | All links should navigate to the correct sections of the forum                    | As expected. |
+| User Registration/Login      | User sign-up and login capabilities         | Registered a new account and logged in                    | Users should be able to create an account and access their profile securely       | As expected. |
+| Logout Functionality         | Log out feature for users                   | Clicked the logout button                                 | User should be logged out and redirected to the appropriate page                  | As expected. |
+| Post Creation                | Ability to create new posts                  | Created a new post through the post creation form        | The post should be saved and displayed on the main page                           | As expected. |
+| Post Editing                 | Ability to edit existing posts               | Edited a previously created post                           | Changes should be reflected on the post detail page                               | As expected. |
+| Post Deletion                | Ability to delete posts                      | Deleted a post from the admin dashboard                   | The post should be removed from the database and no longer displayed              | As expected. |
+| Comment Functionality        | Adding comments to posts                     | Added comments to a post                                 | Comments should appear under the respective post                                  | As expected. |
+| Like/Dislike Feature         | Users can like or dislike posts/comments      | Clicked like and dislike buttons on posts and comments    | Like/dislike counters should update correctly                                      | As expected. |
+| Trending Posts Window        | Display of random posts in trending section  | Observed the trending posts section                       | Trending posts should refresh and display new random posts each time             | As expected. |
+| Search Functionality         | Ability to search for posts                  | Used the search bar to find posts                         | Results should display posts matching the search criteria                         | As expected. |
+| User Notification            | Notifications for replies to comments        | Received notifications and accessed them                  | Notifications should properly inform users of activity on their comments          | As expected. |
+| Categories Navigation        | Links to categories for filtering posts      | Clicked on category links                                  | Redirect to posts associated with the selected category                          | As expected. |
+| Footer Links                 | Links in the footer for additional resources  | Clicked all footer links                                   | Footer links should open the corresponding social media pages in new tabs         | As expected. |

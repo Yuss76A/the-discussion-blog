@@ -1033,3 +1033,131 @@ Within this section, there are two buttons for user navigation:
 
 *Logout Page Dark Mode Mobile*<br>
 ![Logout Page Dark Mode Mobile](static/images/screenshots/darkmodelogoutmobile.png)
+
+
+### Small Details (Features)
+
+In this section, I will explain the small details and features that I have added to the Discussion Room project. Most of these aspects were touched upon in the features section and can be seen in the accompanying images, showcasing both light and dark mode.
+
+Here, I will provide a deeper insight into these features, including the thoughtful design choices and functionalities that enhance the user experience. From responsive elements to interactive components, these small details contribute significantly to the overall functionality and aesthetic of the forum.
+
+## User Action Messages
+
+In the Discussion Room, users receive informative messages based on their actions to enhance their experience and provide feedback. Here are the messages users can expect:
+
+* Post Creation: When a user creates a post, a message will appear stating, "Your post has been created successfully."
+
+* Viewing a Category: If a user visits a specific category, they will see a message indicating, "You are viewing posts in the category: [Category Name]."
+
+* Post Update: Upon updating a post, the message "Your post has been updated successfully." will be displayed to confirm the action.
+
+* Comment Addition: When a user adds a comment, they will see the message "Your comment has been added."
+
+These messages will appear for 10 seconds before automatically disappearing, ensuring users are informed of their actions without cluttering the interface.
+
+*User Action Messages*<br>
+![User Action Messages](static/images/screenshots/messagecars.png)
+
+*User Action Messages*<br>
+![User Action Messages](static/images/screenshots/messagecinema.png)
+
+*User Action Messages*<br>
+![User Action Messages](static/images/screenshots/messagecomment.png)
+
+*User Action Messages*<br>
+![User Action Messages](static/images/screenshots/messagepostcreated.png)
+
+*User Action Messages*<br>
+![User Action Messages](static/images/screenshots/messagerandompost.png)
+
+*User Action Messages*<br>
+![User Action Messages](static/images/screenshots/messagesport.png)
+
+*User Action Messages*<br>
+![User Action Messages](static/images/screenshots/messageupdatedpost.png)
+
+## Trending Posts
+
+The Trending Posts window, previously mentioned in the features section, displays 5 random posts from all the posts in the forum. If there are a total of 200 posts available, every time the user visits or refreshes the page, a new set of 5 random posts will be shown, ensuring fresh content is always highlighted.
+
+This trending window is prominently displayed on the main page, making it easy for users to discover engaging discussions. It also appears while users are reading a post, providing continued access to trending content. However, when visiting other pages of the site, the trending window will be visible but will not display any posts, maintaining a clean layout without redundancy.
+
+*Trending Posts Window*<br>
+![Trending Posts Window](static/images/screenshots/trendingpostswindow.png)
+
+## Categories
+
+The Categories feature, previously mentioned in the features section, allows users to explore 4 distinct categories: Cinema, Cars, Sport, and Random Content. Each category offers a specific theme for users to write about.
+
+All posts will be displayed on the main page, but users can easily navigate to their favorite category by clicking on the corresponding link. For instance, clicking on the Sport category will present all posts associated with that topic, allowing for focused browsing.
+
+Currently, the forum features these 4 categories; however, we will monitor user feedback and reactions to determine if there is interest in adding new categories in the future. User suggestions for improving the category section are welcomed, as we strive to enhance the overall user experience.
+
+*Categories*<br>
+![Categories](static/images/screenshots/sectioncategory.png)
+
+## Advertisement Window
+
+The Advertisement Window has been implemented as a feature for future advertising opportunities. This section will allow us to display relevant ads based on user interest and forum content. If we receive positive feedback regarding the forum's performance, we can utilize the advertisement window to showcase additional advertisements.
+
+When users click on the advertisement window, it will open a new separate window, directing them to the advertised content. We will actively monitor user feedback about this section to assess its effectiveness and make improvements as necessary.
+
+*Advertisement Section*<br>
+![Advertisement Section](static/images/screenshots/sectionadvertisement.png)
+
+## Pagination
+
+The Discussion Room implements pagination for both posts and comments to enhance user experience.
+
+* Posts Pagination: A maximum of 8 posts will be displayed per page. This setup allows users to browse through content effectively without being overwhelmed by too much information at once.
+
+* Comments Pagination: The comment section will feature 6 comments per page. Replies to comments will not count in this pagination, ensuring that the main comments remain easily accessible and organized for users.
+
+This pagination design not only improves performance by reducing load times but also helps maintain a clean and user-friendly interface.
+
+*Pagination*<br>
+![Pagination](static/images/screenshots/sectionpagination.png)
+
+## Comment Section
+
+Users can add comments to posts, fostering engagement and discussion within the forum. Each comment allows others to reply directly, creating a threaded conversation that enhances interactivity among users.
+
+Additionally, users have the ability to like or dislike comments, providing a simple way to express their opinions on the contributions of others. This feature encourages constructive feedback and enhances the overall community experience by allowing members to support each other's insights or share differing viewpoints.
+
+Overall, the commenting functionality adds a dynamic layer to the forum, promoting active participation and community building.
+
+*Comment Section*<br>
+![Comment Section](static/images/screenshots/sectioncommentslightmode.png)
+
+*Comment Section Dark Mode*<br>
+![Comment Section Dark Mode](static/images/screenshots/sectioncommentsdarkmode.png)
+
+## Edit and Delete Post Buttons
+
+The Edit Post functionality is represented by a pencil icon, which is styled in green to signify the action of updating content positively. This color choice reflects the constructive nature of editing, allowing users to enhance their posts with ease.
+
+Conversely, the Delete Post action is represented by a trash icon, styled in red. This color indicates caution and represents a significant action, as deleting a post is a serious decision that removes content permanently.
+
+Both icons are easily accessible in the post interface, allowing users to manage their content efficiently while maintaining clear visual cues about the actions they represent.
+
+*Edit and Delete Post Buttons*<br>
+![Edit and Delete Post Buttons](static/images/screenshots/sectioneditlightmode.png)
+
+*Edit and Delete Post Buttons Dark Mode*<br>
+![Edit and Delete Post Buttons Dark Mode](static/images/screenshots/sectioneditdarkmode.png)
+
+## Like and Dislike Functionality
+
+Users have the option to like and dislike both posts and comments, fostering interaction and feedback within the community. Each post and comment features a counter next to the respective icons, displaying the number of likes and dislikes received.
+
+* Like Icon: Represented by a thumbs-up symbol in green, this icon signifies a positive action, allowing users to express appreciation for valuable content.
+
+* Dislike Icon: Represented by a thumbs-down symbol in red, this icon indicates a negative action, allowing users to signal discontent or disagreement with the content.
+
+These visual indicators and their accompanying counters enhance the user experience by providing immediate feedback on the community's response to posts and comments, encouraging thoughtful participation in discussions.
+
+*Like and Dislike Functionality*<br>
+![Like and Dislike Functionality](static/images/screenshots/sectionlikedislikelightmode.png)
+
+*Like and Dislike Functionality Dark Mode*<br>
+![Like and Dislike Functionality Dark Mode](static/images/screenshots/sectionlikedislikedarkmode.png)

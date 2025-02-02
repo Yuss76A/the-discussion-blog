@@ -1161,3 +1161,11 @@ These visual indicators and their accompanying counters enhance the user experie
 
 *Like and Dislike Functionality Dark Mode*<br>
 ![Like and Dislike Functionality Dark Mode](static/images/screenshots/sectionlikedislikedarkmode.png)
+
+## Search Bar Functionality
+At the top of the main page, there is a search bar that allows users to search for posts easily. Users can enter random keywords or specific titles, and the search functionality will return posts that contain the searched words or titles, making it simple to find relevant content.
+
+This search bar is not only present on the main page but also accessible when users are reading a post, ensuring that they can continue exploring the forum without interruption. This feature enhances content discoverability and allows users to engage with topics that interest them swiftly.
+
+*Search Bar Functionality*<BR>
+![Search Bar Functionality](static/images/screenshots/sectionsearchpostsbar.png)

@@ -11,16 +11,18 @@ def register_view(request):
     """
     Handle user registration.
 
-    This view processes the registration form submission. If the request method is POST, 
-    it validates the submitted form data and creates a new user account. Upon successful 
-    registration, the user is logged in, and a success message is displayed. If the request 
-    method is GET, it initializes a blank form for registration.
+    This view processes the registration form submission. If the request method
+    is POST, it validates the submitted form data and creates a new user
+    account. Upon successful registration, the user is logged in, and a success
+    message is displayed. If the request method is GET, it initializes a blank
+    form for registration.
 
     Parameters:
         request: The HTTP request object.
 
     Returns:
-       Rendered template for registration or redirects to the login page on success.
+       Rendered template for registration or redirects to the login page on
+       success.
        If the form is invalid, it re-renders the form with error messages.
     """
     if request.method == 'POST':
@@ -28,9 +30,13 @@ def register_view(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            username = user.username 
-            messages.success(request, f'Welcome, {username}! Your account is ready. Log in to continue.')  
-            return redirect('login')  
+            username = user.username
+            messages.success(
+                request,
+                f'Welcome, {username}! Your account is ready. '
+                'Log in to continue.'
+            )
+            return redirect('login')
     else:
         form = UserRegisterForm()
 
@@ -42,8 +48,8 @@ def account(request):
     """
     Display user account information.
 
-    This view requires the user to be logged in. It renders a template displaying the
-    user's account details.
+    This view requires the user to be logged in. It renders a template
+    displaying the user's account details.
 
     Parameters:
         request: The HTTP request object.
@@ -59,29 +65,38 @@ def update_account(request):
     """
     Update user account information.
 
-    This view allows logged-in users to update their account details. It handles both
-    user-related information and account-related details. Upon successful form submission,
-    the user's updated information is saved, and a success message is displayed.
+    This view allows logged-in users to update their account details.
+    It handles both user-related information and account-related details.
+    Upon successful form submission, the user's updated information is saved,
+    and a success message is displayed.
 
     Parameters:
         request: The HTTP request object.
 
     Returns:
-        Rendered template for the account update form, or redirects to the account page
-        on successful update. If the form is invalid, it re-renders the form with error messages.
+        Rendered template for the account update form, or redirects to the
+        account page on successful update. If the form is invalid, it
+        re-renders the form with error messages.
     """
     user_account = Account.objects.get(user=request.user)
     if request.method == 'POST':
-        user_form = UserUpdateForm(request.POST, instance=request.user)  
-        account_form = AccountUpdateForm(request.POST, request.FILES, instance=request.user.account)  
+        user_form = UserUpdateForm(request.POST, instance=request.user)
+        account_form = AccountUpdateForm(
+            request.POST,
+            request.FILES,
+            instance=request.user.account
+        )
 
         if user_form.is_valid() and account_form.is_valid():
             updated_user = user_form.save(commit=False)
             updated_user.save()
-            account_form.save()  
-            messages.success(request, 'Your account has been successfully updated!')  
-            return redirect('account') 
-            
+            account_form.save()
+            messages.success(
+                request,
+                'Your account has been successfully updated!'
+            )
+            return redirect('account')
+
     else:
         user_form = UserUpdateForm(instance=request.user)
         account_form = AccountUpdateForm(instance=request.user.account)
@@ -89,4 +104,4 @@ def update_account(request):
         'user_form': user_form,
         'account_form': account_form
         }
-    return render(request, 'users/account_update.html', context)  
+    return render(request, 'users/account_update.html', context)

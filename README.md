@@ -1210,3 +1210,30 @@ This Post Detail Bar is prominently visible on the main page, where all posts ar
 | User Notification            | Notifications for replies to comments        | Received notifications and accessed them                  | Notifications should properly inform users of activity on their comments          | As expected. |
 | Categories Navigation        | Links to categories for filtering posts      | Clicked on category links                                  | Redirect to posts associated with the selected category                          | As expected. |
 | Footer Links                 | Links in the footer for additional resources  | Clicked all footer links                                   | Footer links should open the corresponding social media pages in new tabs         | As expected. |
+
+
+### Validator Testing
+
+To validate all python code used in this project, each file was evaluated using the [CI Python Linter](https://pep8ci.herokuapp.com/).
+
+User Files
+
+*Users/Views.py*<br>
+![Users/Views.py](static/images/screenshots/usersviewspy.png)
+
+*Users/Models.py*<br>
+![Users/Models.py](static/images/screenshots/usersmodelspy.png)
+
+*Users/Forms.py*<br>
+![Users/Forms.py](static/images/screenshots/usersformspy.png)
+
+Blog Files
+
+*Blog/View.py*<br>
+![Blog/Views.py](static/images/screenshots/blogviews.png)
+
+*Blog/Models.py*<br>
+![Blog/Models.py](static/images/screenshots/blogmodelspy.png)
+
+*Blog/Forms.py*<br>
+![Blog/Forms.py](static/images/screenshots/blogformspy.png)

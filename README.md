@@ -1291,3 +1291,134 @@ Summary of Changes Needed
 
 *All Issues Fixed*<br>
 ![All Issues Fixed](static/images/screenshots/sectionhtmlfile.png)
+
+
+## Technologies Used
+
+In this section, I will present the technologies used in the project
+
+## Languages
+
+* [HTML](https://en.wikipedia.org/wiki/HTML "HTML")
+* [CSS](https://en.wikipedia.org/wiki/CSS "CSS")
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript "JavaScript")
+* [Python](https://en.wikipedia.org/wiki/Python_(programming_language) "Python")
+
+## Libraries & Framework
+
+* [Django](https://en.wikipedia.org/wiki/Django_(web_framework) "Django")
+* [Bootstrap](https://getbootstrap.com/ "Bootstrap")
+* [Google Fonts](https://fonts.google.com "Google Fonts")
+
+## Databases
+ * [PostgreSQL](https://www.postgresql.org/ "PostgreSQL")
+ * [ElephantSQL](https://www.elephantsql.com/ "ElephantSQL")
+
+## Tools
+
+* [GitHub](https://github.com "GitHub")
+* [Gitpod](https://gitpod.io "Gitpod")
+* [Balsamic](https://balsamiq.com "Balsamic")
+* [Coolors](http://coolors.co "Coolors")
+* [DevTools](https://developer.chrome.com/docs/devtools "DevTools")
+* [Gunicorn](https://en.wikipedia.org/wiki/Gunicorn "Gitpod")
+* [Cloudinary](https://cloudinary.com/ "Cloudinary")
+* [Heroku](https://heroku.com "Heroku")
+* [Psycopg](https://wiki.postgresql.org/wiki/Psycopg "Psycopg")
+* [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/ "Crispy Forms")
+
+## Development and Deployment
+
+## Development
+
+#### Cloudinary
+
+1. Navigate to [Cloudinary](https://cloudinary.com/ "Cloudinary") and create an account.
+2. Log in.
+3. Navigate to your dashboard and copy the API Enviroment variable.
+4. Keep a note of this variable as you will need to add it to your env.py file in your project.
+
+#### env File
+
+You need to create an env.py file in the root folder of your repository. This is where you assign hidden variables for security reasons. This file must be added to your list of ignored files in git.ignore to ensure it does not get pushed up to your repository on GitHub as it would then be publicly accessible.
+
+*env.py*<br>
+![env.py](static/images/screenshots/sectionenvpy.png)
+
+1. DATABASE_URL
+Description: 
+
+This string typically represents the connection details for your database. It generally includes the database type, user credentials, host, and database name in a format like:
+
+Where to Get It:
+PostgreSQL: If you're using a PostgreSQL service (like ElephantSQL, Heroku, or Neon), you can usually find the DATABASE_URL in the dashboard of your database service provider. After creating your database, they typically display a connection string.
+Locally: When developing locally, you can define this connection string based on your local PostgreSQL setup.
+
+2. CLOUDINARY_URL
+Description:
+
+This URL allows you to connect to your Cloudinary account to manage media uploads and transformations. It includes your Cloudinary cloud name, API key, and API secret.
+Where to Get It:
+
+Cloudinary: You can obtain your CLOUDINARY_URL by signing up on Cloudinary's website and navigating to the Dashboard. In the Dashboard, you’ll find your cloud name and API credentials. Cloudinary provides a default URL format, which you can adapt by substituting your account credentials into the URL as needed.
+
+3. SECRET_KEY
+Description:
+
+The SECRET_KEY is a string that Django uses for cryptographic signing. It’s crucial for various security features in Django (like session cookies, password resets, etc.).
+Where to Get It:
+
+For development purposes, you can generate a new secret key manually or use Django's built-in method for generating a secret key.
+
+In production, never hard-code your secret key in your source code. Instead, use an environment variable to manage sensitive data securely. You can generate a secure key using online tools such as Django Secret Key Generator or by using Django's method mentioned above.
+
+#### Requirements
+
+The requirements for this particular project are as follows:<br>
+
+asgiref==3.8.1
+cloudinary==1.36.0
+dj-database-url==0.5.0
+dj3-cloudinary-storage==0.0.6
+Django==4.2.17
+django-crispy-forms==1.14.0
+gunicorn==20.1.0
+pillow==11.0.0
+psycopg2-binary==2.9.10
+sqlparse==0.5.3
+urllib3==1.26.20
+whitenoise==6.5.0
+
+To update your requirements.txt file, you can use the following command in your IDE's terminal:
+pip freeze > requirements.txt
+This command is useful to remember, especially when you install new libraries that need to be reflected in your requirements.
+
+If you want to install all the required packages listed in requirements.txt, you can run this command in your IDE's terminal:
+pip3 install -r requirements.txt
+
+Note: Be sure to consult the Python documentation for the appropriate terminal command, as it may vary based on your operating system.
+
+## Deployment
+
+This project was deployed using [Heroku](https://www.heroku.com "Heroku") by following the steps detailed below.
+
+1. Navigate to Heroku website and sign up or log in.
+2. Navigate to your dashboard, select **New** and then **Create New App**.
+3. Assign a unique name to your project, select your region and click **Create app**.
+4. Navigate to **Settings** tab.
+5. You need to add specific config vars to be able to deploy the project properly on Heroku. This is done by clicking on **Reveal Config Vars**, and adding them here. The config vars needed are listed below: <br>
+CLOUDINARY_URL = Same as your CLOUDINARY_URL in your env.py.<br>
+DATABASE_URL =  Same as your DATABASE_URL in your env.py.<br>
+SECRET_KEY = Same as your SECRET_KEY in your env.py.
+Make sure that the secret key matches the one you are using in your local development environment to avoid any discrepancies when deploying your project.
+
+## Deploying from a Github Repository
+
+1. Go to the Deploy tab in your Heroku dashboard.
+2. Under the deployment method options, select GitHub - Connect. You will need to log in to your GitHub account through the prompt to authorize the connection.
+3. If your GitHub account is not already selected, choose it from the dropdown menu.
+4. Use the search function to find the GitHub repository you want to deploy and click Connect next to the corresponding repository in the results list.
+5. In the Deploy tab, you will find deployment options further down for both Automatic Deploys and Manual Deploy. Enabling Automatic Deploys will allow Heroku to automatically update your app each time your GitHub repository receives changes.
+6. Select your preferred deployment method and specify the branch you wish to deploy.
+7. Click Enable Automatic Deploys if you opted for Automatic Deploys. If you chose Manual Deploy, then click Deploy Branch.
+8. Heroku will initiate the deployment process. Once the deployment completes successfully, you will see a message stating Your app was successfully deployed, along with a button to view your newly deployed application.

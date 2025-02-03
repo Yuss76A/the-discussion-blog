@@ -1252,3 +1252,42 @@ Overall, I found this organized approach to be very effective in managing my CSS
 
 *CSS Validation*<br>
 ![CSS Validation](static/images/screenshots/cssfilevalidation.png)
+
+## HTML Validation Issues and Resolutions
+
+*HTML Validation Issues and Resolutions*<br>
+![HTML Validation Issues and Resolutions](static/images/screenshots/sectionissuesfile.png)
+
+1. Duplicate IDs
+Issue:
+The validation revealed duplicate IDs within the HTML. Specifically, the IDs auth-links and latest-gist were used multiple times. When I was adding the auth-links, I was so focused on what I could add more to the project that I completely forgot that IDs must be unique.
+
+Explanation:
+In HTML, IDs must be unique within a page. Using the same ID for different elements can lead to unexpected behavior and validation errors.
+
+Certainly! Here’s the revised text with your added context regarding the auth-links IDs:
+
+HTML Validation Issues and Resolutions
+During the HTML validation process, several common issues were identified related to the use of IDs, attributes, and structural elements. Below is a breakdown of each issue along with explanations and suggested fixes.
+
+2. Unnecessary Role Attribute
+Issue:
+A warning was detected regarding the role attribute being unnecessary for the <main> element.
+
+Explanation:
+The <main> element inherently represents the main content of a document, making the role="main" attribute redundant.
+
+3. Bad Value for href Attribute
+Issue:
+An error was found related to a bad value in the href attribute for an <a> element. Specifically, the URL contained spaces, which are illegal characters. This error occurred because I wrote category=random post. I left the space because I am using the exact name filter, meaning that the name must match what I have written, such as category, and my category is specifically random post. Therefore, I could not simply add a dash or underscore.
+
+Explanation:
+Spaces in URLs can disrupt their structure.
+
+Summary of Changes Needed
+* Ensure all IDs are unique throughout the HTML document.
+* Remove the role attribute from the <main> element.
+* Fix URLs in href attributes by encoding spaces appropriately.
+
+*All Issues Fixed*<br>
+![All Issues Fixed](static/images/screenshots/sectionhtmlfile.png)

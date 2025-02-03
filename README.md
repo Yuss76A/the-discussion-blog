@@ -1237,3 +1237,18 @@ Blog Files
 
 *Blog/Forms.py*<br>
 ![Blog/Forms.py](static/images/screenshots/blogformspy.png)
+
+## CSS Validator
+
+[W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) was used to validate the CSS in this project. The validator returned no errors.
+
+In this project, I took a different approach to writing my CSS code. First, I separated the dark mode styles from the light mode styles to enhance clarity. At the beginning of the dark mode section, I included a comment that clearly indicates where the dark mode CSS starts, making it easy to navigate between the two modes.
+
+Additionally, in my past projects, I used comments to separate various parts of the project, such as using a comment for the navbar with all related styles grouped below it. This time, however, I took it a step further by adding comments for each class in the CSS file. These comments specify exactly which element each class targets and often include where to find that element in the HTML markup.
+
+This method greatly helped me quickly identify the CSS rules I was looking for, as I could immediately see what each class was targeting. Having comments for every class made my workflow smoother and more efficient, allowing me to focus on making the necessary adjustments with confidence.
+
+Overall, I found this organized approach to be very effective in managing my CSS code.
+
+*CSS Validation*<br>
+![CSS Validation](static/images/screenshots/cssfilevalidation.png)

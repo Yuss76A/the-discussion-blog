@@ -53,18 +53,18 @@
                         </div>
                         <!-- Navbar Right Side -->
                         <div class="navbar-nav">
-                            <a class="nav-item nav-link" href="{% url 'welcome' %}" id="auth-links"
+                            <a class="nav-item nav-link" href="{% url 'welcome' %}" id="auth-links-home"
                                 aria-label="Go to home page">Home</a>
-                            <a class="nav-item nav-link" href="{% url 'about' %}" id="auth-links"
+                            <a class="nav-item nav-link" href="{% url 'about' %}" id="auth-links-about"
                                 aria-label="Learn more about us">About Us</a>
                             {% if user.is_authenticated %}
-                            <a class="nav-item nav-link" href="{% url 'blog-new' %}" id="auth-links"
+                            <a class="nav-item nav-link" href="{% url 'blog-new' %}" id="auth-links-create"
                                 aria-label="Create a new blog post">Create Post</a>
-                            <a class="nav-item nav-link" href="{% url 'account' %}" id="auth-links"
+                            <a class="nav-item nav-link" href="{% url 'account' %}" id="auth-links-account"
                                 aria-label="View your account settings">Account</a>
-                            <a class="nav-item nav-link" href="{% url 'logout' %}" id="auth-links"
+                            <a class="nav-item nav-link" href="{% url 'logout' %}" id="auth-links-logout"
                                 aria-label="Logout of your account">Logout</a>
-                            <a class="nav-item nav-link" href="{% url 'notifications' %}" id="auth-links"
+                            <a class="nav-item nav-link" href="{% url 'notifications' %}" id="auth-links-notifications"
                                 aria-label="View your notifications">
                                 Notifications
                                 {% if unread_count > 0 %}
@@ -73,9 +73,9 @@
                                 {% endif %}
                             </a>
                             {% else %}
-                            <a class=" nav-item nav-link" href="{% url 'login' %}" id="auth-links"
+                            <a class=" nav-item nav-link" href="{% url 'login' %}" id="auth-links-login"
                                 aria-label="Login to your account">Login</a>
-                            <a class="nav-item nav-link" href="{% url 'register' %}" id="auth-links"
+                            <a class="nav-item nav-link" href="{% url 'register' %}" id="auth-links-register"
                                 aria-label="Register a new account">Register</a>
                             {% endif %}
                         </div>
@@ -85,7 +85,7 @@
         </nav>
     </header>
     <!--Main Section-->
-    <main role="main" class="container">
+    <main class="container">
         <div class="row">
             <!-- Main Content Area for Posts -->
 

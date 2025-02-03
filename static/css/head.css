@@ -156,7 +156,14 @@ svg {
 }
 
 /* Navbar Auth-links CSS Style */
-#auth-links {
+#auth-links-about,
+#auth-links-home,
+#auth-links-login,
+#auth-links-register,
+#auth-links-create,
+#auth-links-account,
+#auth-links-logout,
+#auth-links-notifications {
     font-family: 'Poppins', sans-serif;
     position: relative;
     display: inline-block;
@@ -171,7 +178,14 @@ svg {
 }
 
 /* Slide-in underline effect */
-#auth-links:after {
+#auth-links-about:after,
+#auth-links-home:after,
+#auth-links-login:after,
+#auth-links-register:after,
+#auth-links-create:after,
+#auth-links-account:after,
+#auth-links-logout:after,
+#auth-links-notifications:after {
     content: "";
     position: absolute;
     left: 0;
@@ -183,13 +197,15 @@ svg {
     transition: transform 0.3s ease;
 }
 
-/* Show the underline on hover */
-#auth-links:hover:after {
-    transform: scaleX(1);
-}
-
 /* Changes the style of the link on hover */
-#auth-links:hover {
+#auth-links-about:hover,
+#auth-links-home:hover,
+#auth-links-login:hover,
+#auth-links-register:hover,
+#auth-links-create:hover,
+#auth-links-account:hover,
+#auth-links-logout:hover,
+#auth-links-notifications:hover {
     font-weight: bold;
     background-color: rgba(255, 255, 255, 0.3);
     color: #b2c39c;

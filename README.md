@@ -493,6 +493,61 @@ Community guidelines ensure a positive experience for all users, with a strong e
 *About Us Mobile*<br>
 ![About Us Mobile](static/images/screenshots/pageaboutusmobile.png)
 
+### Log In Page
+
+The Login section of the application is designed to provide a user-friendly interface for accessing user accounts. It features:
+
+* Title: A visually appealing title in dark blue reads "Log In to Your Account," clearly indicating the purpose of this section.
+
+* Input Fields: Users are presented with two input fields:
+
+Username: A field for the user to enter their username, styled with a soft white background for easy readability.
+Password: A field for entering the password, also featuring a soft white design to maintain consistency.
+
+* Login Button: A prominent button labeled "Log In," styled in a blue-purple color, allowing users to submit their credentials and access their accounts seamlessly.
+
+* Sign-Up Prompt: Below the login form, there's a friendly reminder for users who do not have an account, prompting them to "Sign Up" if they need to create a new one.
+
+* Error Messaging: Should the user enter incorrect login information, an error message will be displayed to alert them, stating, "Please enter a correct username and password." It's important to note that both fields may be case-sensitive, which means users must enter their credentials precisely.
+
+This design aims to ensure users have an intuitive experience while logging in, promoting both functionality and ease of use.
+
+*Login Page Desktop*<br>
+![Login Page Desktop](static/images/screenshots/pagelogindesktop.png)
+
+*Login Page Mobile*<br>
+![Login Page Mobile](static/images/screenshots/pageloginmobile.png)
+
+### Register Page
+
+The Registration page is designed to facilitate the account creation process for users. It features:
+
+* Title: A striking dark blue title "Create Your Account" immediately captures the user's attention and clearly indicates the purpose of the page.
+
+* Input Fields: Users are provided with six input fields, all styled with a soft white background for a pleasant aesthetic:
+
+* Username: This field includes a requirements statement to ensure users understand the necessary criteria for creating a valid username.
+* First Name: A field for users to input their first name.
+* Last Name: A field for users to input their last name.
+* Email: A field to enter a valid email address, highlighting the importance of accuracy for communication purposes.
+* Password: This field includes specific rules that must be followed, ensuring the password meets required criteria.
+* Password Confirmation: A field to re-enter the password for verification.
+* Error Messaging: If users enter incorrect information in the password fields or if they attempt to register a username that is already taken, a warning message will appear below the respective input field. This feedback helps users correct their entries promptly.
+
+* User Guidance: Users are encouraged to enter accurate information in all fields to facilitate effective communication from our team regarding updates or any issues that may arise.
+
+* Register Now Button: At the end of the form, there is a prominent "Register Now" button styled in an attractive blue and purple color, allowing users to submit their registration details easily.
+
+* Login Prompt: Additionally, at the bottom of the registration page, a message is displayed stating, "Already have an account? Log in," providing users with an easy way to navigate to the login page if they have previously registered.
+
+This design aims to provide a straightforward and effective registration process, ensuring users can create their accounts with minimal friction while being informed at each step.
+
+*Register Page Desktop*<br>
+![Register Page Desktop](static/images/screenshots/pageregisterdesktop.png)
+
+*Register Page Mobile*<br>
+![Register Page Mobile](static/images/screenshots/pageregistermobile.png)
+
 ### Create A New Post
 
 In the Create a New Post section, users can easily compose and publish new posts. This simple and intuitive interface includes fields for the post title, content, and a choice of category. Once the post is ready, users can click the Publish button to share it with the community. 

@@ -519,7 +519,13 @@ Additionally, there is an Update Profile button that directs users to the profil
 
 ### Edit Your Profile Window
 
-When users click the Update Profile button, they are taken to the Edit Your Profile window. In this section, users can update their name, email, and avatar image. After making the desired changes, users can save their updates, or if they wish to cancel, they have the option to go back without making any changes.
+The Edit Profile Page features a visually appealing soft white container with a prominent blue title that clearly conveys the page's purpose. Inside this container, users will encounter input fields for updating their username and email, set against a light grey background to enhance readability.
+
+Additionally, there is a specific section designated for changing the avatar image. This section showcases the current profile picture, allowing users to easily view their existing image prior to making any updates.
+
+At the bottom of the page, a Save Changes button is displayed with a vibrant blue-purple background and white text, enabling users to submit their updates. Adjacent to it, a straightforward blue link allows users to Cancel and return, providing a convenient option to exit without applying changes.
+
+Users are also shown a warning message when considering a username change, informing them that any changes made will be reflected in the system. Once updated, the new username will serve as their primary login identifier. Additionally, users are reminded to enter a valid email address, allowing our team to reach out concerning any significant updates or changes.
 
 *Edit Your Profile Desktop*<br>
 ![Edit Your Profile Desktop](static/images/screenshots/pageeditprofiledesktop.png)
@@ -915,11 +921,13 @@ Additionally, there is a dedicated section for changing the avatar image. This s
 
 At the bottom of the page, there is a Save Changes button with an attractive dark grey background and white text, enabling users to apply their updates. Next to it, a simple link in blue allows users to Cancel and go back, providing an easy option to exit without saving changes.
 
+A warning message is displayed for users considering a username change, reminding them that if they change their username, it will be updated in the system. After the change, this new username will become their primary identifier for logging in. Furthermore, users are encouraged to provide a correct email address, as this enables our team to contact them regarding any important changes or updates.
+
 *Edit Profile Dark Mode Desktop*<br>
-![Edit Profile Dark Mode Desktop](static/images/screenshots/darkmodeeditprofiledesktop.png)
+![Edit Profile Dark Mode Desktop](static/images/screenshots/darkmodeeditprofilepage.png)
 
 *Edit Profile Dark Mode Mobile*<br>
-![Edit Profile Dark Mode Mobile](static/images/screenshots/darkmodeeditprofilemobil.png)
+![Edit Profile Dark Mode Mobile](static/images/screenshots/darkomodeeditprofilemobile.png)
 
 ## Notifications Page (Dark Mode - Empty)
 The Notifications Page in dark mode features a sleek black background that enhances the visual appeal. At the top of the page, the title Your Notifications is displayed in white letters, clearly indicating the purpose of the section.

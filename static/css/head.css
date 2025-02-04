@@ -619,6 +619,15 @@ button:hover {
     font-size: 1.1rem;
 }
 
+/* Invalid Feedback for the Register Error Messages */
+.invalid-feedback {
+    display: none;
+    width: 100%;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: red; /* or your chosen color */
+}
+
 /* Dark Mood Starts Here */
 
 body.dark-mode {
@@ -895,4 +904,13 @@ body.dark-mode .text-orange {
 body.dark-mode .text-orange:hover {
     color: #FF8C00;
     text-decoration: underline;
+}
+
+/* Invalid Feedback for the Register Error Messages */
+body.dark-mode .invalid-feedback {
+    display: none;
+    width: 100%;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: rgb(216, 158, 158); /* or your chosen color */
 }

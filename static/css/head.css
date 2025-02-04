@@ -606,7 +606,20 @@ button:hover {
     text-decoration: underline;
 }
 
-/* Dark Mood */
+/* Warning Message in the Update Account Page */
+.important-text {
+    color: red;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Warning Text in the Update Account Page */
+.user-profile-message {
+    color: #000;
+    font-size: 1.1rem;
+}
+
+/* Dark Mood Starts Here */
 
 body.dark-mode {
     background-color: #000000;
@@ -713,7 +726,7 @@ body.dark-mode a {
 
 body.dark-mode a:hover {
     color: #bb86fc;
-    /* Lighter shade for link hover effect */
+
 }
 
 /* Ensure button colors are appropriate in dark mode */
@@ -733,13 +746,6 @@ body.light-mode ul li {
     color: #b7c2b7;
 
 }
-
-
-/* UL LI CSS from about us page */
-/* body.dark-mode ul li {
-    color: #FFFFFF;
-
-} */
 
 body.dark-mode .article-content {
     color: white;

@@ -1,10 +1,8 @@
 from django.contrib import messages
-from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.core.paginator import Paginator
-from django.http import HttpResponse
+from django.contrib.messages.views import SuccessMessageMixin
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import (
     ListView,
@@ -271,7 +269,7 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 
 # Delete post view with permissions check
-class PostDeleteView(DeleteView):
+class PostDeleteView(SuccessMessageMixin, DeleteView):
     """
     View to delete a post.
 
@@ -290,23 +288,24 @@ class PostDeleteView(DeleteView):
     """
     model = Post
     success_url = reverse_lazy('welcome')
+    success_message = "Your post has been deleted successfully!"
 
-    def delete(self, request, *args, **kwargs):
+    def delete(self, request):
         """Handle the deletion of the post and notify the user."""
-        post = self.get_object()  # Get the post object
 
         # Capture the current category and search parameters
         current_category = request.GET.get('category', '')
         search_query = request.GET.get('search', '')
 
-        post.delete()
-        messages.success(request, 'Your post has been deleted!')
+        self.object.delete()
+        messages.success(request, self.success_message)
 
-        redirect_url = (
-            f"{self.success_url}?category={current_category}"
+        return redirect(
+            f"{self.success_url}"
+            f"?category={current_category}"
             f"&search={search_query}"
         )
-        return redirect(redirect_url)
+
 
 
 # Update a comment by the author; only authorized users can edit.

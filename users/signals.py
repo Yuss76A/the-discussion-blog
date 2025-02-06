@@ -26,4 +26,5 @@ def save_account(sender, instance, **kwargs):
     any updates to the User instance are reflected in the corresponding Account
     instance.
     """
-    instance.account.save()
+    if hasattr(instance, 'account'):
+        instance.account.save()

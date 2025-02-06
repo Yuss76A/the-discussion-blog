@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.contrib import messages
 from .forms import UserRegisterForm, UserUpdateForm, AccountUpdateForm
@@ -65,9 +64,9 @@ def update_account(request):
     """
     Update user account information.
 
-    This view allows logged-in users to update their account details.
-    It handles both user-related information and account-related details.
-    Upon successful form submission, the user's updated information is saved,
+    This view allows logged-in users to update their account details,
+    including their username and email through a form submission.
+    Upon successful submission, the user's updated information is saved,
     and a success message is displayed.
 
     Parameters:
@@ -76,20 +75,20 @@ def update_account(request):
     Returns:
         Rendered template for the account update form, or redirects to the
         account page on successful update. If the form is invalid, it
-        re-renders the form with error messages.
+        re-renders the form with error messages displayed.
     """
-    user_account = Account.objects.get(user=request.user)
+    user_account = get_object_or_404(Account, user=request.user)
+
     if request.method == 'POST':
         user_form = UserUpdateForm(request.POST, instance=request.user)
         account_form = AccountUpdateForm(
             request.POST,
             request.FILES,
-            instance=request.user.account
+            instance=user_account
         )
 
         if user_form.is_valid() and account_form.is_valid():
-            updated_user = user_form.save(commit=False)
-            updated_user.save()
+            user_form.save()
             account_form.save()
             messages.success(
                 request,
@@ -99,9 +98,10 @@ def update_account(request):
 
     else:
         user_form = UserUpdateForm(instance=request.user)
-        account_form = AccountUpdateForm(instance=request.user.account)
+        account_form = AccountUpdateForm(instance=user_account)
+
     context = {
         'user_form': user_form,
-        'account_form': account_form
-        }
+        'account_form': account_form,
+    }
     return render(request, 'users/account_update.html', context)

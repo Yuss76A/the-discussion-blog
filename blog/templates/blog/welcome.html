@@ -22,14 +22,6 @@
         You are viewing posts in the category: <strong>{{ request.GET.category|title }}</strong>
     </div>
     {% endif %}
-    <!-- Message Display Area -->
-    {% if messages %}
-    {% for message in messages %}
-    <div class="alert alert-success" role="alert">
-        {{ message }}
-    </div>
-    {% endfor %}
-    {% endif %}
     {% for article in articles %}
     <article class="media content-section mt-4">
         <!-- Assuming 'profile' is an attribute of 'author' that contains an image -->

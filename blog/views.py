@@ -307,7 +307,6 @@ class PostDeleteView(SuccessMessageMixin, DeleteView):
         )
 
 
-
 # Update a comment by the author; only authorized users can edit.
 def update_comment(request, comment_id):
     """

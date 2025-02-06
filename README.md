@@ -343,6 +343,83 @@ Category:<br>
 |   name         |    CharField    |
 
 
+## Entity-Relationship Diagram (ERD)
+
+*Entity-Relationship Diagram (ERD)*<br>
+![Entity-Relationship Diagram (ERD)](static/images/screenshots/erd.png)
+
+1. User:
+
+* Attributes:
+id (Primary Key), username, first_name, last_name, email, password.
+
+* Relationships:
+One-to-One relationship with the Account entity.
+One-to-Many relationships with Post, Comment, and Notification entities, indicating that a single user can have multiple posts, comments, and notifications associated with them.
+
+2. Account:
+
+* Attributes:
+id (Primary Key), user_id (Foreign Key referencing User), avatar.
+
+* Relationships:
+One-to-One relationship with the User entity, linking user accounts to their corresponding profile information.
+
+3. Post:
+
+* Attributes:
+id (Primary Key), title, content, date_posted, author_id (Foreign Key referencing User), likes, dislikes, category_id (Foreign Key referencing Category).
+
+* Relationships:
+One-to-Many relationship with the Comment entity, indicating that each post can have multiple comments.
+Many-to-One relationship with the Category entity, linking each post to a specific category.
+
+4. Comment:
+
+* Attributes:
+id (Primary Key), post_id (Foreign Key referencing Post), author_id (Foreign Key referencing User), content, created_at, likes, dislikes, parent_id (optional Foreign Key referencing Comment for replies).
+
+* Relationships:
+Many-to-One relationship with the Post entity, indicating each comment is tied to a specific post.
+Many-to-One relationship with the User entity, indicating that each comment is authored by a user.
+Self-referencing relationship allows for threading of comments (replies).
+
+5. Category:
+
+* Attributes:
+id (Primary Key), name.
+
+* Relationships:
+One-to-Many relationship with the Post entity, allowing multiple posts to be categorized under the same category.
+
+6. Notification:
+
+* Attributes:
+id (Primary Key), user_id (Foreign Key referencing User), message, comment_id (optional Foreign Key referencing Comment), created_at, is_read.
+
+* Relationships:
+Many-to-One relationship with the User entity, linking each notification to a specific user.
+
+7. CollaborateRequest:
+
+* Attributes:
+id (Primary Key), name, email, message, created_at.
+
+* Relationships:
+This entity stands alone with no specific references to other entities.
+
+- Characteristics of the CollaborateRequest Entity
+
+1. Lack of Relationships:
+
+The CollaborateRequest model does not reference any other models via foreign keys. It contains attributes such as name, email, message, and created_at but does not have fields that link it to other entities, such as User or Post.
+Because it does not relate to other entities, it functions independently within the application.
+
+2. Purpose:
+
+The primary purpose of the CollaborateRequest model is to collect and store collaboration inquiries from users. It gathers data without needing to connect directly to the user accounts or posts, making it self-contained.
+It can be seen as a standalone input form that exists for specific functionality (collaboration inquiries), separate from the core user and content management of the application.
+
 
 ## Wireframes
 

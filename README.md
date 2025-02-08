@@ -1627,6 +1627,16 @@ The favicon image was created using Favicon.io by Joh Sorrentino. You can visit 
 *Favicon Image*<br>
 ![Favicon Image](static/images/screenshots/favicon.png)
 
+## Main Idea
+
+At the beginning of my project, I wasn’t entirely sure what direction to take. However, after discussions with my mentor, I started to explore the idea of creating a forum as my project. I quickly recalled one of my favorite forums from my time in Spain called https://forocoches.com/foro/. Although it's a closed forum where registration is limited to invitations, it became a vibrant community that featured discussions and posts on a wide range of topics. 
+
+Inspired by FOROCOCHES, I envisioned building a similar platform where users could engage in meaningful conversations and share insights about various subjects. While my project is currently small, I am committed to enhancing its features over time based on user feedback and suggestions. This iterative approach will help me create a forum that is not only functional but also reflective of the community's interests and needs.
+
+I look forward to developing this project further and turning it into a welcoming space for discussions and knowledge sharing.
+
+
+
 ## Credits
 
 - I extend my heartfelt thanks to [CodeInstitute](https://codeinstitute.net/ "Code Institute") and its vibrant Slack community of tutors and mentors. Your unwavering support, expert advice, and constant encouragement have been instrumental in my educational journey and in successfully completing this project. The dedication shown has significantly enriched my learning experience.

@@ -1613,6 +1613,20 @@ As I coded, I found myself constantly wanting to add new features—thinking, �
 
 However, I realized that this wasn’t a productive approach. I learned the importance of focusing and committing to finishing what I started. Overall, I am proud of what I accomplished, especially as someone who has never formally studied coding. Building projects like this one has been a rewarding experience, and I just wanted to share my thoughts on this fourth project.
 
+## Image Used For Advertisment Window
+
+The image used for the advertisement window comes from the following page name: Fite Fuaite.
+
+*Used Advertisment Image<br>
+![Used Advertisment Image](static/images/screenshots/fitefuaiteimage.png)
+
+## Favicon Image 
+
+The favicon image was created using Favicon.io by Joh Sorrentino. You can visit the favicon page at the following link: https://favicon.io/
+
+*Favicon Image*<br>
+![Favicon Image](static/images/screenshots/favicon.png)
+
 ## Credits
 
 - I extend my heartfelt thanks to [CodeInstitute](https://codeinstitute.net/ "Code Institute") and its vibrant Slack community of tutors and mentors. Your unwavering support, expert advice, and constant encouragement have been instrumental in my educational journey and in successfully completing this project. The dedication shown has significantly enriched my learning experience.

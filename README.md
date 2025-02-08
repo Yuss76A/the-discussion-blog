@@ -265,8 +265,6 @@ This is used as the background color for the entire site when dark mode is activ
 
 ## Color Choices 
 
-Certainly! Here’s a suggested text to add to your README file regarding the color choices and a note about the potential for missing colors, along with an improvised touch to enhance the tone:
-
 Color Choices
 In developing the Discussion Room project, I've carefully selected and noted the colors used to create an engaging and visually appealing website. The goal was to design a platform that not only facilitates discussions but also captures the attention of users through thoughtful color usage.
 

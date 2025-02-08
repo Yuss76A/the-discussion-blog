@@ -1334,6 +1334,17 @@ This Post Detail Bar is prominently visible on the main page, where all posts ar
 *Post Detail Bar*<br>
 ![Post Detail Bar](static/images/screenshots/sectionpostdetailsbar.png)
 
+## Default Image For New Users
+
+When new users register on the forum, they are automatically assigned a default avatar image. This ensures that every user has a profile picture upon joining, creating a more visually engaging community.
+
+For those who wish to customize their presence further, users can upload a personal avatar. To do this, they need to navigate to their account settings and select the "Update Account" option. From there, users can easily upload a new image from their computer to replace the default avatar.
+
+This feature allows users to personalize their profiles, enhancing their overall experience on the forum.
+
+*Default Image For New Users*<br>
+![Default Image For New Users](static/images/screenshots/newusersimage.jpeg)
+
 ## Feature Testing Table
 
 | Feature Tested               | Feature Description                           | Testing Completed                                           | Expected Outcome                                                                  | Result       |
@@ -1498,6 +1509,15 @@ You need to create an env.py file in the root folder of your repository. This is
 
 *env.py*<br>
 ![env.py](static/images/screenshots/sectionenvpy.png)
+
+*Dynamic DEBUG Setup*<br>
+![Dynamic DEBUG Setup](static/images/screenshots/dynamicdebugsetup.png)
+
+In my configuration, I have a variable named DEVELOPMENT set to "1" in the env.py file, indicating the application is in development mode. This setup allows the DEBUG setting to switch based on whether DEVELOPMENT is defined. 
+
+When DEVELOPMENT is "1", DEBUG is set to True, which provides detailed error messages for troubleshooting. However, in a production environment, it defaults to False, which is critical for security and prevents exposing sensitive information in error messages.
+
+Since the DEVELOPMENT variable is stored in env.py, it won’t be included in my repository, ensuring that DEBUG remains False upon deployment. It's vital to have DEBUG set to False to protect the application's integrity.
 
 1. DATABASE_URL
 Description: 

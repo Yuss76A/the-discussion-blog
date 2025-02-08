@@ -1511,13 +1511,15 @@ You need to create an env.py file in the root folder of your repository. This is
 ![env.py](static/images/screenshots/sectionenvpy.png)
 
 *Dynamic DEBUG Setup*<br>
-![Dynamic DEBUG Setup](static/images/screenshots/dynamicdebugsetup.png)
+![Dynamic DEBUG Setup](static/images/screenshots/debugdynamicsectup.png)
 
-In my configuration, I have a variable named DEVELOPMENT set to "1" in the env.py file, indicating the application is in development mode. This setup allows the DEBUG setting to switch based on whether DEVELOPMENT is defined. 
+In my env.py file, I have set a variable named DEVELOPMENT to "1". This indicates that the application is currently running in a development environment.
 
-When DEVELOPMENT is "1", DEBUG is set to True, which provides detailed error messages for troubleshooting. However, in a production environment, it defaults to False, which is critical for security and prevents exposing sensitive information in error messages.
+When DEVELOPMENT is set to "1", the application allows for detailed error messages and debugging information to be displayed in the browser. This is essential during development, as it aids in troubleshooting and testing by providing immediate feedback about any issues encountered.
 
-Since the DEVELOPMENT variable is stored in env.py, it won’t be included in my repository, ensuring that DEBUG remains False upon deployment. It's vital to have DEBUG set to False to protect the application's integrity.
+However, it's crucial to note that in a production environment, DEVELOPMENT should not be set, or it should be set to a value that represents deployment, such as "0". This ensures that detailed debugging information is suppressed, thereby preventing any sensitive information from being exposed to users and improving the overall security of the application.
+
+By managing the DEVELOPMENT variable in this way, I ensure a smooth transition between development and production environments while maintaining security and functionality in both contexts.
 
 1. DATABASE_URL
 Description: 

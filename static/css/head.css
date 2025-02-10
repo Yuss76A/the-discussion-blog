@@ -2,10 +2,20 @@ body {
     background-color: rgb(230, 230, 250);
     color: #444444;
     margin-top: 5rem;
-    /* background-size: contain; */
     transition: background-color 0.5s, color 0.5s;
-    /* background-repeat: no-repeat; */
 }
+
+html, body {
+    height: 100%;  /* Ensure both html and body are full height */
+    margin: 0;  /* Remove default margin */
+    display: flex;  /* Use Flexbox layout */
+    flex-direction: column;  /* Stack child elements vertically */
+}
+
+main {
+    flex: 1; /* This allows the main content area to fill available space */
+    padding-top: 5rem;
+} 
 
 /* Sets the color and font for all headings and paragraphs */
 h1,
@@ -628,8 +638,30 @@ button:hover {
     color: red; /* or your chosen color */
 }
 
-/* Dark Mood Starts Here */
+/* Footer Links Custom Styles */
 
+footer {
+    padding: 20px; /* Padding for the footer */
+    color: white;
+    background-color: #003366; /* Footer background color */
+    text-align: center; /* Center text in the footer */
+}
+
+.site-footer .nav-link {
+    color: #ffffff !important; /* Forcing normal link color */
+}
+
+.site-footer .nav-link:hover {
+    color: #d1e7dd !important; /* Forcing hover color */
+}
+
+.site-footer .text-secondary {
+    color: #ffffff !important; /* Forcing color to white */
+}
+
+ /* Dark Mood Starts Here */
+
+/* Body Dark-Mode Style*/                                                                 
 body.dark-mode {
     background-color: #000000;
     color: #FFFFFF;

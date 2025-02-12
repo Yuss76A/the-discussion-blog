@@ -1041,7 +1041,7 @@ Additionally, the section includes “Connect with Us” text in blue, followed 
 At the bottom of the page, users will find a button for Update Profile, enabling them to make changes to their account details easily.
 
 *Account Page Dark Mode Desktop*<br>
-![Account Page Dark Mode Desktop](static/images/screenshots/darkmodeaccoundesktop.png)
+![Account Page Dark Mode Desktop](static/images/screenshots/darkmodeaccountdesktop.png)
 
 *Account Page Dark Mode Mobile*<br>
 ![Account Page Dark Mode Mobile](static/images/screenshots/darkmodeaccountmobile.png)

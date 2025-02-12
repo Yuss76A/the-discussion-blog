@@ -1068,10 +1068,10 @@ The Notifications Page in dark mode features a sleek black background that enhan
 If there are no notifications to show, a message will appear below the title saying You have no notifications, also in white. This clear communication ensures that users are aware of their current notification status without any confusion.
 
 *Notifications Page Empty Dark Mode Desktop*<br>
-![Notifications Page Empty Dark Mode Desktop](static/images/screenshots/darkmodenotificationsdesktop.png)
+![Notifications Page Empty Dark Mode Desktop](static/images/screenshots/darkmodenotificationsdesktopempty.png)
 
 *Notifications Page Empty Dark Mode Mobile*<br>
-![Notifications Page Empty Dark Mode Mobile](static/images/screenshots/darkmodenotificationsmobil.png)
+![Notifications Page Empty Dark Mode Mobile](static/images/screenshots/darkmodenotificationsmobilempty.png)
 
 ## Notification Page With Notification(Dark Mode)
 
@@ -1087,10 +1087,10 @@ Go to Comment: This option will link the user directly to the specific comment t
 Before arriving at this page, logged-in users will notice a red dot below the notifications link in the navbar, indicating that there are new notifications to check.
 
 *Notifications Page Dark Mode Desktop*<br>
-![Notifications Page Dark Mode Desktop](static/images/screenshots/darkmodewithnotificationdesktop.png)
+![Notifications Page Dark Mode Desktop](static/images/screenshots/darkmodewithnotificationsdesktop.png)
 
 *Notifications Page Dark Mode Mobile*<br>
-![Notifications Page Dark Mode Mobile](static/images/screenshots/darkmodewithnotificationmobile.png)
+![Notifications Page Dark Mode Mobile](static/images/screenshots/darkmodewithnotificationsmobile.png)
 
 ## Post Detail Page (Dark Mode)
 
@@ -1117,7 +1117,7 @@ The Trending Posts window features a title in blue, displaying random posts in a
 Lastly, an Advertisement Window is framed with a grey border, containing a white container inside. This space can be utilized for relevant advertisements, ensuring a clean and organized layout.
 
 *Post Detail Page Dark Mode Desktop*<br>
-![Post Detail Page Dark Mode Desktop](static/images/screenshots/darkomodepostadetaildesktop.png)
+![Post Detail Page Dark Mode Desktop](static/images/screenshots/darkmodepostdetailpagedesktop.png)
 
 *Post Detail Page Dark Mode Mobile*<br>
 ![Post Detail Page Dark Mode Mobile](static/images/screenshots/darkmodepostdetailmobil.png)
@@ -1170,7 +1170,7 @@ Within this section, there are two buttons for user navigation:
 * The second button, Return to Home, has a dark grey background with letters in light blue, allowing users to easily navigate back to the main page of the forum.
 
 *Logout Page Dark Mode Desktop*<br>
-![Logout Page Dark Mode Desktop](static/images/screenshots/darkmodelogoutdesktop.png)
+![Logout Page Dark Mode Desktop](static/images/screenshots/darkmodelogoutpagedesktop.png)
 
 *Logout Page Dark Mode Mobile*<br>
 ![Logout Page Dark Mode Mobile](static/images/screenshots/darkmodelogoutmobile.png)

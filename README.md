@@ -286,7 +286,7 @@ The icons used for the site were sourced from [Font Awesome](https://fontawesome
 
 The Discussion Room provides a simple yet engaging web platform, aiming to establish its unique color scheme and style. The navigation bar includes several links, offering quick access to various sections, such as About Us, Create a Post, Home Page, Logout, and the Notifications Page.
 
-The footer features additional links for Highlights, Collaboration Requests, About the Team, and the Admin Page, ensuring users can easily find important information. 
+The footer features additional links for Highlights, Collaboration Requests, About the Team, and Admin Page, ensuring users can easily find important information. This footer is fixed at the bottom of the page, providing users with continuous access to these essential resources, enhancing navigation and overall user experience.
 
 Additionally, the site includes a Trending Topics section that showcases random posts and a dedicated Advertisement Window for promotional content. Above the trending topics, users will find Categories to help them navigate discussions more effectively.
 
@@ -814,9 +814,11 @@ Each post will display 6 comments per page, with pagination activated to navigat
 
 ### Footer
 
-The footer is positioned at the bottom of the page and provides essential navigation options. It includes links to the Highlights page, Control Panel, Support and Collaboration, and About Me page. 
+The footer is fixed at the bottom of the page and features a design that matches the color of the navbar, providing a cohesive look throughout the website. It offers essential navigation options, including links to the Highlights page, Control Panel, Support and Collaboration, and About Me page.
 
-These links are accessible to both logged-in and logged-out users, ensuring that everyone can explore the content. However, the Control Panel link is restricted to authorized personnel only, while the other links remain available to all users.
+These links are accessible to both logged-in and logged-out users, ensuring that everyone can explore the content. However, the Control Panel link is restricted to authorized personnel only and will open in a separate page, while the other links remain available to all users.
+
+
 
 *Footer Page Desktop*<br>
 ![Footer Page Desktop](static/images/screenshots/footerdesktop.png)
@@ -884,10 +886,10 @@ On the right side, users will find:
 * Trending Posts showcased in a white container with black and grey text, ensuring that users can easily engage with popular discussions.
 * An Advertisement Window featuring dark grey borders with a white background, providing a clear viewing area for promotional content.
 
-At the bottom of the page, a white line visually separates the footer from the rest of the content. The footer includes essential links and a toggle switch for dark/light mode, allowing users to easily switch their viewing preference.
+At the bottom of the page, a white line visually separates the footer from the rest of the content. The footer is fixed at the bottom of the page and has the same color as the navbar, creating a cohesive look throughout the website. It includes essential links and a toggle switch for dark/light mode, allowing users to easily switch their viewing preference.
 
 *Main Page Dark Mode*<br>
-![Main Page Dark Mode](static/images/screenshots/darkmodeloggedout.png)
+![Main Page Dark Mode](static/images/screenshots/darkmodemainpageversion.png)
 
 *Main Page Dark Mobile*<br>
 ![Main Page Dark Mobile](static/images/screenshots/darkmodehome.png)
@@ -914,7 +916,7 @@ The Login Page in dark mode features a sleek design that enhances user experienc
 
 The Log In button is styled with a green border, adding a visually appealing touch. Below the login fields, users who do not have an account can find a prompt to sign up, presented in a nice blue color for emphasis.
 
-A clean white line visually separates the footer from the login options. In the bottom left corner, there is a toggle for switching between dark and light modes, designed in blue to align with the overall color theme.
+A clean white line visually separates the footer from the login options. The footer is fixed at the bottom of the page and features a fixed design that matches the overall color theme. In the bottom left corner, there is a toggle for switching between dark and light modes, designed in blue to align with the overall color theme.
 
 *Dark Mode Log In Page*<br>.
 ![Dark Mode Log In Page](static/images/screenshots/darkmodelogindesktop.png)
@@ -931,21 +933,21 @@ The Register Page in dark mode mirrors the structure of the Login Page, ensuring
 * Below the registration fields, the message for users who already have an account is displayed in white, accompanied by a Log In link styled in a nice blue color.
 * Error Messaging: If users enter incorrect information in the password fields or if they attempt to register a username that is already taken, a warning message will appear below the respective input field. This feedback helps users correct their entries promptly.
 
-At the bottom of the page, a classic line separates the toggle for switching between light and dark modes from the footer, which is presented in a subtle grey color to provide a clear and elegant delineation.
+At the bottom of the page, the footer is fixed and features all essential links presented in white, maintaining the same color as the navbar for consistency. A clean design ensures that the footer remains visually cohesive with the overall layout, providing users with easy navigation options while enhancing the aesthetic of the site.
 
 *Register Page Dark Mode Desktop*<br>
-![Register Page Dark Mode Desktop](static/images/screenshots/darkmodelregisterdesktop.png)
+![Register Page Dark Mode Desktop](static/images/screenshots/darkmoderegisterdesktop.png)
 
 *Register Page Dark Mode Mobile*<br>
 ![Register Page Dark Mobile](static/images/screenshots/darkmodelregistermobile.png)
 
 ## Footer Section ( Dark Mode)
 
-The footer in dark mode features a classic line that separates it from the main content window, providing a clean visual distinction. It includes links for Highlights, Control Panel, Support, and About Me, all styled in a nice grey color with a subtle hover effect for enhanced interactivity.
+The footer in dark mode features a classic line that separates it from the main content window, providing a clean visual distinction. It includes links for Highlights, Control Panel, Support, and About Me, all styled in white for visibility and consistency. The Control Panel link, which will open in a separate page, is reserved for administrative tasks and is only available to authorized personnel who can log in.
 
-These links are accessible across all pages for both logged-in users and those without an account. However, the Control Panel link is reserved for administrative tasks and is only available to authorized personnel who can log in.
+These links are accessible across all pages for both logged-in users and those without an account. At the bottom of the footer, there is an "All rights reserved" message, ensuring clarity regarding content ownership. Additionally, the toggle for switching between dark and light modes is present; in dark mode, the toggle appears in blue, while in light mode, it is styled in grey, maintaining consistency with the overall theme.
 
-At the bottom of the footer, there is an "All rights reserved" message, ensuring clarity regarding content ownership. Additionally, the toggle for switching between dark and light modes is present; in dark mode, the toggle appears in blue, while in light mode, it is styled in grey, maintaining consistency with the overall theme.
+The navbar is fixed at the bottom of the page, providing users with easy access to navigation while enhancing the overall aesthetic of the website.
 
 *Footer In Dark Mode Desktop*<br>
 ![ooter In Dark Mode Desktop](static/images/screenshots/footerdarkmodedesktop.png)

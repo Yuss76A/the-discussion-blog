@@ -1392,6 +1392,18 @@ User Files
 *Users/Forms.py*<br>
 ![Users/Forms.py](static/images/screenshots/usersformspy.png)
 
+*Users/Signals.py*<br>
+![Users/Signals.py](static/images/screenshots/userssignalspyfile.png)
+
+*Users/Urls.py*<br>
+![Users/Urls.py](static/images/screenshots/usersurlspyfile.png)
+
+*Users/Admin.py*<br>
+![Users/Admin.py](static/images/screenshots/usersadminpyfile.png)
+
+*Users/Apps.py*<br>
+![Users/Apps.py](static/images/screenshots/usersappspyfile.png)
+
 Blog Files
 
 *Blog/View.py*<br>
@@ -1402,6 +1414,15 @@ Blog Files
 
 *Blog/Forms.py*<br>
 ![Blog/Forms.py](static/images/screenshots/blogformspy.png)
+
+*Blog/Apps.py*<br>
+![Blog/Apps.py](static/images/screenshots/blogappspyfile.png)
+
+*Blog/Urls.py*<br>
+![Blog/Urls.py](static/images/screenshots/blogurlspyfile.png)
+
+*Blog/Admin.py*<br>
+![Blog/Admin.py](static/images/screenshots/blogadminpyfile.png)
 
 ## CSS Validator
 

@@ -21,7 +21,7 @@ class CollaborateRequestAdmin(admin.ModelAdmin):
 
 
 # Register the Post model with the Django admin site.
-# This allows admins to create, read, update, and delete posts from the admin 
+# This allows admins to create, read, update, and delete posts from the admin
 # interface.
 # Register models in the admin
 admin.site.register(Post)

@@ -10,8 +10,8 @@
 <div class="container mt-5">
     <div class="account-container">
         <div class="card mb-4">
-            <div class="card-header bg-primary text-white text-center">
-                <h4 class="mb-0">Your Account Overview</h4>
+            <div class="card-header text-center">
+                <h4 class="mb-0 text-white">Your Account Overview</h4>
             </div>
             <div class="card-body text-center">
                 <!-- Display user profile image -->
@@ -49,7 +49,7 @@
             </fieldset>
             <p class="text-center">
                 <!-- Link/button to redirect to profile update form -->
-                <a href="{% url 'update_account' %}" id="auth-links" class="btn btn-primary text-black"
+                <a href="{% url 'update_account' %}" id="auth-links" class="card-header text-white"
                     aria-label="Update your profile information">Update Profile</a>
             </p>
         </form>

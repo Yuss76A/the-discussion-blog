@@ -255,6 +255,12 @@ svg {
     opacity: 0.9;
 }
 
+/* Card Header Styles Account Page */
+.card-header {
+    background-color: #003366; /* Use the specified color */
+    color: white;
+}
+
 /* Styles for card elements */
 .card-card {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
@@ -285,13 +291,13 @@ button {
     display: inline-block;
     padding: 10px;
     color: white;
-    background-color: #343a40;
+    background-color: #003366;
     text-align: center;
     cursor: pointer;
     width: 100%;
     font-size: 18px;
     transition: background-color 0.3s, transform 0.2s;
-    background: linear-gradient(270deg, rgba(255, 0, 255, 1) 0%, rgba(50, 0, 255, 1) 100%);
+    
 }
 
 /* Changes styles on button hover */
@@ -767,7 +773,7 @@ body.dark-mode a {
 }
 
 body.dark-mode a:hover {
-    color: #bb86fc;
+    color: white;
 
 }
 

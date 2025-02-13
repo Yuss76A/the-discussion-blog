@@ -224,12 +224,6 @@ svg {
         0 0 200px #03e9f4;
 }
 
-/* For additional styles if you have span elements for animations */
-#auth-links span {
-    position: absolute;
-    display: block;
-}
-
 /* Welcome text styles (if needed separately) */
 .welcome-text {
     color: #E6E6FA;
@@ -689,11 +683,23 @@ footer {
 
 .btn-like,
 .btn-dislike {
-    border: none !important; /* Remove any border */
-    box-shadow: none !important; /* Remove box shadows */
-    background-color: transparent !important; /* Ensure it's flat */
+    border: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
 }
 
+/* Edit Button for comments section */
+.btn-info {
+    color: white;
+    background-color: #003366;
+    border-color: #003366;
+}
+
+.btn-info:hover {
+    background-color: rgba(0, 51, 102, 0.5); /* Transparent background on hover */
+    border-color: rgba(0, 51, 102, 0.5); /* Transparent border on hover */
+    color: white; /* Keep text color white */
+}
 
  /* Dark Mood Starts Here */
 
@@ -999,4 +1005,16 @@ body.dark-mode .btn-dislike {
 
 body.dark-mode .btn-dislike:hover {
     color: darkred;
+}
+
+/* Dark Mode Edit Button Comments Section */
+body.dark-mode .btn-info.no-dark-mode {
+    background-color: #444;
+    color: white;
+    border-color: #003366;
+}
+
+
+body.dark-mode .btn-info.no-dark-mode:hover {
+    background-color: #444;
 }

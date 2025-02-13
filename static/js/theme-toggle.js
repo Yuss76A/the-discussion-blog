@@ -60,5 +60,5 @@ document.addEventListener('DOMContentLoaded', function () {
         messages.forEach(function (message) {
             message.style.display = 'none'; // Hide each alert message
         });
-    }, 10000);
+    }, 5000);
 });

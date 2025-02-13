@@ -788,7 +788,7 @@ When users access the update post option from the post they have published, indi
 ![Update Post Desktop](static/images/screenshots/pageeditpostdesktop.png)
 
 *Update Post Mobile*<br>
-![Update Post Mobile](static/images/screenshots/pageditpostmobile.png)
+![Update Post Mobile](static/images/screenshots/pageeditpostmobile.png)
 
 ### Delete Post
 
@@ -806,11 +806,11 @@ Users will have the option to comment on a post, reply to comments made by other
 
 Each post will display 6 comments per page, with pagination activated to navigate through additional comments as needed.
 
-*Commentin Functionality Desktop*<br>
-![Commentin Functionality Desktop](static/images/screenshots/pagecommentsdesktop.png)
+*Commenting Functionality Desktop*<br>
+![Commenting Functionality Desktop](static/images/screenshots/pagecommentdesktop.png)
 
-*Commentin Functionality Mobile*<br>
-![Commentin Functionality Mobile](static/images/screenshots/pagecommentsmobile.png)
+*Commenting Functionality Mobile*<br>
+![Commenting Functionality Mobile](static/images/screenshots/pagecommentsmobile.png)
 
 ### Footer
 

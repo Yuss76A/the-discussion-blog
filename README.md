@@ -969,13 +969,13 @@ The About Me page in dark mode features an elegant grey window that creates a vi
 
 The Support and Collaboration page in dark mode opens with a nice blue title that creates an inviting atmosphere. Below the title, a submessage encourages users to contact the team for messages and various inquiries related to collaboration.
 
-Input fields for name, email, and message are displayed in white, ensuring clarity against the dark background. The Submit button features a grey background with white letters and a nice blue border, providing an appealing call-to-action for users submitting their queries.
+Input fields for name, email, and message are displayed in white, ensuring clarity against the dark background. The Submit button features a grey background with white letters, providing an appealing call-to-action for users submitting their queries.
 
-*About Me Dark Mode Desktop*<br>
-![About Me Dark Mode Desktop](static/images/screenshots/darkmodesupportdesktop.png)
+*Support & Collaboration Dark Mode Desktop*<br>
+![Support & Collaboration Mode Desktop](static/images/screenshots/darkmodesupportdesktop.png)
 
-*About Me Dark Mode Mobile*<br>
-![About Me Dark Mode Mobile](static/images/screenshots/darkmodesupportmobile.png)
+*Support & Collaboration Dark Mode Mobile*<br>
+![Support & Collaboration Mode Mobile](static/images/screenshots/darkmodesupportmobile.png)
 
 ## Control Panel (Dark Mode)
 
@@ -985,11 +985,11 @@ Within the control panel, users can expect to see various icons—such as "x" fo
 
 The combination of blue titles, white text, and green action icons creates a cohesive and user-friendly interface, ensuring that administrators can manage the forum efficiently and intuitively while maintaining a pleasant visual environment.
 
-*About Me Dark Mode Desktop*<br>
-![About Me Dark Mode Desktop](static/images/screenshots/darkmodecontrolpaneldesktop.png)
+*Control Panel Dark Mode Desktop*<br>
+![Control Panel Dark Mode Desktop](static/images/screenshots/darkmodecontrolpaneldesktop.png)
 
-*About Me Dark Mode Mobile*<br>
-![About Me Dark Mode Mobile](static/images/screenshots/darkmodecontrolpanelmobile.png)
+*Control Panel Dark Mode Mobile*<br>
+![Control Panel Dark Mode Mobile](static/images/screenshots/darkmodecontrolpanelmobile.png)
 
 ## Highlights Page (Dark Mode)
 

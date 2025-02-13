@@ -1032,7 +1032,7 @@ To inspire users, two motivational phrases are included, creating a positive atm
 
 ## Account Page (Dark Mode)
 
-The Account Page in dark mode features a visually appealing layout with a main container that has a soft white background. Within this container, there is another internal container, also in white, which includes a bar with a blue background displaying the text "Your Account Overview" in black letters.
+The Account Page in dark mode features a visually appealing layout with a soft white background. Within this container, there is another internal container, also in white, which includes a bar with a background color matching the navbar and footer. The text "Your Account Overview" is displayed in white for better visibility against the blue background.
 
 The user’s avatar is presented in a circular format, accompanied by the username displayed in blue and the email address in grey for clear differentiation. 
 

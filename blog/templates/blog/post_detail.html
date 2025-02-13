@@ -64,10 +64,10 @@
 
             <!-- Right Side: Like and Dislike buttons -->
             <div>
-                <a href="{% url 'like-post' object.id %}" class="btn btn-success mr-2" aria-label="Like this post">
+                <a href="{% url 'like-post' object.id %}" class="btn btn-like mr-2" aria-label="Like this post">
                     <i class="fas fa-thumbs-up"></i>({{ object.likes }})
                 </a>
-                <a href="{% url 'dislike-post' object.id %}" class="btn btn-danger" aria-label="Dislike this post">
+                <a href="{% url 'dislike-post' object.id %}" class="btn btn-dislike" aria-label="Dislike this post">
                     <i class="fas fa-thumbs-down"></i>({{ object.dislikes }})
                 </a>
             </div>
@@ -98,11 +98,11 @@
 
             <!-- Right Side: Like and Dislike buttons -->
             <div>
-                <a href="{% url 'like-comment' comment.id %}" class="btn btn-success btn-sm"
+                <a href="{% url 'like-comment' comment.id %}" class="btn  btn-like btn-sm"
                     aria-label="Like this comment">
                     <i class="fas fa-thumbs-up"></i>({{ comment.likes }})
                 </a>
-                <a href="{% url 'dislike-comment' comment.id %}" class="btn btn-danger btn-sm"
+                <a href="{% url 'dislike-comment' comment.id %}" class="btn btn-dislike btn-sm"
                     aria-label="Dislike this comment">
                     <i class="fas fa-thumbs-down"></i>({{ comment.dislikes }})
                 </a>
@@ -112,7 +112,7 @@
         <form method="POST" action="{% url 'reply-comment' comment.id %}" class="mt-2">
             {% csrf_token %}
             <textarea name="content" class="form-control" placeholder="Reply to this comment..." required></textarea>
-            <button type="submit" class="btn btn-primary mt-2">Reply</button>
+            <button type="submit" class="btn mt-2">Reply</button>
         </form>
 
         <!-- Display Replies -->
@@ -134,11 +134,11 @@
                     {% endif %}
                 </div>
                 <div>
-                    <a href="{% url 'like-comment' reply.id %}" class="btn btn-success btn-sm"
+                    <a href="{% url 'like-comment' reply.id %}" class="btn btn-like btn-sm"
                         aria-label="Like this reply">
                         <i class="fas fa-thumbs-up"></i>({{ reply.likes }})
                     </a>
-                    <a href="{% url 'dislike-comment' reply.id %}" class="btn btn-danger btn-sm"
+                    <a href="{% url 'dislike-comment' reply.id %}" class="btn btn-dislike btn-sm"
                         aria-label="Dislike this reply">
                         <i class="fas fa-thumbs-down"></i>({{ reply.dislikes }})
                     </a>
@@ -193,7 +193,7 @@
     <!-- Adjust form action -->
     {% csrf_token %}
     <textarea name="content" class="comment-textarea" placeholder="Add a comment..." required></textarea>
-    <button type="submit" class="btn btn-primary mt-2">Submit</button>
+    <button type="submit" class="btn mt-2">Submit</button>
 </form>
 {% else %}
 <p>You must be logged in to leave a comment.</p>

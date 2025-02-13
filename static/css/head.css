@@ -642,29 +642,51 @@ button:hover {
     width: 100%;
     margin-top: 0.5rem;
     font-size: 0.875rem;
-    color: red; /* or your chosen color */
+    color: red;
 }
 
 /* Footer Links Custom Styles */
 
 footer {
-    padding: 20px; /* Padding for the footer */
+    padding: 20px;
     color: white;
-    background-color: #003366; /* Footer background color */
-    text-align: center; /* Center text in the footer */
+    background-color: #003366;
+    text-align: center;
 }
 
 .site-footer .nav-link {
-    color: #ffffff !important; /* Forcing normal link color */
+    color: #ffffff !important;
 }
 
 .site-footer .nav-link:hover {
-    color: #d1e7dd !important; /* Forcing hover color */
+    color: #d1e7dd !important;
 }
 
 .site-footer .text-secondary {
-    color: #ffffff !important; /* Forcing color to white */
+    color: #ffffff !important;
 }
+
+/* Specific styles for like buttons */
+.btn-like {
+    color: green;
+}
+
+.btn-dislike {
+    color: red;
+}
+
+.btn-like:hover {
+    color: darkgreen;
+}
+
+.btn-dislike:hover {
+    color: darkred;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
 
  /* Dark Mood Starts Here */
 
@@ -951,5 +973,23 @@ body.dark-mode .invalid-feedback {
     width: 100%;
     margin-top: 0.5rem;
     font-size: 0.875rem;
-    color: rgb(216, 158, 158); /* or your chosen color */
+    color: rgb(216, 158, 158);
+}
+
+/* Dark Mode Styles for Like Button */
+body.dark-mode .btn-like {
+    color: lightgreen;
+}
+
+body.dark-mode .btn-like:hover {
+    color: darkgreen;
+}
+
+/* Dark Mode Styles for Dislike Button */
+body.dark-mode .btn-dislike {
+    color: lightcoral;
+}
+
+body.dark-mode .btn-dislike:hover {
+    color: darkred;
 }

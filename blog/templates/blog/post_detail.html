@@ -64,7 +64,7 @@
 
             <!-- Right Side: Like and Dislike buttons -->
             <div>
-                <a href="{% url 'like-post' object.id %}" class="btn btn-like mr-2" aria-label="Like this post">
+                <a href="{% url 'like-post' object.id %}" class="btn btn-like" aria-label="Like this post">
                     <i class="fas fa-thumbs-up"></i>({{ object.likes }})
                 </a>
                 <a href="{% url 'dislike-post' object.id %}" class="btn btn-dislike" aria-label="Dislike this post">

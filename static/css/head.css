@@ -687,6 +687,13 @@ footer {
     opacity: 0.8;
 }
 
+.btn-like,
+.btn-dislike {
+    border: none !important; /* Remove any border */
+    box-shadow: none !important; /* Remove box shadows */
+    background-color: transparent !important; /* Ensure it's flat */
+}
+
 
  /* Dark Mood Starts Here */
 
@@ -795,7 +802,7 @@ body.dark-mode a {
 }
 
 body.dark-mode a:hover {
-    color: white;
+    color: #02a5cc;
 
 }
 

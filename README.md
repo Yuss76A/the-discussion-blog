@@ -929,7 +929,7 @@ A clean white line visually separates the footer from the login options. The foo
 The Register Page in dark mode mirrors the structure of the Login Page, ensuring a consistent user experience. All input fields are displayed in white, with their corresponding labels also in white, creating a classic input style against the black background. 
 
 * Password Requirements are also presented in white to maintain readability.
-* The Register Now button features a nice blue border, providing a visually appealing call-to-action.
+* The "Register Now" button features a nice grey color, providing a classic combination with white lettering for a visually appealing call-to-action.
 * Below the registration fields, the message for users who already have an account is displayed in white, accompanied by a Log In link styled in a nice blue color.
 * Error Messaging: If users enter incorrect information in the password fields or if they attempt to register a username that is already taken, a warning message will appear below the respective input field. This feedback helps users correct their entries promptly.
 
@@ -939,7 +939,7 @@ At the bottom of the page, the footer is fixed and features all essential links 
 ![Register Page Dark Mode Desktop](static/images/screenshots/darkmoderegisterdesktop.png)
 
 *Register Page Dark Mode Mobile*<br>
-![Register Page Dark Mobile](static/images/screenshots/darkmodelregistermobile.png)
+![Register Page Dark Mobile](static/images/screenshots/darkmoderegistermobile.png)
 
 ## Footer Section ( Dark Mode)
 

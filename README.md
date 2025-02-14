@@ -1237,6 +1237,9 @@ Currently, the forum features these 4 categories; however, we will monitor user 
 *Categories*<br>
 ![Categories](static/images/screenshots/sectioncategory.png)
 
+*Categories Dark Mode*<br>
+![Categories Dark Mode](static/images/screenshots/categoriesdarkmode.png)
+
 ## Advertisement Window
 
 The Advertisement Window has been implemented as a feature for future advertising opportunities. This section will allow us to display relevant ads based on user interest and forum content. If we receive positive feedback regarding the forum's performance, we can utilize the advertisement window to showcase additional advertisements.
@@ -1308,8 +1311,11 @@ At the top of the main page, there is a search bar that allows users to search f
 
 This search bar is not only present on the main page but also accessible when users are reading a post, ensuring that they can continue exploring the forum without interruption. This feature enhances content discoverability and allows users to engage with topics that interest them swiftly.
 
-*Search Bar Functionality*<BR>
-![Search Bar Functionality](static/images/screenshots/sectionsearchpostsbar.png)
+*Search Bar Functionality*<br>
+![Search Bar Functionality](static/images/screenshots/sectionsearchpostslightmode.png)
+
+*Search Bar Dark Mode*<br>
+![Search Bar Dark Mode](static/images/screenshots/sectionsearchpostsdarkmode.png)
 
 ## Social Account Links
 On the Account Page, users will find links to their social media accounts, including Facebook, Twitter, LinkedIn, and Dribbble. These links are conveniently positioned to encourage users to connect and engage with their networks.

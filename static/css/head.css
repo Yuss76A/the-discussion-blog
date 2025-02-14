@@ -45,6 +45,11 @@ ul {
     background-color: #003366;
 }
 
+.site-header .navbar-nav {
+    display: flex; /* Use flexbox to align links in a row */
+    align-items: center; /* Vertically center the links */
+}
+
 /* Styles the navigation links in the navbar */
 .site-header .navbar-nav .nav-link {
     color: #d1e7dd;
@@ -585,25 +590,8 @@ button:hover {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Notification DOT Bellow the notification button */
-.notification-dot {
-    color: red;
-    font-size: 1.5em;
-    display: none;
-    margin-top: 5px;
-    line-height: 1.2;
-    vertical-align: middle;
-
-}
-
-.visible {
-    display: inline;
-    /* Show the dot when notifications exist */
-}
-
 .hidden {
-    display: none;
-    /* Hide the dot when there are no notifications */
+    display: none; /* Hide elements with this class */
 }
 
 /* Code Institute Link in the highkights.html file*/

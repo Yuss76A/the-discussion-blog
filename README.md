@@ -1176,7 +1176,7 @@ Within this section, there are two buttons for user navigation:
 ![Logout Page Dark Mode Mobile](static/images/screenshots/darkmodelogoutmobile.png)
 
 
-### Small Details (Features)
+## Small Details (Features)
 
 In this section, I will explain the small details and features that I have added to the Discussion Room project. Most of these aspects were touched upon in the features section and can be seen in the accompanying images, showcasing both light and dark mode.
 

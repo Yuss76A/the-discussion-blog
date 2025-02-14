@@ -66,11 +66,8 @@
                                 aria-label="Logout of your account">Logout</a>
                             <a class="nav-item nav-link" href="{% url 'notifications' %}" id="auth-links-notifications"
                                 aria-label="View your notifications">
-                                Notifications
-                                {% if unread_count > 0 %}
-                                <span class="notification-dot visible ml-5">●</span>
-                                <!-- Only shows the dot if there are unread notifications -->
-                                {% endif %}
+                                <i class="fas fa-bell {% if request.user.is_authenticated and unread_count > 0 %}visible{% else %}hidden{% endif %}"></i>
+                                Notification
                             </a>
                             {% else %}
                             <a class=" nav-item nav-link" href="{% url 'login' %}" id="auth-links-login"

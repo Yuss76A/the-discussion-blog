@@ -605,7 +605,6 @@ def notifications_view(request):
     )
 
     unread_count = notifications.filter(is_read=False).count()
-
     notifications.update(is_read=True)
 
     # Pass notifications and unread_count to the template

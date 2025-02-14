@@ -1120,7 +1120,7 @@ Lastly, an Advertisement Window is framed with a grey border, containing a white
 ![Post Detail Page Dark Mode Desktop](static/images/screenshots/darkmodepostdetailpagedesktop.png)
 
 *Post Detail Page Dark Mode Mobile*<br>
-![Post Detail Page Dark Mode Mobile](static/images/screenshots/darkmodepostdetailmobil.png)
+![Post Detail Page Dark Mode Mobile](static/images/screenshots/darkmodepostdetailmobile.png)
 
 ## Update Post Page(Dark Mode)
 

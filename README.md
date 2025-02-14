@@ -579,7 +579,7 @@ The Login section of the application is designed to provide a user-friendly inte
 Username: A field for the user to enter their username, styled with a soft white background for easy readability.
 Password: A field for entering the password, also featuring a soft white design to maintain consistency.
 
-* Login Button: A prominent button labeled "Log In," styled in a blue-purple color, allowing users to submit their credentials and access their accounts seamlessly.
+* A prominent button labeled "Log In," styled in a blue that matches the navbar and footer, allowing users to submit their credentials and access their accounts seamlessly.
 
 * Sign-Up Prompt: Below the login form, there's a friendly reminder for users who do not have an account, prompting them to "Sign Up" if they need to create a new one.
 
@@ -611,7 +611,7 @@ The Registration page is designed to facilitate the account creation process for
 
 * User Guidance: Users are encouraged to enter accurate information in all fields to facilitate effective communication from our team regarding updates or any issues that may arise.
 
-* Register Now Button: At the end of the form, there is a prominent "Register Now" button styled in an attractive blue and purple color, allowing users to submit their registration details easily.
+* At the end of the form, there is a prominent "Register Now" button styled in an attractive blue that matches the navbar and footer, allowing users to submit their registration details easily.
 
 * Login Prompt: Additionally, at the bottom of the registration page, a message is displayed stating, "Already have an account? Log in," providing users with an easy way to navigate to the login page if they have previously registered.
 
@@ -630,10 +630,10 @@ In the Create a New Post section, users can easily compose and publish new posts
 For those who wish to cancel the action, there is an option to go back, allowing users to navigate away without creating a new post.
 
 *Create A New Post Desktop*<br>
-![Create A New Post Desktop](static/images/screenshots/pagecreateapostdesktop.png)
+![Create A New Post Desktop](static/images/screenshots/pagecreatepostdesktop.png)
 
 *Create A New Post Mobile*<br>
-![Create A New Post Mobile](static/images/screenshots/pagecreateapostmobile.png)
+![Create A New Post Mobile](static/images/screenshots/pagecreatepostmobile.png)
 
 ### Account
 

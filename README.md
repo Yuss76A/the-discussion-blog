@@ -653,7 +653,7 @@ The Edit Profile Page features a visually appealing soft white container with a 
 
 Additionally, there is a specific section designated for changing the avatar image. This section showcases the current profile picture, allowing users to easily view their existing image prior to making any updates.
 
-At the bottom of the page, a Save Changes button is displayed with a vibrant blue-purple background and white text, enabling users to submit their updates. Adjacent to it, a straightforward blue link allows users to Cancel and return, providing a convenient option to exit without applying changes.
+At the bottom of the page, a "Save Changes" button is displayed with a vibrant blue that matches the footer and navbar, featuring white text to enable users to submit their updates. Adjacent to it, a straightforward blue link allows users to cancel and return, providing a convenient option to exit without applying changes.
 
 Users are also shown a warning message when considering a username change, informing them that any changes made will be reflected in the system. Once updated, the new username will serve as their primary login identifier. Additionally, users are reminded to enter a valid email address, allowing our team to reach out concerning any significant updates or changes.
 

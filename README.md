@@ -685,10 +685,10 @@ In the Notifications Page, users will see notifications for replies to comments 
 If there are no notifications, users will simply see a message stating that there are no notifications available, ensuring clear communication without unnecessary clutter.
 
 *Notification Page Desktop*<br>
-![Notification Page Desktop](static/images/screenshots/pagenotificationsdesktop.png)
+![Notification Page Desktop](static/images/screenshots/pagenotificationdesktop.png)
 
 *Notification Page Mobile*<br>
-![Notification Page Mobile](static/images/screenshots/pagenotificationsmobile.png)
+![Notification Page Mobile](static/images/screenshots/pagenotificationmobile.png)
 
 *Red Dot*<br>
 ![Red Dot](static/images/screenshots/redpoint.png)

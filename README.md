@@ -680,7 +680,7 @@ In this window, users will have two options:
 
 ### Notifications
 
-In the Notifications Page, users will see notifications for replies to comments they have posted on various forum posts. When users log in or when someone replies to their comment, a red dot will appear below the notification button, indicating that they have new notifications.
+In the Notifications Page, users will see notifications for replies to comments they have posted on various forum posts. When users log in or when someone replies to their comment, a bell icon will appear next to the notification button, indicating that they have new notifications.
 
 If there are no notifications, users will simply see a message stating that there are no notifications available, ensuring clear communication without unnecessary clutter.
 
@@ -690,8 +690,11 @@ If there are no notifications, users will simply see a message stating that ther
 *Notification Page Mobile*<br>
 ![Notification Page Mobile](static/images/screenshots/pagenotificationmobile.png)
 
-*Red Dot*<br>
-![Red Dot](static/images/screenshots/redpoint.png)
+*Bell Icon*<br>
+![Bell Icon](static/images/screenshots/bellicon.png)
+
+*Delete Notification*<br>
+![Delete Notification](static/images/screenshots/deletenotification.png)
 
 * In the Notifications Page, users will see notifications for replies to comments they have posted on various forum posts. If a user has notifications, they will see messages formatted as follows: "User [username] replied to your comment: [main comment content]." Each notification will include the date and time of the reply.Users will also have options to Delete the notification or Go to the comment, allowing them to manage their interactions effectively.
 
@@ -1084,7 +1087,7 @@ Additionally, users will have two options for each notification:
 
 Delete: To remove the notification and keep the notifications page clean and organized.
 Go to Comment: This option will link the user directly to the specific comment they posted, allowing for easy navigation and engagement with the discussion.
-Before arriving at this page, logged-in users will notice a red dot below the notifications link in the navbar, indicating that there are new notifications to check.
+Before arriving at this page, logged-in users will notice a bell icon next to the notifications link in the navbar, indicating that there are new notifications to check.
 
 *Notifications Page Dark Mode Desktop*<br>
 ![Notifications Page Dark Mode Desktop](static/images/screenshots/darkmodewithnotificationsdesktop.png)

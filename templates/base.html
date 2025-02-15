@@ -66,8 +66,8 @@
                                 aria-label="Logout of your account">Logout</a>
                             <a class="nav-item nav-link" href="{% url 'notifications' %}" id="auth-links-notifications"
                                 aria-label="View your notifications">
-                                <i class="fas fa-bell {% if request.user.is_authenticated and unread_count > 0 %}visible{% else %}hidden{% endif %}"></i>
                                 Notification
+                                <i class="fas fa-bell {% if request.user.is_authenticated and unread_count > 0 %}visible{% else %}hidden{% endif %}"></i>
                             </a>
                             {% else %}
                             <a class=" nav-item nav-link" href="{% url 'login' %}" id="auth-links-login"

@@ -815,13 +815,29 @@ Each post will display 6 comments per page, with pagination activated to navigat
 *Commenting Functionality Mobile*<br>
 ![Commenting Functionality Mobile](static/images/screenshots/pagecommentsmobile.png)
 
+### Update Comment Function
+
+When users click the edit button for a comment, they are directed to a dedicated update window where they can modify their previous comment. This interface features an aesthetically pleasing container that enhances the user experience.
+
+Within this container, the top section includes a bold blue title that reads "Update Comment," signaling the purpose of the page. Below the title, a subtitle prompts users with the phrase, "Edit your comment below to share your insights!" This encourages users to take their time to articulate their thoughts clearly.
+
+In the main content area labeled "Comment Details," users can update their comment in a provided text area. Just below this input, there is a prominent "Update Comment" button styled in the same color as the navbar and footer, featuring white text to create a cohesive design.
+
+Additionally, there is a straightforward link that states, "Need to go back? Return to Post," which appears in blue to offer users an easy way to navigate back to the previous page.
+
+Finally, a closing motivational phrase, "Make your thoughts clear! Your voice matters!" serves to inspire users to engage thoughtfully within the forum.
+
+*Update Comment Desktop*<br>
+![Update Comment Desktop](static/images/screenshots/fileupdatecommentdesktop.png)
+
+*Update Comment Mobile*<br>
+![Update Comment Mobile](static/images/screenshots/fileupdatecommentmobile.png)
+
 ### Footer
 
 The footer is fixed at the bottom of the page and features a design that matches the color of the navbar, providing a cohesive look throughout the website. It offers essential navigation options, including links to the Highlights page, Control Panel, Support and Collaboration, and About Me page.
 
 These links are accessible to both logged-in and logged-out users, ensuring that everyone can explore the content. However, the Control Panel link is restricted to authorized personnel only and will open in a separate page, while the other links remain available to all users.
-
-
 
 *Footer Page Desktop*<br>
 ![Footer Page Desktop](static/images/screenshots/footerdesktop.png)
@@ -1140,6 +1156,24 @@ At the bottom of the page, the Publish button has a dark grey background with wh
 
 *Update Post Page Dark Mode Mobile*<br>
 ![Update Post Page Dark Mode Mobile](static/images/screenshots/darkmodeditpostmobil.png)
+
+## Update Comment (Dark Mode)
+
+In dark mode, the Update Comment section features a visually appealing container with a soft grey background, providing a pleasant contrast for the user. At the top of this container, a prominent blue title reads "Update Comment," clearly indicating the purpose of the page.
+
+Beneath the title, a white subtitle prompts users with the phrase, "Edit your comment below to share your insights!" This encourages thoughtful engagement from users.
+
+The main content area includes a "Comment Details" section where users can update their comment in a designated input area. Just below the input, there is an "Update Comment" button styled with a dark grey background and white text, ensuring good visibility against the grey container.
+
+Additionally, a straightforward link is displayed in white text that states, "Need to go back? Return to Post," appearing in blue to offer users an easy way to navigate back to the previous page.
+
+At the end of the section, two motivational phrases, "Make your thoughts clear!" and "Your voice matters!" inspire users to express themselves confidently within the forum.
+
+*Update Comment Dark Mode Desktop*<br>
+![Update Comment Dark Mode Desktop](static/images/screenshots/darkmodeupdatecomment.png)
+
+*Update Comment Dark Mode Mobile*<br>
+![Update Comment Dark Mode Mobile](static/images/screenshots/darkmodeupdatecommentmobile.png)
 
 ## Delete Post Page (Dark Mode)
 

@@ -447,6 +447,12 @@ Wireframes have been created using [Balsamic](https://balsamiq.com "Balsamic"). 
 *Account Page Mobile Wireframe*<br>
 ![Account Page Mobile Wireframe](static/images/screenshots/accountpagemobile.png)
 
+*Edit Your Profile Desktop Wireframe*<br>
+![Edit Your Profile Desktop Wireframe](static/images/screenshots/edityourprofiledesktop.png)
+
+*Edit Your Profile Mobile Wireframe*<br>
+![Edit Your Profile Mobile Wireframe](static/images/screenshots/edityourprofilemobile.png)
+
 *Logged Out Window Desktop Wireframe*<br>
 ![Logged Out Window Desktop Wireframe](static/images/screenshots/loggedoutdesktop.png)
 
@@ -454,13 +460,13 @@ Wireframes have been created using [Balsamic](https://balsamiq.com "Balsamic"). 
 ![Logged Out Window Mobile Wireframe](static/images/screenshots/loggedoutmobile.png)
 
 *Notifications Page Desktop Wireframe*<br>
-![Notifications Page Desktop Wireframe](static/images/screenshots/notificationsdesktop.png)
+![Notifications Page Desktop Wireframe](static/images/screenshots/notificationpagedesktop.png)
 
 *Notifications Page Mobile Wireframe*<br>
 ![Notifications Page Mobile Wireframe](static/images/screenshots/notificationsmobile.png)
 
 *About Me Page Desktop Wireframe*<br>
-![About Me Page Desktop Wireframe](static/images/screenshots/aboutmepagedesktop.png)
+![About Me Page Desktop Wireframe](static/images/screenshots/aboutmedesktop.png)
 
 *About Me Page Mobile Wireframe*<br>
 ![About Me Page Mobile Wireframe](static/images/screenshots/aboutmemobile.png)
@@ -475,17 +481,43 @@ Wireframes have been created using [Balsamic](https://balsamiq.com "Balsamic"). 
 ![Highlights Page Desktop Wireframe](static/images/screenshots/highlightspagedesktop.png)
 
 *Highlights Page Mobile Wireframe*<br>
-![Highlights Page Mobile Wireframe](static/images/screenshots/supportpagemobile.png)
+![Highlights Page Mobile Wireframe](static/images/screenshots/highlightspagemobile.png)
 
 *Reading Post Desktop Wireframe*<br>
-![Reading Post Desktop Wireframe](static/images/screenshots/readingapostdesktop.png)
+![Reading Post Desktop Wireframe](static/images/screenshots/readingpostdesktop.png)
 
 *Reading Post Mobile Wireframe*<br>
 ![Reading Post Mobile Wireframe](static/images/screenshots/readingapostmobile.png)
 
+*Login Page Desktop Wireframe*<br>
+![Login Page Desktop Wireframe](static/images/screenshots/loginpagedesktop.png)
+
+*Login Page Mobile Wireframe*<br>
+![Login Page Mobile Wireframe](static/images/screenshots/loginpagemobile.png)
+
+*Register Page Desktop Wireframe*<br>
+![Register Page Desktop Wireframe](static/images/screenshots/registerpagedesktop.png)
+
+*Register Page Mobile Wireframe*<br>
+![Register Page Mobile Wireframe](static/images/screenshots/registermobile.png)
+
+*Post Delete Desktop Wireframe*<br>
+![Post Delete Desktop Wireframe](static/images/screenshots/postdeletepagedesktop.png)
+
+*Post Delete Mobile Wireframe*<br>
+![Post Delete Mobile Wireframe](static/images/screenshots/postdeletepagemobile.png)
+
+*Update Comment Desktop Wireframe*<br>
+![Update Comment Desktop Wireframe](static/images/screenshots/updatecommentdesktop.png)
+
+*Update Comment Mobile Wireframe*<br>
+![Update Comment Mobile Wireframe](static/images/screenshots/updatecommentmobile.png)
+
 ## Note
 
 As with many forums and web pages, the mobile wireframe reflects the layout users will see when they interact with the site on smaller screens. When viewing the forum on mobile, users will need to scroll down to access all content on the page. The design shown in the mobile wireframe illustrates the initial view, while scrolling reveals the complete set of features and discussions.
+
+The post edit wireframe is not presented as a standalone design because it utilizes the same layout and style as the create post section.
 
 
 ## Features 

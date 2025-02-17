@@ -1420,12 +1420,12 @@ This feature allows users to personalize their profiles, enhancing their overall
 *Default Image For New Users*<br>
 ![Default Image For New Users](static/images/screenshots/newusersimage.jpeg)
 
-## Feature Testing Table
+## Manual Testing Table
 
-| Feature Tested               | Feature Description                           | Testing Completed                                           | Expected Outcome                                                                  | Result       |
+| Element Tested               | Element Description                           | Testing Completed                                           | Expected Outcome                                                                  | Result       |
 |------------------------------|----------------------------------------------|-----------------------------------------------------------|-----------------------------------------------------------------------------------|--------------|
 | Navigation Links             | Links to various sections of the forum      | Clicked all available navigation links                    | All links should navigate to the correct sections of the forum                    | As expected. |
-| User Registration/Login      | User sign-up and login capabilities         | Registered a new account and logged in                    | Users should be able to create an account and access their profile securely       | As expected. |
+| User Registration            | User sign-up       | Registered a new account                                                           | Users should be able to create an account and access their profile securely       | As expected. |
 | Logout Functionality         | Log out feature for users                   | Clicked the logout button                                 | User should be logged out and redirected to the appropriate page                  | As expected. |
 | Post Creation                | Ability to create new posts                  | Created a new post through the post creation form        | The post should be saved and displayed on the main page                           | As expected. |
 | Post Editing                 | Ability to edit existing posts               | Edited a previously created post                           | Changes should be reflected on the post detail page                               | As expected. |
@@ -1437,6 +1437,19 @@ This feature allows users to personalize their profiles, enhancing their overall
 | User Notification            | Notifications for replies to comments        | Received notifications and accessed them                  | Notifications should properly inform users of activity on their comments          | As expected. |
 | Categories Navigation        | Links to categories for filtering posts      | Clicked on category links                                  | Redirect to posts associated with the selected category                          | As expected. |
 | Footer Links                 | Links in the footer for additional resources  | Clicked all footer links                                   | Footer links should open the corresponding social media pages in new tabs         | As expected. |
+| User Login                   | User login capabilities                      | Successfully logged into the user account                    | Users should be able to securely log into their existing accounts without issues.   | As expected. |
+| Update Existing Comment      | Capability for users to update their existing comments | Successfully updated the comment                   | Users should be able to modify their comments easily and securely. | As expected. |
+| Reply to Existing Comment |  Capability for users to reply to existing comments | Successfully submitted a reply to the comment            | Users should be able to respond to comments effortlessly, enhancing engagement and discussion. | As expected. |
+| Delete Existing Reply Comment | Capability for users to delete their replies to comments | Successfully removed the reply comment          | Users should be able to delete their replies without any issues, ensuring control over their contributions. |  As expected. |
+| Delete Existing Comment | Capability for users to delete their comments | Successfully removed the comment                                 | Users should be able to delete their comments seamlessly, ensuring they have control over their posted content. | As expected. |
+| Social Links on Account Page | Social media links allowing users to connect with various platforms | Successfully opened links in separate pages for each social media account | Users should be able to click on the social links to navigate to the respective social media platforms seamlessly. | As expected. |
+| Dark Mode                    | Enable dark mode for a more comfortable viewing experience in low-light environments | Successfully switched to dark mode, altering background and text colors appropriately | Users should be able to toggle dark mode on and off, ensuring readability and reducing eye strain. | As expected. |
+| Pagination Functionality     | Capability to navigate through multiple pages of content | Successfully navigated between pages of posts or comments | Users should be able to use pagination controls to efficiently browse through content without issues. | As expected. |
+| Advertisement Window         | Display of advertisements that link to external resources or partners | Successfully redirected users to a separate page when clicking on the advertisement link | Users should be able to click on the advertisement to navigate to the specified external page without issues. | As expected. |
+| Button and Link Testing | Verification of functionality for all buttons and links across the application, including "Return Home" | Successfully tested each button and link, confirming proper navigation and functionality | All buttons and links should direct users to their respective pages and perform their defined actions correctly without any errors. | As expected. |
+
+- Note
+All buttons, links, pages, and features implemented have been tested manually, and everything worked as expected. However, as I always say, something can always happen. If any issues arise, we kindly ask our users to communicate with us quickly through our support page so that we can address and fix the issue promptly. Additionally, the page will be continuously monitored to prevent any potential problems.
 
 ## Potential Features to Add
 

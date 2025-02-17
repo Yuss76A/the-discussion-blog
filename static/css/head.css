@@ -40,6 +40,10 @@ ul {
     background: linear-gradient(270deg, rgba(30, 15, 45, 1) 0%, rgba(70, 50, 120, 1) 100%);
 }
 
+.selector-for-some-widget {
+    box-sizing: content-box;
+  }
+
 /* Navbar Color CSS Style */
 .navbar-custom {
     background-color: #003366;
@@ -1005,4 +1009,30 @@ body.dark-mode .btn-info.no-dark-mode {
 
 body.dark-mode .btn-info.no-dark-mode:hover {
     background-color: #444;
+}
+
+/* Adjusting screen sizes for the navbar */
+@media (max-width: 1060px) {
+    /* Adjustments for smaller screens */
+    html {
+        scroll-padding-top: 1rem; /* Adjust scroll padding as needed */
+    }
+
+    /* Collapse styles */
+    .navbar-collapse {
+        margin: 0;
+        padding: 0; /* Remove extra padding */
+    }
+
+    /* Style for the toggler button */
+    .navbar-toggler {
+        border: none; /* Remove border for cleaner look */
+    }
+
+    /* Categories section */
+    .category-name {
+        font-size: 1.4rem; /* Adjust category font size */
+        padding: 0.5rem; /* Modify padding for better spacing */
+    }
+
 }

@@ -35,6 +35,18 @@ ul {
     list-style: none;
 }
 
+/* Trending Posts Container */
+.trending-title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-wrap: break-word;
+}
+
+.trending-title > * {
+    margin: 5px 0;
+}
+
 /* Applies a linear gradient background */
 .bg-steel {
     background: linear-gradient(270deg, rgba(30, 15, 45, 1) 0%, rgba(70, 50, 120, 1) 100%);
@@ -42,7 +54,7 @@ ul {
 
 .selector-for-some-widget {
     box-sizing: content-box;
-  }
+}
 
 /* Navbar Color CSS Style */
 .navbar-custom {
@@ -1011,28 +1023,24 @@ body.dark-mode .btn-info.no-dark-mode:hover {
     background-color: #444;
 }
 
-/* Adjusting screen sizes for the navbar */
-@media (max-width: 1060px) {
-    /* Adjustments for smaller screens */
-    html {
-        scroll-padding-top: 1rem; /* Adjust scroll padding as needed */
+/* Styles for small screens (between 576px and 768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    main {
+        margin-top: 3rem; /* Slightly increase margin for small screens */
     }
-
-    /* Collapse styles */
-    .navbar-collapse {
-        margin: 0;
-        padding: 0; /* Remove extra padding */
-    }
-
-    /* Style for the toggler button */
-    .navbar-toggler {
-        border: none; /* Remove border for cleaner look */
-    }
-
-    /* Categories section */
-    .category-name {
-        font-size: 1.4rem; /* Adjust category font size */
-        padding: 0.5rem; /* Modify padding for better spacing */
-    }
-
 }
+
+/* Styles for medium screens (tablets, between 768px and 992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    main {
+        margin-top: 2rem; /* A small adjustment for tablet sizes */
+    }
+}
+
+/* Styles for large screens (desktops, larger than 992px) */
+@media (min-width: 992px) {
+    main {
+        margin-top: 3rem; /* Minimal margin for larger screens */
+    }
+}
+

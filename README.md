@@ -348,63 +348,93 @@ Category:<br>
 
 1. User:
 
-* Attributes:
-id (Primary Key), username, first_name, last_name, email, password.
+* id (Primary Key)
 
-* Relationships:
-One-to-One relationship with the Account entity.
-One-to-Many relationships with Post, Comment, and Notification entities, indicating that a single user can have multiple posts, comments, and notifications associated with them.
+* username
+
+* first_name
+
+* last_name
+
+* email
+
+* password
 
 2. Account:
 
-* Attributes:
-id (Primary Key), user_id (Foreign Key referencing User), avatar.
+* id (Primary Key)
 
-* Relationships:
-One-to-One relationship with the User entity, linking user accounts to their corresponding profile information.
+* user_id (Foreign Key referencing User)
+
+* avatar
 
 3. Post:
 
-* Attributes:
-id (Primary Key), title, content, date_posted, author_id (Foreign Key referencing User), likes, dislikes, category_id (Foreign Key referencing Category).
+* id (Primary Key)
 
-* Relationships:
-One-to-Many relationship with the Comment entity, indicating that each post can have multiple comments.
-Many-to-One relationship with the Category entity, linking each post to a specific category.
+* title
+
+* content
+
+* date_posted
+
+* author_id (Foreign Key referencing User)
+
+* likes
+
+* dislikes
+
+* category_id (Foreign Key referencing Category)
 
 4. Comment:
 
-* Attributes:
-id (Primary Key), post_id (Foreign Key referencing Post), author_id (Foreign Key referencing User), content, created_at, likes, dislikes, parent_id (optional Foreign Key referencing Comment for replies).
+* id (Primary Key)
 
-* Relationships:
-Many-to-One relationship with the Post entity, indicating each comment is tied to a specific post.
-Many-to-One relationship with the User entity, indicating that each comment is authored by a user.
-Self-referencing relationship allows for threading of comments (replies).
+* post_id (Foreign Key referencing Post)
+
+* author_id (Foreign Key referencing User)
+
+* content
+
+* created_at
+
+* likes
+
+* dislikes
+
+* parent_id (optional Foreign Key referencing Comment for replies)
 
 5. Category:
 
-* Attributes:
-id (Primary Key), name.
+* id (Primary Key)
 
-* Relationships:
-One-to-Many relationship with the Post entity, allowing multiple posts to be categorized under the same category.
+* name
 
 6. Notification:
 
-* Attributes:
-id (Primary Key), user_id (Foreign Key referencing User), message, comment_id (optional Foreign Key referencing Comment), created_at, is_read.
+* id (Primary Key)
 
-* Relationships:
-Many-to-One relationship with the User entity, linking each notification to a specific user.
+* user_id (Foreign Key referencing User)
+
+* message
+
+* comment_id (optional Foreign Key referencing Comment)
+
+* created_at
+
+* is_read
 
 7. CollaborateRequest:
 
-* Attributes:
-id (Primary Key), name, email, message, created_at.
+id (Primary Key)
 
-* Relationships:
-This entity stands alone with no specific references to other entities.
+* name
+
+* email
+
+* message
+
+* created_at
 
 - Characteristics of the CollaborateRequest Entity
 
@@ -418,6 +448,47 @@ Because it does not relate to other entities, it functions independently within 
 The primary purpose of the CollaborateRequest model is to collect and store collaboration inquiries from users. It gathers data without needing to connect directly to the user accounts or posts, making it self-contained.
 It can be seen as a standalone input form that exists for specific functionality (collaboration inquiries), separate from the core user and content management of the application.
 
+- Relationships
+
+1. User
+
+* 1-to-1 with Account (user_id in Account references id in User)
+
+* 1-to-many with Post (author_id in Post references id in User)
+
+* 1-to-many with Comment (author_id in Comment references id in User)
+
+* 1-to-many with Notification (user_id in Notification references id in User)
+
+2. Post
+
+* Many-to-1 with User (author_id in Post references id in User)
+
+* Many-to-1 with Category (category_id in Post references id in Category)
+
+* 1-to-many with Comment (post_id in Comment references id in Post)
+
+3. Comment
+
+* Many-to-1 with Post (post_id in Comment references id in Post)
+
+* Many-to-1 with User (author_id in Comment references id in User)
+
+* Self-referencing for replies (parent_id in Comment references id in Comment)
+
+4. Category
+
+* 1-to-many with Post (category_id in Post references id in Category)
+
+5. Notification
+
+* Many-to-1 with User (user_id in Notification references id in User)
+
+* Optional Many-to-1 with Comment (comment_id in Notification references id in Comment)
+
+6. CollaborateRequest
+
+* No relationships (independent entity)
 
 ## Wireframes
 

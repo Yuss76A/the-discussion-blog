@@ -6,14 +6,14 @@ body {
 }
 
 html, body {
-    height: 100%;  /* Ensure both html and body are full height */
-    margin: 0;  /* Remove default margin */
-    display: flex;  /* Use Flexbox layout */
-    flex-direction: column;  /* Stack child elements vertically */
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 main {
-    flex: 1; /* This allows the main content area to fill available space */
+    flex: 1;
     padding-top: 5rem;
 } 
 

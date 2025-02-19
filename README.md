@@ -1637,6 +1637,43 @@ Summary of Changes Needed
 *All Issues Fixed*<br>
 ![All Issues Fixed](static/images/screenshots/sectionhtmlfile.png)
 
+## BUGS that I Faced
+
+- During the development of the trending posts feature, I encountered an issue with the responsiveness of the trending posts container. Initially, the container was displayed as intended, but when I checked its responsiveness across different screen sizes, I noticed that it was overflowing in some cases, causing layout problems and negatively impacting the user experience.
+
+*Trending Posts Container Overflowing*<br>
+![Trending Posts Container Overflowing](static/images/screenshots/trendingpostsoverflowing.png)
+
+- To address this issue, I implemented the following CSS adjustments:
+
+*Solution*<br>
+![Solution](static/images/screenshots/overflowingsolution.png)
+
+- Navbar BUGS 
+
+In the initial stages of development, the navbar functioned as expected; however, I later discovered that it did not respond properly to some responsive screen sizes. During my testing, I noticed that the notification link and the bell icon (used to indicate new notifications) were missing on certain screen sizes. 
+
+The issue was caused by the placement of the welcome user message, which was displayed next to the "Discussion Room" title. This placement was taking up too much space in the navbar. Given the time constraints and limited opportunity to implement a completely new navbar design or functionality, I decided to move the welcome message below the "Discussion Room" title. 
+
+While this adjustment was not part of the original project plan, it effectively resolved the issue and improved the responsiveness of the navbar without requiring significant redesign.
+
+I apologize for the line on the screen; I just wanted to clearly illustrate where the issue is exactly.
+
+*Navbar Desktop Issue*<br>
+![Navbar Desktop Issue](static/images/screenshots/navbardesktopissue.png)
+
+*Navbar Mobile Issue*<br>
+![Navbar Desktop Issue](static/images/screenshots/navbarmobileissue.png)
+
+* BUGS Fixed
+
+As we can see in the following images, the navbar has been fixed for small, medium, and large screens. I specifically added the navbar-expand-lg class to enhance its responsiveness for larger devices. Additionally, I implemented media query code to slightly push the main content down, ensuring that the user welcome message appears below the title. With this adjustment, the navbar is slightly taller, and the main content no longer sticks to the navbar.
+
+*Navbar Fixed Desktop*<br>
+![Navbar Fixed Desktop](static/images/screenshots/navbarfixeddesktop.png)
+
+*Navbar Fixed Mobile*<br>
+![Navbar Fixed Mobile](static/images/screenshots/navbarfixedmobile.png)
 
 ## Technologies Used
 

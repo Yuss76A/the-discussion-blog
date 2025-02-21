@@ -146,3 +146,15 @@ LOGIN_URL = 'login'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Define the base URL for serving media files
 MEDIA_URL = 'media/'
+
+if 'DEVELOPMENT' in os.environ:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    DEFAULT_FROM_EMAIL = 'your_example_email@gmail.com'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_USE_TLS = True
+    EMAIL_PORT = 587
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD = os.environ.get('xfjf yfdu ajgz tmdo')
+    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')

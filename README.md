@@ -1495,6 +1495,66 @@ This feature allows users to personalize their profiles, enhancing their overall
 *Default Image For New Users*<br>
 ![Default Image For New Users](static/images/screenshots/newusersimage.jpeg)
 
+## Reset Password Option (Forgot Password)
+
+Also, I decided to create a section for resetting the password that explains everything in detail, including pictures for both light and dark mode within the same section. When we click on the "Forgot Password" button, we will be directed to a page where we need to enter the email address we used when we registered for the forum. After submitting your email, you will see a message prompting you to check your inbox or spam folder. This email will contain instructions on how to reset your password.
+
+*Reset Password Light Mode Desktop*<br>
+![*Reset Password Light Mode Desktop](static/images/screenshots/passwordresetlighmodedesktop.png)
+
+*Reset Password Light Mode Mobile*<br>
+![*Reset Password Light Mode Mobile](static/images/screenshots/passwordresetmobilelightmode.png)
+
+*Reset Password Dark Mode Desktop*<br>
+![*Reset Password Dark Mode Desktop](static/images/screenshots/darkmodepasswordresetdesktop.png)
+
+*Reset Password Dark Mode Mobile*<br>
+![*Reset Password Dark Mode Mobile](static/images/screenshots/darkmodepasswordresetmobile.png)
+
+*Password Request Confirmation Desktop*<br>
+![Password Request Confirmation Desktop](static/images/screenshots/passwordrequestconfirmationdesktop.png)
+
+*Password Request Confirmation Mobile*<br>
+![Password Request Confirmation Mobile](static/images/screenshots/passwordconfirmationmobile.png)
+
+*Password Request Confirmation Dark Mode Desktop*<br>
+![Password Request Confirmation Dark Mode Desktop](static/images/screenshots/passrequestconfirmationdesktop.png)
+
+*Password Request Confirmation Dark Mode Mobile*<br>
+![Password Request Confirmation Dark Mode Mobile](static/images/screenshots/passrequestconfirmationdarkmode.png)
+
+Once we receive the message, we will see a text saying, "You're receiving this email because you requested a password reset for your user account at discussion-room-828675a77e1b.herokuapp.com." Following that, there will be a prompt: "Please go to the following page and choose a new password." Additionally, the email will remind us of the username we registered with, in case we forgot it.
+
+*Email*<br>
+![Email](static/images/screenshots/email.png)
+
+Once we click the link in the email, we will be redirected to a page where we can enter our new password and confirm it by entering it again in the "Confirm Password" field. After filling in both fields, we simply need to click the "Change My Password" button to finalize the process.
+
+*Change Password Window Light Mode*<br>
+![Change Password Window Light Mode](static/images/screenshots/changepasswordlightmodedesktop.png)
+
+*Change Password Window Dark Mode*<br>
+![Change Password Window Dark Mode](static/images/screenshots/changepassworddarkmodedesktop.png)
+
+Once we click the "Change My Password" button, our request will be processed and the password will be changed. We will see the following phrase: "Your password has been set, you may go ahead and log in now." Additionally, there will be a "Log In" button that will redirect us to the login page.
+
+*New Passowrd Confirmation*<br>
+![New Password Confirmation](static/images/screenshots/passwordconfirmationlightmode.png)
+
+*New Passowrd Confirmation Dark Mode*<br>
+![New Password Confirmation Dark Mode](static/images/screenshots/passwordconfirmationdarkmode.png)
+
+Once we use the link to change our password, it will no longer be valid, and we will need to request a new password reset email if we need to change our password again.
+
+*Not Valid Link*<br>
+![Not Valid Link](static/images/screenshots/notvalidlinklightmode.png)
+
+*Not Valid Link Dark Mode*<br>
+![Not Valid Link Dark Mode](static/images/screenshots/notvalidlinkdarkmode.png)
+
+* Note : 
+When I started working on this section, I uploaded screenshots for both the desktop and mobile versions in dark and light modes. However, there was a point when I could only upload the desktop versions. This was due to an issue where I couldn't take screenshots of the mobile version. I attempted to fix the problem, but unfortunately, it didn't work.
+
 ## Manual Testing Table
 
 | Element Tested               | Element Description                           | Testing Completed                                           | Expected Outcome                                                                  | Result       |

@@ -684,6 +684,8 @@ Password: A field for entering the password, also featuring a soft white design 
 
 * A prominent button labeled "Log In," styled in a blue that matches the navbar and footer, allowing users to submit their credentials and access their accounts seamlessly.
 
+* In light mode, we also have a "Forgot Password" button positioned before the "Don't have an account? Sign up" section. This button features a nice blue color that complements the overall website theme, ensuring it stands out while maintaining a cohesive design. This enhances user experience by providing easy access to the password recovery option.
+
 * Sign-Up Prompt: Below the login form, there's a friendly reminder for users who do not have an account, prompting them to "Sign Up" if they need to create a new one.
 
 * Error Messaging: Should the user enter incorrect login information, an error message will be displayed to alert them, stating, "Please enter a correct username and password." It's important to note that both fields may be case-sensitive, which means users must enter their credentials precisely.
@@ -1037,6 +1039,8 @@ The About Us page retains the same features as described previously, with a dark
 The Login Page in dark mode features a sleek design that enhances user experience. It includes input fields for username and password, both displayed in white to provide a strong contrast against the dark background, ensuring readability.
 
 The Log In button is styled with a green border, adding a visually appealing touch. Below the login fields, users who do not have an account can find a prompt to sign up, presented in a nice blue color for emphasis.
+
+Also, we have a "Forgot Password" button positioned prominently before the "Don't have an account? Sign up" section. This button is designed in a blue color, aligning with the dark mode theme and matching the title and links. This design choice enhances visibility and accessibility, allowing users to easily find the option for password recovery.
 
 A clean white line visually separates the footer from the login options. The footer is fixed at the bottom of the page and features a fixed design that matches the overall color theme. In the bottom left corner, there is a toggle for switching between dark and light modes, designed in blue to align with the overall color theme.
 

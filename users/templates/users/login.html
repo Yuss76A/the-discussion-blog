@@ -16,13 +16,14 @@
             <button class="btn btn-block" type="submit">Log In</button>
         </div>
     </form>
-    <div class="text-center">
-        <a href="{% url 'password_reset' %}" aria-label="Reset your password" target="_blank">Forgot Password?</a>
+    <div class="btn btn-block">
+        <a href="{% url 'password_reset' %}" aria-label="Reset your password" target="_blank">Forgot Password ?</a>
     </div>
     <div class="mt-3 text-center">
         <small class="text-switch">Don't have an account? <a href="{% url 'register' %}" class="text-info"
                 aria-label="Create a new account">Sign
-                Up</a></small>
+                Up</a>
+            </small>
     </div>
 </div>
 {% endblock content %}

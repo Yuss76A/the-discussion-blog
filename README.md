@@ -48,6 +48,9 @@ Discussion Room is a user-friendly forum application designed to facilitate enga
 
 * As a user, I want to comment on posts to express my thoughts and engage in discussions with other users.
 
+10. Reset Password Functionality
+
+* As a user, I want to reset my password so that I can regain access to my account in case I forget my current password.
 
 ### Admin Stories
 

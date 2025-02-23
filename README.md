@@ -1912,8 +1912,11 @@ This project was deployed using [Heroku](https://www.heroku.com "Heroku") by fol
 5. You need to add specific config vars to be able to deploy the project properly on Heroku. This is done by clicking on **Reveal Config Vars**, and adding them here. The config vars needed are listed below: <br>
 CLOUDINARY_URL = Same as your CLOUDINARY_URL in your env.py.<br>
 DATABASE_URL =  Same as your DATABASE_URL in your env.py.<br>
-SECRET_KEY = Same as your SECRET_KEY in your env.py.
+SECRET_KEY = Same as your SECRET_KEY in your env.py.<br>
 Make sure that the secret key matches the one you are using in your local development environment to avoid any discrepancies when deploying your project.
+EMAIL_HOST_USER = Your email address used for sending emails.<br>
+EMAIL_HOST_PASS = EMAIL_HOST_PASS = A Gmail API key, as my address and configuration use Gmail settings.<br>
+
 
 ## Deploying from a Github Repository
 

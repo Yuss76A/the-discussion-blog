@@ -1023,6 +1023,13 @@ body.dark-mode .btn-info.no-dark-mode:hover {
     background-color: #444;
 }
 
+/* Styles for Dark Mode Password_reset_confirm file */
+.dark-mode ul {
+    color: white;
+    padding: 0;
+    list-style: none;  
+}
+
 /* Styles for small screens (between 576px and 768px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
     main {

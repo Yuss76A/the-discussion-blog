@@ -1500,28 +1500,28 @@ This feature allows users to personalize their profiles, enhancing their overall
 Also, I decided to create a section for resetting the password that explains everything in detail, including pictures for both light and dark mode within the same section. When we click on the "Forgot Password" button, we will be directed to a page where we need to enter the email address we used when we registered for the forum. After submitting your email, you will see a message prompting you to check your inbox or spam folder. This email will contain instructions on how to reset your password.
 
 *Reset Password Light Mode Desktop*<br>
-![*Reset Password Light Mode Desktop](static/images/screenshots/passwordresetlighmodedesktop.png)
+![*Reset Password Light Mode Desktop](static/images/screenshots/resetpassworddesktop.png)
 
 *Reset Password Light Mode Mobile*<br>
-![*Reset Password Light Mode Mobile](static/images/screenshots/passwordresetmobilelightmode.png)
+![*Reset Password Light Mode Mobile](static/images/screenshots/resetpasswordmobile.png)
 
 *Reset Password Dark Mode Desktop*<br>
-![*Reset Password Dark Mode Desktop](static/images/screenshots/darkmodepasswordresetdesktop.png)
+![*Reset Password Dark Mode Desktop](static/images/screenshots/resetpassworddarkmodedekstop.png)
 
 *Reset Password Dark Mode Mobile*<br>
-![*Reset Password Dark Mode Mobile](static/images/screenshots/darkmodepasswordresetmobile.png)
+![*Reset Password Dark Mode Mobile](static/images/screenshots/resetpassworddarkmodemobile.png)
 
 *Password Request Confirmation Desktop*<br>
-![Password Request Confirmation Desktop](static/images/screenshots/passwordrequestconfirmationdesktop.png)
+![Password Request Confirmation Desktop](static/images/screenshots/passwordresetdesktopsent.png)
 
 *Password Request Confirmation Mobile*<br>
-![Password Request Confirmation Mobile](static/images/screenshots/passwordconfirmationmobile.png)
+![Password Request Confirmation Mobile](static/images/screenshots/resetpasswordmobile.png)
 
 *Password Request Confirmation Dark Mode Desktop*<br>
-![Password Request Confirmation Dark Mode Desktop](static/images/screenshots/passrequestconfirmationdesktop.png)
+![Password Request Confirmation Dark Mode Desktop](static/images/screenshots/passwordresetsentdarkmodedesktop.png)
 
 *Password Request Confirmation Dark Mode Mobile*<br>
-![Password Request Confirmation Dark Mode Mobile](static/images/screenshots/passrequestconfirmationdarkmode.png)
+![Password Request Confirmation Dark Mode Mobile](static/images/screenshots/resetpassworddarkmodemobile.png)
 
 Once we receive the message, we will see a text saying, "You're receiving this email because you requested a password reset for your user account at discussion-room-828675a77e1b.herokuapp.com." Following that, there will be a prompt: "Please go to the following page and choose a new password." Additionally, the email will remind us of the username we registered with, in case we forgot it.
 

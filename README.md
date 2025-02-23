@@ -1528,32 +1528,53 @@ Once we receive the message, we will see a text saying, "You're receiving this e
 *Email*<br>
 ![Email](static/images/screenshots/email.png)
 
-Once we click the link in the email, we will be redirected to a page where we can enter our new password and confirm it by entering it again in the "Confirm Password" field. After filling in both fields, we simply need to click the "Change My Password" button to finalize the process.
+Once we click the link in the email, we will be redirected to a page where we can enter our new password and confirm it by entering it again in the "Confirm Password" field. After filling in both fields, we simply need to click the "Update Password" button to finalize the process.
+
+Additionally, we will have a list of password requirements displayed on the page. It is important that users carefully read these instructions to ensure that their new password meets the necessary criteria. This will help maintain account security and prevent any issues during the password update process.
 
 *Change Password Window Light Mode*<br>
-![Change Password Window Light Mode](static/images/screenshots/changepasswordlightmodedesktop.png)
+![Change Password Window Light Mode](static/images/screenshots/enternewpassdesktop.png)
+
+*Change Password Window Light Mode Mobile*<br>
+![Change Password Window Light Mode Mobile](static/images/screenshots/enternewpassmobilelightmode.png)
 
 *Change Password Window Dark Mode*<br>
-![Change Password Window Dark Mode](static/images/screenshots/changepassworddarkmodedesktop.png)
+![Change Password Window Dark Mode](static/images/screenshots/enternewpassworddarkmodedesktop.png)
 
-Once we click the "Change My Password" button, our request will be processed and the password will be changed. We will see the following phrase: "Your password has been set, you may go ahead and log in now." Additionally, there will be a "Log In" button that will redirect us to the login page.
+*Change Password Window Dark Mode Mobile*<br>
+![Change Password Window Dark Mode Mobile](static/images/screenshots/enternewpassmobile.png)
+
+Once we click the "Update Password" button, our request will be processed, and the password will be updated. We will see the following phrase: "Your password has been set. You may go ahead and log in now."
+There will also be a "Log In" button that will redirect us to the login page, allowing us to access our account with the newly set password.
 
 *New Passowrd Confirmation*<br>
-![New Password Confirmation](static/images/screenshots/passwordconfirmationlightmode.png)
+![New Password Confirmation](static/images/screenshots/passconfirmationdesktop.png)
+
+*New Passowrd Confirmation Mobile*<br>
+![New Password Confirmation Mobile](static/images/screenshots/passconfirmationmobile.png)
 
 *New Passowrd Confirmation Dark Mode*<br>
-![New Password Confirmation Dark Mode](static/images/screenshots/passwordconfirmationdarkmode.png)
+![New Password Confirmation Dark Mode](static/images/screenshots/passconfirmationdarkmodedesktop.png)
+
+*New Passowrd Confirmation Dark Mode Mobile*<br>
+![New Password Confirmation Dark Mode Mobile](static/images/screenshots/passconfirmationdarkmodemobile.png)
 
 Once we use the link to change our password, it will no longer be valid, and we will need to request a new password reset email if we need to change our password again.
 
 *Not Valid Link*<br>
 ![Not Valid Link](static/images/screenshots/notvalidlinklightmode.png)
 
+*Not Valid Link Mobile*<br>
+![Not Valid Link Mobile](static/images/screenshots/notvalidlinkmobilelightmode.png)
+
 *Not Valid Link Dark Mode*<br>
 ![Not Valid Link Dark Mode](static/images/screenshots/notvalidlinkdarkmode.png)
 
+*Not Valid Link Dark Mode Mobile*<br>
+![Not Valid Link Dark Mode Mobile](static/images/screenshots/notvalidlinkmobiledarkmode.png)
+
 * Note : 
-When I started working on this section, I uploaded screenshots for both the desktop and mobile versions in dark and light modes. However, there was a point when I could only upload the desktop versions. This was due to an issue where I couldn't take screenshots of the mobile version. I attempted to fix the problem, but unfortunately, it didn't work.
+The screenshots for "New Password Confirmation" and the "Not Valid Link" sections were taken using the Safari tools option. I encountered an issue with my Google Dev Tools, which prevented me from using the responsive option as it was consistently blocking access. Therefore, I decided to use Safari tools to capture the screenshots for both desktop and mobile versions.
 
 ## Manual Testing Table
 

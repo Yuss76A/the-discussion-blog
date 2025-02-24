@@ -1606,6 +1606,7 @@ This feature allows users to personalize their profiles, enhancing their overall
 | Advertisement Window         | Display of advertisements that link to external resources or partners | Successfully redirected users to a separate page when clicking on the advertisement link | Users should be able to click on the advertisement to navigate to the specified external page without issues. | As expected. |
 | Button and Link Testing | Verification of functionality for all buttons and links across the application, including "Return Home" | Successfully tested each button and link, confirming proper navigation and functionality | All buttons and links should direct users to their respective pages and perform their defined actions correctly without any errors. | As expected. |
 | Reset Password Functionality | Verification of the password reset process, including email sending, password entry, and confirmation. | Successfully tested the entire password reset flow, ensuring users can request a password reset, set a new password, and confirm completion. | All steps in the password reset process work as intended, directing users through email verification, new password entry, and completion stages without errors. | As expected. |
+| Categories Functionality | Created a post and assigned it to a specified category. | Successfully tested the process of creating a new post and assigning it to an existing category. | The post is correctly assigned to the chosen category and is displayed accordingly on the site. | As expected. |
 
 - Note
 All buttons, links, pages, and features implemented have been tested manually, and everything worked as expected. However, as I always say, something can always happen. If any issues arise, we kindly ask our users to communicate with us quickly through our support page so that we can address and fix the issue promptly. Additionally, the page will be continuously monitored to prevent any potential problems.
@@ -1950,6 +1951,14 @@ As I coded, I found myself constantly wanting to add new features—thinking, �
 
 However, I realized that this wasn’t a productive approach. I learned the importance of focusing and committing to finishing what I started. Overall, I am proud of what I accomplished, especially as someone who has never formally studied coding. Building projects like this one has been a rewarding experience, and I just wanted to share my thoughts on this fourth project.
 
+## Not About Readme File
+
+During the development of this project, I made a concerted effort to keep track of all the elements and features I added. However, as the project progressed and I approached completion, I encountered several bugs, which I have detailed in the Bugs section of this document.
+
+Throughout this process, the README file underwent multiple revisions to reflect the latest changes made to the project. While I strived to document everything thoroughly, it's important to acknowledge that in large projects like this, it's possible that some details may have been overlooked or omitted unintentionally. Please understand that any such omissions were not intentional, and I appreciate your consideration as you navigate the documentation.
+
+Thank you for your understanding!
+
 ## Image Used For Advertisment Window
 
 The image used for the advertisement window comes from the following page name: Fite Fuaite.
@@ -1971,8 +1980,6 @@ At the beginning of my project, I wasn’t entirely sure what direction to take.
 Inspired by FOROCOCHES, I envisioned building a similar platform where users could engage in meaningful conversations and share insights about various subjects. While my project is currently small, I am committed to enhancing its features over time based on user feedback and suggestions. This iterative approach will help me create a forum that is not only functional but also reflective of the community's interests and needs.
 
 I look forward to developing this project further and turning it into a welcoming space for discussions and knowledge sharing.
-
-
 
 ## Credits
 

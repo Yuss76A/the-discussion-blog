@@ -1671,6 +1671,11 @@ Blog Files
 *Blog/Admin.py*<br>
 ![Blog/Admin.py](static/images/screenshots/blogadminpyfile.png)
 
+Discussion Blog
+
+*Discussion Blog/Urls.py*<br>
+![Discussion Blog/Urls.py](static/images/screenshots/discussionblogurlspyfile.png)
+
 ## CSS Validator
 
 [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) was used to validate the CSS in this project. The validator returned no errors.

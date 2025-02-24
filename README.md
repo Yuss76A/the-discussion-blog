@@ -1186,10 +1186,10 @@ At the bottom of the page, there is a Save Changes button with an attractive dar
 A warning message is displayed for users considering a username change, reminding them that if they change their username, it will be updated in the system. After the change, this new username will become their primary identifier for logging in. Furthermore, users are encouraged to provide a correct email address, as this enables our team to contact them regarding any important changes or updates.
 
 *Edit Profile Dark Mode Desktop*<br>
-![Edit Profile Dark Mode Desktop](static/images/screenshots/darkmodeeditprofilepage.png)
+![Edit Profile Dark Mode Desktop](static/images/screenshots/darkmodeeditprofiledesktop.png)
 
 *Edit Profile Dark Mode Mobile*<br>
-![Edit Profile Dark Mode Mobile](static/images/screenshots/darkomodeeditprofilemobile.png)
+![Edit Profile Dark Mode Mobile](static/images/screenshots/darkmodeeditprofilemobile.png)
 
 ## Notifications Page (Dark Mode - Empty)
 The Notifications Page in dark mode features a sleek black background that enhances the visual appeal. At the top of the page, the title Your Notifications is displayed in white letters, clearly indicating the purpose of the section.

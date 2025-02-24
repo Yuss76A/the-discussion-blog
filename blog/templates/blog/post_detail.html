@@ -46,7 +46,7 @@
             <!-- Link to detail view -->
         </h2>
         <hr>
-        <p class="article-content">{{ object.content }}</p>
+        <p class="article-content">{{ object.content|linebreaks }}</p>
         <div class="d-flex justify-content-between mt-3">
             <!-- Left Side: Edit and Delete buttons -->
             <div>
@@ -80,7 +80,7 @@
     {% if comment.parent is None %}
     <div class="comment rounded my-2" id="comment-{{ comment.id }}">
         <strong>{{ comment.author.username }}:</strong>
-        <p class="text-switch">{{ comment.content }}</p>
+        <p class="text-switch">{{ comment.content|linebreaks }}</p>
         <small class="text-muted">{{ comment.created_at }}</small>
         <!-- Actions section with edit/delete on the left and like/dislike on the right -->
         <div class="d-flex justify-content-between mt-2">
@@ -120,7 +120,7 @@
         <div class="reply mt-3 pl-4">
             <!-- Indent replies for clarity -->
             <strong>{{ reply.author.username }}:</strong>
-            <p class="text-switch">{{ reply.content }}</p>
+            <p class="text-switch">{{ reply.content|linebreaks }}</p>
             <small class="text-muted">{{ reply.created_at|date:"F j, Y - H:i" }}</small>
             <div class="d-flex justify-content-between mt-2">
                 <div>

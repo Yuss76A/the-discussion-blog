@@ -80,7 +80,7 @@
     {% if comment.parent is None %}
     <div class="comment rounded my-2" id="comment-{{ comment.id }}">
         <strong>{{ comment.author.username }}:</strong>
-        <p class="text-switch">{{ comment.content|linebreaks }}</p>
+        <p class="text-switch comment-content">{{ comment.content|linebreaks }}</p>
         <small class="text-muted">{{ comment.created_at }}</small>
         <!-- Actions section with edit/delete on the left and like/dislike on the right -->
         <div class="d-flex justify-content-between mt-2">

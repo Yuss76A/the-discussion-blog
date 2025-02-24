@@ -23,10 +23,15 @@ h2,
 h3,
 h4,
 h5,
-h6,
-p {
+h6 {
     color: #444444;
     font-family: 'Poppins', sans-serif;
+}
+
+/* Paragraph styles for light mode */
+p {
+    color: #444444; /* Same color for light mode */
+    font-family: 'Poppins', sans-serif; /* Same font */
 }
 
 /* Resets padding and removes bullet points from unordered lists */
@@ -344,6 +349,11 @@ button:hover {
     padding: .375rem .75rem;
 }
 
+/* Personal Information Phrase Update Account Page */
+.bnt {
+    font-size: 16px;
+    width: auto;
+}
 
 .comment {
     max-width: 100%;
@@ -434,7 +444,7 @@ button:hover {
 
 /* CSS Style for the text in the advertisment window */
 .link-custom {
-    color: inherit !important;
+    color: #444444 !important;
     text-decoration: none !important;
 
 }
@@ -828,6 +838,17 @@ body.dark-mode button:hover {
 
 }
 
+/* Paragraph styles for dark mode */
+body.dark-mode p {
+    color: white; /* White color for dark mode */
+    
+}
+
+/* Dark Mode for Trending Topics Window Post Content Color*/
+body.dark-mode .small {
+    color: #444444; /* Set the text to white for dark mode */
+}
+
 /* Color For Password requirements and Forum Guidelines in About Us page in Dark Mode*/
 body.light-mode ul li {
     color: #b7c2b7;
@@ -835,7 +856,7 @@ body.light-mode ul li {
 }
 
 body.dark-mode .article-content {
-    color: white;
+    color: white !important; /* Forces the color to stay white in dark mode */
 }
 
 body.dark-mode .text-switch {
@@ -855,7 +876,7 @@ body.dark-mode .text-muted {
 }
 
 body.dark-mode .content-section {
-    background: #777575;
+    background-color: #777575;
     color: #171515;
     border: 1px solid #333;
 }
@@ -896,7 +917,6 @@ body.dark-mode .custom-header {
 body.dark-mode .comment {
     background-color: #777575;
     color: #ffffff;
-
 }
 
 /* Dark Mode Styles for Register File */
@@ -1028,6 +1048,11 @@ body.dark-mode .btn-info.no-dark-mode:hover {
     color: white;
     padding: 0;
     list-style: none;  
+}
+
+/* Important text style for dark mode */
+body.dark-mode .important-text {
+    color: orange;
 }
 
 /* Styles for small screens (between 576px and 768px) */

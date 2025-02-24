@@ -5,13 +5,13 @@
 
 <div class="container mt-5">
     <!-- Profile update card for editing user information -->
-    <div class="profile-update-card p-4 bg-light rounded">
-        <h2 class="text-center text-primary mb-4 text-switch">Edit Your Profile</h2>
+    <div class="profile-update-card content-section">
+        <h2 class="text-center mb-4 text-switch">Edit Your Profile</h2>
 
         <form action="" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <fieldset class="form-border p-3 mb-4 rounded" id="profile-update-form">
-                <legend class="text-secondary btn mb-3">Personal Information</legend>
+                <legend class="text-center bnt text-switch mb-3">Personal Information</legend>
                 {{ user_form|crispy }}
                 <!-- Render user update form -->
                 {{ account_form|crispy }}

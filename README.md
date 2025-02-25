@@ -1959,6 +1959,8 @@ Throughout this process, the README file underwent multiple revisions to reflect
 
 Thank you for your understanding!
 
+
+
 ## Image Used For Advertisment Window
 
 The image used for the advertisement window comes from the following page name: Fite Fuaite.
@@ -1980,6 +1982,12 @@ At the beginning of my project, I wasn’t entirely sure what direction to take.
 Inspired by FOROCOCHES, I envisioned building a similar platform where users could engage in meaningful conversations and share insights about various subjects. While my project is currently small, I am committed to enhancing its features over time based on user feedback and suggestions. This iterative approach will help me create a forum that is not only functional but also reflective of the community's interests and needs.
 
 I look forward to developing this project further and turning it into a welcoming space for discussions and knowledge sharing.
+
+## Registered Users 
+
+Users registered to test the project will notice several posts on the main page from different users. Yuss7six is the primary user, while Mett26 has been registered as an external user to assess the functionality of the project. Additionally, Fate is my wife, who registered herself to participate in the testing.
+
+You will also find comments and replies from these users on the posts, showcasing how the commenting system operates. Features such as likes and dislikes have been thoroughly tested as part of this experience.
 
 ## Credits
 

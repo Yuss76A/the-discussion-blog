@@ -1731,6 +1731,59 @@ Summary of Changes Needed
 *All Issues Fixed*<br>
 ![All Issues Fixed](static/images/screenshots/sectionhtmlfile.png)
 
+- Rest of the HTML Files
+
+*About Us Validator*<br>
+![About Us Validator](static/images/screenshots/aboutusvalidator.png)
+
+*About Me Validator*<br>
+![About Me Validator](static/images/screenshots/aboutmevalidator.png)
+
+*Support Page Validator*<br>
+![Support Page Validator](static/images/screenshots/supportvalidator.png)
+
+*Highlights Validator*<br>
+![Highlights Validator](static/images/screenshots/highlightsvalidator.png)
+
+*Logout Validator*<br>
+![Logout Validator](static/images/screenshots/logoutvalidator.png)
+
+*Post Delete Validator*<br>
+![Post Delete Validator](static/images/screenshots/postdeletevalidator.png)
+
+*Create New Post Validator*<br>
+![Create New Post Validator](static/images/screenshots/createnewpostvalidator.png)
+
+*Account Page Validator*<br>
+![Account Page Validator](static/images/screenshots/accountvalidator.png)
+
+*Account Update Page Validator*<br>
+![Account Update Page Validator](static/images/screenshots/accountupdatevalidator.png)
+
+*Notification Page Validator*<br>
+![Notification Page Validator](static/images/screenshots/notificationvalidator.png)
+
+*Post Update Page Validator*<br>
+![Post Update Page Validator](static/images/screenshots/postupdatevalidator.png)
+
+*Comment Update Validator*<br>
+![Comment Update Validator](static/images/screenshots/commentupdatevalidator.png)
+
+*Post Detail View Validator*<br>
+![Post Detail View Validator](static/images/screenshots/postdetailviewvalidator.png)
+
+*Login Page Validator*<br>
+![Login Page Validator](static/images/screenshots/loginvalidator.png)
+
+*Password Reset Sent Validator*<br>
+![Password Reset Sent Validato](static/images/screenshots/passwordresetsentvalidator.png)
+
+*Set New Password Validator*<br>
+![Set New Password Validator](static/images/screenshots/setnewpasswordvalidator.png)
+
+*Password Complete Validator*<br>
+![Password Complete Validator](static/images/screenshots/passwordcompletevalidator.png)
+
 ## LightHouse Test
 
 - In this section, I will paste the images for the Lighthouse test outcomes. These tests were conducted on both desktop and mobile versions of the application, as well as in both light and dark modes. The images will provide insights into the performance, accessibility, best practices, and SEO scores of the application, highlighting areas of strength and opportunities for improvement.

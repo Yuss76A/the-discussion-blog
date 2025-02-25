@@ -39,7 +39,7 @@
                         class="fa fa-facebook fa-lg text-info mx-2"></i></a>
             </div>
         </div>
-        <form action="" method="post" enctype="multipart/form-data" class="mt-4">
+        <form method="post" enctype="multipart/form-data" class="mt-4">
             {% csrf_token %}
             <fieldset class="form-group">
                 {{ user_form|crispy }}

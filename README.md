@@ -1784,6 +1784,9 @@ Summary of Changes Needed
 *Password Complete Validator*<br>
 ![Password Complete Validator](static/images/screenshots/passwordcompletevalidator.png)
 
+*Password Reset Page Validator*<br>
+![Password Reset Page Validator](static/images/screenshots/passwordresetvalidator.png)
+
 ## LightHouse Test
 
 - In this section, I will paste the images for the Lighthouse test outcomes. These tests were conducted on both desktop and mobile versions of the application, as well as in both light and dark modes. The images will provide insights into the performance, accessibility, best practices, and SEO scores of the application, highlighting areas of strength and opportunities for improvement.

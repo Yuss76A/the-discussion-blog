@@ -1856,7 +1856,7 @@ As we can see in the following images, the navbar has been fixed for small, medi
 *Navbar Fixed Mobile*<br>
 ![Navbar Fixed Mobile](static/images/screenshots/navbarfixedmobile.png)
 
-Note on Create Post Page:
+* Note on Create Post Page:
 
 *Google DevTools*<br>
 ![Google DevTools](static/images/screenshots/devtoolscreatepost.png)
@@ -1866,9 +1866,9 @@ Note on Create Post Page:
 
 * During my final checks before submission, I noticed an issue while testing the create post page in mobile mode using Google DevTools. The category dropdown appeared at the top of the page in that specific testing environment. However, when I tested the same functionality in another browser, such as Safari, it worked as expected.
 
-Additionally, I tested the create post page on several personal devices, and it functioned correctly across those platforms as well. This suggests that the behavior might be related to the specific browser or the Google DevTools settings being used.
+* Additionally, I tested the create post page on several personal devices, and it functioned correctly across those platforms as well. This suggests that the behavior might be related to the specific browser or the Google DevTools settings being used.
 
-Since everything works well in other environments, we will leave it as is for now. If any complaints arise regarding this issue, the team will investigate to determine if there is a real problem within the project.
+* Since everything works well in other environments, we will leave it as is for now. If any complaints arise regarding this issue, the team will investigate to determine if there is a real problem within the project.
 
 ## Technologies Used
 

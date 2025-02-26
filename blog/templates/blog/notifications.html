@@ -16,10 +16,12 @@
             </a>
         </div>
         {% if notification.comment %}
-        <a href="{% url 'blog-detail' notification.comment.post.id %}#comment-{{ notification.comment.id }}"
+        <div class="comment-link-container">
+            <a href="{% url 'blog-detail' notification.comment.post.id %}#comment-{{ notification.comment.id }}"
             class="notification-link" aria-label="View your comment">
             Go to Comment
-        </a>
+            </a>
+        </div>
         {% else %}
         <span class="no-comment">No associated comment.</span>
         {% endif %}

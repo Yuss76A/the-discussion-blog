@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
     deleteLinks.forEach(link => {
         link.addEventListener('click', function (event) {
             event.preventDefault(); // Prevent the default action
+            event.stopPropagation();
 
             const notificationId = this.getAttribute('data-id'); // Get the ID from the data attribute
 
@@ -44,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Confirm delete event
             document.getElementById('confirmDelete').onclick = function () {
                 // Redirect to the delete URL
-                window.location.href = `/notifications/delete/${notificationId}/`; // Adjust if necessary
+                window.location.href = `/notifications/delete/${notificationId}/`;
             };
 
             // Cancel delete event

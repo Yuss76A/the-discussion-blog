@@ -8,9 +8,9 @@
     {% for notification in notifications %}
     <li class="notification-item {% if notification.is_read %}read{% else %}unread{% endif %}">
         <div class="notification-message">
-            <span class="notification-text">{{ notification.message }}</span>
-            <small class="notification-timestamp">{{ notification.created_at|date:"F j, Y, g:i A" }}</small>
-            <a href="#" class="delete-notification" aria-label="Delete this notification"
+            <span class="notification-text order-2">{{ notification.message }}</span>
+            <small class="notification-timestamp order-1">{{ notification.created_at|date:"F j, Y, g:i A" }}</small>
+            <a href="#" class="delete-notification order-3" aria-label="Delete this notification"
                 data-id="{{ notification.id }}" onclick="confirmDeletion(event)">
                 Delete
             </a>

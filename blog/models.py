@@ -154,7 +154,7 @@ class Notification(models.Model):
         __str__(): Returns a string representation of the notification.
     """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    message = models.CharField(max_length=255)
+    message = models.TextField()
     comment = models.ForeignKey(
         Comment,
         null=True,

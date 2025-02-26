@@ -332,7 +332,7 @@ Notification:<br>
 | Object         | Field           |
 |----------------|-----------------|
 |   user         |    ForeignKey   |
-|  message       |    CharField    |
+|  message       |    TextField    |
 |  is_read       |    BooleanField |
 | created_at     |    DateTimeField|
 | comment        |    ForeignKey   |
@@ -1216,10 +1216,10 @@ Go to Comment: This option will link the user directly to the specific comment t
 Before arriving at this page, logged-in users will notice a bell icon next to the notifications link in the navbar, indicating that there are new notifications to check.
 
 *Notifications Page Dark Mode Desktop*<br>
-![Notifications Page Dark Mode Desktop](static/images/screenshots/darkmodewithnotificationsdesktop.png)
+![Notifications Page Dark Mode Desktop](static/images/screenshots/darkmodewithnotificationdesktop.png)
 
 *Notifications Page Dark Mode Mobile*<br>
-![Notifications Page Dark Mode Mobile](static/images/screenshots/darkmodewithnotificationsmobile.png)
+![Notifications Page Dark Mode Mobile](static/images/screenshots/darkmodenotificationmobile.png)
 
 ## Post Detail Page (Dark Mode)
 

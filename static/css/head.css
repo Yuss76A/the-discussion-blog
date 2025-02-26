@@ -556,8 +556,8 @@ button:hover {
 }
 
 .comment-link-container {
-    text-align: center; /* Center the "Go to Comment" link */
-    margin-top: 10px; /* Margin above the link */
+    text-align: center;
+    margin-top: 10px;
 }
 
 .notification-message {
@@ -584,9 +584,9 @@ button:hover {
     border-radius: 5px;
 }
 
+/* Bootstrap danger color for display message */
 .no-comment {
     color: #d9534f;
-    /* Bootstrap danger color for display message */
 }
 
 /* Modal Background Style Delete / Cancel buton Notifications Page*/

@@ -804,7 +804,18 @@ If there are no notifications, users will simply see a message stating that ther
 *Delete Notification*<br>
 ![Delete Notification](static/images/screenshots/deletenotification.png)
 
-* In the Notifications Page, users will see notifications for replies to comments they have posted on various forum posts. If a user has notifications, they will see messages formatted as follows: "User [username] replied to your comment: [main comment content]." Each notification will include the date and time of the reply.Users will also have options to Delete the notification or Go to the comment, allowing them to manage their interactions effectively.
+On the Notifications Page, users will see notifications for interactions related to their comments on various forum posts. The notifications will inform users about two primary interactions: replies to comments they have posted and comments made on their posts. If a user has notifications, they will see messages formatted as follows:
+
+1. Reply Notifications:
+
+"User [username] replied to your comment: [main comment content]."
+Each reply notification will include the date and time of the reply.
+
+2. Comment Notifications:
+
+"User [username] commented on your post: [post title or content]."
+Each comment notification will also include the date and time of the comment.
+Users will have options to Delete the notification or Go to the comment/post, allowing them to manage their interactions effectively.
 
 *Notification Page with Notification Desktop*<br>
 ![Notification Page with Notification Desktop](static/images/screenshots/messagenotificationdesktop.png)
@@ -1217,7 +1228,7 @@ Go to Comment: This option will link the user directly to the specific comment t
 Before arriving at this page, logged-in users will notice a bell icon next to the notifications link in the navbar, indicating that there are new notifications to check.
 
 *Notifications Page Dark Mode Desktop*<br>
-![Notifications Page Dark Mode Desktop](static/images/screenshots/darkmodewithnotificationdesktop.png)
+![Notifications Page Dark Mode Desktop](static/images/screenshots/darkmodenotificationdesktop.png)
 
 *Notifications Page Dark Mode Mobile*<br>
 ![Notifications Page Dark Mode Mobile](static/images/screenshots/darkmodenotificationmobile.png)
@@ -1796,6 +1807,27 @@ Summary of Changes Needed
 
 *Password Reset Page Validator*<br>
 ![Password Reset Page Validator](static/images/screenshots/passwordresetvalidator.png)
+
+## JavaScript Testing
+
+- The JavaScript code has been validated using [JSHint](https://jshint.com/ "JSHint") and produced the following results.
+
+- The theme-toggle.js file was originally created with the primary purpose of managing the dark mode style for the website. Initially, there were no plans to include additional functionalities within this file. However, to ensure that the project worked properly, I utilized the file to accommodate some small additional functionalities. I decided to retain the original name to reflect its initial purpose, even though it now encompasses a broader range of operations. 
+
+Importantly, these changes do not affect or create any issues with the existing code. The file remains well-structured, maintaining clarity and functionality. The integration of the additional functionalities has been executed in a way that improves the overall user experience without compromising the original purpose of the file.
+
+* Theme-toggle.js*<br>
+![JSHint result](static/images/screenshots/jstestfile.png)
+
+- JSHint Warnings and Code Metrics Explained
+
+When you run JSHint on this project, you might see warnings about ES6 features. Don't worry – these aren't errors in your code. They just show that we're using modern JavaScript.
+
+These warnings mention things like 'const', 'let', arrow functions (=>), and the spread operator (...). All of these are part of ES6, which is a newer version of JavaScript.
+
+JSHint is telling us that we're using these new features. If you're building for modern browsers or recent versions of Node.js, you can ignore these warnings. Your code will work fine.
+
+Important Note: Despite these warnings, the code is functioning correctly and as intended. There's no need for intervention or changes based on these JSHint warnings alone. The code is working well in its current state.
 
 ## LightHouse Test
 

@@ -183,8 +183,19 @@ class PostDetailView(LoginRequiredMixin, DetailView):
             comment.post = self.object
             comment.author = request.user
             comment.save()
-            messages.success(request, 'Your comment has been added!')
 
+            # Create a notification if the commenter is not the post author
+            if self.object.author != request.user:
+                Notification.objects.create(
+                    user=self.object.author,
+                    message=(
+                        f"{request.user.username} commented on your post:"
+                        f"'{comment.content[:50]}...'"
+                    ),
+                    comment=comment
+                )
+
+            messages.success(request, 'Your comment has been added!')
             return redirect('blog-detail', pk=self.object.id)
 
         # If the form is not valid, render the same page with form errors

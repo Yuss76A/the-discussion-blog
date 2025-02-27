@@ -1192,6 +1192,7 @@ A warning message is displayed for users considering a username change, remindin
 ![Edit Profile Dark Mode Mobile](static/images/screenshots/darkmodeeditprofilemobile.png)
 
 ## Notifications Page (Dark Mode - Empty)
+
 The Notifications Page in dark mode features a sleek black background that enhances the visual appeal. At the top of the page, the title Your Notifications is displayed in white letters, clearly indicating the purpose of the section.
 
 If there are no notifications to show, a message will appear below the title saying You have no notifications, also in white. This clear communication ensures that users are aware of their current notification status without any confusion.

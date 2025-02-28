@@ -2178,6 +2178,62 @@ Additionally, I want to assure users that if any issues arise regarding accessib
 *Lighthouse Test Mobile Dark Mode*<br>
 ![Lighthouse Test Mobile Dark Mode](static/images/screenshots/darkmobilelogout.png)
 
+#### Reset Password Page
+
+*Lighthouse Test Desktop Light Mode*<br>
+![Lighthouse Test Desktop Light Mode](static/images/screenshots/lightdesktopressetpassword.png)
+
+*Lighthouse Test Mobile Light Mode*<br>
+![Lighthouse Test Mobile Light Mode](static/images/screenshots/lightmobileresetpassword.png)
+
+*Lighthouse Test Desktop Dark Mode*<br>
+![Lighthouse Test Desktop Dark Mode](static/images/screenshots/darkdesktopresetpassword.png)
+
+*Lighthouse Test Mobile Dark Mode*<br>
+![Lighthouse Test Mobile Dark Mode](static/images/screenshots/darkmobileresetpassword.png)
+
+#### Password Reset Sent Page
+
+*Lighthouse Test Desktop Light Mode*<br>
+![Lighthouse Test Desktop Light Mode](static/images/screenshots/lightdesktoppasswordsent.png)
+
+*Lighthouse Test Mobile Light Mode*<br>
+![Lighthouse Test Mobile Light Mode](static/images/screenshots/lightmobilepasswordsent.png)
+
+*Lighthouse Test Desktop Dark Mode*<br>
+![Lighthouse Test Desktop Dark Mode](static/images/screenshots/darkpasswordsentdesktop.png)
+
+*Lighthouse Test Mobile Dark Mode*<br>
+![Lighthouse Test Mobile Dark Mode](static/images/screenshots/darkmobilepasswordsent.png)
+
+#### New Password Page
+
+*Lighthouse Test Desktop Light Mode*<br>
+![Lighthouse Test Desktop Light Mode](static/images/screenshots/ligthnewpassdesktop.png)
+
+*Lighthouse Test Mobile Light Mode*<br>
+![Lighthouse Test Mobile Light Mode](static/images/screenshots/lightmobilenewpass.png)
+
+*Lighthouse Test Desktop Dark Mode*<br>
+![Lighthouse Test Desktop Dark Mode](static/images/screenshots/darkdesktopnewpass.png)
+
+*Lighthouse Test Mobile Dark Mode*<br>
+![Lighthouse Test Mobile Dark Mode](static/images/screenshots/darkmobilenewpass.png)
+
+#### Password Confirmation Page
+
+*Lighthouse Test Desktop Light Mode*<br>
+![Lighthouse Test Desktop Light Mode](static/images/screenshots/lightdesktoppasscomplete.png)
+
+*Lighthouse Test Mobile Light Mode*<br>
+![Lighthouse Test Mobile Light Mode](static/images/screenshots/lightmobilepasscomplete.png)
+
+*Lighthouse Test Desktop Dark Mode*<br>
+![Lighthouse Test Desktop Dark Mode](static/images/screenshots/darkdesktoppasscomplete.png)
+
+*Lighthouse Test Mobile Dark Mode*<br>
+![Lighthouse Test Mobile Dark Mode](static/images/screenshots/darkmobilepasscomplete.png)
+
 - Note on Lighthouse Tests
 
 During the evaluation of my project's performance using Lighthouse, I encountered some technical difficulties with Google Chrome DevTools. Unfortunately, the DevTools functionality was unresponsive during my attempts to run tests on certain pages. In response, I utilized an alternative tool, the  site found at https://pagespeed.web.dev/?utm_source=psi&utm_medium=redirect&hl=en to conduct the testing.

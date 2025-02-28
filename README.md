@@ -2041,7 +2041,121 @@ Important Note: Despite these warnings, the code is functioning correctly and as
 *Lighthouse Test Mobile Dark Mode*<br>
 ![Lighthouse Test Mobile Dark Mode](static/images/screenshots/darkhighlihtsmobile.png)
 
-#### Support Page
+#### Create Post Page
+
+*Lighthouse Test Desktop Light Mode*<br>
+![Lighthouse Test Desktop Light Mode](static/images/screenshots/lightdesktopcreatepost.png)
+
+*Lighthouse Test Mobile Light Mode*<br>
+![Lighthouse Test Mobile Light Mode](static/images/screenshots/lightmobilecreate.png)
+
+*Lighthouse Test Desktop Dark Mode*<br>
+![Lighthouse Test Desktop Dark Mode](static/images/screenshots/darkcreatepostdesktop.png)
+
+*Lighthouse Test Mobile Dark Mode*<br>
+![Lighthouse Test Mobile Dark Mode](static/images/screenshots/darkmobilecreatepost.png)
+
+
+#### Account Page
+
+*Lighthouse Test Desktop Light Mode*<br>
+![Lighthouse Test Desktop Light Mode](static/images/screenshots/lightaccountdesktop.png)
+
+*Lighthouse Test Mobile Light Mode*<br>
+![Lighthouse Test Mobile Light Mode](static/images/screenshots/lightaccountmobile.png)
+
+*Lighthouse Test Desktop Dark Mode*<br>
+![Lighthouse Test Desktop Dark Mode](static/images/screenshots/darkaccountdesktop.png)
+
+*Lighthouse Test Mobile Dark Mode*<br>
+![Lighthouse Test Mobile Dark Mode](static/images/screenshots/darkaccountmobile.png)
+
+
+#### Account Update Page
+
+*Lighthouse Test Desktop Light Mode*<br>
+![Lighthouse Test Desktop Light Mode](static/images/screenshots/lightaccountupdatedecktop.png)
+
+*Lighthouse Test Mobile Light Mode*<br>
+![Lighthouse Test Mobile Light Mode](static/images/screenshots/lightaccountupdatemobile.png)
+
+*Lighthouse Test Desktop Dark Mode*<br>
+![Lighthouse Test Desktop Dark Mode](static/images/screenshots/darkaccountupdatedesktop.png)
+
+*Lighthouse Test Mobile Dark Mode*<br>
+![Lighthouse Test Mobile Dark Mode](static/images/screenshots/darkaccountupdatemobile.png)
+
+#### Notifications Page
+
+*Lighthouse Test Desktop Light Mode*<br>
+![Lighthouse Test Desktop Light Mode](static/images/screenshots/lightdesktopnotification.png)
+
+*Lighthouse Test Mobile Light Mode*<br>
+![Lighthouse Test Mobile Light Mode](static/images/screenshots/lightmobilenotification.png)
+
+*Lighthouse Test Desktop Dark Mode*<br>
+![Lighthouse Test Desktop Dark Mode](static/images/screenshots/darkdesktopnotification.png)
+
+*Lighthouse Test Mobile Dark Mode*<br>
+![Lighthouse Test Mobile Dark Mode](static/images/screenshots/darkmobilenotification.png)
+
+#### Post Detail Page
+
+*Lighthouse Test Desktop Light Mode*<br>
+![Lighthouse Test Desktop Light Mode](static/images/screenshots/lightdesktoppostdetail.png)
+
+*Lighthouse Test Mobile Light Mode*<br>
+![Lighthouse Test Mobile Light Mode](static/images/screenshots/lightmobilepostdetail.png)
+
+*Lighthouse Test Desktop Dark Mode*<br>
+![Lighthouse Test Desktop Dark Mode](static/images/screenshots/darkdesktoppostdetail.png)
+
+*Lighthouse Test Mobile Dark Mode*<br>
+![Lighthouse Test Mobile Dark Mode](static/images/screenshots/darkmobilepostdetail.png)
+
+#### Update Post Page
+
+*Lighthouse Test Desktop Light Mode*<br>
+![Lighthouse Test Desktop Light Mode](static/images/screenshots/lightdesktopupdatepost.png)
+
+*Lighthouse Test Mobile Light Mode*<br>
+![Lighthouse Test Mobile Light Mode](static/images/screenshots/lightmobileupdatepost.png)
+
+*Lighthouse Test Desktop Dark Mode*<br>
+![Lighthouse Test Desktop Dark Mode](static/images/screenshots/darkdesktopupdatepost.png)
+
+*Lighthouse Test Mobile Dark Mode*<br>
+![Lighthouse Test Mobile Dark Mode](static/images/screenshots/darkmobileupdatepost.png)
+
+#### Delete Post Page
+
+*Lighthouse Test Desktop Light Mode*<br>
+![Lighthouse Test Desktop Light Mode](static/images/screenshots/lightdesktopdeletepost.png)
+
+*Lighthouse Test Mobile Light Mode*<br>
+![Lighthouse Test Mobile Light Mode](static/images/screenshots/ligthmobiledeletepost.png)
+
+*Lighthouse Test Desktop Dark Mode*<br>
+![Lighthouse Test Desktop Dark Mode](static/images/screenshots/darkdesktopdeketepost.png)
+
+*Lighthouse Test Mobile Dark Mode*<br>
+![Lighthouse Test Mobile Dark Mode](static/images/screenshots/darkmobiledeletepost.png)
+
+#### Edit Comment Page
+
+*Lighthouse Test Desktop Light Mode*<br>
+![Lighthouse Test Desktop Light Mode]()
+
+*Lighthouse Test Mobile Light Mode*<br>
+![Lighthouse Test Mobile Light Mode]()
+
+*Lighthouse Test Desktop Dark Mode*<br>
+![Lighthouse Test Desktop Dark Mode]()
+
+*Lighthouse Test Mobile Dark Mode*<br>
+![Lighthouse Test Mobile Dark Mode]()
+
+#### Logout Page
 
 *Lighthouse Test Desktop Light Mode*<br>
 ![Lighthouse Test Desktop Light Mode]()

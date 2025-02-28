@@ -10,47 +10,128 @@ Discussion Room is a user-friendly forum application designed to facilitate enga
 
 ## User Stories 
 
-1. User Login Functionality
+1. **User Login Functionality**
+   - As a registered user, I want to log in to my account so that I can access my saved preferences and activities.
+   
+   **Acceptance Criteria:**
+   - Users can log in with their username and password.
+   - An error message is displayed for invalid login attempts.
+   - Users are redirected to their dashboard upon successful login.
 
-* As a registered user, I want to log in to my account so that I can access my personalized content and participate in discussions.
+2. **User Registration and Authentication**
+   - As a new user, I want to create an account so that I can participate in discussions and post comments.
 
-2. User Registration and Authentication
+   **Acceptance Criteria:**
+   - Users must provide a valid email address and a unique username.
+   - Passwords must adhere to security rules (e.g., minimum length, special characters).
 
-* As a new user, I want to register for an account so that I can start participating in discussions.
-* As a user, I want to log out of my account for security reasons when I’m finished using the platform.
+3. **Post Creation Functionality**
+   - As a registered user, I want to create a post so that I can share my knowledge or request help on a topic.
 
-3. Post Creation Functionality
+   **Acceptance Criteria:**
+   - Users can create a post with a title and content.
+   - The post is saved to the database upon submission.
+   - Users receive a confirmation message upon successful publication.
 
-* As a user, I want to create new posts on topics of my choice so that I can share my opinions and ideas with others.
+4. **Post Editing Functionality**
+   - As a user, I want to edit my posts so that I can correct mistakes or update information after it has been published.
 
-4. Post Editing Functionality
+   **Acceptance Criteria:**
+   - Users can access their published posts for editing.
+   - Changes are reflected immediately upon saving.
+   - Users receive an update notification about their changes.
 
-* As a user, I want to edit my posts so that I can correct mistakes or update information after it has been published.
+5. **Comment Deletion Functionality**
+   - As a user, I want to delete comments I have made so that I can remove anything I no longer wish to be visible.
 
-5. Comment Deletion Functionality
+   **Acceptance Criteria:**
+   - Users can delete a comment with a confirmation prompt.
+   - The comment must be removed from the display below the respective post immediately after deletion.
 
-* As a user, I want to delete comments I have made so that I can remove anything I no longer wish to be visible.
+6. **Post Deletion Functionality**
+   - As a user, I want to delete my posts if I want to remove them from the platform entirely.
 
-6. Post Deletion Functionality
+   **Acceptance Criteria:**
+   - Users can delete a post with a confirmation dialog.
+   - The post must be removed from all views immediately after deletion.
 
-* As a user, I want to delete my posts if I want to remove them from the platform entirely.
+7. **Comment Editing Functionality**
+   - As a registered user, I want to edit my comment so that I can clarify my thoughts or correct errors.
 
-7. Comment Editing Functionality
+   **Acceptance Criteria:**
+   - Users can access their comments for editing.
+   - Edited comments indicate that they have been modified.
 
-* As a user, I want to edit my comments so that I can fix errors or add additional information to my original thoughts.
+8. **User Account Management for Admins**
+   - As an admin, I want to manage user accounts so that I can maintain community standards.
 
-8. User Account Management for Admins
+   **Acceptance Criteria:**
+   - Admins can view a list of all users.
+   - Admins can update user roles and delete accounts if necessary.
+   - Changes made are logged for auditing purposes.
 
-* As an admin, I want to manage user accounts so that I can enforce community guidelines and maintain a safe environment for discussions.
-* As an admin, I want to view user activity to monitor interactions and ensure compliance with the platform's standards.
+9. **Commenting Functionality**
+   - As a registered user, I want to comment on posts so that I can engage in discussions and share my thoughts.
 
-9. Commenting Functionality
+   **Acceptance Criteria:**
+   - Users can add a comment to any post.
+   - Comments are displayed in chronological order below the respective post.
+   - Users receive a notification if someone replies to their comment.
 
-* As a user, I want to comment on posts to express my thoughts and engage in discussions with other users.
+10. **Password Reset Functionality**
+   - As a registered user, I want to reset my password if I forget it so that I can regain access to my account.
 
-10. Reset Password Functionality
+   **Acceptance Criteria:**
+   - Users can request a password reset link through their registered email.
+   - The link should expire after a specified time after using it.
+   - Users should be able to set a new password after following the link.
 
-* As a user, I want to reset my password so that I can regain access to my account in case I forget my current password.
+11. **User Profile Management Functionality**
+   - As a registered user, I would like to access my account to modify my avatar picture, username, and email so that I can keep my profile up-to-date and personalized.
+
+   **Acceptance Criteria:**
+   - Users can navigate to their account settings to access their profile.
+   - Users can upload a new avatar picture.
+   - Users can change their username and email.
+   - Changes are saved immediately upon submission.
+   - Users receive a confirmation message after successfully updating their profile.
+
+12. **Notification Functionality**
+   - As a registered user, I would like to receive notifications if someone replies to my comment or post so that I can engage in the conversation and stay informed about the discussions.
+
+   **Acceptance Criteria:**
+   - Users receive a notification when someone replies to their comment, including a brief excerpt of the comment to which they are replying.
+   - Users receive a notification when someone replies to their post, including a short version of the original comment made on the post.
+   - Notifications include relevant details, such as the username of the replier and the content of the reply.
+   - Notifications can be accessed through a dedicated notifications page.
+   - Users can delete notifications if they no longer wish to keep them.
+
+13. **Category Navigation Functionality**
+   - As a user, I would like to navigate between several categories so that I can easily find discussions on topics that interest me.
+
+   **Acceptance Criteria:**
+   - Users can see a list of available categories on the main page.
+   - Users can click on a category to view all posts associated with that category.
+   - Posts should be displayed in chronological order within the selected category.
+   - The selected category should be highlighted to indicate to users which category they are currently viewing.
+
+   15. **Support and Collaboration Functionality**
+   - As a user, I would like to access the Support and Collaboration page so that I can contact the forum team for any reason, such as collaboration inquiries, suggestions to improve the forum, or reporting activity that I find inappropriate.
+
+   **Acceptance Criteria:**
+   - Users can navigate to the Support and Collaboration page.
+   - Users can fill in a form that includes fields for their name, email, and message.
+   - Users receive a confirmation message after successfully submitting their inquiry or suggestion.
+   - The Support form should include validation to ensure all required fields are completed properly.
+   - Submitted messages are stored and can be reviewed by the forum team for follow-up actions.
+
+#### Notes on User Stories
+
+When conceptualizing the Discussion Room project, I identified these user stories as the core functionalities that are fundamental to the platform's purpose. These stories represent the key features that facilitate user interaction and engagement within the forum, forming the foundation upon which the rest of the application is built.
+
+While the development process has allowed for the addition of smaller features and enhancements along the way, I believe that these main user stories encapsulate the most critical aspects of the project. Ensuring that users can effectively log in, register, create and manage posts and comments, and receive notifications about their activities is essential for fostering a vibrant and collaborative community.
+
+By prioritizing these core functionalities, I aimed to create a user-friendly experience that encourages participation and supports knowledge sharing among users. As the project evolves, I will continue to enhance its features based on user feedback and emerging needs, but these foundational user stories will always remain at the heart of the Discussion Room.
 
 ### Admin Stories
 

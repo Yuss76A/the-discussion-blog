@@ -7,6 +7,8 @@
 
 Discussion Room is a user-friendly forum application designed to facilitate engaging and structured discussions among users. Built with Django, this project serves as my Project 4 for the CodeInstitute Full Stack Software Development Diploma. It provides a platform where users can create, share, and discuss topics of interest, fostering a collaborative environment for exchanging ideas and knowledge.
 
+*Link to the Porject*<br>
+![Link to the Project](https://discussion-room-828675a77e1b.herokuapp.com/)
 
 ## User Stories 
 
@@ -1943,6 +1945,14 @@ Important Note: Despite these warnings, the code is functioning correctly and as
 
 - In this section, I will paste the images for the Lighthouse test outcomes. These tests were conducted on both desktop and mobile versions of the application, as well as in both light and dark modes. The images will provide insights into the performance, accessibility, best practices, and SEO scores of the application, highlighting areas of strength and opportunities for improvement.
 
+- Note on Accessibility Scores
+
+While reviewing the accessibility scores for various pages of the Discussion Room project, it is observed that some pages have scores ranging around 85 or 89. It’s important to clarify that, although these scores indicate areas for improvement, they do not significantly affect the core functionality of the forum. The application remains fully operational and provides users with the essential features required for engagement and interaction.
+
+Due to time constraints leading up to the submission deadline, these accessibility scores will be left as they are for now. However, I am committed to prioritizing improvements in these areas upon future updates.
+
+Additionally, I want to assure users that if any issues arise regarding accessibility or overall functionality, they will be addressed and resolved as promptly as possible once detected. User feedback is invaluable, and I appreciate the community’s understanding as we strive to enhance the user experience continuously.
+
 #### Home Page
 
 *Lighthouse Test Desktop Light Mode*<br>
@@ -2144,30 +2154,40 @@ Important Note: Despite these warnings, the code is functioning correctly and as
 #### Edit Comment Page
 
 *Lighthouse Test Desktop Light Mode*<br>
-![Lighthouse Test Desktop Light Mode]()
+![Lighthouse Test Desktop Light Mode](static/images/screenshots/lightdesktopupdatecomment.png)
 
 *Lighthouse Test Mobile Light Mode*<br>
-![Lighthouse Test Mobile Light Mode]()
+![Lighthouse Test Mobile Light Mode](static/images/screenshots/lightmobileupdatecomment.png)
 
 *Lighthouse Test Desktop Dark Mode*<br>
-![Lighthouse Test Desktop Dark Mode]()
+![Lighthouse Test Desktop Dark Mode](static/images/screenshots/darkdesktopupdatecomment.png)
 
 *Lighthouse Test Mobile Dark Mode*<br>
-![Lighthouse Test Mobile Dark Mode]()
+![Lighthouse Test Mobile Dark Mode](static/images/screenshots/darkmobileupdatecomment.png)
 
 #### Logout Page
 
 *Lighthouse Test Desktop Light Mode*<br>
-![Lighthouse Test Desktop Light Mode]()
+![Lighthouse Test Desktop Light Mode](static/images/screenshots/lightdesktoplogout.png)
 
 *Lighthouse Test Mobile Light Mode*<br>
-![Lighthouse Test Mobile Light Mode]()
+![Lighthouse Test Mobile Light Mode](static/images/screenshots/lightmobilelogout.png)
 
 *Lighthouse Test Desktop Dark Mode*<br>
-![Lighthouse Test Desktop Dark Mode]()
+![Lighthouse Test Desktop Dark Mode](static/images/screenshots/darkdesktoplogout.png)
 
 *Lighthouse Test Mobile Dark Mode*<br>
-![Lighthouse Test Mobile Dark Mode]()
+![Lighthouse Test Mobile Dark Mode](static/images/screenshots/darkmobilelogout.png)
+
+- Note on Lighthouse Tests
+
+During the evaluation of my project's performance using Lighthouse, I encountered some technical difficulties with Google Chrome DevTools. Unfortunately, the DevTools functionality was unresponsive during my attempts to run tests on certain pages. In response, I utilized an alternative tool, the  site found at https://pagespeed.web.dev/?utm_source=psi&utm_medium=redirect&hl=en to conduct the testing.
+
+However, there was also a moment when this alternative page ceased to work properly, posing additional challenges in testing. Despite these setbacks, I was able to successfully run tests on the remaining links to evaluate the application's performance.
+
+As a result, you may observe discrepancies in the screenshots provided in the documentation; some include visual representations of scores while others do not. The differences stem from the varying tools used to obtain these results, as well as the technical issues faced with browser functionalities.
+
+If any inconsistencies in the presentation of test results arise, I appreciate your understanding as I navigated these challenges. I remain committed to ensuring that the application meets high standards of performance and usability.
 
 ## BUGS that I Faced
 

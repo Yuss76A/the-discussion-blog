@@ -1943,7 +1943,7 @@ Important Note: Despite these warnings, the code is functioning correctly and as
 
 - In this section, I will paste the images for the Lighthouse test outcomes. These tests were conducted on both desktop and mobile versions of the application, as well as in both light and dark modes. The images will provide insights into the performance, accessibility, best practices, and SEO scores of the application, highlighting areas of strength and opportunities for improvement.
 
-* We can see from the Lighthouse test results in light mode that the performance score for desktop is 94, while for mobile it is 96. The best practices score is 100, and the SEO score is 91. The accessibility score stands at 85 for both platforms, which is a manageable level that does not significantly hinder the user experience. Overall, the project is performing well, and given that the submission deadline is approaching, these scores will remain as they are for now since they do not impede the functionality of the page.
+#### Home Page
 
 *Lighthouse Test Desktop Light Mode*<br>
 ![Lighthouse Test Desktop Light Mode](static/images/screenshots/lighthousedesktoplightmode.png)
@@ -1951,15 +1951,109 @@ Important Note: Despite these warnings, the code is functioning correctly and as
 *Lighthouse Test Mobile Light Mode*<br>
 ![Lighthouse Test Mobile Light Mode](static/images/screenshots/lighthousemobiletest.png)
 
-* In the Lighthouse test results for dark mode, we see that the performance score for desktop is 92, while mobile achieves an impressive 98. The accessibility score for both platforms is 90, with best practices scoring a perfect 100. Additionally, the SEO score stands at 91 for both desktop and mobile. 
-
-These scores suggest that the application is functioning exceptionally well across different modes and devices. Given that our submission deadline is fast approaching, we feel confident in maintaining these current configurations, as they do not interfere with the usability and performance of the application.
-
 *Lighthouse Test Desktop Dark Mode*<br>
 ![Lighthouse Test Desktop Dark Mode](static/images/screenshots/darkmodelighthousetestdesktop.png)
 
 *Lighthouse Test Mobile Dark Mode*<br>
 ![Lighthouse Test Mobile Dark Mode](static/images/screenshots/darkmodemobilelighthousetest.png)
+
+#### About Us Page
+
+*Lighthouse Test Desktop Light Mode*<br>
+![Lighthouse Test Desktop Light Mode](static/images/screenshots/lighthousetestdesktopabout.png)
+
+*Lighthouse Test Mobile Light Mode*<br>
+![Lighthouse Test Mobile Light Mode](static/images/screenshots/lighthousetestmobileabout.png)
+
+*Lighthouse Test Desktop Dark Mode*<br>
+![Lighthouse Test Desktop Dark Mode](static/images/screenshots/darkmodeaboutdesktop.png)
+
+*Lighthouse Test Mobile Dark Mode*<br>
+![Lighthouse Test Mobile Dark Mode](static/images/screenshots/darkmodeaboutmobile.png)
+
+#### Login Page
+
+*Lighthouse Test Desktop Light Mode*<br>
+![Lighthouse Test Desktop Light Mode](static/images/screenshots/lighthousetestdesktoplogin.png)
+
+*Lighthouse Test Mobile Light Mode*<br>
+![Lighthouse Test Mobile Light Mode](static/images/screenshots/lighthousetestmobilelogin.png)
+
+*Lighthouse Test Desktop Dark Mode*<br>
+![Lighthouse Test Desktop Dark Mode](static/images/screenshots/darkmodelogintestdesktop.png)
+
+*Lighthouse Test Mobile Dark Mode*<br>
+![Lighthouse Test Mobile Dark Mode](static/images/screenshots/darkmodemobilelogin.png)
+
+#### Register Page
+
+*Lighthouse Test Desktop Light Mode*<br>
+![Lighthouse Test Desktop Light Mode](static/images/screenshots/lighthousetestdesktopregister.png)
+
+*Lighthouse Test Mobile Light Mode*<br>
+![Lighthouse Test Mobile Light Mode](static/images/screenshots/lighthousetestmobileregister.png)
+
+*Lighthouse Test Desktop Dark Mode*<br>
+![Lighthouse Test Desktop Dark Mode](static/images/screenshots/darkdesktopregister.png)
+
+*Lighthouse Test Mobile Dark Mode*<br>
+![Lighthouse Test Mobile Dark Mode](static/images/screenshots/darkmobileregister.png)
+
+#### About Me Page
+
+*Lighthouse Test Desktop Light Mode*<br>
+![Lighthouse Test Desktop Light Mode](static/images/screenshots/lighthousetestaboutmedesktop.png)
+
+*Lighthouse Test Mobile Light Mode*<br>
+![Lighthouse Test Mobile Light Mode](static/images/screenshots/lighttestsupportdesktopmobile.png)
+
+*Lighthouse Test Desktop Dark Mode*<br>
+![Lighthouse Test Desktop Dark Mode](static/images/screenshots/darkaboutmedesktop.png)
+
+*Lighthouse Test Mobile Dark Mode*<br>
+![Lighthouse Test Mobile Dark Mode](static/images/screenshots/darkaboutmemobile.png)
+
+#### Support Page
+
+*Lighthouse Test Desktop Light Mode*<br>
+![Lighthouse Test Desktop Light Mode](static/images/screenshots/lighttestsupportdesktop.png)
+
+*Lighthouse Test Mobile Light Mode*<br>
+![Lighthouse Test Mobile Light Mode](static/images/screenshots/lightsupportmobile.png)
+
+*Lighthouse Test Desktop Dark Mode*<br>
+![Lighthouse Test Desktop Dark Mode](static/images/screenshots/darksupportdesktop.png)
+
+*Lighthouse Test Mobile Dark Mode*<br>
+![Lighthouse Test Mobile Dark Mode](static/images/screenshots/darksupportmobile.png)
+
+#### HighLights Page
+
+*Lighthouse Test Desktop Light Mode*<br>
+![Lighthouse Test Desktop Light Mode](static/images/screenshots/lighthighlihts.png)
+
+*Lighthouse Test Mobile Light Mode*<br>
+![Lighthouse Test Mobile Light Mode](static/images/screenshots/lightmobilehighlights.png)
+
+*Lighthouse Test Desktop Dark Mode*<br>
+![Lighthouse Test Desktop Dark Mode](static/images/screenshots/darkhighlightsdesktop.png)
+
+*Lighthouse Test Mobile Dark Mode*<br>
+![Lighthouse Test Mobile Dark Mode](static/images/screenshots/darkhighlihtsmobile.png)
+
+#### Support Page
+
+*Lighthouse Test Desktop Light Mode*<br>
+![Lighthouse Test Desktop Light Mode]()
+
+*Lighthouse Test Mobile Light Mode*<br>
+![Lighthouse Test Mobile Light Mode]()
+
+*Lighthouse Test Desktop Dark Mode*<br>
+![Lighthouse Test Desktop Dark Mode]()
+
+*Lighthouse Test Mobile Dark Mode*<br>
+![Lighthouse Test Mobile Dark Mode]()
 
 ## BUGS that I Faced
 

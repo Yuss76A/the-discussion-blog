@@ -2345,9 +2345,6 @@ In this section, I will present the technologies used in the project
 
 You need to create an env.py file in the root folder of your repository. This is where you assign hidden variables for security reasons. This file must be added to your list of ignored files in git.ignore to ensure it does not get pushed up to your repository on GitHub as it would then be publicly accessible.
 
-*env.py*<br>
-![env.py](static/images/screenshots/sectionenvpy.png)
-
 *Dynamic DEBUG Setup*<br>
 ![Dynamic DEBUG Setup](static/images/screenshots/debugdynamicsectup.png)
 
@@ -2358,6 +2355,9 @@ When DEVELOPMENT is set to "1", the application allows for detailed error messag
 However, it's crucial to note that in a production environment, DEVELOPMENT should not be set, or it should be set to a value that represents deployment, such as "0". This ensures that detailed debugging information is suppressed, thereby preventing any sensitive information from being exposed to users and improving the overall security of the application.
 
 By managing the DEVELOPMENT variable in this way, I ensure a smooth transition between development and production environments while maintaining security and functionality in both contexts.
+
+*env.py*<br>
+![env.py](static/images/screenshots/sectionenvpy.png)
 
 1. DATABASE_URL
 Description: 

@@ -125,14 +125,6 @@ Discussion Room is a user-friendly forum application designed to facilitate enga
    - The Support form should include validation to ensure all required fields are completed properly.
    - Submitted messages are stored and can be reviewed by the forum team for follow-up actions.
 
-#### Notes on User Stories
-
-When conceptualizing the Discussion Room project, I identified these user stories as the core functionalities that are fundamental to the platform's purpose. These stories represent the key features that facilitate user interaction and engagement within the forum, forming the foundation upon which the rest of the application is built.
-
-While the development process has allowed for the addition of smaller features and enhancements along the way, I believe that these main user stories encapsulate the most critical aspects of the project. Ensuring that users can effectively log in, register, create and manage posts and comments, and receive notifications about their activities is essential for fostering a vibrant and collaborative community.
-
-By prioritizing these core functionalities, I aimed to create a user-friendly experience that encourages participation and supports knowledge sharing among users. As the project evolves, I will continue to enhance its features based on user feedback and emerging needs, but these foundational user stories will always remain at the heart of the Discussion Room.
-
 ### Admin Stories
 
 1. User Account Management
@@ -158,6 +150,15 @@ By prioritizing these core functionalities, I aimed to create a user-friendly ex
 * As an admin, I want to receive notifications about user reports on posts or comments so that I can respond promptly and uphold community standards.
 * As an admin, I want to ban users for repeat offenses to protect the community from disruptive behavior.
 
+#### Notes on User Stories
+
+When conceptualizing the Discussion Room project, I identified these user stories as the core functionalities that are fundamental to the platform's purpose. These stories represent the key features that facilitate user interaction and engagement within the forum, forming the foundation upon which the rest of the application is built.
+
+While the development process has allowed for the addition of smaller features and enhancements along the way, I believe that these main user stories encapsulate the most critical aspects of the project. Ensuring that users can effectively log in, register, create and manage posts and comments, and receive notifications about their activities is essential for fostering a vibrant and collaborative community.
+
+By prioritizing these core functionalities, I aimed to create a user-friendly experience that encourages participation and supports knowledge sharing among users. As the project evolves, I will continue to enhance its features based on user feedback and emerging needs, but these foundational user stories will always remain at the heart of the Discussion Room.
+
+Github User Stories : [Github User Stories](https://github.com/users/Yuss76A/projects/9/views/1)
 
 ### Website Goals
 

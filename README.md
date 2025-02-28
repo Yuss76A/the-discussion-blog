@@ -1497,6 +1497,34 @@ Once we use the link to change our password, it will no longer be valid, and we 
 * Note : 
 The screenshots for "New Password Confirmation" and the "Not Valid Link" sections were taken using the Safari tools option. I encountered an issue with my Google Dev Tools, which prevented me from using the responsive option as it was consistently blocking access. Therefore, I decided to use Safari tools to capture the screenshots for both desktop and mobile versions.
 
+## Custom Models (Unique Model)
+
+#### User Profile Management (Account Page)
+
+**Purpose**: 
+The User Account Page serves as a comprehensive management interface for users, allowing them to view and modify their profile information while enhancing user engagement on the forum.
+
+**Key Features**:
+
+1. **User Information Display**:
+   - **Avatar Image**: Displays the user's profile picture, enhancing personalization.
+   - **Username and Email**: Clearly presented user credentials for easy identification.
+
+2. **Social Links**:
+   - Users have access to links to their social media accounts, allowing them to engage with their networks and share forum content.
+   - Each link opens in a separate page, facilitating easy navigation while maintaining forum engagement.
+
+3. **Profile Editing Functionality**:
+   - Users can navigate to a section to modify their **username**, **email**, and **avatar image**.
+   - **Important Note**:
+     - The page includes a notice stating: "Any change made to your username or email will be reflected in the main system. If you change your username, it will be your primary login identifier. Please ensure the email provided is valid, as it allows the team to contact you regarding any issues.”
+
+*Unique Model/Account Page*<br>
+![Unique Model/Account Page](static/images/screenshots/uniquemodelaccountpage.png)
+
+*Unique Model/Update Profile*<br>
+![Unique Model/Update Profile](static/images/screenshots/uniquemodelupdateprofile.png)
+
 ## Small Details (Features)
 
 In this section, I will explain the small details and features that I have added to the Discussion Room project. Most of these aspects were touched upon in the features section and can be seen in the accompanying images, showcasing both light and dark mode.

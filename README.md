@@ -2386,22 +2386,38 @@ For development purposes, you can generate a new secret key manually or use Djan
 
 In production, never hard-code your secret key in your source code. Instead, use an environment variable to manage sensitive data securely. You can generate a secure key using online tools such as Django Secret Key Generator or by using Django's method mentioned above.
 
+## Database Configuration
+
+The Discussion Room application leverages PostgreSQL as its database management system, currently hosted on Neon Tech. This choice provides robust data storage and retrieval capabilities essential for effective user management and dynamic content delivery.
+
+Key Details:
+
+* Database URL: The application connects to the PostgreSQL database through an environment variable, ensuring secure management of sensitive information. The DATABASE_URL encapsulates all necessary credentials for establishing the database connection.
+
+* Transition to ElephantSQL: While deploying this project, the decision was made to utilize the Neon Tech PostgreSQL service. In the future, should the need arise, migrating to ElephantSQL is straightforward, with potential updates to the database settings requiring minimal changes to the source code.
+
+Development Notes:
+
+* During the development phase, a local database was employed for comprehensive testing. It is crucial to verify that all CRUD (Create, Read, Update, Delete) functionalities related to posts, comments, and user accounts are fully operational within the production environment.
+
+* To maintain the security of sensitive information, I have utilized environment variables to store critical details, including the database connection string, email credentials, and application secret keys.
+
 #### Requirements
 
 The requirements for this particular project are as follows:<br>
 
-asgiref==3.8.1
-cloudinary==1.36.0
-dj-database-url==0.5.0
-dj3-cloudinary-storage==0.0.6
-Django==4.2.17
-django-crispy-forms==1.14.0
-gunicorn==20.1.0
-pillow==11.0.0
-psycopg2-binary==2.9.10
-sqlparse==0.5.3
-urllib3==1.26.20
-whitenoise==6.5.0
+asgiref==3.8.1<br>
+cloudinary==1.36.0<br>
+dj-database-url==0.5.0<br>
+dj3-cloudinary-storage==0.0.6<br>
+Django==4.2.17<br>
+django-crispy-forms==1.14.0<br>
+gunicorn==20.1.0<br>
+pillow==11.0.0<br>
+psycopg2-binary==2.9.10<br>
+sqlparse==0.5.3<br>
+urllib3==1.26.20<br>
+whitenoise==6.5.0<br>
 
 To update your requirements.txt file, you can use the following command in your IDE's terminal:
 pip freeze > requirements.txt

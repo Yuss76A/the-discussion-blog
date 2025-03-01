@@ -159,7 +159,19 @@ While the development process has allowed for the addition of smaller features a
 
 By prioritizing these core functionalities, I aimed to create a user-friendly experience that encourages participation and supports knowledge sharing among users. As the project evolves, I will continue to enhance its features based on user feedback and emerging needs, but these foundational user stories will always remain at the heart of the Discussion Room.
 
-Github User Stories : [Github User Stories](https://github.com/users/Yuss76A/projects/9/views/1)
+## Kanban Board
+
+To track the progress of the Discussion Room project, we are using a Kanban board hosted on GitHub Projects. You can access it [here](https://github.com/users/Yuss76A/projects/9/views/1).
+
+### Board Overview
+- **To Do**: Features and tasks planned for future development.
+- **In Progress**: Tasks currently being worked on.
+- **Done**: Completed tasks.
+
+- **Project Status and Kanban Board**
+As you can see, all the tasks that were planned at the beginning of the project have been completed and thoroughly tested, as documented in the Manual Testing Table. Currently, we do not have any tasks in the "To Do" or "In Progress" columns, reflecting that our initial development goals have been achieved.
+
+Looking ahead, we are eager to receive feedback and suggestions from our users. As we collect reviews and tips on how to improve the Discussion Room web application, the Kanban board will be updated to reflect new tasks and enhancements. This iterative approach ensures that we continue to evolve and refine the application based on user input, fostering a community that thrives on collaboration and engagement.
 
 ### Website Goals
 
